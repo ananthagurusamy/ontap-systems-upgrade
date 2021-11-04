@@ -187,7 +187,7 @@ Refer to link:other_references.html[References] to link to the _ONTAP 9 Network 
 +
 Each cluster LIF must be listening on port 7700.
 +
-Port 7700 is listening on cluster ports is the expected outcome, as shown in the following example for a two-node cluster:
+Port 7700 listening on cluster ports is the expected outcome as shown in the following example for a two-node cluster:
 +
 ----
 Cluster::> network connections listening show -vserver Cluster
@@ -207,5 +207,5 @@ Cluster          NodeB_clus2:7700               TCP/ctlopcp
 `::> net int modify -vserver Cluster -lif <cluster-lif> -status-admin down; net int modify -vserver Cluster -lif <cluster-lif> -status-admin up`
 +
 Repeat substep (11) to verify that the cluster LIF is now listening on port 7700.
-// 2021-11-03, BURT 1429264 
+// 2021-11-03, BURT 1429264
 // bottom of pg. 38, 39, 40, and top of 41 in PDF
