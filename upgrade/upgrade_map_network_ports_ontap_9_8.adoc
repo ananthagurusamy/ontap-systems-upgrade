@@ -52,6 +52,34 @@ When all cluster LIFs are migrated and cluster communication is established, the
 .. Display the health state of node3 and node4:
 +
 `cluster show -node <node1> -fields health`
+
+.. Verify that the cluster LIFs are listening on port 7700:
++
+`::> network connections listening show -vserver Cluster`
++
+Each cluster LIF must be listening on port 7700.
++
+Port 7700 is listening on cluster ports is the expected outcome, as shown in the following example for a two-node cluster:
++
+----
+Cluster::> network connections listening show -vserver Cluster
+Vserver Name     Interface Name:Local Port     Protocol/Service
+---------------- ----------------------------  -------------------
+Node: NodeA
+Cluster          NodeA_clus1:7700               TCP/ctlopcp
+Cluster          NodeA_clus2:7700               TCP/ctlopcp
+Node: NodeB
+Cluster          NodeB_clus1:7700               TCP/ctlopcp
+Cluster          NodeB_clus2:7700               TCP/ctlopcp
+4 entries were displayed.
+----
+
+.. If necessary, for each cluster LIF that is not listening on port 7700, set the administrative status of the LIF to `down` and then `up`:
++
+`::> net int modify -vserver Cluster -lif <cluster-lif> -status-admin down; net int modify -vserver Cluster -lif <cluster-lif> -status-admin up`
++
+Repeat substep (g) to verify that the cluster LIF is now listening on port 7700.
+// 2021-11-03, BURT 1429264 
 . [[map_9.8_5]]Modify the broadcast domain memberships of physical ports hosting data LIFs. You can do this manually, as shown in link:upgrade-map-network-ports-ontap-9-7-or-earlier.html#map_9.7_7[Map network ports using ONTAP 9.7 or earlier, Step7]. The recommended approach is to use the enhanced network reachability scan and repair procedure introduced in ONTAP 9.8, as shown in the following Step 5, substeps (a) to (g).
 .. List the reachability status of all ports:
 +
