@@ -206,6 +206,6 @@ Cluster          NodeB_clus2:7700               TCP/ctlopcp
 +
 `::> net int modify -vserver Cluster -lif <cluster-lif> -status-admin down; net int modify -vserver Cluster -lif <cluster-lif> -status-admin up`
 +
-Repeat substep (11) to verify that the cluster LIF is now listening on port 7700.
+Repeat Step 11 to verify that the cluster LIF is now listening on port 7700.
 // 2021-11-03, BURT 1429264
 // bottom of pg. 38, 39, 40, and top of 41 in PDF
