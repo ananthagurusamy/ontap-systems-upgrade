@@ -10,4 +10,4 @@ The node halts automatically.
 
 .After you finish
 
-You can decommission node2 after the upgrade is completed. See link:decommission_old_system.html[Decommission the old system]
+You can decommission node2 after the upgrade is completed. See link:decommission_old_system.html[Decommission the old system].
