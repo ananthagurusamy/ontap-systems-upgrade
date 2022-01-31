@@ -13,4 +13,12 @@ summary: The nodes must be prepared before you can upgrade.
 :imagesdir: ./media/
 
 [.lead]
-include::../_include/ru_man_prepare_nodes_upgrade.adoc[]
+include::../_include/ru_man_prepare_nodes_upgrade_chunk_a.adoc[]
++
+[NOTE]
+====
+* You will use this information later in the procedure.
+* If you have a system with more than two cluster ports per node, such as an FAS8080 or an AFF8080, you must consolidate the cluster LIFs to two cluster ports per node before you start the controller upgrade. If you perform the controller upgrade with more than two cluster ports per node, cluster LIFs might be missing on the new controller after the upgrade.
+//BURT 1418719 31-Jan-2022
+====
+include::../_include/ru_man_prepare_nodes_upgrade_chunk_b.adoc[]
