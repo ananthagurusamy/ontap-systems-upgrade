@@ -13,5 +13,9 @@ summary: The nodes must be prepared before you can upgrade.
 :imagesdir: ./media/
 
 [.lead]
-include::../_include/ru_man_prepare_nodes_upgrade.adoc[]
+include::../_include/ru_man_prepare_nodes_upgrade_chunk_a.adoc[]
++
+NOTE: You will use this information later in the procedure.
+
+include::../_include/ru_man_prepare_nodes_upgrade_chunk_b.adoc[]
 // 26 FEB 2021: formmatted from CMS

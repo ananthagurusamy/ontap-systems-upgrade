@@ -31,6 +31,9 @@ You should validate in the cluster mixing rules whether new nodes can become par
 
 NOTE: If you are upgrading a system that supports internal drives (for example, an FAS2700 or AFF A250) but does NOT have internal drives, refer to link:other_references.html[References] and use the procedure in the _Aggregate Relocation to Manually Upgrade Controller Hardware_ content that is correct for your version of ONTAP.
 
+If you have a system with more than two cluster ports per node, such as an FAS8080 or an AFF8080, you must consolidate the cluster LIFs to two cluster ports per node before you start the controller upgrade. If you perform the controller upgrade with more than two cluster ports per node, cluster LIFs might be missing on the new controller after the upgrade.
+// BURT 1418719 31-Jan-2022
+
 Controller upgrade using ARL is supported on systems configured with SnapLock Enterprise and SnapLock Compliance volumes.
 
 ==== Two-node switchless clusters
