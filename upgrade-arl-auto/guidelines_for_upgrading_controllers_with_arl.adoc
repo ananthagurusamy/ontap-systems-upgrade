@@ -27,6 +27,9 @@ NOTE: Before performing an AFF system upgrade, you must upgrade ONTAP to release
 
 NOTE: If you are upgrading a system that supports internal drives (for example, an FAS2700 or AFF A250) but does NOT have internal drives, refer to link:other_references.html[References] and use the procedure in the _Aggregate Relocation to Manually Upgrade Controller Hardware_ content that is correct for your version of ONTAP.
 
+If you are using ONTAP 9.6P11, 9.7P8, or later releases, it is recommended to enable Connectivity, Liveliness, and Availability Monitor (CLAM) takeover to return the cluster into quorum when certain node failures occur. The `kernel-service` command requires advanced privilege level access. For more information, see: https://kb.netapp.com/Support_Bulletins/Customer_Bulletins/SU436[NetApp KB Article SU436: CLAM takeover default configuration changed^].
+// BURT 1400769 31-Jan-2022
+
 Controller upgrade using ARL is supported on systems configured with SnapLock Enterprise andSnapLock Compliance volumes.
 
 == Two-node switchless clusters
