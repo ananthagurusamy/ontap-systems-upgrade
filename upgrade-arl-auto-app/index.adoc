@@ -5,7 +5,8 @@ keywords: aggregate, relocation, controller, hardware, aggregates, flexarray, me
 summary: You upgrade the original controller hardware with the replacement controller hardware, relocating the ownership of non-root aggregates.
 ---
 
-= Use "system controller replace" commands to upgrade controller hardware running ONTAP 9.8 or later
+= Overview
+
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -15,6 +16,8 @@ summary: You upgrade the original controller hardware with the replacement contr
 [.lead]
 
 [.lead]
+*You can use this aggregate relocation procedure to upgrade controller hardware by using `system controller replace` commands. This procedure applies to controller hardware running ONTAP 9.8 or later.*
+
 During the procedure, you upgrade the original controller hardware with the replacement controller hardware, relocating the ownership of non-root aggregates. You migrate aggregates multiple times from node to node to ensure that at least one node is serving data from the aggregates throughout the upgrade procedure. You also migrate data logical interfaces (LIFs) and assign the network ports on the new controller to the interface groups as you proceed.
 
 .Terminology used in this information
@@ -37,4 +40,4 @@ This upgrade procedure primarily applies to upgrade scenarios where the controll
 * This procedure applies to systems running 4-node NetApp MetroCluster configuration or higher. Since MetroCluster configuration sites can be at two physically different locations, the automated controller upgrade must be carried out individually at each MetroCluster site for an HA pair.
 * For non-MetroCluster systems, such as HA clusters, the ARL upgrade is the only supported procedure.
 // 2021-11-02, BURT 1438029
-* If you are upgrading from an AFF A320 system, you can use volume moves to upgrade controller hardware or contact technical support. Refer to link:other_references.html[References] to link to the _Controller Hardware Upgrade Express Guide_.
+* If you are upgrading from an AFF A320 system, you can use volume moves to upgrade controller hardware or contact technical support. Refer to link:other_references.html[References] to link to _Upgrade by moving volumes or storage_.

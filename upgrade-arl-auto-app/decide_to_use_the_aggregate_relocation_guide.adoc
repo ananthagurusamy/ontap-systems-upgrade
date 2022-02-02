@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
 permalink: upgrade-arl-auto-app/decide_to_use_the_aggregate_relocation_guide.html
-keywords: deciding, aggregate, relocation, guide, storage, controllers, administrators, ontap, ha, high, availability
-summary: This guide describes how to upgrade the storage controllers in an HA pair with new controllers.
+keywords: deciding, aggregate, relocation, content, storage, controllers, administrators, ontap, ha, high, availability
+summary: This content describes how to upgrade the storage controllers in an HA pair with new controllers.
 ---
 
-= Decide whether to use the aggregate relocation guide
+= Decide whether to use the aggregate relocation procedure
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -19,16 +19,16 @@ summary: This guide describes how to upgrade the storage controllers in an HA pa
 //
 
 [.lead]
-This guide describes how to upgrade the storage controllers in an HA pair with new controllers while keeping all the existing data and disks. This is a complex procedure that should be used only by experienced administrators.
+This content describes how to upgrade the storage controllers in an HA pair with new controllers while keeping all the existing data and disks. This is a complex procedure that should be used only by experienced administrators.
 
-You should use this guide under the following circumstances:
+You should use this content under the following circumstances:
 
 * You are running ONTAP 9.8 or later.
 * You do not want to add the new controllers as a new HA pair to the cluster and migrate the data using volume moves.
 * You are experienced in administering ONTAP and are comfortable with the risks of working in the diagnostic privilege mode.
 * If you are upgrading a MetroCluster configuration, it is a four-node or higher FC configuration, and all nodes are running ONTAP 9.8 or later.
 +
-For upgrading MetroCluster IP configurations, refer to link:other_references.html[References] to link to the _MetroCluster Upgrade and Expansion Guide_.
+For upgrading MetroCluster IP configurations, refer to link:other_references.html[References] to link to the _MetroCluster Upgrade and Expansion_ content.
 
 NOTE: You can use NetApp Storage Encryption (NSE) and NetApp Volume Encryption (NVE) with this procedure.
 
@@ -51,7 +51,7 @@ The following table shows the supported model matrix for the controller upgrade.
 
 NOTE: If your controller upgrade model combination is not in the above table, contact technical support.
 
-^1^For the additional steps needed for A800 systems, go to the step that references A800 in section link:set_fc_or_uta_uta2_config_on_node3.html#step23[Check and configure UTA/UTA2 ports on node3, Step 23], or link:set_fc_or_uta_uta2_config_node4.html#step23[Check and configure UTA/UTA2 ports on node4, Step 23].
+^1^For the additional steps needed for AFF A800 systems, go to the step that references A800 in section link:set_fc_or_uta_uta2_config_on_node3.html#step23[Check and configure UTA/UTA2 ports on node3, Step 23], or link:set_fc_or_uta_uta2_config_node4.html#step23[Check and configure UTA/UTA2 ports on node4, Step 23].
 
 ^2^ARL automated upgrade from an AFF A320 to an AFF A400 system is supported from ONTAP 9.9.1.
 // BURT 1379899 30-Aug-2021
