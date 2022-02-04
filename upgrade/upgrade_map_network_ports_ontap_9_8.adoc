@@ -53,11 +53,9 @@ When all cluster LIFs are migrated and cluster communication is established, the
 +
 `cluster show -node <node1> -fields health`
 
-.. Verify that the cluster LIFs are listening on port 7700:
+.. Each cluster LIF must be listening on port 7700. Verify that the cluster LIFs are listening on port 7700:
 +
 `::> network connections listening show -vserver Cluster`
-+
-Each cluster LIF must be listening on port 7700.
 +
 Port 7700 listening on cluster ports is the expected outcome as shown in the following example for a two-node cluster:
 +
