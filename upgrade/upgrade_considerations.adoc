@@ -39,10 +39,10 @@ For root aggregate size requirements, see the https://hwu.netapp.com[NetApp Hard
 * The controllers in a HA pair must be two AFF models or two FAS models.
 * You can upgrade by moving volumes or physical storage from one FAS2xxx to a later FAS2xxx if the nodes are in the same cluster. For example, you can move volumes or physical storage from a FAS2552 to a FAS2750.
 
-* If you are upgrading a HA pair in a cluster with multiple HA pairs, you should move Epsilon to the node of a HA pair not undergoing a controller upgrade. For example, if you are upgrading nodeA/nodeB in a cluster with the HA pair configuration nodeA/nodeB and nodeC/nodeD, you should move Epsilon to nodeC or nodeD.
+* If you are upgrading a HA pair in a cluster with multiple HA pairs, you should move epsilon to the node of a HA pair not undergoing a controller upgrade. For example, if you are upgrading nodeA/nodeB in a cluster with the HA pair configuration nodeA/nodeB and nodeC/nodeD, you should move epsilon to nodeC or nodeD.
 // BURT 1400769 31-Jan-2022
 
-* If you are using ONTAP 9.6P11, 9.7P8, or later releases, it is recommended to enable Connectivity, Liveliness, and Availability Monitor (CLAM) takeover to return the cluster into quorum when certain node failures occur. The `kernel-service` command requires advanced privilege level access. For more information, see: https://kb.netapp.com/Support_Bulletins/Customer_Bulletins/SU436[NetApp KB Article SU436: CLAM takeover default configuration changed^]. Beginning with ONTAP, the `kcs-enable-takeover` parameter is enabled by default.
+* If you are using ONTAP 9.6P11, 9.7P8, or later releases, it is recommended to enable Connectivity, Liveliness, and Availability Monitor (CLAM) takeover to return the cluster into quorum when certain node failures occur. The `kernel-service` command requires advanced privilege level access. For more information, see: https://kb.netapp.com/Support_Bulletins/Customer_Bulletins/SU436[NetApp KB Article SU436: CLAM takeover default configuration changed^]. Beginning with ONTAP 9.8, the `kcs-enable-takeover` parameter is enabled by default.
 // BURT 1400769 31-Jan-2022
 
 * If you are upgrading a two-node MetroCluster configuration, see: https://docs.netapp.com/us-en/ontap-metrocluster/upgrade/concept_choosing_an_upgrade_method_mcc.html[Choosing an upgrade or refresh method^]
