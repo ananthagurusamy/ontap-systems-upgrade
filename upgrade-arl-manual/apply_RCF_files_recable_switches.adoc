@@ -13,7 +13,7 @@ summary:  Apply the appropriate RCF files to reconfigure switches to accommodate
 :imagesdir: ./media/
 
 [.lead]
-You must apply the appropriate reference configuration (RCF) files to reconfigure your switches to accommodate the new nodes. After you apply the RCF files, you can recable the switches.
+You must apply the appropriate reference configuration files (RCFs) to reconfigure your switches to accommodate the new nodes. After you apply the RCFs, you can recable the switches.
 
 .Before you begin
 
@@ -21,13 +21,14 @@ The FC switch port usage must match the usage described in the _Fabric-attached 
 
 .Steps
 
-. Locate the RCF files for your configuration.
+. Go to the https://mysupport.netapp.com/site/products/all/details/metrocluster-rcf/downloads-tab[MetroCluster RCF^] page and select the RCFs for your configuration.
 +
-You must use the RCF files that match your switch model.
+You must use the RCFs that match your switch model.
 +
-link:http://mysupport.netapp.com/NOW/download/software/metrocluster_brocade/sanswitch/index.shtml[NetApp Downloads: MetroCluster Configuration Files for Brocade Switches]
-+
-link:http://mysupport.netapp.com/NOW/download/software/metrocluster_cisco/sanswitch/index.shtml[NetApp Downloads: MetroCluster Configuration Files for Cisco Switches]
+For more information FC RCF installations in a fabric-attached MetroCluster configuration:
+
+* https://docs.netapp.com/us-en/ontap-metrocluster/install-fc/task_install_the_brocade_fc_switch_rcf_file.html[Brocade FC switch RCF installations^]
+* https://docs.netapp.com/us-en/ontap-metrocluster/install-fc/task_download_and_install_the_cisco_fc_switch_rcf_files.html[Cisco FC switch RCF installations^]
 
 . Apply the RCF files, following the directions on the *Download* page and adjusting the ISL settings as needed.
 
