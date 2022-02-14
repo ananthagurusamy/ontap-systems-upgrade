@@ -36,23 +36,23 @@ This procedure includes steps that are performed on the new controller module. Y
 +
 .. Add the key management server:
 +
-`security key-manager external add-servers -key-servers <key_management_server_ip_address>`
-//BURT 1450483 11-Feb-2022
+`security key-manager -add <key_management_server_ip_address>`
+
 .. Repeat the previous step for each listed key management server.
 +
 You can link up to four key management servers.
 .. Verify the that the key management servers were added successfully:
 +
-`security key-manager external show`
-//BURT 1450483 11-Feb-2022
+`security key-manager show`
+
 . On the new controller module, run the key management setup wizard to set up and install the key management servers.
 +
 You must install the same key management servers that are installed on the existing controller module.
 +
 .. Launch the key management server setup wizard on the new node:
 +
-`security key-manager external enable`
-//BURT 1450483 11-Feb-2022
+`security key-manager setup -node <new_controller_name>`
+
 .. Complete the steps in the wizard to configure key management servers.
 
 . Restore authentication keys from all linked key management servers to the new node.
