@@ -8,20 +8,20 @@ After upgrading, you must immediately configure Storage Encryption and establish
 
 . Configure Storage Encryption on all nodes by using the following command on each node:
 +
-`security key-manager setup`
-
+`security key-manager external enable`
+// BURT 1450483 11-Feb-2022
 . Add the IP address for each key management server:
 +
-`security key-manager add`
-
+`security key-manager external add-servers -key-servers <key_management_server_ip_address>`
+// BURT 1450483 11-Feb-2022
 . Verify that the same key management servers are configured and available on all nodes in the cluster:
 +
-`security key-manager show -status`
-
+`security key-manager external show-status`
+// BURT 1450483 11-Feb-2022
 . Create a new cluster-wide authentication key:
 +
-`security key-manager create-key`
-
+`security key-manager key create`
+// BURT 1450483 11-Feb-2022
 . Make a note of the new authentication key ID.
 . Rekey all self-encrypting drives with the new authentication key:
 +
