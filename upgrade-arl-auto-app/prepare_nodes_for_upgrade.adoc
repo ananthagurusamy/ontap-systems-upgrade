@@ -136,7 +136,8 @@ You must run and save the output of the following commands individually:
 * storage array config show -switch <switch_name>
 * system license show -owner <node_name>
 * storage encryption disk show
-* security key-manager backup show
+* security key-manager onboard show-backup
+// BURT 1450483 11-Feb-2022
 * security key-manager external show
 * security key-manager external show-status
 * reachability show -detail

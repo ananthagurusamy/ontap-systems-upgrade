@@ -7,4 +7,5 @@ You can use the OKM to manage encryption keys. If you plan to use OKM, you must 
 . Save the passphrase to a secure location.
 . Create a backup for recovery purposes. Run the following command and save the output:
 +
-`key-manager onboard show-backup`
+`security key-manager onboard show-backup`
+// BURT 1450483 11-Feb-2022

@@ -12,7 +12,8 @@ summary: Configure Storage Encryption and establish a client authentication key.
 :linkattrs:
 :imagesdir: ./media/
 
-include::../_include/ru_man_get_ip_address_external_km_server.adoc[]
+[.lead]
+include::../_include/ru_auto_get_ip_address_external_key_management_server_encryption.adoc[]
 
 == Manage authentication using KMIP servers
 
