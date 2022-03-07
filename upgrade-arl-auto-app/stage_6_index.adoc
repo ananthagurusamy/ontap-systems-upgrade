@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto-app/stage_6_index.html
 keywords: complete upgrade, node, unified, target, storage, encryption
-summary: During stage 6, confirm that the new nodes are set up correctly.
+summary: During stage 6, confirm that the new nodes are set up correctly. This procedure applies to controller upgrades using "system controller replace" commands to upgrade controller hardware running ONTAP 9.8 or later.
 ---
 
 = Stage 6. Complete the upgrade

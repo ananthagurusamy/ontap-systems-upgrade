@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto-app/automate_the_controller_upgrade_process.html
 keywords: automating, controller, upgrade, process, network, port, ha
-summary: During a controller upgrade, the controller is replaced with another controller.
+summary: During a controller upgrade, the controller is replaced with another controller. This procedure applies to controller upgrades using "system controller replace" commands to upgrade controller hardware running ONTAP 9.8 or later.
 ---
 
 = Automating the controller upgrade process
@@ -22,3 +22,5 @@ summary: During a controller upgrade, the controller is replaced with another co
 During a controller upgrade, the controller is replaced with another controller running a newer or more powerful platform. Earlier versions of this content contained instructions for a nondisruptive controller update process that was comprised of entirely manual steps. This content provides the steps for the new automated procedure which utilizes automatic network port reachability checks to further simplify the controller upgrade experience.
 
 The manual process was lengthy and complex but in this simplified procedure you can implement a controller update using aggregate relocation, allowing for more efficient nondisruptive upgrades for HA pairs. There are significantly fewer manual steps, especially around validation, collection of information, and post checks.
+
+// Clean-up, 2022-03-07

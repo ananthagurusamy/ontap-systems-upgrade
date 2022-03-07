@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto-app/decide_to_use_the_aggregate_relocation_guide.html
 keywords: deciding, aggregate, relocation, content, storage, controllers, administrators, ontap, ha, high, availability
-summary: This content describes how to upgrade the storage controllers in an HA pair with new controllers.
+summary: This content describes how to upgrade the storage controllers in an HA pair with new controllers. This procedure applies to controller upgrades using "system controller replace" commands to upgrade controller hardware running ONTAP 9.8 or later.
 ---
 
 = Decide whether to use the aggregate relocation procedure
@@ -67,3 +67,4 @@ include::../_include/ru_auto_decide_use_arl_guide_end.adoc[]
 
 // 2021-04-14 Burt 1367155
 // 2021-04-16 Burt 1379899
+// Clean-up, 2022-03-07

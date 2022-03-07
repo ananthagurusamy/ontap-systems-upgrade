@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto-app/reboots_panics_or_power_cycles.html
 keywords: reboots, panics, power, cycles, node, crash
-summary: The system might crash – reboot, panic or go through a power cycle.
+summary: The system might crash – reboot, panic or go through a power cycle. This procedure applies to controller upgrades using "system controller replace" commands to upgrade controller hardware running ONTAP 9.8 or later.
 ---
 
 = Reboots, panics, or power cycles

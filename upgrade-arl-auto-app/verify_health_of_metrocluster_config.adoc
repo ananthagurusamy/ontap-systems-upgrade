@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto-app/verify_health_of_metrocluster_config.html
 keywords: verifying, health, metrocluster, configuration, fabric, mcc
-summary: Before starting upgrade on a Fabric MetroCluster configuration.
+summary: Before starting upgrade on a Fabric MetroCluster configuration. This procedure applies to controller upgrades using "system controller replace" commands to upgrade controller hardware running ONTAP 9.8 or later.
 ---
 
 = Verify the health of the MetroCluster configuration

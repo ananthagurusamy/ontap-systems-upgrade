@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto-app/resume_snapmirror_operations.html
 keywords: resuming, snapmirror, operations, transfer, relationship, updates, schedule, complete
-summary: You can resume SnapMirror transfers that were quiesced before upgrade and resume the SnapMirror relationships.
+summary: You can resume SnapMirror transfers that were quiesced before upgrade and resume the SnapMirror relationships. This procedure applies to controller upgrades using "system controller replace" commands to upgrade controller hardware running ONTAP 9.8 or later.
 ---
 
 = Resume SnapMirror operations

@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto-app/restore_key-manager_configuration_node3.html
 keywords: restoring, key-manager, configuration, node3, nve, arl, encryption, netapp, volume
-summary: If you are using Netapp Volume Encryption (NVE) to encrypt volumes on the system you are upgrading.
+summary: If you are using Netapp Volume Encryption (NVE) to encrypt volumes on the system you are upgrading. This procedure applies to controller upgrades using "system controller replace" commands to upgrade controller hardware running ONTAP 9.8 or later.
 ---
 
 = Restore key-manager configuration on node3

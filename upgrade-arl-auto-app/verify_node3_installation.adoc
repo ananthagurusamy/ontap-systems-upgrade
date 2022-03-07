@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto-app/verify_node3_installation.html
 keywords: verifying, verify, node, install, installation
-summary: Verifying the node3 installation
+summary: Verifying the node3 installation. This procedure applies to controller upgrades using "system controller replace" commands to upgrade controller hardware running ONTAP 9.8 or later.
 ---
 
 = Verify the node3 installation

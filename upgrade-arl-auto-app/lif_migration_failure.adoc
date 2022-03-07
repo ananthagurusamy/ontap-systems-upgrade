@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto-app/lif_migration_failure.html
 keywords: lif, migration, failure, mtu
-summary: After you migrate LIFs, they might not come online after migration in Stage 2, Stage 3, or Stage 5.
+summary: After you migrate LIFs, they might not come online after migration in Stage 2, Stage 3, or Stage 5. This procedure applies to controller upgrades using "system controller replace" commands to upgrade controller hardware running ONTAP 9.8 or later.
 ---
 
 = LIF migration failure
