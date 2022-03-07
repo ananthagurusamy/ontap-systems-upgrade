@@ -13,7 +13,18 @@ summary: You upgrade the AFF A700 controller hardware with the AFF A900 controll
 :imagesdir: ./media/
 
 [.lead]
-*You can use this aggregate relocation procedure to upgrade an AFF A700 to an AFF A900 system by using `system controller replace` commands. This procedure applies to AFF A700 and AFF A900 systems running ONTAP 9.10.1 RC2 or later.*
+This procedure describes how to upgrade the controller hardware using aggregate relocation (ARL) for the following system configuration:
+
+[cols=4*,options="header",cols="30,20,20,30"]
+|===
+|Method |ONTAP version |Supported systems |Description
+
+|Using `system controller replace` commands
+|9.10 or later
+|AFF A900 to AFF A700
+|Converts an AFF A700 to an AFF A900 system in the same chassis
+|===
+
 
 You can nondisruptively upgrade controller hardware on a HA pair of AFF A700 nodes to an AFF A900 system by swapping the controller module and the nonvolatile storage module (NVS). You migrate non-root aggregates between the AFF A700 nodes and then migrate to the AFF A900 nodes in the HA pair. The data hosted on the nodes that you are upgrading is accessible during the upgrade procedure.
 
