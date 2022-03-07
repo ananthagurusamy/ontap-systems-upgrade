@@ -19,13 +19,13 @@ This procedure describes how to upgrade the controller hardware using aggregate 
 |===
 |Method |ONTAP version |Supported systems
 
-|Manual upgrade
+|Manual upgrade using ARL
 |9.8 or earlier
 a|* FAS system to FAS system
-* FAS system to V-Series system or system with FlexArray Virtualization Software
-* V-Series system to V-Series system or a system with FlexArray Virtualization Software
-* V-Series system or system with FlexArray Virtualization Software to an FAS system, provided that the V-Series system or system with FlexArray Virtualization Software has no array LUNs.
+* FAS system to a system with FlexArray Virtualization Software or a V-Series system
 * AFF system to AFF system
+* System with FlexArray Virtualization Software or a V-Series system to a FAS system, provided that the system with FlexArray Virtualization Software or V-Series system has no array LUNs.
+* V-Series system to a system with FlexArray Virtualization Software or a V-Series system
 |===
 
 include::../_include/ru_man_use_arl_overview.adoc[]
