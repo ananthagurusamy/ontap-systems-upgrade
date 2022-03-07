@@ -18,8 +18,6 @@ summary: You upgrade the original controller hardware with the replacement contr
 [.lead]
 This procedure describes how to upgrade the controller hardware using aggregate relocation (ARL) for the following system configuration:
 
-This procedure describes how to upgrade the controller hardware using aggregate relocation (ARL) for the following system setup:
-
 [cols=3*,options="header",cols="40,20,40"]
 
 |===
