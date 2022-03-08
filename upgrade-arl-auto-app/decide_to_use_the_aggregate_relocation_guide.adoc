@@ -67,4 +67,3 @@ include::../_include/ru_auto_decide_use_arl_guide_end.adoc[]
 
 // 2021-04-14 Burt 1367155
 // 2021-04-16 Burt 1379899
-// Clean-up, 2022-03-07
