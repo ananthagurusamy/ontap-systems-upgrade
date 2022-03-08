@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto-app/automate_the_controller_upgrade_process.html
 keywords: automating, controller, upgrade, process, network, port, ha
-summary: During a controller upgrade, the controller is replaced with another controller. This procedure applies to controller upgrades using "system controller replace" commands to upgrade controller hardware running ONTAP 9.8 or later.
+summary: "The partially automated ARL procedure for controllers running ONTAP 9.8 or later uses automatic network port reachability to simplify the controller upgrade."
 ---
 
 = Automating the controller upgrade process

@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto-app/verify_node3_installation.html
 keywords: verifying, verify, node, install, installation
-summary: Verifying the node3 installation. This procedure applies to controller upgrades using "system controller replace" commands to upgrade controller hardware running ONTAP 9.8 or later.
+summary: "You can verify the node3 installation by using "system controller replace" commands on controllers running ONTAP 9.8 or later."
 ---
 
 = Verify the node3 installation
@@ -119,7 +119,7 @@ NOTE: In this procedure, the section _Re-creating VLANs, ifgrps, and broadcast d
 
 == Restore network configuration on node3
 
-After you confirm that node3 is in quorum and can communicate with node2, verify that node1’s VLANs, interface groups,  and broadcast domains are seen on node3.  Also,  verify that all node3 network ports are configured in their correct broadcast domains.
+After you confirm that node3 is in quorum and can communicate with node2, verify that node1’s VLANs, interface groups, and broadcast domains are seen on node3.  Also, verify that all node3 network ports are configured in their correct broadcast domains.
 
 .About this task
 

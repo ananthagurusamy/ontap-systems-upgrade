@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto-app/decommission_old_system.html
 keywords: decommission, old system, upgrade, databases, netapp, support, site, serial, number, cluster
-summary: After upgrading, you can decommission the old system through the NetApp Support Site. This procedure applies to controller upgrades using "system controller replace" commands to upgrade controller hardware running ONTAP 9.8 or later.
+summary: "After upgrading by using "system controller replace" commands, you can decommission the old system through the NetApp Support Site on controllers running ONTAP 9.8 or later."
 ---
 
 = Decommission the old system
