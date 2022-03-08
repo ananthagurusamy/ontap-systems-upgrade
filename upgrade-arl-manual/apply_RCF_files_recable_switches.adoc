@@ -23,9 +23,9 @@ The FC switch port usage must match the usage described in the _Fabric-attached 
 
 . Go to the https://mysupport.netapp.com/site/products/all/details/metrocluster-rcf/downloads-tab[MetroCluster RCF downloads^] page and select the RCFs for your switch configuration.
 +
-You must use the RCFs that match your switch model.
+You must use the RCFs that match your switch models.
 +
-. Install your FC switch RCF by selecting the procedure for your switch type and following the installation instructions:
+. Install the FC switch RCFs by selecting the procedure that matches your switch models and following the installation instructions:
 
 * https://docs.netapp.com/us-en/ontap-metrocluster/install-fc/task_install_the_brocade_fc_switch_rcf_file.html[Install a Brocade FC switch RCF^]
 * https://docs.netapp.com/us-en/ontap-metrocluster/install-fc/task_download_and_install_the_cisco_fc_switch_rcf_files.html[Install a Cisco FC switch RCF^]
