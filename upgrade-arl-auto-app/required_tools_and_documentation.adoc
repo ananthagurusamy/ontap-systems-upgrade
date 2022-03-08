@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto-app/required_tools_and_documentation.html
 keywords: required, tools, documentation, install, worksheet, ontap
-summary: You must have specific tools to install the new hardware, and you need to reference other documents during the upgrade process. This procedure applies to controller upgrades using "system controller replace" commands to upgrade controller hardware running ONTAP 9.8 or later.
+summary: "When you use this "system controller replace" command procedure, you must have specific tools to install the new hardware, and you need to reference other documents during the upgrade process on controllers running ONTAP 9.8 or later."
 ---
 
 = Required tools and documentation

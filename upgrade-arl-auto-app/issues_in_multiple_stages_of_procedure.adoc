@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto-app/issues_in_multiple_stages_of_procedure.html
 keywords: issues, arise, multiple, stages, procedure
-summary: Some issues can occur during different stages of the procedure. This procedure applies to controller upgrades using "system controller replace" commands to upgrade controller hardware running ONTAP 9.8 or later.
+summary: "Some issues can occur during different stages of the "system controller replace" command procedure to upgrade controller hardware running ONTAP 9.8 or later."
 ---
 
 = Issues that can arise in multiple stages of the procedure
