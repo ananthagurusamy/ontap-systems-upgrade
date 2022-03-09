@@ -1,12 +1,12 @@
-You need to install node4 in the rack, transfer node2 connections to node4, and boot node4. You must also reassign any node2 spares, any disks belonging to root, and any non-root aggregates that were not relocated to node3 earlier.
+You must install node4 in the rack, transfer node2 connections to node4, and boot node4. You must also reassign any node2 spares, any disks belonging to root, and any non-root aggregates that were not relocated to node3 earlier.
 
 .About this task
 
-You need to netboot node4 if it does not have the same version of ONTAP 9 that is installed on node2. After you install node4, boot it from the ONTAP 9 image stored on the web server. You can then download the correct files to the boot media device for subsequent system boots by following the instructions in link:prepare_for_netboot.html[Prepare for netboot]
+You must netboot node4 if it does not have the same version of ONTAP 9 that is installed on node2. After you install node4, boot it from the ONTAP 9 image stored on the web server. You can then download the correct files to the boot media device for subsequent system boots by following the instructions in link:prepare_for_netboot.html[Prepare for netboot]
 
-However, you do not need to netboot node4 if it has the same or later version of Data ONTAP 9 that is installed on node2.
+However, do not netboot node4 if it has the same or later version of Data ONTAP 9 that is installed on node2.
 
-*Important*:
+*Important information:*
 
 * If you are upgrading a V-Series system or a system with FlexArray Virtualization Software that is connected to storage arrays, you need to complete <<man_install4_Step1,Step 1>> through <<man_install4_Step7,Step 7>>, leave this section at <<man_install4_Step8,Step 8>> and follow instructions in link:set_fc_uta_uta2_config_node4.html[Set the FC or UTA/UTA2 configuration on node4] as needed, entering the commands in Maintenance mode. You then need to return to this section and resume the procedure at <<man_install4_Step9,Step 9>>.
 
@@ -34,7 +34,7 @@ If node4 is in a separate chassis from node3, you can put node4 in the same loca
 The following references help you make proper cable connections. Go to link:other_references.html[References] to link to them.
 +
 * _Installation and Setup Instructions_ or _FlexArray Virtualization Installation Requirements and Reference_ for the node4 platform
-* The appropriate disk shelf procedure 
+* The appropriate disk shelf procedure
 * The _High Availability management_ documentation
 
 +
@@ -142,7 +142,7 @@ The system stops at the boot environment prompt.
 
 . [[man_install4_Step20]]Configure the netboot connection by choosing one of the following actions.
 +
-NOTE: You should use the management port and IP address as the netboot connection. Do not use a data LIF IP address or a data outage might occur while the upgrade is being performed.
+NOTE: You must use the management port and IP address as the netboot connection. Do not use a data LIF IP address or a data outage might occur while the upgrade is being performed.
 
 +
 [cols=2*,options="header",cols="30,70"]

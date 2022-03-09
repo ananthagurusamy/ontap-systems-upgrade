@@ -19,7 +19,7 @@ summary: You can verify the node4 installation by using "system controller repla
 //
 
 [.lead]
-You must verify that the physical ports from node2 map correctly to the physical ports on node4. This will allow node4 to communicate with other nodes in the cluster and with the network after the upgrade.
+You must verify that the physical ports from node2 map correctly to the physical ports on node4. This will enable node4 to communicate with other nodes in the cluster and with the network after the upgrade.
 
 .About this task
 

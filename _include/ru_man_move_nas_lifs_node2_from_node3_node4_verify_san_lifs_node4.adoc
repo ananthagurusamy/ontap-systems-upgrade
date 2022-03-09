@@ -144,7 +144,7 @@ vs1
 `portset add -vserver <vserver_name> -portset <portset_name> -port-name <port_name>`
 
 +
-NOTE: You need to ensure that you move SAN LIFs to a port that has the same link speed as the original port.
+NOTE: You must move SAN LIFs to a port that has the same link speed as the original port.
 
 . Modify the status of all LIFs to `up` so the LIFs can accept and send traffic on the node by entering the following command:
 +

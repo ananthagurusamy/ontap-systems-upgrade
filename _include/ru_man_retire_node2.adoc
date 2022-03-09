@@ -1,4 +1,4 @@
-To retire node2, you need to shut node2 down properly and remove it from the rack or chassis. If the cluster is in a SAN environment, you also need to delete the SAN LIFs.
+To retire node2, you must shut node2 down properly and remove it from the rack or chassis. If the cluster is in a SAN environment, you also must delete the SAN LIFs.
 
 .Steps
 
@@ -45,7 +45,7 @@ Warning: Cluster HA has not been configured. Cluster HA must be configured on a 
 2 entries were displayed.
 ----
 +
-NOTE: If you are upgrading a HA pair in a cluster with multiple HA pairs, you should move epsilon to the node of a HA pair not undergoing a controller upgrade. For example, if you are upgrading nodeA/nodeB in a cluster with the HA pair configuration nodeA/nodeB and nodeC/nodeD, you should move epsilon to nodeC or nodeD.
+NOTE: If you are upgrading a HA pair in a cluster with multiple HA pairs, you must move epsilon to the node of a HA pair not undergoing a controller upgrade. For example, if you are upgrading nodeA/nodeB in a cluster with the HA pair configuration nodeA/nodeB and nodeC/nodeD, you must move epsilon to nodeC or nodeD.
 //BURT 1400769 31-Jan-2022
 
 . If node2 holds epsilon, mark epsilon as `false` on the node so that it can be transferred to node3:
@@ -87,3 +87,4 @@ The value of this command must match the physical state of the system.
 
 . After node2 shuts down completely, remove it from the chassis or the rack. You can decommission node2 after the upgrade is completed. See link:decommission_old_system.html[Decommission the old system].
 // 02 Mar 2021:  Formatted from CMS
+// Clean-up, 2022-03-09

@@ -1,8 +1,8 @@
-You need to install node3 in the rack, transfer node1's connections to node3, boot node3, and install ONTAP. You then need to reassign any of node1's spare disks, any disks belonging to the root volume, and any non-root aggregates not relocated to node2 earlier.
+You must install node3 in the rack, transfer node1's connections to node3, boot node3, and install ONTAP. You then must reassign any of node1's spare disks, any disks belonging to the root volume, and any non-root aggregates not relocated to node2 earlier.
 
 .About this task
 
-You need to netboot node3 if it does not have the same version of ONTAP 9 that is installed on node1. After you install node3, boot it from the ONTAP 9 image stored on the web server. You can then download the correct files to the boot media device for subsequent system boots. See link:prepare_for_netboot.html[Prepare for netboot].
+You must netboot node3 if it does not have the same version of ONTAP 9 that is installed on node1. After you install node3, boot it from the ONTAP 9 image stored on the web server. You can then download the correct files to the boot media device for subsequent system boots. See link:prepare_for_netboot.html[Prepare for netboot].
 
 However, you do not need to netboot node3 if it has the same or a later version of ONTAP 9 that is installed on node1.
 
@@ -158,7 +158,7 @@ running ONTAP running in 7-Mode.
 
 . [[man_install3_step20]]Configure the netboot connection by choosing one of the following actions.
 +
-NOTE: You should use the management port and IP as the netboot connection. Do not use a data LIF IP or else a data outage might occur while the upgrade is being performed.
+NOTE: You must use the management port and IP as the netboot connection. Do not use a data LIF IP or else a data outage might occur while the upgrade is being performed.
 +
 [cols="35,65"]
 |===
@@ -199,7 +199,7 @@ NOTE: You should use the management port and IP as the netboot connection. Do no
 |`netboot \http://<web_server_ip>/<path_to_webaccessible_directory>/<ontap_version>_image.tgz`
 |===
 +
-The `<path_to_the_web-accessible_directory>` should lead to where you downloaded the `<ontap_version>_image.tgz` in link:prepare_for_netboot.html#man_netboot_Step1[Step 1] in the section _Prepare for netboot_.
+The `<path_to_the_web-accessible_directory>` leads to where you downloaded the `<ontap_version>_image.tgz` in link:prepare_for_netboot.html#man_netboot_Step1[Step 1] in the section _Prepare for netboot_.
 +
 NOTE: Do not interrupt the boot.
 
@@ -262,8 +262,7 @@ The system displays the system ID of the node and information about its disks, a
  ......
 ----
 +
-NOTE: You might see the message `disk show: No disks match option -a.` after entering the command. This is not an error message so you can continue with the
-procedure.
+NOTE: You might see the message `disk show: No disks match option -a.` after entering the command. This is not an error message so you can continue with the procedure.
 
 . [[man_install3_step28]]Reassign node1's spares, any disks belonging to the root, and any non-root aggregates that were not relocated to node2 earlier in link:relocate_non_root_aggr_node1_node2.html[Relocate non-root aggregates from node1 to node2].
 +
@@ -468,3 +467,4 @@ The node might go through one round of reboot before booting normally.
 
 . [[man_install3_step48]]Log in to node3.
 // 22 FEB 2021: Formatted from CMS
+// Clean-up, 2022-03-09

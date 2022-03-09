@@ -10,7 +10,7 @@ NOTE: NetApp marketing materials might use the term "UTA2" to refer to CNA adapt
 
 * However, if you have a V-Series system or a system with FlexArray Virtualization software with storage arrays, and node3 does not have onboard FC ports, onboard UTA/UTA ports, or a UTA/UTA2 card, return to _Install and boot node3_ and resume at link:install_boot_node3.html#step22[Step 22].
 
-.Choices
+.Choices:
 
 * <<Configure FC ports on node3>>
 * <<Check and configure UTA/UTA2 ports on node3>>
