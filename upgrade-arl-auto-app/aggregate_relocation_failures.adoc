@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto-app/aggregate_relocation_failures.html
 keywords: aggregate, relocation, failures, ARL
-summary: Aggregate relocation (ARL) might fail at different points during the upgrade.
+summary: You can troubleshoot aggregate relocation failures that might occur after an ARL upgrade by using "system controller replace" commands on controllers running ONTAP 9.8 or later.
 ---
 
 = Aggregate relocation failures

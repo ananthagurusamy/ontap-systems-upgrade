@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto-app/stage_2_index.html
 keywords: relocating, retiring, node1, lif
-summary: "You can relocate and retire node1 by using "system controller replace" commands on controllers running ONTAP 9.8 or later."
+summary: You can relocate and retire node1 by using "system controller replace" commands on controllers running ONTAP 9.8 or later.
 ---
 
 = Stage 2. Relocate and retire node1

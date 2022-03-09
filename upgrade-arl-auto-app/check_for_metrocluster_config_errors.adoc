@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto-app/check_for_metrocluster_config_errors.html
 keywords: metrocluster, configuration, errors, config, advisor, netapp, support, site
-summary: "When you use this "system controller replace" command procedure, you can use the Config Advisor tool available from the NetApp Support Site to check for common configuration errors on controllers running ONTAP 9.8 or later." 
+summary: When you use this "system controller replace" command procedure, you can use the Config Advisor tool available from the NetApp Support Site to check for common configuration errors on controllers running ONTAP 9.8 or later.
 ---
 
 = Check for MetroCluster configuration errors

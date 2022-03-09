@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto-app/verify_node4_installation.html
 keywords: verify, node4, installation, physical ports, node2, node, LIF, MetroCluster
-summary: "You can verify the node4 installation by using "system controller replace" commands on controllers running ONTAP 9.8 or later."
+summary: You can verify the node4 installation by using "system controller replace" commands on controllers running ONTAP 9.8 or later.
 ---
 
 = Verify the node4 installation
@@ -44,6 +44,7 @@ The output of the `health` field should be `true`.
 . Verify that node4 is part of the same cluster as node3 and that it is healthy:
 +
 `cluster show`
+
 
 . Each cluster LIF must be listening on port 7700. Verify that the cluster LIFs are listening on port 7700:
 +
@@ -130,6 +131,7 @@ After you confirm that node4 is in quorum and can communicate with node3, verify
 .About this task
 
 For more information on creating and re-creating VLANs, interface groups, and broadcast domains, refer to link:other_references.html[References] to link to _Network Management_.
+
 
 .Steps
 
@@ -311,4 +313,3 @@ When all ports are correctly configured and added to the correct broadcast domai
 +
 `network interface show -fields home- port,status-admin`
 // 11 DEC 2020, thomi, checked
-// Clean-up, 2022-03-07

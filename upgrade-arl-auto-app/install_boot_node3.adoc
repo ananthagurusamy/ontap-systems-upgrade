@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto-app/install_boot_node3.html
 keywords: installing, booting, node3, ontap
-summary: "You must install node3 in the rack, transfer node1's connections to node3, boot node3, and install ONTAP by using "system controller replace" commands on controllers running ONTAP 9.8 or later."
+summary: You must install node3 in the rack, transfer node1's connections to node3, boot node3, and install ONTAP by using "system controller replace" commands on controllers running ONTAP 9.8 or later.
 ---
 
 = Install and boot node3
@@ -53,5 +53,3 @@ include::../_include/ru_auto_install_boot_node3_step_7_28.adoc[]
 [start=29]
 . [[step29]]For a MetroCluster configuration, V-Series systems and systems with FlexArray Virtualization software connected to storage arrays,  you must set and configure the FC or UTA/UTA2 ports on node3 to detect the disks attached to the node.
 To complete this task, go to section link:set_fc_or_uta_uta2_config_on_node3.html[Set the FC or UTA/UTA2 configuration on node3].
-
-// Clean-up, 2022-03-07
