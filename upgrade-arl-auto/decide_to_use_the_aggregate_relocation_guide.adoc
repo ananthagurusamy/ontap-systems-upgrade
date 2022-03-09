@@ -27,7 +27,7 @@ You should use this content under the following circumstances:
 
 NOTE: You can use NetApp Storage Encryption (NSE) and NetApp Volume Encryption (NVE) with this procedure.
 
-The following tables shows the supported model matrix for the controller upgrade.
+[[sys_commands_95_97_supported_systems]] The following tables shows the supported model matrix for the controller upgrade.
 
 [cols="50,50"]
 |===

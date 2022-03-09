@@ -8,7 +8,7 @@ Installing a new controller module changes the WWPN values associated with each 
 
 . If your configuration uses switch-based zoning, adjust the zoning to reflect the new WWPN values.
 
-. [[step27]]If NetApp Storage Encryption (NSE) is in use on this configuration, the `setenv bootarg.storageencryption.support` command must be set to `true`, and the `kmip.init.maxwait` variable needs to be set to `off` to avoid a boot loop after the node2 configuration is loaded:
+. [[step27]]If NetApp Storage Encryption (NSE) is in use on this configuration, the `setenv bootarg.storageencryption.support` command must be set to `true`, and the `kmip.init.maxwait` variable must be set to `off` to avoid a boot loop after the node2 configuration is loaded:
 +
 `setenv bootarg.storageencryption.support true`
 +
