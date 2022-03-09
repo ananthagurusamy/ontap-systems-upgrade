@@ -16,6 +16,7 @@ summary: Boot node1 with the AFF A900 controller module and NVS.
 Node1 with the AFF A900 controller module and NVS is now ready for boot up. Upgrading from an AFF A700 to an AFF A900 by swapping the controller module and NVS involves moving only the console and management connections. This section provides the steps required to boot node1 with the AFF A900 controller module and NVS.
 
 .Steps
+
 .	If NetApp Storage Encryption (NSE) is in use on this configuration, the `setenv bootarg.storageencryption.support` command must be set to `true`, and the `kmip.init.maxwait` variable must be set to `off` to avoid a boot loop after the node1 configuration is loaded:
 +
 `setenv bootarg.storageencryption.support true`
