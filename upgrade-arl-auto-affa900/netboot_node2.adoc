@@ -108,7 +108,7 @@ Do you want to restore the backup configuration now? {y|n}
 The node must be rebooted to start using the newly installed software. Do you want to reboot now? {y|n}
 ----
 +
-The controller module reboots but stops at the boot menu because the boot device was reformatted, and the configuration data needs to be restored.
+The controller module reboots but stops at the boot menu because the boot device was reformatted, and the configuration data must be restored.
 .	At the prompt, run the `wipeconfig` command to clear any previous configuration on the boot media.
 ..	When you see the message below, answer `yes`:
 +

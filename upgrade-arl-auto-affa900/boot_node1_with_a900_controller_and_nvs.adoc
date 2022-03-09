@@ -153,7 +153,7 @@ Login:
 ====
 In the preceding console output example, ONTAP will prompt you for the partner node name if the system uses Advanced Disk Partitioning (ADP) disks.
 
-The system IDs shown in the above example are example IDs. The actual system IDs of the nodes that you are upgrading will be different.
+The system IDs shown in the preceding example are example IDs. The actual system IDs of the nodes that you are upgrading will be different.
 
 Between entering node names at the prompt and the login prompt, the node reboots a few times to restore the environment variables, update firmware on the cards in the system, and for other ONTAP updates.
 ====

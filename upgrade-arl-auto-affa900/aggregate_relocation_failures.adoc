@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto-affa900/aggregate_relocation_failures.html
 keywords: aggregate, relocation, failures, arl, stage 2, stage 3, stage 5
-summary: "Aggregate relocation (ARL) might fail at 'different points' during the upgrade."
+summary: "Aggregate relocation (ARL) might fail at different points during the upgrade."
 ---
 
 = Aggregate relocation failures

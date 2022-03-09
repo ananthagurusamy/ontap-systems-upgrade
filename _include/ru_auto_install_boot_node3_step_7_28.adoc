@@ -35,7 +35,7 @@ Always use netboot to update the new node to the desired image. If you use anoth
 +
 `The node must be rebooted to start using the newly installed software. Do you want to reboot now? {y|n}`
 +
-The controller module reboots but stops at the boot menu because the boot device was reformatted, and the configuration data needs to be restored.
+The controller module reboots but stops at the boot menu because the boot device was reformatted, and the configuration data must be restored.
 
 . [[step11]]Select maintenance mode `5` from the boot menu and enter `y` when you are prompted to continue with the boot.
 . [[step12]]Verify that the controller and chassis are configured as ha:
@@ -97,7 +97,7 @@ Interrupt the autoboot by pressing `Ctrl-C` at the boot environment prompt.
 +
 `saveenv`
 
-. [[auto_install3_step21]]On the new node, in boot loader, the `partner-sysid` parameter needs to be set. For node3, `partner-sysid` needs to be that of node2. Verify the `partner-sysid` for node3:
+. [[auto_install3_step21]]On the new node, in boot loader, the `partner-sysid` parameter must be set. For node3, `partner-sysid` must be that of node2. Verify the `partner-sysid` for node3:
 +
 `printenv partner-sysid`
 
@@ -129,7 +129,7 @@ See your storage array and zoning documentation for instructions.
 Installing a new controller module changes the WWPN values associated with each onboard FC port.
 
 . [[step26]]If your configuration uses switch-based zoning, adjust the zoning to reflect the new WWPN values.
-. [[step27]]If NetApp Storage Encryption (NSE) is in use on this configuration, the `setenv bootarg.storageencryption.support` command must be set to `true`, and the `kmip.init.maxwait` variable needs to be set to `off` to avoid a boot loop after the node1 configuration is loaded:
+. [[step27]]If NetApp Storage Encryption (NSE) is in use on this configuration, the `setenv bootarg.storageencryption.support` command must be set to `true`, and the `kmip.init.maxwait` variable must be set to `off` to avoid a boot loop after the node1 configuration is loaded:
 +
 `setenv bootarg.storageencryption.support true`
 +
