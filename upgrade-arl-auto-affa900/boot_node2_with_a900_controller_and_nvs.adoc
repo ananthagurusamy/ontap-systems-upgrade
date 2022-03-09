@@ -16,7 +16,7 @@ summary: Boot node2 with the AFF A900 controller module and NVS.
 Node2 with the AFF A900 controller module and NVS is now ready for upgrade. Upgrading from an AFF A700 to an AFF A900 by swapping the controller module and NVS involves moving only the console and management connections. This section provides the steps required to boot node2 with the AFF A900 controller module and NVS.
 
 .Steps
-.	[[boot_node2_step1]]If NetApp Storage Encryption (NSE) is in use on this configuration, the `setenv bootarg.storageencryption.support` command must be set to `true`, and the `kmip.init.maxwait` variable needs to be set to `off` to avoid a boot loop after the node2 configuration is loaded:
+.	[[boot_node2_step1]]If NetApp Storage Encryption (NSE) is in use on this configuration, the `setenv bootarg.storageencryption.support` command must be set to `true`, and the `kmip.init.maxwait` variable must be set to `off` to avoid a boot loop after the node2 configuration is loaded:
 +
 `setenv bootarg.storageencryption.support true`
 +
@@ -151,9 +151,9 @@ Login:
 +
 [NOTE]
 ====
-In the above console output example, ONTAP will prompt you for the partner node name if the system uses Advanced Disk Partitioning (ADP) disks.
+In the preceding console output example, ONTAP will prompt you for the partner node name if the system uses Advanced Disk Partitioning (ADP) disks.
 
-The system IDs shown in the above example are example IDs. The actual system IDs of the nodes you are upgrading will be different.
+The system IDs shown in the preceding example are example IDs. The actual system IDs of the nodes that you are upgrading will be different.
 
-Between entering node names at the prompt and the login prompt, the node reboots a couple of times to restore the environment variables, update firmware on the cards in the system, and for other ONTAP updates.
+Between entering node names at the prompt and the login prompt, the node reboots several of times to restore the environment variables, update firmware on the cards in the system, and for other ONTAP updates.
 ====
