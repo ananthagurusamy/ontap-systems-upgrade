@@ -6,7 +6,7 @@
 +
 `network interface modify -vserver <vserver_name> -lif <LIF_name>-home-port <netport|ifgrp> -home-node <node3>`
 
-. [[man_lif_verify_3_step8]]Ensure that the SAN LIFs are on the correct ports on node3:
+. [[man_lif_verify_3_step8]]Confirm that the SAN LIFs are on the correct ports on node3:
 
 .. Enter the following command and examine its output:
 +

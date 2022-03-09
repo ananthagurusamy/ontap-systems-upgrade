@@ -13,7 +13,7 @@ summary: After you install and boot node3, you need to verify that it is install
 :imagesdir: ./media/
 
 [.lead]
-After you install and boot node3, you need to verify that it is installed correctly. You must wait for node3 to join quorum and then resume the relocation operation.
+After you install and boot node3, you must verify that it is installed correctly. You must wait for node3 to join quorum and then resume the relocation operation.
 
 .About this task
 
@@ -70,3 +70,4 @@ If you are using NetApp Volume Encryption (NVE) to encrypt volumes on the system
 include::../_include/ru_auto_restore_key_manager_config_ontap_95_97.adoc[]
 
 // bottom half of p. 42. in PDF
+// Clean-up, 2022-03-09

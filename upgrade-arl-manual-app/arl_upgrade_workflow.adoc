@@ -13,7 +13,7 @@ summary: ARL upgrade workflow
 :imagesdir: ./media/
 
 [.lead]
-Before you upgrade the nodes using ARL, you should understand how the procedure works. In this document, the procedure is broken down into several stages.
+Before you upgrade the nodes using ARL, you must understand how the procedure works. In this document, the procedure is broken down into several stages.
 
 During the procedure, you upgrade the original controller hardware with the replacement controller hardware, one controller at a time, taking advantage of the HA pair configuration to relocate the ownership of non-root aggregates. All non-root aggregates must undergo two relocations to reach their final destination, which is the correct upgraded node.
 
@@ -91,7 +91,7 @@ Aggregate ownership at the end of Stage 5:
 * Node4 is the home owner and current owner of aggregates that originally belonged to node2.
 
 |Stage 6: Complete the upgrade
-a| . Ensure the new controllers are set up correctly.
+a| . Confirm the new controllers are set up correctly.
 . Set up Storage Encryption on the new nodes.
 +
 This task is required only if you are upgrading to a system with self-encrypting drives.
@@ -102,3 +102,5 @@ This task is required only if you are upgrading to a system with self-encrypting
 
 No changes occur in aggregate ownership.
 |===
+
+// Clean-up, 2022-03-09

@@ -11,7 +11,7 @@ summary: 'This content describes how to upgrade controller hardware of an AFF sy
 [.lead]
 This content describes how to upgrade controller hardware of an AFF system or a FAS system in a cluster by moving storage or volumes.
 
-You should use this procedure if you want to upgrade controller hardware in the following situations:
+Use this procedure if you want to upgrade controller hardware in the following situations:
 
 NOTE: The hardware upgrade procedures have been simplified in ONTAP 9.8 with the introduction of the automatic port placement feature.
 
@@ -49,3 +49,5 @@ xref:upgrade-methods.adoc[Choose methods for upgrading controller hardware]
 https://docs.netapp.com/us-en/ontap-metrocluster/maintain/concept_where_to_find_procedures_for_mcc_maintenance_tasks.html[Where to find procedures for MetroCluster maintenance tasks^]
 
 https://hwu.netapp.com[NetApp Hardware Universe^]
+
+// Clean-up, 2022-03-09

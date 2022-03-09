@@ -239,7 +239,7 @@ If the interface group’s reachability status is not `ok`, assign it to the app
 +
 `network port broadcast-domain add-port`
 +
-Verify that there are no unreachable or unexpected ports present. Check the reachability status for all physical ports by using the following command and examining the output to ensure the status is `ok`:
+Verify that there are no unreachable or unexpected ports present. Check the reachability status for all physical ports by using the following command and examining the output to confirm the status is `ok`:
 +
 `network port reachability show -detail`
 
@@ -313,3 +313,4 @@ When all ports are correctly configured and added to the correct broadcast domai
 +
 `network interface show -fields home- port,status-admin`
 // 11 DEC 2020, thomi, checked
+// Clean-up, 2022-03-09

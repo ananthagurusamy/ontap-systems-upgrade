@@ -13,7 +13,7 @@ summary: After you install and boot node4, you need to verify that it is install
 :imagesdir: ./media/
 
 [.lead]
-After you install and boot node4, you need to verify that it is installed correctly, that it is part of the cluster, and that it can communicate with node3.
+After you install and boot node4, you must verify that it is installed correctly, that it is part of the cluster, and that it can communicate with node3.
 
 .Steps
 

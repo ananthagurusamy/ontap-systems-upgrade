@@ -67,7 +67,7 @@ The system pauses once the resource relocation is complete.
 +
 If any aggregates fail to relocate or are vetoed, you must take manually relocate the aggregates, or override either the vetoes or destination checks, if necessary. See the section link:relocate_failed_or_vetoed_aggr.html[Relocate failed or vetoed aggregates] for more information.
 
-. Ensure that the SAN LIFs are on the correct ports on node4 by completing the following substeps:
+. Confirm that the SAN LIFs are on the correct ports on node4 by completing the following substeps:
 +
 .. Enter the following command and examine its output:
 +
@@ -110,7 +110,7 @@ vs1
 +
 `portset add -vserver <vserver_name> -portset <portset_name> -port-name <port_name>`
 +
-NOTE: You need to ensure that you move SAN LIFs to a port that has the same link speed as the original port.
+NOTE: You must confirm that you move SAN LIFs to a port that has the same link speed as the original port.
 
 .. Modify the status of all LIFs to `up` so the LIFs can accept and send traffic on the node by entering the following command:
 +
@@ -134,3 +134,5 @@ The system performs the following post-checks:
 * Aggregate status check
 * Disk status check
 * Cluster LIF status check
+
+// Clean-up, 2022-03-09

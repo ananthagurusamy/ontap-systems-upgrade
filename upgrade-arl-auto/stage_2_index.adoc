@@ -13,7 +13,7 @@ summary: During Stage 1, you must prepare the nodes for the upgrade and run a se
 :imagesdir: ./media/
 
 [.lead]
-During Stage 2, you relocate the node1 aggregates and LIFs to node2, record node1 information, and then retire node1. This process is largely automated; the operation pauses to allow you to check its status. You must manually resume the operation.
+During Stage 2, you relocate the node1 aggregates and LIFs to node2, record node1 information, and then retire node1. This process is largely automated; the operation pauses to enable you to check its status. You must manually resume the operation.
 
 .Steps
 

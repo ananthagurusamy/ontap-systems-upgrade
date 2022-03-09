@@ -93,7 +93,7 @@ Aggregate ownership at the end of Stage 5:
 * Node4 is the home owner and current owner of aggregates that originally belonged to node2.
 
 |Stage 6: Complete the upgrade
-a| . Ensure the new controllers are set up correctly.
+a| . Confirm the new controllers are set up correctly.
 . Set up Storage Encryption on the new nodes.
 +
 This task is required only if you are upgrading to a system with self-encrypting drives.
@@ -105,3 +105,4 @@ This task is required only if you are upgrading to a system with self-encrypting
 No changes occur in aggregate ownership.
 |===
 // 26 FEB 2021:  Formatted from CMS
+// Clean-up, 2022-03-09

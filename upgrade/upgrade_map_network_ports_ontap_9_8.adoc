@@ -9,7 +9,7 @@ summary: To enable node3 and node4 to communicate with each other in the cluster
 :imagesdir: ../media/
 
 [.lead]
-To enable node3 and node4 to communicate with each other in the cluster and with the network after the upgrade, you must ensure the physical ports are correctly configured with the settings for the intended use, such as cluster, data, and so on.
+To enable node3 and node4 to communicate with each other in the cluster and with the network after the upgrade, you must confirm that the physical ports are correctly configured with the settings for the intended use, such as cluster, data, and so on.
 
 .Before you begin
 These steps apply to systems running ONTAP 9.8. If you are running ONTAP 9.7 or earlier, you must use the procedure in xref:upgrade-map-network-ports-ontap-9-7-or-earlier.adoc[Map network ports using ONTAP 9.7 or earlier].
@@ -94,7 +94,7 @@ different broadcast domain, which can cause LIFs to be re-homed away
 from the port. Are you sure you want to continue? {y|n}:
 ----
 
-.. To allow ONTAP to complete the repair, wait for about a minute after running the `reachability repair` command on the last port.
+.. To enable ONTAP to complete the repair, wait for about a minute after running the `reachability repair` command on the last port.
 .. List all broadcast domains on the cluster:
 +
 `broadcast-domain show`
@@ -141,7 +141,6 @@ NOTE: Depending on the complexity of the networking configuration of the system 
 .. Verify that all LIF home ports have been restored:
 +
 `displaced-interface show`
-
 +
 When all ports are correctly configured and added to the correct broadcast domains, the network port reachability show command should report the reachability status as ok for all connected ports, and the status as no-reachability for ports with no physical connectivity. If any ports are reporting a status other than these two, repair the reachability as outlined in <<map_98_5,Step 5>>.
 . Verify that all LIFs are administratively up on ports belonging to the correct broadcast domains.
@@ -160,3 +159,5 @@ NOTE: For iSCSI LIFs, modification of the home port requires the LIF to be admin
 `network interface revert *`
 
 You have completed mapping the physical ports. To complete the upgrade, go to xref:upgrade-final-upgrade-steps-in-ontap-9-8.adoc[Perform final upgrade steps in ONTAP 9.8].
+
+// Clean-up, 2022-03-09

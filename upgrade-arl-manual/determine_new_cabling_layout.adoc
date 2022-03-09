@@ -25,6 +25,7 @@ Use the _Fabric-attached MetroCluster Installation and Configuration_ content to
 
 Go to link:other_references.html[References] to link to the _Fabric-attached MetroCluster Installation and Configuration_ content.
 
-NOTE: If your environment cannot be cabled in a way that RCFs can be used, then contact technical support. Do not use this procedure if the cabling cannot use RCFs.
+NOTE: If your environment cannot be cabled in a way that RCFs can be used, contact technical support. Do not use this procedure if the cabling cannot use RCFs.
 
 // 02 MAR 2021:  Formatted from CMS
+// Clean-up, 2022-03-09

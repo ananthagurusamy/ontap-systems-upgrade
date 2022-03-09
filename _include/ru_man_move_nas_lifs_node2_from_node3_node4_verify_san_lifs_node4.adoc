@@ -101,7 +101,7 @@ node4
 +
 `set -privilege admin`
 
-. [[man_lif_verify_4_Step10]]Ensure that the SAN LIFs are on the correct ports on node4 by completing the following substeps:
+. [[man_lif_verify_4_Step10]]Confirm that the SAN LIFs are on the correct ports on node4 by completing the following substeps:
 
 .. Enter the following command:
 +
@@ -157,3 +157,5 @@ NOTE: You must move SAN LIFs to a port that has the same link speed as the origi
 . [[man_lif_verify_4_Step13]]If any LIFs are down, set the administrative status of the LIFs to `up` by entering the following command, once for each LIF:
 +
 `network interface modify -vserver <vserver_name> -lif <lif_name> -status-admin up`
+
+// Clean-up, 2022-03-09

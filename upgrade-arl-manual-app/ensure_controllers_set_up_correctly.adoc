@@ -5,7 +5,7 @@ keywords: set up, controllers, correctly, ha pair, lif, aggregate, node, failove
 summary: Ensure the new controllers are set up correctly by enabling the HA pair.
 ---
 
-= Ensure that the new controllers are set up correctly
+= Confirm that the new controllers are set up correctly
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -15,3 +15,4 @@ summary: Ensure the new controllers are set up correctly by enabling the HA pair
 [.lead]
 include::../_include/ru_man_ensure_controllers_set_up_correctly.adoc[]
 // 25 Feb 2021:  formatted from CMS
+// Clean-up, 2022-03-09

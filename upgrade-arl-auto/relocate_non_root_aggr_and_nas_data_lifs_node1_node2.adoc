@@ -18,7 +18,7 @@ Before you can replace node1 with node3, you must move the non-root aggregates a
 
 .Before you begin
 
-The operation should already be paused when you begin the task; you must manually resume the operation.
+The operation must already be paused when you begin the task; you must manually resume the operation.
 
 .About this task
 
@@ -67,3 +67,5 @@ Distribution Function: ip
 .. If any interface groups are configured on the node, record the names of those groups and the ports assigned to them, and then delete the ports by entering the following command, once for each port:
 +
 `network port ifgrp remove-port -node <nodename> -ifgrp <ifgrp_name> -port <netport>`
+
+// Clean-up, 2022-03-09

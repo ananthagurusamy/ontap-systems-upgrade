@@ -280,7 +280,7 @@ Do you want to continue (y/n)? y
 ----
 .. Enter `y` to allow disk ownership to be updated.
 
-. If you are upgrading from a system with external disks to a system that supports internal and external disks (A800 systems, for example), set node4 as root to ensure it boots from the root aggregate of node2.
+. If you are upgrading from a system with external disks to a system that supports internal and external disks (A800 systems, for example), set node4 as root to confirm it boots from the root aggregate of node2.
 +
 WARNING: *Warning: You must perform the following substeps in the exact order shown; failure to do so might cause an outage or even data loss.*
 
@@ -392,3 +392,5 @@ NOTE: The system might reboot twice before displaying the mismatch warning.
 The node might complete one round of rebooting before booting normally.
 
 . Log in to node4.
+
+// Clean-up, 2022-03-09

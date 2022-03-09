@@ -40,9 +40,9 @@ a|
 +
 You can suppress the quorum check during the reboot process by using the `-ignore-quorum-warnings` option.
 
-. Connect to the serial console, if you are not already connected. The node should be at the LOADER prompt. Use the `boot_ontap maint` command to boot into maintenance mode.
+. Connect to the serial console, if you are not already connected. The node must be at the LOADER prompt. Use the `boot_ontap maint` command to boot into maintenance mode.
 +
-A message might appear asking you to ensure that the partner node is down or takeover is manually disabled on the partner node. You can enter `yes` to continue.
+A message might appear asking you to confirm that the partner node is down or takeover is manually disabled on the partner node. You can enter `yes` to continue.
 
 . [[shutdown_node_step5]]Record each original node's system ID, which is obtained through disk ownership information in Maintenance mode:
 +
@@ -79,7 +79,7 @@ Adapter Mode    Type      Mode    Type    Status
 ...
 ----
 
-. In Maintenance mode, destroy thenode1 and node2 mailboxes: +
+. In Maintenance mode, destroy the node1 and node2 mailboxes: +
 +
 `mailbox destroy local`
 +
@@ -110,3 +110,5 @@ Use "storage failover modify -node <nodename> -onreboot false" to turn it OFF.
 . Turn off the power to node1 and node2, and then unplug them from the power source.
 . Label and remove all cables from node1 and node2.
 . Remove the chassis containing node1 and node2.
+
+// Clean-up, 2022-03-09

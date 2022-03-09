@@ -13,7 +13,7 @@ summary: After you install and boot node3, you need to verify that it is install
 :imagesdir: ./media/
 
 [.lead]
-After you install and boot node3, you need to verify that it is installed correctly, that it is part of the cluster, and that it can communicate with node2.
+After you install and boot node3, you must verify that it is installed correctly, that it is part of the cluster, and that it can communicate with node2.
 
 .Steps
 
@@ -53,3 +53,4 @@ Time                Node   Severity      Event
 8/13/2012 14:03:43  node4  INFORMATIONAL scsiblade.in.quorum: The scsi-blade ...
 ----
 // 24 FEB 2021:  formatted from CMS
+// Clean-up, 2022-03-09

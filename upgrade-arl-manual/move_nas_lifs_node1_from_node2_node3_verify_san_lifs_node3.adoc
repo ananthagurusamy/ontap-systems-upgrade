@@ -13,7 +13,7 @@ summary: You need to move the NAS data LIFs belonging to node1 that are currentl
 :imagesdir: ./media/
 
 [.lead]
-After you verify the node3 installation and before you relocate aggregates from node2 to node3, you need to move the NAS data LIFs belonging to node1 that are currently on node2 from node2 to node3. You also need to verify the SAN LIFs on node3.
+After you verify the node3 installation and before you relocate aggregates from node2 to node3, you must move the NAS data LIFs belonging to node1 that are currently on node2 from node2 to node3. You also need to verify the SAN LIFs on node3.
 
 include::../_include/ru_man_move_nas_lifs_node1_from_node2_node3_verify_san_lifs_chunk_a.adoc[]
 
@@ -28,3 +28,5 @@ cluster::> network port broadcast-domain add-ports -ipspace Default -broadcast-d
 ----
 
 include::../_include/ru_man_move_nas_lifs_node1_from_node2_node3_verify_san_lifs_chunk_b.adoc[]
+
+// Clean-up, 2022-03-09

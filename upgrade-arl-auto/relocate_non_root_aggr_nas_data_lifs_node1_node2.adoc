@@ -17,7 +17,7 @@ Before you can replace node1 with node3, you must move the non-root aggregates a
 
 .Before you begin
 
-The operation should already be paused when you begin the task; you must manually resume the operation.
+The operation must already be paused when you begin the task; you must manually resume the operation.
 
 .About this task
 
@@ -68,3 +68,4 @@ Distribution Function: ip
 +
 `network port ifgrp remove-port -node _nodename_ -ifgrp _ifgrp_name_ -port _netport_`
 // p. 22-23 of PDF (not the small section at bottom of p. 23)
+// Clean-up, 2022-03-09

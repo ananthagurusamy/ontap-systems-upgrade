@@ -105,7 +105,7 @@ If the node uses two cluster ports, you should see that it is able to communicat
 +
 `set -privilege admin`
 
-. Ensure that node1 and node2 are in an HA pair and verify that the nodes are connected to each other, and that takeover is possible:
+. Confirm that node1 and node2 are in an HA pair and verify that the nodes are connected to each other, and that takeover is possible:
 +
 `storage failover show`
 +
@@ -134,7 +134,7 @@ node2          node1          true     Connected to node1
 +
 If either node is in partial giveback, use the `storage failover giveback` command to perform the giveback, and then use the `storage failover show-giveback` command to make sure that no aggregates still need to be given back. For detailed information about the commands, refer to link:other_references.html[References] to link to _High Availability management_.
 
-. [[man_prepare_nodes_step9]]Ensure that neither node1 nor node2 owns the aggregates for which it is the current owner (but not the home owner):
+. [[man_prepare_nodes_step9]]Confirm that neither node1 nor node2 owns the aggregates for which it is the current owner (but not the home owner):
 +
 `storage aggregate show -node <node_name> -is-home false -fields owner-name,homename,state`
 +

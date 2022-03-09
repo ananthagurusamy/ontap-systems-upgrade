@@ -84,7 +84,7 @@ Enter username/password if applicable, or press Enter to continue.
 +
 link:https://docs.netapp.com/us-en/ontap/san-admin/index.html[SAN management with the CLI^]
 
-. You should verify that the command output shows `ha`:
+. You must verify that the command output shows `ha`:
 +
 ----
 *> ha-config show
@@ -101,3 +101,5 @@ The `ha-config modify controller ha` command configures `ha` for the controller 
 `halt`
 +
 The system stops at the LOADER prompt
+
+// Clean-up, 2022-03-09

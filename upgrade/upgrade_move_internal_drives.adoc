@@ -15,7 +15,7 @@ If your original node is one of the supported models, during the process of upgr
 
 * You must have reviewed link:upgrade-considerations.html[Considerations for upgrading controller hardware] about moving internal drives.
 +
-You should contact technical support if you need guidance specific to your configuration.
+Contact technical support if you need guidance specific to your configuration.
 
 * The SATA or SSD drive carriers from the original node must be compatible with the new drive shelf.
 * A compatible drive shelf must already be attached to the new node.
@@ -37,6 +37,8 @@ NOTE: Use two hands when inserting the carrier.
 
 . [[move_int_drive_5]] Close the cam handle so that the carrier is fully seated in the midplane and the handle clicks into place.
 +
-You should close the handle slowly so that it aligns correctly with the face of the carrier.
+You must close the handle slowly so that it aligns correctly with the face of the carrier.
 
 . Repeat <<move_int_drive_2,Step 2>> through <<move_int_drive_5,Step 5>> for all of the drives that you are moving to the new system.
+
+// Clean-up, 2022-03-09

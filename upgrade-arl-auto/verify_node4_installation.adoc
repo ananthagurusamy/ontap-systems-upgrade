@@ -15,7 +15,7 @@ summary: Verify that node4 is installed correctly.
 [.lead]
 
 // pg. 64 middle only
-After you install and boot node4, you need to verify that it is installed correctly, that it is part of the cluster, and that it can communicate with node3.
+After you install and boot node4, you must verify that it is installed correctly, that it is part of the cluster, and that it can communicate with node3.
 
 .About this task
 At this point in the procedure, the operation will have paused as node4 joins quorum.
@@ -70,3 +70,5 @@ For more information on creating and re-creating VLANs, interface groups, and br
 If you are using NetApp Volume Encryption (NVE) to encrypt volumes on the system you are upgrading, the encryption configuration must be synchronized to the new nodes. Encrypted volumes are taken offline when ARL is complete for node1 aggregates from node2 to node4.
 
 include::../_include/ru_auto_restore_key_manager_config_ontap_95_97.adoc[]
+
+// Clean-up, 2022-03-09

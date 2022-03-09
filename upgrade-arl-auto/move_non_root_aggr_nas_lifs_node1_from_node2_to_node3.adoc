@@ -13,7 +13,7 @@ summary: After you verify the node3 installation and before you relocate aggrega
 :imagesdir: ./media/
 
 [.lead]
-After you verify the node3 installation and before you relocate aggregates from node2 to node3, you need to move the NAS data LIFs belonging to node1 that are currently on node2 from node2 to node3. You also need to verify that the SAN LIFs exist on node3.
+After you verify the node3 installation and before you relocate aggregates from node2 to node3, you must move the NAS data LIFs belonging to node1 that are currently on node2 from node2 to node3. You also must verify that the SAN LIFs exist on node3.
 
 .About this task
 
@@ -119,7 +119,7 @@ vs1
 +
 `portset add -vserver <Vserver_name> -portset <portset_name> -port-name <port_name>`
 +
-NOTE: You need to ensure that you move SAN LIFs to a port that has the same link speed as the original port.
+NOTE: You must confirm that you moved SAN LIFs to a port that has the same link speed as the original port.
 
 .. Modify the status of all LIFs to "up" so the LIFs can accept and send traffic on the node:
 +
@@ -146,3 +146,4 @@ The system performs the following post-checks:
 * Disk status check
 * Cluster LIF status check
 // bottom of page 43, 44, and 45 in PDF.
+// Clean-up, 2022-03-09

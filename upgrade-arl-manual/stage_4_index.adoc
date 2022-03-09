@@ -13,10 +13,11 @@ summary: During Stage 4, you record node2 information and then retire node2.
 :imagesdir: ./media/
 
 [.lead]
-// COPIED FROM 9.8 GUIDE...CHECK FOR REUSE, THEN REMOVE THIS COMMENT
 During Stage 4, you record node2 information and then retire node2.
 
 .Steps
 
 . link:record_node2_information.html[Record node2 information]
 . link:retire_node2.html[Retire node2]
+
+// Clean-up, 2022-03-09

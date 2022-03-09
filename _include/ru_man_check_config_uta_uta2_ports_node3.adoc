@@ -28,7 +28,7 @@ You can use the `ucadmin show` command to verify the current port configuration:
 6 entries were displayed.
 ----
 
-UTA/UTA2 ports can be configured into native FC mode or UTA/UTA2 mode. FC mode supports FC initiator and FC target; UTA/UTA2 mode allows concurrent NIC and FCoE traffic sharing the same 10 GbE SFP+ interface and supports FC targets.
+UTA/UTA2 ports can be configured into native FC mode or UTA/UTA2 mode. FC mode supports FC initiator and FC target; UTA/UTA2 mode enables concurrent NIC and FCoE traffic sharing the same 10 GbE SFP+ interface and supports FC targets.
 
 UTA/UTA2 ports might be found on an adapter or on the controller, and have the following configurations, but you should check the configuration of the UTA/UTA2 ports on the node3 and change it, if necessary:
 
@@ -240,3 +240,5 @@ Adapter  Mode     Type       Mode     Type       Status
 |Is a V-series system or has FlexArray Virtualization Software and is connected to storage arrays
 |Return to _Install and boot node3_ and resume at link:install_boot_node3.html#step7[Step 7].
 |===
+
+// Clean-up, 2022-03-09

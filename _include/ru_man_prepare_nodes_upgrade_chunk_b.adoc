@@ -30,7 +30,7 @@ NOTE: After the upgrade, you will run the command again and compare the output w
 +
 Make note of whether interface groups or VLANs are configured on node1 or node2; you need that information in the next step and later in the procedure.
 
-. Complete the following substeps on both node1 and node2 to ensure that physical ports can be mapped correctly later in the procedure:
+. Complete the following substeps on both node1 and node2 to confirm that physical ports can be mapped correctly later in the procedure:
 
 .. Enter the following command to see if there are failover groups on the node other than `clusterwide`:
 +

@@ -17,5 +17,5 @@ During a controller upgrade, the controller is replaced with another controller 
 
 Earlier versions of this content contained instructions for a nondisruptive controller update process that was comprised of entirely manual steps. This content provides the steps for the new automated procedure.
 
-The manual process was lengthy and complex but in this simplified procedure you can implement a controller update using aggregate relocation, allowing for more efficient nondisruptive upgrades for HA pairs. There are significantly fewer manual steps, especially around validation, collection of information, and post checks.
+The manual process was lengthy and complex but in this simplified procedure you can implement a controller update using aggregate relocation, enabling for more efficient nondisruptive upgrades for HA pairs. There are significantly fewer manual steps, especially around validation, collection of information, and post checks.
 // P. 6 in pdf

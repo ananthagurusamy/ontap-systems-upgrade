@@ -16,7 +16,7 @@ summary: You must verify that the physical ports on node2 map correctly to the p
 
 // pg. 60 to 62
 
-You must verify that the physical ports on node2 map correctly to the physical ports on node4, which will allow node4 to communicate with other nodes in the cluster and with the network after the upgrade.
+You must verify that the physical ports on node2 map correctly to the physical ports on node4, which will enable node4 to communicate with other nodes in the cluster and with the network after the upgrade.
 
 .About this task
 
@@ -129,7 +129,7 @@ This command removes port "e0d" on node4:
 +
 `cluster show -node node4 -fields health`
 
-. [[auto_map_4_Step5]]Adjust the broadcast domains hosting your cluster LIFs and node-management/clustermanagement LIFs. Ensure that each broadcast domain contains the correct ports. A port cannot be moved between broadcast domains if it is hosting or is home to a LIF so you may need to migrate and modify the LIFs as shown in the following steps:
+. [[auto_map_4_Step5]]Adjust the broadcast domains hosting your cluster LIFs and node-management/clustermanagement LIFs. Confirm that each broadcast domain contains the correct ports. A port cannot be moved between broadcast domains if it is hosting or is home to a LIF so you may need to migrate and modify the LIFs as shown in the following steps:
 +
 .. Display the home port of a LIF:
 +

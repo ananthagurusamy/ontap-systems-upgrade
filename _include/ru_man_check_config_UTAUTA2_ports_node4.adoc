@@ -8,7 +8,7 @@ You must have the correct SFP+ modules for the UTA/UTA2 ports.
 
 .About this task
 
-UTA/UTA2 ports can be configured into native FC mode or UTA/UTA2A mode. FC mode supports FC initiator and FC target; UTA/UTA2 mode allows concurrent NIC and FCoE traffic to share the same 10 GbE SFP+ interface and supports FC target.
+UTA/UTA2 ports can be configured into native FC mode or UTA/UTA2A mode. FC mode supports FC initiator and FC target; UTA/UTA2 mode enables concurrent NIC and FCoE traffic to share the same 10 GbE SFP+ interface and supports FC target.
 
 NOTE: NetApp marketing materials might use the term UTA2 to refer to CNA adapters and ports. However, the CLI uses the term CNA.
 
@@ -110,7 +110,7 @@ Adapters in target mode are automatically offline in Maintenance mode.
 * `-t` is the FC4 type: target or initiator.
 
 +
-NOTE: You need to use FC initiator for tape drives and FlexArray Virtualization systems. You need to use the FC target for SAN clients.
+NOTE: You must use FC initiator for tape drives and FlexArray Virtualization systems. You must use the FC target for SAN clients.
 
 . Verify the settings by entering the following command and examining its output:
 +
@@ -203,3 +203,5 @@ f-a    2b      fc      target    cna      -          online
 |Is a V-Series system or has FlexArray Virtualization Software and is connected to storage arrays
 |Return to the section _Install and boot node4_, and resume the section at link:install_boot_node4.html#Step9[Step 9].
 |===
+
+// Clean-up, 2022-03-09

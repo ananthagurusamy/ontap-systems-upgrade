@@ -18,7 +18,7 @@ include::../_include/ru_auto_install_boot_node3_intro_step_5.adoc[]
 [start=6]
 .  [[auto9597_istall3_step6]]Configure the netboot connection by choosing one of the following actions.
 +
-NOTE: You should use the management port and IP as the netboot connection. Do not use a data LIF IP or a data outage might occur while the upgrade is being performed.
+NOTE: You must use the management port and IP as the netboot connection. Do not use a data LIF IP or a data outage might occur while the upgrade is being performed.
 
 +
 [cols=2*,options="header"cols="30,70"]

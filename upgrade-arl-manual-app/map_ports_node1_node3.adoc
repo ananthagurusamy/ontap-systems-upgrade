@@ -111,7 +111,7 @@ A warning like the following is expected. Review and enter `y` or `n` as appropr
 WARNING: Repairing port "node_name:port" might cause it to move into a different broadcast domain, which can cause LIFs to be re-homed away from the port. Are you sure you want to continue? {y|n}:
 ----
 
-.. To allow ONTAP to complete the repair, wait for about a minute after running the `reachability repair` command on the last port.
+.. To enable ONTAP to complete the repair, wait for about a minute after running the `reachability repair` command on the last port.
 
 .. List all broadcast domains on the cluster:
 +
@@ -197,3 +197,4 @@ NOTE: For iSCSI LIFs, modification of the home port requires the LIF to be admin
 +
 `network interface revert *`
 // 24 FEB 2021: formatted from CMS
+// Clean-up, 2022-03-09
