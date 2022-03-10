@@ -1,4 +1,4 @@
-To upgrade the node pair, you need to prepare the original nodes and then perform a series of steps on both the original and new nodes. You can then decommission the original nodes.
+To upgrade the node pair, you must prepare the original nodes and then perform a series of steps on both the original and new nodes. You can then decommission the original nodes.
 
 .Steps
 
