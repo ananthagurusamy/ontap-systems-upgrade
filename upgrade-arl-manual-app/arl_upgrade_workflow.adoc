@@ -15,6 +15,21 @@ summary: "You must understand how the procedure to manually upgrade controllers 
 [.lead]
 Before you upgrade the nodes using ARL, you must understand how the procedure works. In this document, the procedure is broken down into several stages.
 
+== Upgrade the node pair
+
+To upgrade the node pair, you must prepare the original nodes and then perform a series of steps on both the original and new nodes. You can then decommission the original nodes.
+
+.Steps
+
+. link:stage1_prepare_for_upgrade.html[Stage 1: Prepare for upgrade]
+. link:stage2_relocate_retire_node1.html[Stage 2: Relocate and retire node1]
+. link:stage_3_install_boot_node3.html[Stage 3: Install and boot node3]
+. link:stage4_record_info_retire_node2.html[Stage 4: Record information and retire node2]
+. link:stage5_install_boot_node4.html[Stage 5: Install and boot node4]
+. link:stage6_complete_upgrade.html[Stage 6: Complete the upgrade]
+
+== ARL upgrade sequence overview
+
 During the procedure, you upgrade the original controller hardware with the replacement controller hardware, one controller at a time, taking advantage of the HA pair configuration to relocate the ownership of non-root aggregates. All non-root aggregates must undergo two relocations to reach their final destination, which is the correct upgraded node.
 
 Each aggregate has a home owner and current owner. The home owner is the actual owner of the aggregate, and the current owner is the temporary owner.

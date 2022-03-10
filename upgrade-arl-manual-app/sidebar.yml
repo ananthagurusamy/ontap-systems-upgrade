@@ -13,8 +13,6 @@ entries:
     url: /upgrade-arl-manual-app/required_tools_documentation.html
   - title: " Worksheet:  Information to collect before and during the controller upgrade"
     url: /upgrade-arl-manual-app/worksheet_information_before_during_upgrade.html
-  - title: "Upgrade the node pair"
-    url: /upgrade-arl-manual-app/upgrade_node_pair.html
   - title: "Stage 1. Prepare for upgrade"
     entries:
       - title: Overview
