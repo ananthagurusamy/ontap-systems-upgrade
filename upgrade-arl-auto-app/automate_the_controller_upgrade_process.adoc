@@ -5,7 +5,7 @@ keywords: automating, controller, upgrade, process, network, port, ha
 summary: "The partially automated ARL procedure for controllers running ONTAP 9.8 or later uses automatic network port reachability to simplify the controller upgrade."
 ---
 
-= Automating the controller upgrade process
+= Automate the controller upgrade process
 :hardbreaks:
 :nofooter:
 :icons: font
