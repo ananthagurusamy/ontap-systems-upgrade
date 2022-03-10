@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-manual-app/stage_2_index.html
 keywords: relocate, retire, node1, steps
-summary: During Stage 2, you relocate the node1 aggregates and LIFs to node2, record node1 information, and then retire node1.
+summary: "During stage 2, you manually relocate the node1 aggregates and LIFs to node2, record node1 information, and then retire node1 on controllers running ONTAP 9.8 or later."
 ---
 
 = Stage 2. Relocate and retire node1

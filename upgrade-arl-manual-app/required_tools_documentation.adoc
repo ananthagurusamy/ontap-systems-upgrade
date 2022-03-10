@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-manual-app/required_tools_documentation.html
 keywords:  Tool, documentation, center, content, reference, worksheet
-summary: Tools and documentation you will need during upgrade.
+summary: "You can find the tools and documentation you will need during the manual upgrade on controllers running ONTAP 9.8 or later."
 ---
 
 = Required tools and documentation

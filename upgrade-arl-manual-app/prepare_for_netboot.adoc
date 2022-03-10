@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-manual-app/prepare_for_netboot.html
 keywords: prepare, netboot, rack, node3, node4
-summary: You might need to netboot node3 and node4 after you physically rack them.
+summary: "When you perform this manual procedure to upgrade controller hardware, you might need to netboot node3 and node4 after you physically rack them on controllers running ONTAP 9.8 and later."
 ---
 
 = Prepare for netboot

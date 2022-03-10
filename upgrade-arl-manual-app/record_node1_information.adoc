@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-manual-app/record_node1_information.html
 keywords: record, information, node1, NVRAM
-summary: Before you can shut down and retire node1, you need to record information about its cluster network, management, and FC ports as well as its NVRAM System ID.
+summary: "Before you can manually shut down and retire node1  on controllers running ONTAP 9.8 or later, you must record information about its cluster network, management, and FC ports as well as its NVRAM System ID on controllers running ONTAP 9.8 or later."
 ---
 
 =  Record node1 information

@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-manual-app/guidelines_upgrade_with_arl.html
 keywords: guidelines, upgrade
-summary: Guidelines for upgrade controllers with ARL
+summary: "You must understand the guidelines for the procedure to manually upgrade controllers running ONTAP 9.8 or later with ARL."
 ---
 
 = Guidelines for upgrading controllers with ARL

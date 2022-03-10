@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-manual-app/prepare_nodes_for_upgrade.html
 keywords: prepare, nodes, upgrade, missing disks, HA pair, san
-summary: The nodes must be prepared before you can upgrade.
+summary: "The nodes must be prepared before you can manually upgrade controllers running ONTAP 9.8 and later."
 ---
 
 = Prepare the nodes for upgrade

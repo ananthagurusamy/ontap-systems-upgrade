@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-manual-app/arl_upgrade_workflow.html
 keywords: upgrade workflow, procedure steps, stages
-summary: ARL upgrade workflow
+summary: "You must understand how the procedure to manually upgrade controllers running ONTAP 9.8 or later works"
 ---
 
 = ARL upgrade workflow

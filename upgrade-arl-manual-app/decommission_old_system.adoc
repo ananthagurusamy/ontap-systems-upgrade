@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-manual-app/decommission_old_system.html
 keywords: decommission, system, metrocluster
-summary: Decommission the old system
+summary: "After you upgrade manually, you can decommission the old system through the NetApp Support Site on controllers running ONTAP 9.8 or later."
 ---
 
 = Decommission the old system

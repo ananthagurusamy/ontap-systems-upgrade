@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-manual-app/manage_authentication_kmip.html
 keywords: kmip, authentication, keys, fips
-summary: Use KMIP servers to manage authentication keys.
+summary: "You can use KMIP servers to manage authentication keys on controllers running 9.8 or later."
 ---
 
 = Manage authentication using KMIP servers
