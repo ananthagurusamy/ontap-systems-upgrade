@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto-app/verify_health_of_metrocluster_config.html
 keywords: verifying, health, metrocluster, configuration, fabric, mcc
-summary: You can verify the health of the MetroCluster configuration using "system controller replace" commands on controllers running ONTAP 9.8 or later.
+summary: "You can verify the health of the MetroCluster configuration using `system controller replace` commands on controllers running ONTAP 9.8 or later."
 ---
 
 = Verify the health of the MetroCluster configuration

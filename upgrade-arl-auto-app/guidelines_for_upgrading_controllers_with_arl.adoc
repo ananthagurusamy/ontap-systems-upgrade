@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto-app/guidelines_for_upgrading_controllers_with_arl.html
 keywords: guidelines, upgrading, controllers, ARL
-summary: You can use this "system controller replace" command procedure to understand whether you can use ARL to upgrade a pair of controllers running ONTAP 9.8.
+summary: "You can use this `system controller replace` command procedure to understand whether you can use ARL to upgrade a pair of controllers running ONTAP 9.8."
 ---
 
 = Guidelines for upgrading controllers with ARL

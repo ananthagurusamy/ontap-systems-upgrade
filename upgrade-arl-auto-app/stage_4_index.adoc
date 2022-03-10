@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto-app/stage_4_index.html
 keywords: relocate, retire, node2, LIF, node3, non-root aggregates
-summary: You can relocate all non-root aggregates from node2 to node3 by using "system controller replace" commands on controllers running ONTAP 9.8 or later.
+summary: "You can relocate all non-root aggregates from node2 to node3 by using `system controller replace` commands on controllers running ONTAP 9.8 or later."
 ---
 
 = Stage 4. Relocate and retire node2

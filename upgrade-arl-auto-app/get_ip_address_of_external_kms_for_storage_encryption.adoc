@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto-app/get_ip_address_of_external_kms_for_storage_encryption.html
 keywords: ip, address, external, key, management, server, storage, encryption, upgrading, authentication
-summary: After upgrading by using "system controller replace" commands, you must immediately configure Storage Encryption on controllers running ONTAP 9.8 or later.
+summary: "After upgrading by using `system controller replace` commands, you must immediately configure Storage Encryption on controllers running ONTAP 9.8 or later."
 ---
 
 = Get an IP address of an external key management server for storage encryption
