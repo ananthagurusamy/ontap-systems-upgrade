@@ -26,12 +26,12 @@ include::../_include/ru_auto_overview_arl_workflow_top.adoc[]
 | Stage | Steps
 
 | Stage 1. Prepare for upgrade
-a| . Run prechecks to verify that the operation can be performed.
+a| . Run prechecks to verify that you can perform the operation.
 . Correct aggregate ownership if a precheck fails.
-. Enter the cluster-base license keys.
+. Input the cluster-base license keys.
 . Get an IP address for storage encryption.
-. Manage authentication using a KMIP server.
-. Manage storage encryption using an onboard key manager (OKM).
+. Manage authentication by using a KMIP server.
+. Manage storage encryption by using an onboard key manager (OKM).
 . Quiesce the SnapMirror relationships (optional).
 
 Aggregate ownership at the end of Stage 1:
@@ -98,3 +98,5 @@ a| . Verify the system is set up correctly.
 . Decommission the old system.
 . Resume NetApp SnapMirror operations, if needed.
 |===
+
+// Clean-up, 2022-03-10

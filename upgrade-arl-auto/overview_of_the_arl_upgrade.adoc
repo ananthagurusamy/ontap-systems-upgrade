@@ -21,7 +21,7 @@ include::../_include/ru_auto_overview_arl_workflow_top.adoc[]
 | Stage | Steps
 
 |Stage 1. Prepare for the upgrade
-a|. Run prechecks to verify that the operation can be performed.
+a|. Run prechecks to verify that you can perform the operation.
 
 . Prepare for netbooting (optional).
 
