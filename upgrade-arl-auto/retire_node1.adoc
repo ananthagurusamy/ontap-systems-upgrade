@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto/retire_node1.html
 keywords: retire, node1
-summary: To retire node1, you need to shut node1 down properly and remove it from the rack or chassis.
+summary: To retire node1, you need to shut node1 down correctly and remove it from the rack or chassis.
 ---
 
 = Retire node1

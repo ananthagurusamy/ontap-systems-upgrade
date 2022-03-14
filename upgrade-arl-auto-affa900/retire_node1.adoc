@@ -31,7 +31,7 @@ After node1 has completely halted, node1 should be at the LOADER> prompt. To see
 At this stage, node1 is down and all data is served by node2. Because node1 and node2 are in the same chassis and powered by the same set of power supplies, do NOT power off the chassis. You must take care to remove only the node1 controller module and the node1 NVS. Typically, node1 is controller A located on the left side of the chassis when looking at the controllers from the rear of the system. The controller label is located on the chassis directly above the controller module.
 
 .Before you begin
-If you are not already grounded, properly ground yourself.
+If you are not already grounded, correctly ground yourself.
 
 === Remove the AFF A700 controller module
 Use the following procedure to remove the AFF A700 controller module.
@@ -94,7 +94,7 @@ image::../media/black_circle_two.png[Number two]
 You must install the AFF A900 NVS and controller module that you received for the upgrade on node1. Do NOT move the coredump devices from the AFF A700 NVS module to the AFF A900 NVS module.
 
 .Before you begin
-If you are not already grounded, properly ground yourself.
+If you are not already grounded, correctly ground yourself.
 
 === Install the AFF A900 NVS
 Use the following procedure to install the AFF A900 NVS in slot 6 of node1.

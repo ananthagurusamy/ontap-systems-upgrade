@@ -1,4 +1,4 @@
-To retire node2, you must shut node2 down properly and remove it from the rack or chassis. If the cluster is in a SAN environment, you also must delete the SAN LIFs.
+To retire node2, you must shut node2 down correctly and remove it from the rack or chassis. If the cluster is in a SAN environment, you also must delete the SAN LIFs.
 
 .Steps
 

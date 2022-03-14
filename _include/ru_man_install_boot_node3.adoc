@@ -313,7 +313,7 @@ Do you want to continue (y/n)?
 
 . [[man_install3_step31]]Enter `y`.
 
-. [[man_install3_step32]]If you are upgrading from a system with external disks to a system that supports internal and external disks (AFF A800 systems, for example), set the node1 aggregate as root to confirm node3 boots from the root aggregate of node1.
+. [[man_install3_step32]]If you are upgrading from a system with external disks to a system that supports internal and external disks (AFF A800 systems, for example), set the node1 aggregate as root to confirm that node3 boots from the root aggregate of node1.
 +
 WARNING: *Warning*: You must perform the following substeps in the exact order shown; failure to do so might cause an outage or even data loss.
 

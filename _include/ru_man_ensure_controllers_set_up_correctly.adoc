@@ -94,7 +94,7 @@ Do you want to continue? {y|n}: y
 ----
 Enter `y` to remove all of the packages.
 
-. Verify that the licenses are properly installed by entering the following command and examining its output:
+. Verify that the licenses are correctly installed by entering the following command and examining its output:
 +
 `system license show`
 +

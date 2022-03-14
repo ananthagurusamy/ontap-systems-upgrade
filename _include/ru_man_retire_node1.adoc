@@ -1,4 +1,4 @@
-To retire node1, you must disable the HA pair with node2, shut node1 down properly, and remove it from the rack or chassis.
+To retire node1, you must disable the HA pair with node2, shut node1 down correctly, and remove it from the rack or chassis.
 
 .Steps
 

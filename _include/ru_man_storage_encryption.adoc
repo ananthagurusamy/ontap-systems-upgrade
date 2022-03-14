@@ -1,4 +1,4 @@
-The original nodes or the new nodes might be enabled for Storage Encryption. In that case, you must take additional steps in this procedure to verify that Storage Encryption is set up properly.
+The original nodes or the new nodes might be enabled for Storage Encryption. In that case, you must take additional steps in this procedure to verify that Storage Encryption is set up correctly.
 
 If you want to use Storage Encryption, all the disk drives associated with the nodes must have self-encrypting disk drives.
 

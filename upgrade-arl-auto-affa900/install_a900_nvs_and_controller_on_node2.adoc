@@ -16,7 +16,7 @@ summary: Install the AFF A900 NVS and controller module on node2.
 You must install the AFF A900 NVS and controller module that you received for the upgrade on node2. Node2 is the controller B located on the right side of the chassis when looking at the controllers from the rear of the system.
 
 .Before you begin
-If you are not already grounded, properly ground yourself.
+If you are not already grounded, correctly ground yourself.
 
 == Install the AFF A900 NVS
 Use the following procedure to install the AFF A900 NVS in slot 6 of node2.

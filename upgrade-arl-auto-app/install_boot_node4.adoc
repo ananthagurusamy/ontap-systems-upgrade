@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto-app/install_boot_node4.html
 keywords: install, boot, node4, install ONTAP
-summary: "You must install node4 in the rack, transfer node2 connections to node4, boot node4, and install ONTAP by using  `system controller replace` commands on controllers running ONTAP 9.8 or later."
+summary: "When you upgrade controllers running ONTAP 9.8 or later by using `system controller replace` commands, you must install and boot node4 and install ONTAP software."
 ---
 
 = Install and boot node4
