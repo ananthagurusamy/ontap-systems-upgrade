@@ -13,7 +13,7 @@ summary: You upgrade the AFF A700 controller hardware with the AFF A900 controll
 :imagesdir: ./media/
 
 [.lead]
-This procedure describes how to upgrade the controller hardware using aggregate relocation (ARL) for the following system configurations:
+This procedure describes how to upgrade the controller hardware using aggregate relocation (ARL) for the following system configuration:
 
 [cols=4*,options="header",cols="30,20,20,30"]
 |===
