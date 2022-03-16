@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-manual/determine_new_cabling_layout.html
 keywords: cable, cabling, layout, disk shelf, fc switches
-summary:  Determine the cabling for the new controller modules and any new disk shelves to the existing FC switches.
+summary:  "Determine the cabling layout for new controller modules and disk shelves during a manual ARL upgrade on controllers running ONTAP 9.7 or earlier."
 ---
 
 = Determine the new cabling layout

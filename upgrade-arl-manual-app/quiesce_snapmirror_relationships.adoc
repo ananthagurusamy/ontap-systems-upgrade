@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-manual-app/quiesce_snapmirror_relationships.html
 keywords: quiesce, snapmirror, relationship, netboot, destination cluster
-summary: "When you perform this procedure to manually upgrade controllers running ONTAP 9.8 or later, you must quiesce all SnapMirror relationships before you netboot the system."
+summary: "Before you netboot the system, quiesce all SnapMirror relationships during a manual ARL upgrade on controllers running ONTAP 9.8 or later."
 ---
 
 = Quiesce the SnapMirror relationships

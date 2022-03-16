@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: /upgrade-arl-auto-affa900/move_non_root_aggr_and_nas_data_lifs_back_to_node2.html
 keywords: moving, non-root, aggregates, nas, lif, node1, node2
-summary: After you verify network configuration on node2 and before you relocate aggregates from node1 to node2, you must verify the LIF ownership on node2.
+summary: "Verify that node2's NAS data LIFs on node1 are relocated from node1 to node2 when upgrading from AFF A700 to AFF A900."
 ---
 
 = Move non-root aggregates and NAS data LIFs back to node2

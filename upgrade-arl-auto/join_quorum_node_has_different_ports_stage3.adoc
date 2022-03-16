@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: upgrade-arl-auto/join_quorum_node_has_different_ports_stage3.html
-keywords: aggregate relocation, YYYYY
-summary: If the new node has a different set of network ports, you must confirm that the node successfully joins the quorum.
+keywords: aggregate, relocation, quorum, network, ports
+summary: "Confirm that the new node joins the quorum during stage 3 when upgrading controllers running ONTAP 9.5 to 9.7 by using `system controller replace` commands."
 ---
 
 = Join the quorum when a node has a different set of network ports

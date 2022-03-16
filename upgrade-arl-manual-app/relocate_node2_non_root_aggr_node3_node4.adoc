@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-manual-app/relocate_node2_non_root_aggr_node3_node4.html
 keywords: relocate, non-root, aggregates, node3, node4
-summary: "After manually relocating node2's non-root aggregates to node3, you now must relocate them from node3 to node4 on controllers running ONTAP 9.8 or later."
+summary: "Relocate node2’s non-root aggregates from node3 to node4 during a manual ARL upgrade on controllers running ONTAP 9.8 or later."
 ---
 
 = Relocate node2's non-root aggregates from node3 to node4

@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: upgrade-arl-manual/verify_node3_installation.html
-keywords: verify, node3, install, installation
-summary: After you install and boot node3, you need to verify that it is installed correctly, that it is part of the cluster, and that it can communicate with node2.
+keywords: verify, node3, install, installation, node4
+summary: "Verify the node3 installation and communication with node2 during a manual ARL upgrade on controllers running ONTAP 9.7 or earlier."
 ---
 
 = Verify the node3 installation

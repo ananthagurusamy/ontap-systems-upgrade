@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-manual-app/worksheet_information_before_during_upgrade.html
 keywords: worksheet, stage, information, node ID, LIF, licensing key, IP address
-summary: "You must gather certain information to successfully manually upgrade the original nodes on controllers running ONTAP 9.8 or later."
+summary: "Gather certain information during a manual ARL upgrade on controllers running ONTAP 9.8 or later."
 ---
 
 = Worksheet:  Information to collect before and during controller upgrade

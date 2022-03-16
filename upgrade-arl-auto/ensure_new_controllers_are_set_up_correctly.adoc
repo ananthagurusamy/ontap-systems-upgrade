@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto/ensure_new_controllers_are_set_up_correctly.html
 keywords: confirm, controllers, set up, ha, node3, node4, node2, lif, cluster, high, availability
-summary: To confirm correct setup, you must enable the HA pair.
+summary: "Enable the HA pair, verify node3 and node4 storage access, and confirm aggregate ownership after upgrading controllers running ONTAP 9.5 to 9.7 by using `system controller replace` commands."
 ---
 
 = Confirm that the new controllers are set up correctly

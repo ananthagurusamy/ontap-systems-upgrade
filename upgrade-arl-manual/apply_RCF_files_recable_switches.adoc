@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-manual/apply_RCF_files_recable_switches.html
 keywords:  rcf files, reference configuration, switches, nodes, recable, fc
-summary:  Apply the appropriate RCF files to reconfigure switches to accommodate the new nodes.
+summary:  "Install RCF files to reconfigure Cisco and Brocade switches during a manual ARL upgrade on controllers running ONTAP 9.7 or earlier."
 ---
 
 = Apply RCF files and recable the switches

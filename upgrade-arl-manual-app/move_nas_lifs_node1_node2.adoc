@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-manual-app/move_nas_lifs_node1_node2.html
 keywords: nas, node1, node2, lifs, cluster, san
-summary: "You must manually move the NAS data LIFs owned by node1 to node2 if you have a two-node cluster, or to a third node if your cluster has more than two nodes on controllers running ONTAP 9.8 or later."
+summary: "Move node1's data LIFs to node2 if you have a two-node cluster, or to a third node if your cluster has more than two nodes, during a manual ARL upgrade on controllers running ONTAP 9.8 or later."
 ---
 
 = Move NAS data LIFs owned by node1 to node2

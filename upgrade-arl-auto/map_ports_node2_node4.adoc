@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto/map_ports_node2_node4.html
 keywords: map, node2, ports, cluster, broadcast domains, physical ports
-summary: You must verify that the physical ports on node2 map correctly to the physical ports on node4.
+summary: "Verify that the physical ports on node2 map correctly to node4 when upgrading controllers running ONTAP 9.5 to 9.7 by using `system controller replace` commands."
 ---
 
 = Map ports from node2 to node4

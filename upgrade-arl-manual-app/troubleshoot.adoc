@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-manual-app/troubleshoot_index.html
 keywrods: troubleshoot, failure, aggregate, relocate, lifs
-summary: "You can troubleshoot any failures that occur during the manual upgrade on controllers running ONTAP 9.8 or later."
+summary: "Troubleshoot failures that might occur during a manual ARL upgrade on controllers running ONTAP 9.8 or later."
 ---
 
 = Troubleshoot

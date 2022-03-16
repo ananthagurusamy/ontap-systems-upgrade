@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-manual-app/retire_node1.html
 keywords: retire, node1, epsilon, shut down, failover
-summary: "To manually retire node1, you need to disable the HA pair with node2, shut node1 down correctly, and remove it from the rack or chassis on controllers running ONTAP 9.8 or later."
+summary: "Disable the HA pair with node2 and shut node1 down correctly during a manual ARL upgrade on controllers running ONTAP 9.8 or later."
 ---
 
 = Retire node1

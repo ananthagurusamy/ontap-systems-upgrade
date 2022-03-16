@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-manual/map_ports_node1_node3.html
 keywords: map, ports, node1, node3, cluster, home port, vlan ports, broadcast domain, connectivity
-summary: Map ports from node1 to node3
+summary: "Verify that the physical ports on node1 map correctly to node3 during a manual ARL upgrade on controllers running ONTAP 9.7 or earlier."
 ---
 
 = Map ports from node1 to node3

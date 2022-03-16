@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-manual-app/ensure_controllers_set_up_correctly.html
 keywords: set up, controllers, correctly, ha pair, lif, aggregate, node, failover
-summary: "You can manually confirm that the new controllers are set up correctly by enabling the HA pair on controllers running ONTAP 9.8 or later."
+summary: "Enable the HA pair, verify node3 and node4 storage access, and confirm aggregate ownership after a manual ARL upgrade on controllers running ONTAP 9.8 or later."
 ---
 
 = Confirm that the new controllers are set up correctly

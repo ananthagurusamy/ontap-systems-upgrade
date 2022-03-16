@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: upgrade-arl-manual/stage_4_index.html
-keywords: stage4, record, node2, information, retire
-summary: During Stage 4, you record node2 information and then retire node2.
+keywords: stage 4, record, node2, information, retire
+summary: "Stage 4 process sequence for a manual ARL upgrade on controllers running ONTAP 9.7 or earlier."
 ---
 
 = Stage 4. Record node2 information and retire node2

@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto-affa900/install_a900_nvs_and_controller_on_node2.html
 keywords: install, nvs, aff, a900, node2, controller, module
-summary: Install the AFF A900 NVS and controller module on node2.
+summary: "Installation instructions for an AFF A900 NVS and controller module during the ARL controller upgrade procedure."
 ---
 
 = Install AFF A900 NVS and controller module on node2

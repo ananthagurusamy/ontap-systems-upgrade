@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-manual/verify_node4_installation.html
 keywords: install, node4, node3, verify, communicate
-summary: After you install and boot node4, you need to verify that it is installed correctly
+summary: "Verify the node4 installation and communication with node3 during a manual ARL upgrade on controllers running ONTAP 9.7 or earlier."
 ---
 
 = Verify the node4 installation

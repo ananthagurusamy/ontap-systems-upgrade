@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto-app/troubleshoot_index.html
 keywords: troubleshooting, troubleshoot, node, aggregate, lif, migrate, failure
-summary: "You can troubleshoot failures that you might encounter when upgrading a node pair by using `system controller replace` commands on controllers running ONTAP 9.8 or later."
+summary: "Troubleshoot failures that might occur when upgrading controllers running ONTAP 9.8 or later by using `system controller replace` commands."
 ---
 
 = Troubleshoot

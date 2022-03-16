@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto-affa900/other_references.html
 keywords: references, documentation, hardware universe, content, documentation center, information
-summary: Link to reference content and websites that are required to support the upgrade.
+summary: "Reference content and websites required to support AFF A700 to AFF A900 controller upgrade."
 ---
 
 = References
