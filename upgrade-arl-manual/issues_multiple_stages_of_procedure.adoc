@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-manual/issues_multiple_stages_of_procedure.html
 keywords: issues, problems, errors, multiple stages, procedure, troubleshoot
-summary: Issues can arise in multiple stages of the procedure.
+summary: "Information on issues that might occur during a manual ARL upgrade on controllers running ONTAP 9.7 or earlier."
 ---
 
 = Issues that can arise in multiple stages of the procedure

@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-manual/determine_aggregates_on_internal_drives.html
 keywords: determine, aggregate, disk, drive, controller
-summary: Determine whether the controller has aggregates on internal disk drives
+summary: "Confirm that internal disk drives do not contain root or data aggregates during a manual ARL upgrade on controllers running ONTAP 9.7 or earlier."
 ---
 
 = Determine whether the controller has aggregates on internal disk drives

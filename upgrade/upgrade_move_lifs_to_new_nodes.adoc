@@ -9,7 +9,7 @@ summary: After you have moved the volumes from the original nodes, you need to m
 :imagesdir: ../media/
 
 [.lead]
-After you have moved the volumes from the original nodes, you need to migrate the non-SAN data LIFs and cluster-management LIFs from the original nodes to the new nodes.
+After you have moved the volumes from the original nodes, you must migrate the non-SAN data LIFs and cluster-management LIFs from the original nodes to the new nodes.
 
 .About this task
 You cannot migrate a LIF that is used for copy-offload operations with VMware vStorage APIs for Array Integration (VAAI).
@@ -53,3 +53,5 @@ cluster::> network interface migrate-all -node local
 .. Migrate the cluster-management LIF to one of the new nodes:
 +
 `network interface migrate -vserver <vserver_name> -lif cluster-mgmt -destination-node <new_node_name> -destination-port {<netport|ifgrp>}`
+
+// Clean-up, 2022-03-09

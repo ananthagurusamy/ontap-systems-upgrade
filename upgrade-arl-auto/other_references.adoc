@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto/other_references.html
 keywords: other references, documentation, hardware universe, content, documentation center, information
-summary: You can link to other reference content and websites in this topic.
+summary: "Reference content and websites required to support a controller upgrade running ONTAP 9.5 to 9.7 by using `system controller replace` commands."
 ---
 
 = References

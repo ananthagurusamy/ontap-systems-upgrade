@@ -1,4 +1,4 @@
-To ensure correct setup, you must enable the HA pair. You must also verify that node3 and node4 can access each other's storage and that neither owns data LIFs belonging to other nodes on the cluster. In addition, you must ensure that node3 owns node1's aggregates and that node4 owns node2's aggregates, and that the volumes for both nodes are online.
+To confirm correct setup, you must enable the HA pair. You must also verify that node3 and node4 can access each other's storage and that neither owns data LIFs belonging to other nodes on the cluster. In addition, you must confirm that node3 owns node1's aggregates and that node4 owns node2's aggregates, and that the volumes for both nodes are online.
 
 .Steps
 
@@ -94,11 +94,11 @@ Do you want to continue? {y|n}: y
 ----
 Enter `y` to remove all of the packages.
 
-. Verify that the licenses are properly installed by entering the following command and examining its output:
+. Verify that the licenses are correctly installed by entering the following command and examining its output:
 +
 `system license show`
 +
-You might want to compare the output with the output that you captured in link:prepare_nodes_for_upgrade.html#step30[Step 30] of _Prepare the nodes for upgrade_.
+You can compare the output with the output that you captured in link:prepare_nodes_for_upgrade.html#step30[Step 30] of _Prepare the nodes for upgrade_.
 
 . Configure the SPs by performing the following command on both nodes:
 +
@@ -119,10 +119,12 @@ Go to link:other_references.html[References] to link to the _System Administrati
 .. Return to the admin level by entering the following command:
 +
 `set -privilege admin`
-.. Reboot the system to ensure that the changes take effect.
+.. Reboot the system to confirm that the changes take effect.
 
 . If you want to set up a switchless cluster on the new nodes, go to link:other_references.html[References] to link to the _Network Support Site_ and follow the instructions in _Transitioning to a two-node switchless cluster_.
 
 .After you finish
 
 If Storage Encryption is enabled on node3 and node4, complete the steps in link:set_up_storage_encryption_new_controller.html[Set up Storage Encryption on the new controller module]. Otherwise, complete the steps in link:decommission_old_system.html[Decommission the old system].
+
+// Clean-up, 2022-03-09

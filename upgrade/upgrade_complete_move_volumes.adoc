@@ -9,7 +9,7 @@ summary: To complete the procedure of upgrading by moving volumes, you need to c
 :imagesdir: ../media/
 
 [.lead]
-To complete the procedure of upgrading by moving volumes, you need to configure the Service Processor (SP), install new licenses, and set up AutoSupport. You might also need to set up Storage or Volume Encryption and configure the FC or NCA ports.
+To complete the procedure of upgrading by moving volumes, you must configure the Service Processor (SP), install new licenses, and set up AutoSupport. You might also need to set up Storage or Volume Encryption and configure the FC or NCA ports.
 
 . Configure the SP on the new nodes as needed:
 +
@@ -50,3 +50,5 @@ https://library.netapp.com/ecm/ecm_download_file/ECMP1140535[Migrating to a two-
  .. Click the link *My Installed Systems*.
  .. On the *Installed Systems* page, enter the serial number of the old system in the form and then click *Go!*
  .. On the Decommission Form page, fill out the form and click *Submit*.
+
+// Clean-up, 2022-03-09

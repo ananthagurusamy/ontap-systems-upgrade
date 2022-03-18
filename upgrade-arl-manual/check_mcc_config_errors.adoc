@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: upgrade-arl-manual/check_mcc_config_errors.html
-keywords: config advisor, mcc, metrocluster,configuration, configure, error, check
-summary: Use Config Advisor to check for common configuration errors.
+keywords: config advisor, mcc, metrocluster, configuration, configure, error, check
+summary: "Use the Config Advisor tool to check for common configuration errors during a manual ARL upgrade on controllers running ONTAP 9.7 or earlier."
 ---
 
 = Check for MetroCluster configuration errors

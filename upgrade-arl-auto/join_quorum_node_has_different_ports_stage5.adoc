@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto/join_quorum_node_has_different_ports_stage5.html
 keywords: quorum, cluster, network ports, node, broadcast domain
-summary: You must ensure that the node successfully joins the quorum.
+summary: "Confirm that the new node joins the quorum during stage 5 when upgrading controllers running ONTAP 9.5 to 9.7 by using `system controller replace` commands."  
 ---
 
 = Join the quorum when a node has a different set of network ports
@@ -16,7 +16,7 @@ summary: You must ensure that the node successfully joins the quorum.
 
 // This is section for Stage 5.  There is a similar topic for Stage 3.
 // pge 63 and a bit on 64 in PDF
-The node with the new controller boots and attempts to join the cluster automatically at first; however, if the new node has a different set of network ports, you must perform the following steps to ensure that the node successfully joins the quorum.
+The node with the new controller boots and attempts to join the cluster automatically at first; however, if the new node has a different set of network ports, you must perform the following steps to confirm that the node successfully joins the quorum.
 
 .About this task
 
@@ -67,7 +67,7 @@ network port modify -node node3 -port e1b -ipspace Cluster -mtu 9000
 +
 `cluster show -node node3 -fields health`
 
-. Adjust the broadcast domains hosting your cluster LIFs and node-management/cluster management LIFs. Ensure that each broadcast domain contains the correct ports. A port cannot be moved between broadcast domains if it is hosting or is home to a LIF, so you might need to migrate and modify the LIFs as follows:
+. Adjust the broadcast domains hosting your cluster LIFs and node-management/cluster management LIFs. Confirm that each broadcast domain contains the correct ports. A port cannot be moved between broadcast domains if it is hosting or is home to a LIF, so you might need to migrate and modify the LIFs as follows:
 +
 .. Display the home port of a LIF:
 +
@@ -84,3 +84,5 @@ network port modify -node node3 -port e1b -ipspace Cluster -mtu 9000
 `network interface modify -vserver <vserver-name> -lif <lif_name> –home-port <port_name>`
 +
 Adjust the intercluster broadcast domains and migrate the intercluster LIFs, if necessary. The data LIFs remain unchanged.
+
+// Clean-up, 2022-03-09

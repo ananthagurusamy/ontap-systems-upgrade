@@ -1,4 +1,4 @@
-You need to make sure that the physical ports on node1 map correctly to the physical ports on node3, which will let node3 communicate with other nodes in the cluster and with the network after the upgrade.
+You must make sure that the physical ports on node1 map correctly to the physical ports on node3, which will let node3 communicate with other nodes in the cluster and with the network after the upgrade.
 
 .Before you begin
 
@@ -9,3 +9,5 @@ The software configuration of node3 must match the physical connectivity of node
 .About this task
 
 Port settings might vary, depending on the model of the nodes.
+
+// Clean-up, 2022-03-09

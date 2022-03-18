@@ -6,7 +6,7 @@
 +
 `network interface modify -vserver <vserver_name> -lif <LIF_name>-home-port <netport|ifgrp> -home-node <node3>`
 
-. [[man_lif_verify_3_step8]]Ensure that the SAN LIFs are on the correct ports on node3:
+. [[man_lif_verify_3_step8]]Confirm that the SAN LIFs are on the correct ports on node3:
 
 .. Enter the following command and examine its output:
 +
@@ -52,7 +52,7 @@ cluster::> net int show -data-protocol iscsi|fcp -home-node node3
 +
 `portset add -vserver <vserver_name> -portset <portset_name> -port-name <port_name>`
 +
-NOTE: You need to ensure that you move SAN LIFs to a port that has the same link speed as the original port.
+NOTE: You must move SAN LIFs to a port that has the same link speed as the original port.
 
 . Modify the status of all LIFs to "up" so the LIFs can accept and send traffic on the node:
 +
@@ -69,3 +69,5 @@ NOTE: You need to ensure that you move SAN LIFs to a port that has the same link
 . Send a post-upgrade AutoSupport message to NetApp for node1:
 +
 `system node autosupport invoke -node <node3> -type all -message "node1 successfully upgraded from <platform_old> to <platform_new>"`
+
+// Clean-up, 2022-03-09

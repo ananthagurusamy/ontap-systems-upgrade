@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto-affa900/automate_the_controller_upgrade_process.html
 keywords: automating, controller, upgrade, network, port, aff, a700, a900
-summary: Replace an AFF A700 controller with an AFF A900 controller using an automated procedure.
+summary: "Use the partially automated ARL procedure to upgrade AFF A700 to AFF A900."
 ---
 
 = Automate the controller upgrade process

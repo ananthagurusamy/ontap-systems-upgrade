@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto-app/prepare_nodes_for_upgrade.html
 keywords: preparing, nodes, upgrade
-summary: Begin the controller replacement process by entering the following command in the ONTAP command line.
+summary: "Prepare the nodes and run a series of prechecks when upgrading controllers running ONTAP 9.8 or later by using `system controller replace` commands."
 ---
 
 = Prepare the nodes for upgrade
@@ -114,7 +114,7 @@ If aggregate reconstruction is in progress, the task fails.
 If node affinity jobs are running, the check fails.
 |===
 
-. After the controller replacement operation is started and the prechecks are completed,  the operation pauses allowing you to collect output information that you might need later when configuring node3.
+. After the controller replacement operation is started and the prechecks are completed,  the operation pauses enabling you to collect output information that you might need later when configuring node3.
 +
 NOTE: If you have a system with more than two cluster ports per node, such as an FAS8080 or an AFF8080, you must consolidate the cluster LIFs to two cluster ports per node before you start the controller upgrade. If you perform the controller upgrade with more than two cluster ports per node, cluster LIFs might be missing on the new controller after the upgrade.
 // BURT 1418719 31-Jan-2022
@@ -123,27 +123,29 @@ NOTE: If you have a system with more than two cluster ports per node, such as an
 +
 You must run and save the output of the following commands individually:
 +
-* vserver services name-service dns show
-* network interface show -curr-node <nodename> -role <cluster,intercluster,node-mgmt,cluster-mgmt,data>
-* network port show -node <node_name> -type physical
-* service-processor show -node * -instance
-* network fcp adapter show -node <node_name>
-* network port ifgrp show
-* system node show -instance -node <node_name>
-* run -node <node_name> sysconfig
-* storage aggregate show -node <node_name>
-* volume show -node <node_name>
-* storage array config show -switch <switch_name>
-* system license show -owner <node_name>
-* storage encryption disk show
-* security key-manager onboard show-backup
+* `vserver services name-service dns show`
+* `network interface show -curr-node <nodename> -role <cluster,intercluster,node-mgmt,cluster-mgmt,data>`
+* `network port show -node <node_name> -type physical`
+* `service-processor show -node * -instance`
+* `network fcp adapter show -node <node_name>`
+* `network port ifgrp show`
+* `system node show -instance -node <node_name>`
+* `run -node <node_name> sysconfig`
+* `storage aggregate show -node <node_name>`
+* `volume show -node <node_name>`
+* `storage array config show -switch <switch_name>`
+* `system license show -owner <node_name>`
+* `storage encryption disk show`
+* `security key-manager onboard show-backup`
 // BURT 1450483 11-Feb-2022
-* security key-manager external show
-* security key-manager external show-status
-* reachability show -detail
+* `security key-manager external show`
+* `security key-manager external show-status`
+* `reachability show -detail`
 
-NOTE: If NetApp Volume Encryption using Onboard Key Manager (OKM) is in use, keep the key- manager passphrase ready to complete the key manager resync later in the procedure.
+NOTE: If NetApp Volume Encryption using Onboard Key Manager (OKM) is in use, keep the key manager passphrase ready to complete the key manager resync later in the procedure.
 
 include::../_include/ru_auto_correct_aggregate_ownership.adoc[]
 
 include::../_include/ru_auto_license.adoc[]
+
+// Clean-up, 2022-03-09

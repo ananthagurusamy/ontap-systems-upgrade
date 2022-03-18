@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto-affa900/resume_snapmirror_operations.html
 keywords: resuming, snapmirror, operations, transfer, relationship, updates, schedule, complete
-summary: Resume SnapMirror transfers that were quiesced before the upgrade and resume the SnapMirror relationships.
+summary: "Resume the SnapMirror transfers and relationships when upgrading AFF A700 to AFF A900."
 ---
 
 = Resume SnapMirror operations
