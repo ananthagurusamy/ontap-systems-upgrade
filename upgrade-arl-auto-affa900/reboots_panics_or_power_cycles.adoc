@@ -53,7 +53,7 @@ When node1 enters the `waiting for giveback` state, node2 gives back all of the 
 
 === Node1 crashes during the first resource-release phase while HA pair is disabled
 
-Node2 does not take over but it is still serving data from all non-root aggregates.
+Node2 does not take over, but it is still serving data from all non-root aggregates.
 
 .Steps
 
@@ -101,7 +101,7 @@ A client outage occurs for all aggregates while node2 is booting up.
 
 === Node1 crashes during the first verification phase with HA pair disabled
 
-Node2 does not take over but it is still serving data from all non-root aggregates.
+Node2 does not take over, but it is still serving data from all non-root aggregates.
 
 .Steps
 

@@ -15,4 +15,4 @@ summary: "You must have certain tools and documentation when upgrading AFF A700 
 [.lead]
 You must have a grounding strap to perform the upgrade, and you need to reference other documents during the upgrade process.
 
-Go to the link:other_references.html[References] section to access the list of reference documents and reference sites required for this upgrade.
+Refer to link:other_references.html[References] to access the list of reference documents and reference sites required for this upgrade.
