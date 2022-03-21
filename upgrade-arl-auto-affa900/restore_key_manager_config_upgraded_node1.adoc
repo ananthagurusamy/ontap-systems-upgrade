@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto-affa900/restore_key_manager_config_upgraded_node1.html
 keywords: restore key-manager, configuration, node1, nve, arl, volume, encryption
-summary: "If required, restore key-manager configuration on the upgraded node1 when upgrading AFF A700 to AFF A900."
+summary: "If required, restore key-manager configuration on the upgraded node1 during an AFF A700 to AFF A900 upgrade."
 ---
 
 = Restore key-manager configuration on the upgraded node1

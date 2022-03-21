@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto-affa900/retire_node2.html
 keywords: retire, node2
-summary: "Shut down node2 and remove it from the rack or chassis when upgrading AFF A700 to AFF A900."
+summary: "Shut down node2 and remove it from the rack or chassis during an AFF A700 to AFF A900 upgrade."
 ---
 
 = Retire node2

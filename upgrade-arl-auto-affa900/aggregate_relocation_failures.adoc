@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto-affa900/aggregate_relocation_failures.html
 keywords: aggregate, relocation, failures, arl, stage 2, stage 3, stage 5
-summary: "Troubleshoot aggregate relocation failures when upgrading AFF A700 to AFF A900."
+summary: "Troubleshoot aggregate relocation failures that might occur during an AFF A700 to AFF A900 upgrade."
 ---
 
 = Aggregate relocation failures

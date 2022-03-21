@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-manual/aggregate_relocation_failures.html
 keywords: aggregate, relocation, failure, error, problem
-summary: "Troubleshoot aggregate relocation failures during a manual ARL upgrade on controllers running ONTAP 9.7 or earlier."
+summary: "Troubleshoot aggregate relocation failures that might occur during a manual ARL upgrade on controllers running ONTAP 9.7 or earlier."
 ---
 
 = Aggregate relocation failures
