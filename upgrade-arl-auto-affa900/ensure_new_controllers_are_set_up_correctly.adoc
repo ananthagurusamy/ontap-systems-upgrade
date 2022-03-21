@@ -5,7 +5,7 @@ keywords: ensure, controllers, new, setup, ha, pair, node1, node2, lif, cluster,
 summary: "Verify that the HA pair is enabled, verify node1 and node2 storage access and LIF and aggregate ownership after upgrading an AFF A700 to an AFF A900."
 ---
 
-= Ensure that the new controllers are set up correctly
+= Confirm that the new controllers are set up correctly
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -14,7 +14,7 @@ summary: "Verify that the HA pair is enabled, verify node1 and node2 storage acc
 
 
 [.lead]
-To ensure the correct setup, you must verify that HA pair is enabled. You must also verify that node1 and node2 can access each other's storage and that neither owns data LIFs belonging to other nodes on the cluster. In addition, you must ensure that all data aggregates are on their correct home nodes, and that the volumes for both nodes are online. If one of the new nodes has a unified target adapter, you must restore any port configurations and you might need to change the use of the adapter.
+To confirm the correct setup, you must verify that the HA pair is enabled. You must also verify that node1 and node2 can access each other's storage and that neither owns data LIFs belonging to other nodes on the cluster. In addition, you must verify that all data aggregates are on their correct home nodes, and that the volumes for both nodes are online. If one of the new nodes has a unified target adapter, you must restore any port configurations and you might need to change the use of the adapter.
 
 .Steps
 .	After the post-checks of node2, the storage failover and cluster HA pair for the node2 cluster are enabled. When the operation is done, both nodes show as completed and the system performs some cleanup operations.
@@ -95,8 +95,8 @@ Enter `y` to remove all of the packages.
 +
 `system license show`
 +
-You might want to compare the output with the output that you captured in the link:prepare_nodes_for_upgrade.html[Prepare the nodes for upgrade] section.
-.	If NetApp Storage Encryption (NSE) was in use on the configuration and you set the `setenv bootarg.storageencryption.support` command to `true` with the `<kmip.init.maxwait>` variable `off` (in _Boot node2 with the AFF A900 controller module and NVS_, link:boot_node2_with_a900_controller_and_nvs.html#boot_node2_step1[Step 1]), you need to reset the variable:
+You can compare the output with the output that you captured in the link:prepare_nodes_for_upgrade.html[Prepare the nodes for upgrade] section.
+.	If NetApp Storage Encryption (NSE) was in use on the configuration and you set the `setenv bootarg.storageencryption.support` command to `true` with the `<kmip.init.maxwait>` variable `off` (in _Boot node2 with the AFF A900 controller module and NVS_, link:boot_node2_with_a900_controller_and_nvs.html#boot_node2_step1[Step 1]), you must reset the variable:
 +
 `set diag; systemshell -node <node_name> -command sudo kenv -u -p kmip.init.maxwait`
 .	Configure the SPs by using the following command on both nodes:
