@@ -37,8 +37,8 @@ Aggregate ownership at the end of Stage 1:
 a| .	Relocate non-root aggregates and NAS data LIFs owned by node1 to node2
 . Relocate failed or vetoed aggregates
 . Retire node1
-.	Remove the AFF A700 controller module and NVRAM
-.	Install the AFF A900 NVRAM and controller module on node1
+.	Remove the AFF A700 controller module and NVRAM module
+.	Install the AFF A900 NVRAM module and controller module on node1
 .	Netboot node1
 
 Aggregate ownership at the end of Stage 2:
@@ -46,8 +46,8 @@ Aggregate ownership at the end of Stage 2:
 * Node2 is the current owner of node1 aggregates
 * Node2 is the home owner and current owner of node2 aggregates
 
-|Stage 3: Boot node1 with the AFF A900 controller module NVRAM
-a| . Boot node1 with the AFF A900 controller module and NVRAM
+|Stage 3: Boot node1 with the AFF A900 controller module NVRAM module
+a| . Boot node1 with the AFF A900 controller module and NVRAM module
 .	Verify that node1 is successfully installed
 .	Restore node1 network configuration
 .	Restore key-manager configuration on the upgraded node1
@@ -68,8 +68,8 @@ Aggregate ownership at the end of Stage 4:
 *	Node2 is the home owner of node2 aggregates
 *	Upgraded node1 is the current owner of node2 aggregates
 
-|Stage 5: Install the AFF A900 NVRAM and controller module on node2
-a| .	Install the AFF A900 NVRAM and controller module on node2
+|Stage 5: Install the AFF A900 NVRAM module and controller module on node2
+a| .	Install the AFF A900 NVRAM module and controller module on node2
 .	Netboot node2
 
 Aggregate ownership at the end of Stage 5:
@@ -77,8 +77,8 @@ Aggregate ownership at the end of Stage 5:
 *	Node1 is the home owner and current owner of the aggregates that originally belonged to node1.
 *	Upgraded node2 is the home owner and current owner of aggregates that originally belonged to node2.
 
-|Stage 6: Boot node2 with the AFF A900 controller module and NVRAM
-a| .	Boot node2 with the AFF A900 controller module and NVRAM
+|Stage 6: Boot node2 with the AFF A900 controller module and NVRAM module
+a| .	Boot node2 with the AFF A900 controller module and NVRAM module
 .	Verify that node2 is correctly installed
 .	Restore node2 network configuration
 .	Move non-root aggregates and NAS data LIFs back to node2
