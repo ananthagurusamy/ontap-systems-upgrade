@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
 permalink: upgrade-arl-auto-affa900/boot_node1_with_a900_controller_and_nvs.html
-keywords: boot, nvs, controller, module, node1, aff, a700, a900
-summary: Boot node1 with the AFF A900 controller module and NVS.
+keywords: boot, NVRAM, controller, module, node1, aff, a700, a900
+summary: Boot node1 with the AFF A900 controller module and NVRAM module.
 ---
 
-= Boot node1 with the AFF A900 controller module and NVS
+= Boot node1 with the AFF A900 controller module and NVRAM module
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,7 +13,7 @@ summary: Boot node1 with the AFF A900 controller module and NVS.
 :imagesdir: ./media/
 
 [.lead]
-Node1 with the AFF A900 controller module and NVS is now ready for boot up. Upgrading from an AFF A700 to an AFF A900 by swapping the controller module and NVS involves moving only the console and management connections. This section provides the steps required to boot node1 with the AFF A900 controller module and NVS.
+Node1 with the AFF A900 controller module and NVRAM module is now ready for boot up. Upgrading from an AFF A700 to an AFF A900 by swapping the controller module and NVRAM module involves moving only the console and management connections. This section provides the steps required to boot node1 with the AFF A900 controller module and NVRAM module.
 
 .Steps
 

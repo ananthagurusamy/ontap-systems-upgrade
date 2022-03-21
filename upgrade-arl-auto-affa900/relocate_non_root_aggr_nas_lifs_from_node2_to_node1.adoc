@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: upgrade-arl-auto-affa900/relocate_non_root_aggr_nas_lifs_from_node2_to_node1.html
-keywords: relocate, non-root, aggregates, nas, lif, node2, node1. aff, a900, nvs, controller
-summary: Before replacing node2 with the AFF A900 controller module and NVS, you must relocate the non-root aggregates that are owned by node2 to node1.
+keywords: relocate, non-root, aggregates, nas, lif, node2, node1. aff, a900, NVRAM, controller
+summary: Relocate node2's non-root aggregates to node1 before replacing node2 with the AFF A900 controller module and the NVRAM module.
 ---
 
 = Relocate non-root aggregates and NAS data LIFs from node2 to node1
@@ -13,7 +13,7 @@ summary: Before replacing node2 with the AFF A900 controller module and NVS, you
 :imagesdir: ./media/
 
 [.lead]
-Before you can replace node2 with the AFF A900 controller module and NVS, you must first relocate the non-root aggregates that are owned by node2 to node1.
+Before you can replace node2 with the AFF A900 controller module and the NVRAM module, you must first relocate the non-root aggregates that are owned by node2 to node1.
 
 .Before you begin
 After the post-checks from the previous stage complete, the resource release for node2 starts automatically. The non-root aggregates and non-SAN data LIFs are migrated from node2 to the new node1.

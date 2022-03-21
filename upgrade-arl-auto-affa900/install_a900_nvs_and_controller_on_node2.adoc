@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
 permalink: upgrade-arl-auto-affa900/install_a900_nvs_and_controller_on_node2.html
-keywords: install, nvs, aff, a900, node2, controller, module
-summary: Install the AFF A900 NVS and controller module on node2.
+keywords: install, NVRAM, aff, a900, node2, controller, module
+summary: Install the AFF A900 NVRAM module and controller module on node2.
 ---
 
-= Install AFF A900 NVS and controller module on node2
+= Install AFF A900 NVRAM module and controller module on node2
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,17 +13,17 @@ summary: Install the AFF A900 NVS and controller module on node2.
 :imagesdir: ./media/
 
 [.lead]
-You must install the AFF A900 NVS and controller module that you received for the upgrade on node2. Node2 is controller B located on the right side of the chassis when looking at the controllers from the rear of the system.
+You must install the AFF A900 NVRAM module and controller module that you received for the upgrade on node2. Node2 is controller B located on the right side of the chassis when looking at the controllers from the rear of the system.
 
 .Before you begin
 If you are not already grounded, properly ground yourself.
 
-== Install the AFF A900 NVS
-Use the following procedure to install the AFF A900 NVS in slot 6 of node2.
+== Install the AFF A900 NVRAM module
+Use the following procedure to install the AFF A900 NVRAM module in slot 6 of node2.
 
 .Steps
-.	Align the NVS with the edges of the chassis opening in slot 6.
-.	Gently slide the NVS into the slot until the lettered and numbered I/O cam latch begins to engage with the I/O cam pin, and then push the I/O cam latch all the way up to lock the NVS in place.
+.	Align the NVRAM module with the edges of the chassis opening in slot 6.
+.	Gently slide the NVRAM module into the slot until the lettered and numbered I/O cam latch begins to engage with the I/O cam pin, and then push the I/O cam latch all the way up to lock the NVRAM module in place.
 
 == Install the AFF A900 controller module in node2.
 Use the following procedure to install the AFF A900 controller module in node2.

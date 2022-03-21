@@ -22,11 +22,11 @@ This procedure describes how to upgrade the controller hardware using aggregate 
 |Using `system controller replace` commands
 |9.10 or later
 |AFF A700 to AFF A900
-|Converts an AFF A700 to an AFF A900 by keeping the same AFF A700 chassis
+|Converts an AFF A700 to an AFF A900 by keeping the same chassis
 |===
 
 
-You can nondisruptively upgrade controller hardware on a high availability (HA) pair of AFF A700 nodes to an AFF A900 system by swapping the controller module and the nonvolatile storage module (NVS). You migrate non-root aggregates between the AFF A700 nodes and then migrate to the AFF A900 nodes in the HA pair. The data hosted on the nodes that you are upgrading is accessible during the upgrade procedure.
+You can nondisruptively upgrade controller hardware on a high availability (HA) pair of AFF A700 nodes to an AFF A900 system by swapping the controller module and the NVRAM module. You migrate non-root aggregates between the AFF A700 nodes. After installation, you then migrate the non-root aggregates from the AFF A700 nodes to the AFF A900 nodes. The data hosted on the nodes that you are upgrading is accessible during the upgrade procedure.
 
 .About this task
 During this controller upgrade procedure, you upgrade an AFF A700 to an AFF A900 system.
