@@ -32,7 +32,7 @@ For upgrading MetroCluster IP configurations, refer to link:other_references.htm
 
 NOTE: You can use NetApp Storage Encryption (NSE) and NetApp Volume Encryption (NVE) with this procedure.
 
-The following table shows the supported model matrix for the controller upgrade.
+[[sys_commands_98_supported_systems]]The following table shows the supported model matrix for the controller upgrade.
 
 |===
 |Old controller |Replacement controller

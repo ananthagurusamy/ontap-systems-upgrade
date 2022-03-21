@@ -61,7 +61,7 @@ To complete the Network Reachability task, the ONTAP network configuration must 
 2 entries were displayed.
 ----
 +
-NOTE:	In this guide section _Re-creating VLANs, ifgrps, and broadcast domains_ has been renamed _Restore network configuration on node2_.
+NOTE:	In this procedure, section _Re-creating VLANs, ifgrps, and broadcast domains_ has been renamed _Restore network configuration on node2_.
 
 .	With the controller replacement in a paused state, proceed to <<Restore network configuration on node2>>.
 
@@ -107,7 +107,7 @@ Node2
 13 entries were displayed.
 ----
 +
-In the above example, node2 has booted and joined quorum after controller replacement. It has several ports that have no reachability and are pending a reachability scan.
+In the preceding example, node2 has booted and joined quorum after controller replacement. It has several ports that have no reachability and are pending a reachability scan.
 
 .	[[restore_node2_step4]]Repair the reachability for each of the ports on node2 with a reachability status other than `ok` by using the following command, in the following order:
 +
@@ -128,7 +128,7 @@ Cluster ::> reachability repair -node node2 -port e9d
 Warning: Repairing port "node2:e9d" may cause it to move into a different broadcast domain, which can cause LIFs to be re-homed away from the port. Are you sure you want to continue? {y|n}:
 ----
 +
-A warning message, as shown above, is expected for ports with a reachability status that might be different from the reachability status of the broadcast domain where it is currently located. Review the connectivity of the port and answer `y` or `n` as appropriate.
+A warning message, as shown in the preceding example, is expected for ports with a reachability status that might be different from the reachability status of the broadcast domain where it is currently located. Review the connectivity of the port and answer `y` or `n` as appropriate.
 +
 Verify that all physical ports have their expected reachability:
 +
@@ -148,7 +148,7 @@ When all ports are correctly configured and added to the correct broadcast domai
 +
 `network port broadcast-domain show`
 
-.	Restore LIF home ports, specifying the Vserver(s) and LIF(s) home ports, if any, that need to be restored by using the following steps:
+.	Restore LIF home ports, specifying the Vserver and LIF home ports, if any, that need to be restored by using the following steps:
 
 ..	List any LIFs that are displaced:
 +
