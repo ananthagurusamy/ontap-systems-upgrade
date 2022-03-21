@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-manual/map_ports_node1_node3.html
 keywords: map, ports, node1, node3, cluster, home port, vlan ports, broadcast domain, connectivity
-summary: Map ports from node1 to node3
+summary: "Verify that the physical ports on node1 map correctly to node3 during a manual ARL upgrade on controllers running ONTAP 9.7 or earlier."
 ---
 
 = Map ports from node1 to node3
@@ -133,7 +133,7 @@ network port broadcast-domain remove-ports -ipspace Cluster -broadcast-domain Cl
 +
 `cluster show -node <node3> -fields health`
 
-. [[man_map_1_step5]]Adjust the broadcast domains hosting your cluster LIFs and node-management and/or cluster-management LIFs. Ensure that each broadcast domain contains the correct ports. A port cannot be moved between broadcast domains if it is hosting or is home to a LIF, so you might need to migrate and modify the LIFs as follows:
+. [[man_map_1_step5]]Adjust the broadcast domains hosting your cluster LIFs and node-management and/or cluster-management LIFs. Confirm that each broadcast domain contains the correct ports. A port cannot be moved between broadcast domains if it is hosting or is home to a LIF, so you might need to migrate and modify the LIFs as follows:
 +
 .. Display the home port of a LIF:
 +
@@ -213,3 +213,4 @@ Cluster          NodeB_clus2:7700               TCP/ctlopcp
 Repeat Step 11 to verify that the cluster LIF is now listening on port 7700.
 // 2021-11-03, BURT 1429264
 // 24 FEB 2021:  formatted from CMS
+// Clean-up, 2022-03-09

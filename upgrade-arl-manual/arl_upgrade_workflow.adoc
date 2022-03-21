@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-manual/arl_upgrade_workflow.html
 keywords: upgrade workflow, procedure steps, stages
-summary: ARL upgrade workflow
+summary: "Understand how the manual ARL upgrade procedure for a pair of controllers running ONTAP 9.7 or earlier works."
 ---
 
 = ARL upgrade workflow
@@ -14,6 +14,21 @@ summary: ARL upgrade workflow
 
 [.lead]
 Before you upgrade the nodes using ARL, you should understand how the procedure works. In this document, the procedure is broken down into several stages.
+
+== Upgrade the node pair
+
+To upgrade the node pair, you must prepare the original nodes and then perform a series of steps on both the original and new nodes. You can then decommission the original nodes.
+
+.Steps
+
+. link:stage1_prepare_for_upgrade.html[Stage 1: Prepare for upgrade]
+. link:stage2_relocate_retire_node1.html[Stage 2: Relocate and retire node1]
+. link:stage_3_install_boot_node3.html[Stage 3: Install and boot node3]
+. link:stage4_record_info_retire_node2.html[Stage 4: Record information and retire node2]
+. link:stage5_install_boot_node4.html[Stage 5: Install and boot node4]
+. link:stage6_complete_upgrade.html[Stage 6: Complete the upgrade]
+
+== ARL upgrade sequence overview
 
 During the procedure, you upgrade the original controller hardware with the replacement controller hardware, one controller at a time, taking advantage of the HA pair configuration to relocate the ownership of non-root aggregates. All non-root aggregates must undergo two relocations to reach their final destination, which is the correct upgraded node.
 
@@ -93,7 +108,7 @@ Aggregate ownership at the end of Stage 5:
 * Node4 is the home owner and current owner of aggregates that originally belonged to node2.
 
 |Stage 6: Complete the upgrade
-a| . Ensure the new controllers are set up correctly.
+a| . Confirm the new controllers are set up correctly.
 . Set up Storage Encryption on the new nodes.
 +
 This task is required only if you are upgrading to a system with self-encrypting drives.
@@ -105,3 +120,4 @@ This task is required only if you are upgrading to a system with self-encrypting
 No changes occur in aggregate ownership.
 |===
 // 26 FEB 2021:  Formatted from CMS
+// Clean-up, 2022-03-09

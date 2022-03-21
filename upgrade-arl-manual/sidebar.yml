@@ -33,8 +33,6 @@ entries:
         url: /upgrade-arl-manual/persist_enable_switches.html
       - title: "Verify switchover, healing, and switchback"
         url: /upgrade-arl-manual/verify_swtichover_healing_switchback.html
-  - title: "Upgrade the node pair"
-    url: /upgrade-arl-manual/upgrade_node_pair.html
   - title: "Stage 1. Prepare for upgrade"
     entries:
       - title: Overview

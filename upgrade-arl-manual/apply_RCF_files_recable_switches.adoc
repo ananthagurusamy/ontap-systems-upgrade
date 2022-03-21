@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-manual/apply_RCF_files_recable_switches.html
 keywords:  rcf files, reference configuration, switches, nodes, recable, fc
-summary:  Apply the appropriate RCF files to reconfigure switches to accommodate the new nodes.
+summary:  "Install RCF files to reconfigure Cisco and Brocade switches during a manual ARL upgrade on controllers running ONTAP 9.7 or earlier."
 ---
 
 = Apply RCF files and recable the switches
@@ -13,7 +13,7 @@ summary:  Apply the appropriate RCF files to reconfigure switches to accommodate
 :imagesdir: ./media/
 
 [.lead]
-You must apply the appropriate reference configuration (RCF) files to reconfigure your switches to accommodate the new nodes. After you apply the RCF files, you can recable the switches.
+You must apply the appropriate reference configuration files (RCFs) to reconfigure your switches to accommodate the new nodes. After you apply the RCFs, you can recable the switches.
 
 .Before you begin
 
@@ -21,15 +21,14 @@ The FC switch port usage must match the usage described in the _Fabric-attached 
 
 .Steps
 
-. Locate the RCF files for your configuration.
+. Go to the https://mysupport.netapp.com/site/products/all/details/metrocluster-rcf/downloads-tab[MetroCluster RCF downloads^] page and select the RCFs for your switch configuration.
 +
-You must use the RCF files that match your switch model.
+You must use the RCFs that match your switch models.
 +
-link:http://mysupport.netapp.com/NOW/download/software/metrocluster_brocade/sanswitch/index.shtml[NetApp Downloads: MetroCluster Configuration Files for Brocade Switches]
-+
-link:http://mysupport.netapp.com/NOW/download/software/metrocluster_cisco/sanswitch/index.shtml[NetApp Downloads: MetroCluster Configuration Files for Cisco Switches]
+. Install the FC switch RCFs by selecting the procedure that matches your switch models and following the installation instructions:
 
-. Apply the RCF files, following the directions on the *Download* page and adjusting the ISL settings as needed.
+* https://docs.netapp.com/us-en/ontap-metrocluster/install-fc/task_install_the_brocade_fc_switch_rcf_file.html[Install a Brocade FC switch RCF^]
+* https://docs.netapp.com/us-en/ontap-metrocluster/install-fc/task_download_and_install_the_cisco_fc_switch_rcf_files.html[Install a Cisco FC switch RCF^]
 
 . Verify that the switch configuration is saved.
 

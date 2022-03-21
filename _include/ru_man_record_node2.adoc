@@ -1,4 +1,4 @@
-Before you can shut down and retire node2, you need to record information about its cluster network, management, and FC ports as well as its NVRAM System ID. You need that information later in the procedure when you map node2 to node4 and reassign disks.
+Before you can shut down and retire node2, you must record information about its cluster network, management, and FC ports as well as its NVRAM System ID. You need that information later in the procedure when you map node2 to node4 and reassign disks.
 
 .Steps
 
@@ -112,3 +112,5 @@ cluster::> system node show -instance -node node2
 ----
 
 . [[man_record_2_step10]]Record the NVRAM System ID to use in the section link:install_boot_node4.html[Install and boot node4].
+
+// Clean-up, 2022-03-09

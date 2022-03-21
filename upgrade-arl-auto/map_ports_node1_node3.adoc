@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto/map_ports_node1_node3.html
 keywords: map, port, node1, node3, settings, restore, cluster
-summary: Verify that the physical ports on node1 map correctly to the physical ports on node3
+summary: "Verify that the physical ports on node1 map correctly to node3 when upgrading controllers running ONTAP 9.5 to 9.7 by using `system controller replace` commands."
 ---
 
 = Map ports from node1 to node3
@@ -13,7 +13,7 @@ summary: Verify that the physical ports on node1 map correctly to the physical p
 :imagesdir: ./media/
 
 [.lead]
-You must verify that the physical ports on node1 map correctly to the physical ports on node3, which will allow node3 to communicate with other nodes in the cluster and with the network after the upgrade.
+You must verify that the physical ports on node1 map correctly to the physical ports on node3, which will enable node3 to communicate with other nodes in the cluster and with the network after the upgrade.
 
 .About this task
 
@@ -129,7 +129,7 @@ The following command removes port "e0d" on node3:
 +
 `cluster show -node node3 -fields health`
 
-. [[auto_map_3_step5]]Adjust the broadcast domains hosting your cluster LIFs and node-management/clustermanagement LIFs. Ensure that each broadcast domain contains the correct ports. A port cannot be moved between broadcast domains if it is hosting or is home to a LIF, so you might need to migrate and modify the LIFs as follows:
+. [[auto_map_3_step5]]Adjust the broadcast domains hosting your cluster LIFs and node-management/clustermanagement LIFs. Confirm that each broadcast domain contains the correct ports. A port cannot be moved between broadcast domains if it is hosting or is home to a LIF, so you might need to migrate and modify the LIFs as follows:
 
 .. Display the home port of a LIF:
 +
@@ -207,3 +207,4 @@ Cluster          NodeB_clus2:7700               TCP/ctlopcp
 Repeat Step 11 to verify that the cluster LIF is now listening on port 7700.
 // 2021-11-03, BURT 1429264
 // bottom of pg. 38, 39, 40, and top of 41 in PDF
+// Clean-up, 2022-03-09

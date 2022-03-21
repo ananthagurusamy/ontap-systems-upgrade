@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto/required_tools_and_documentation.html
 keywords: required, tools, documentation, install, worksheet, ontap
-summary: You need specific tools to install the new hardware.  Also, you can reference additional documents and other information.
+summary: "You must have certain tools and documentation when upgrading controllers running ONTAP 9.5 to 9.7 by using `system controller replace` commands."
 ---
 
 = Required tools and documentation

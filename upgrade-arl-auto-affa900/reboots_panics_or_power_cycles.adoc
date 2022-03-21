@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto-affa900/reboots_panics_or_power_cycles.html
 keywords: reboots, panics, power, cycles, node, crash
-summary: The system might crash – reboot, panic or go through a power cycle.
+summary: "The system might crash – reboot, panic, or go through a power cycle – during different stages when upgrading AFF A700 to AFF A900."
 ---
 
 = Reboots, panics, or power cycles
@@ -13,7 +13,7 @@ summary: The system might crash – reboot, panic or go through a power cycle.
 :imagesdir: ./media/
 
 [.lead]
-The system might crash - reboot, panic or go through a power cycle – during different stages of the upgrade.
+The system might crash – reboot, panic, or go through a power cycle – during different stages of the upgrade.
 
 The solution to these problems depends on when they occur.
 

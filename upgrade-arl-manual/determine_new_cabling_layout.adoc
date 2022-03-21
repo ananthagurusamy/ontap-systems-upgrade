@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-manual/determine_new_cabling_layout.html
 keywords: cable, cabling, layout, disk shelf, fc switches
-summary:  Determine the cabling for the new controller modules and any new disk shelves to the existing FC switches.
+summary:  "Determine the cabling layout for new controller modules and disk shelves during a manual ARL upgrade on controllers running ONTAP 9.7 or earlier."
 ---
 
 = Determine the new cabling layout
@@ -25,6 +25,7 @@ Use the _Fabric-attached MetroCluster Installation and Configuration_ content to
 
 Go to link:other_references.html[References] to link to the _Fabric-attached MetroCluster Installation and Configuration_ content.
 
-NOTE: If your environment cannot be cabled in a way that RCFs can be used, then contact technical support. Do not use this procedure if the cabling cannot use RCFs.
+NOTE: If your environment cannot be cabled in a way that RCFs can be used, contact technical support. Do not use this procedure if the cabling cannot use RCFs.
 
 // 02 MAR 2021:  Formatted from CMS
+// Clean-up, 2022-03-09
