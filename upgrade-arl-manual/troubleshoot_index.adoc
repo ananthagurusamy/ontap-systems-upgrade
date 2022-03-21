@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-manual/troubleshoot_index.html
 keywords: troubleshoot, troubleshooting, problem, error, failure
-summary: You might encounter a failure while upgrading the node pair.
+summary: "Troubleshoot failures that might occur during a manual ARL upgrade on controllers running ONTAP 9.7 or earlier."
 ---
 
 = Troubleshoot

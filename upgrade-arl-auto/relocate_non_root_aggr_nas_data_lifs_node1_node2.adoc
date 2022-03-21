@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: upgrade-arl-auto/relocate_non_root_aggr_nas_data_lifs_node1_node2.html
-keywords: relocate, non-root, nonroot, aggregates, NAS, data, lif s, node1, node2
-summary: Move the non-root aggregates and NAS data LIFs from node1 to node2
+keywords: relocate, non-root, nonroot, aggregates, NAS, data, lifs, node1, node2
+summary: "Move non-root aggregates and NAS data LIFs from node1 to node2 and move node1's resources to node3 when upgrading controllers running ONTAP 9.5 to 9.7 by using 'system controller replace' commands."
 ---
 
 = Relocate non-root aggregates and NAS data LIFs owned by node1 to node2
@@ -17,7 +17,7 @@ Before you can replace node1 with node3, you must move the non-root aggregates a
 
 .Before you begin
 
-The operation should already be paused when you begin the task; you must manually resume the operation.
+The operation must already be paused when you begin the task; you must manually resume the operation.
 
 .About this task
 
@@ -68,3 +68,4 @@ Distribution Function: ip
 +
 `network port ifgrp remove-port -node _nodename_ -ifgrp _ifgrp_name_ -port _netport_`
 // p. 22-23 of PDF (not the small section at bottom of p. 23)
+// Clean-up, 2022-03-09

@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-manual/set_fc_uta_uta2_config_node3.html
 keywords: configure, configuration, fc, uta, uta2, settings
-summary: Settings must be configured before completing the upgrade.
+summary: "Configure node3 onboard FC ports, UTA/UTA2 ports, or UTA/UTA2 card during a manual ARL upgrade on controllers running ONTAP 9.7 or earlier." 
 ---
 
 = Set the FC or UTA/UTA2 configuration on node3

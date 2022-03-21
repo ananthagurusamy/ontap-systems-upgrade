@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: upgrade-arl-manual/lifs_invalid_ports_after_upgrade.html
-keywords: lifs, invalid, ports, error, mismatch, troublshoot, metrocluster
-summary: After the upgrade, the FC logical interfaces (LIFs) might be left on incorrect ports if you have a MetroCluster configuration.
+keywords: lifs, invalid, ports, error, mismatch, troubleshoot, metrocluster
+summary: Resync LIFs that are on invalid ports in a MetroCluster configuration after a manual ARL upgrade on controllers running ONTAP 9.7 or earlier.
 ---
 
 = LIFs are on invalid ports after upgrade

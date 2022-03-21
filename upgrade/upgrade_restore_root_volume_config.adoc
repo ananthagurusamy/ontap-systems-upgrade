@@ -13,7 +13,7 @@ summary: 'You must restore configuration information from the root volume to the
 You must restore configuration information from the root volume to the boot devices.
 
 .About this task
-You need to perform these steps on node3 and node4, completing each step on one node and then
+You must perform these steps on node3 and node4, completing each step on one node and then
 the other before going on to the next step.
 
 .Steps
@@ -48,3 +48,5 @@ Override system id? {y|n} [n] y
 ----
 +
 The startup sequence proceeds normally.
+
+// Clean-up, 2022-03-09

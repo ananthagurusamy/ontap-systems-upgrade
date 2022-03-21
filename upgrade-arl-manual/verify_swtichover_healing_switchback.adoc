@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-manual/verify_swtichover_healing_switchback.html
 keywords: verify,switchover, healing, switchback, negotiated, mcc, metrocluster
-summary: Verify the switchover, healing, and switchback operations.
+summary: "Verify the switchover, healing, and switchback operations during a manual ARL upgrade on controllers running ONTAP 9.7 or earlier."
 ---
 
 = Verify switchover, healing, and switchback

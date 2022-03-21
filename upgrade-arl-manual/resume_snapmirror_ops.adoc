@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-manual/resume_snapmirror_ops.html
 keywords: resume, snapmirror, transfers, relationships
-summary: You can resume SnapMirror transfers that were quiesced before upgrade and resume the SnapMirror relationships.
+summary: "Resume the SnapMirror transfers and relationships during a manual ARL upgrade on controllers running ONTAP 9.7 or earlier."
 ---
 
 = Resume SnapMirror operations

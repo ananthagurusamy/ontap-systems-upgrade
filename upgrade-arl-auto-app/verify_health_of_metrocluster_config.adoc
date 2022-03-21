@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto-app/verify_health_of_metrocluster_config.html
 keywords: verifying, health, metrocluster, configuration, fabric, mcc
-summary: Before starting upgrade on a Fabric MetroCluster configuration.
+summary: "Verify the MetroCluster configuration and correct operation when upgrading controllers running ONTAP 9.8 or later by using `system controller replace` commands."
 ---
 
 = Verify the health of the MetroCluster configuration
@@ -19,7 +19,7 @@ summary: Before starting upgrade on a Fabric MetroCluster configuration.
 //
 
 [.lead]
-Before starting an upgrade on a Fabric MetroCluster configuration, you must check the health of the MetroCluster configuration to verify proper operation.
+Before starting an upgrade on a Fabric MetroCluster configuration, you must check the health of the MetroCluster configuration to verify correct operation.
 
 .Steps
 

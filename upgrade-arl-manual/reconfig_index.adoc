@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-manual/reconfig_index.html
 keywords: reconfigure, fc, switch, layout, RCF, metrocluster
-summary: Decommission the old system
+summary: "For ONTAP 9.1 or later, reconfigure the port layout and apply the latest RCFs during a manual ARL upgrade on controllers running ONTAP 9.7 or earlier."
 ---
 
 = Reconfigure the FC switch layout for ONTAP 9.1 or later

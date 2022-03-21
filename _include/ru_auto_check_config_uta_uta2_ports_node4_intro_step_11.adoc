@@ -97,7 +97,7 @@ Adapters in target mode are automatically offline in Maintenance mode.
 +
 `ucadmin modify -m fc|cna -t initiator|target <adapter_name>`
 
-** `-m` is the personality mode, FC or 10 GbE UTA.
+** `-m` is the personality mode, FC or 10GbE UTA.
 ** `-t` is the FC4 type, `target` or `initiator`.
 +
 NOTE: You must use FC initiator for tape drives, FlexArray Virtualization systems, and MetroCluster configurations. You must use the FC target for SAN clients.

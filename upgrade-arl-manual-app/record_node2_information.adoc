@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: upgrade-arl-manual-app/record_node2_information.html
-keywords: record, node2, information
-summary: Before you shut down and retire node2, you need to record information about node2.
+keywords: record, node2, information, NVRAM, retire
+summary: "Record information about node2 cluster network, management, FC ports, and NVRAM System ID during a manual ARL upgrade on controllers running ONTAP 9.8 or later."
 ---
 
 = Record node2 information

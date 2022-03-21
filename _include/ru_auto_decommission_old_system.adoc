@@ -11,7 +11,7 @@ You can choose one of the following to locate your system:
 * Serial Number (located on the back of the unit)
 * Serial Numbers for My Location
 
-. Click *Go!*
+. Select *Go!*
 +
 A table displays cluster information, including the serial numbers.
 

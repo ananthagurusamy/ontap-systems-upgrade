@@ -9,7 +9,7 @@ summary: You need to perform a few preparation steps before upgrading controller
 :imagesdir: ../media/
 
 [.lead]
-You need to perform a few preparation steps before upgrading controller hardware by moving volumes.
+You must perform a few preparation steps before upgrading controller hardware by moving volumes.
 
 .Steps
 . Display the volumes on the original nodes:
@@ -38,3 +38,5 @@ https://library.netapp.com/ecm/ecm_download_file/ECMP1140535[Migrating to a two-
 . Send an AutoSupport message from each original node to inform technical support of the upgrade:
 +
 `system node autosupport invoke -node <node_name> -type all -message "Upgrading node_name from <platform_original> to <platform_new>"`
+
+// Clean-up, 2022-03-09

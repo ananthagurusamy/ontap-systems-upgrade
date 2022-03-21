@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto-app/restore_key-manager_config_node4.html
 keywords: restore key-manager, configuration, node4, nve, arl, volume, encryption
-summary: If you are using Netapp Volume Encryption (NVE) to encrypt volumes on the system you are upgrading.
+summary: "If required, restore key-manager configuration on node4 when upgrading controllers running ONTAP 9.8 or later by using `system controller replace` commands."
 ---
 
 = Restore key-manager configuration on node4

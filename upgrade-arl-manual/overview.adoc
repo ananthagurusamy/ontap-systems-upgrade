@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: upgrade-arl-manual/overview.html
-keywords: upgrade, contoller, aggregates, nodes, lifs, network, ports, replacement
-summary: You upgrade the original controller hardware with the replacement controller hardware, relocating the ownership of non-root aggregates.
+keywords: upgrade, controller, aggregates, nodes, lifs, network, ports, replacement
+summary: "Understand how the manual ARL upgrade procedure on controllers running ONTAP 9.7 or earlier works."
 ---
 
 = Overview
