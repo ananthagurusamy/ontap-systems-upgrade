@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto-affa900/ensure_new_controllers_are_set_up_correctly.html
 keywords: ensure, controllers, new, setup, ha, pair, node1, node2, lif, cluster, high, availability
-summary: "Verify that the HA pair is enabled, verify node1 and node2 storage access and LIF and aggregate ownership after upgrading AFF A700 to AFF A900."
+summary: "Verify that the HA pair is enabled, verify node1 and node2 storage access and LIF, and confirm aggregate ownership after upgrading an AFF A700 to an AFF A900."
 ---
 
 = Confirm that the new controllers are set up correctly

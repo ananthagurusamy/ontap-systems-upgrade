@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: upgrade-arl-auto/verify_node4_installation.html
-keywords: verify, node4, installation, MetroCluster
-summary: "Verify that node4 joins the quorum, re-create node1's VLANs, interface groups, and broadcast domains and restore key-manager configuration when upgrading controllers running ONTAP 9.5 to 9.7 by using `system controller replace` commands."
+keywords: verify, node4, installation, MetroCluster, restore, key, manager
+summary: "Verify that node4 joins the quorum, re-create node1's VLANs, interface groups, and broadcast domains, and restore the key-manager configuration when upgrading controllers running ONTAP 9.5 to 9.7 by using `system controller replace` commands."
 ---
 
 = Verify the node4 installation

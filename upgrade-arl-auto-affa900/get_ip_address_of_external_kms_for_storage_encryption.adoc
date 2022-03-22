@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto-affa900/get_ip_address_of_external_kms_for_storage_encryption.html
 keywords: storage, encryption, authentication, key, manager, external
-summary: "Configure and manage Storage Encryption, manage authentication keys, and quiesce the SnapMirror relationships when upgrading AFF A700 to AFF A900."
+summary: "Configure and manage Storage Encryption, manage authentication keys, and quiesce the SnapMirror relationships during an AFF A700 to AFF A900 upgrade."
 ---
 
 = Get an IP address of an external key management server for Storage Encryption

@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto-affa900/relocate_failed_or_vetoed_aggr.html
 keywords: relocate, failed, vetoed, aggregates, relocation, operation
-summary: "Relocate failed or vetoed aggregates when upgrading AFF A700 to AFF A900."
+summary: "Relocate failed or vetoed aggregates during an AFF A700 to AFF A900 upgrade."
 ---
 
 = Relocate failed or vetoed aggregates

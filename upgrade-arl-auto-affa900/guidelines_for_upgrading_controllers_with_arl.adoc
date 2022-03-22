@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto-affa900/guidelines_for_upgrading_controllers_with_arl.html
 keywords: guidelines, upgrade, aff, a900, a700, ontap, controllers
-summary: "Understand if you can use ARL to upgrade AFF A700 to AFF A900."
+summary: "Understand if you can use ARL to upgrade an AFF A700 to an AFF A900."
 ---
 
 = Guidelines for upgrading from an AFF A700 to an AFF A900 with ARL
