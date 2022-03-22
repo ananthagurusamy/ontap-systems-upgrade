@@ -43,7 +43,7 @@ Aggregate ownership at the end of Stage 2:
 
 * Node2 is the home owner and current owner of node2 aggregates.
 
-| link:/stage_3_index.html[Stage 3. Install and boot node3]
+| link:stage_3_index.html[Stage 3. Install and boot node3]
 a|. Install and boot node3.
 
 . Set the FC or CNA configuration.
