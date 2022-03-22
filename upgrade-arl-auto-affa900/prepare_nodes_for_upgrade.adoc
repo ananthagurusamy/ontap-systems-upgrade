@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto-affa900/prepare_nodes_for_upgrade.html
 keywords: preparing, nodes, upgrade, stage 1, prechecks
-summary: "Prepare the nodes and run a series of prechecks when upgrading AFF A700 to AFF A900."
+summary: "Prepare the nodes and run a series of prechecks during an AFF A700 to AFF A900 upgrade."
 ---
 
 = Prepare the nodes for upgrade

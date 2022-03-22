@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto-affa900/set_up_netapp_volume_encryption_new_module.html
 keywords: set up, netapp volume encryption, controller, module, nve, node
-summary: If required, configure the new controller module for NVE when upgrading AFF A700 to AFF A900."
+summary: If required, configure the new controller module for NVE during an AFF A700 to AFF A900 upgrade."
 ---
 
 = Set up NetApp Volume Encryption on the new controller module

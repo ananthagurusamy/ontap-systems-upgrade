@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto-affa900/retire_node1.html
 keywords: retiring, node, retire
-summary: "Disable the HA pair with node2 and shut node1 down when upgrading AFF A700 to AFF A900."
+summary: "Disable the HA pair with node2 and shut node1 down during an AFF A700 to AFF A900 upgrade."
 ---
 
 = Retire node1
