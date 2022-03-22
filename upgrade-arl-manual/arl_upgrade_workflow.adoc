@@ -19,15 +19,6 @@ Before you upgrade the nodes using ARL, you should understand how the procedure 
 
 To upgrade the node pair, you must prepare the original nodes and then perform a series of steps on both the original and new nodes. You can then decommission the original nodes.
 
-.Steps
-
-. link:stage1_prepare_for_upgrade.html[Stage 1: Prepare for upgrade]
-. link:stage2_relocate_retire_node1.html[Stage 2: Relocate and retire node1]
-. link:stage_3_install_boot_node3.html[Stage 3: Install and boot node3]
-. link:stage4_record_info_retire_node2.html[Stage 4: Record information and retire node2]
-. link:stage5_install_boot_node4.html[Stage 5: Install and boot node4]
-. link:stage6_complete_upgrade.html[Stage 6: Complete the upgrade]
-
 == ARL upgrade sequence overview
 
 During the procedure, you upgrade the original controller hardware with the replacement controller hardware, one controller at a time, taking advantage of the HA pair configuration to relocate the ownership of non-root aggregates. All non-root aggregates must undergo two relocations to reach their final destination, which is the correct upgraded node.
@@ -44,7 +35,7 @@ The following table describes the high-level tasks you perform during each stage
 |===
 | Stage | Steps
 
-| Stage 1: Prepare for upgrade
+| link:stage_1_index.html[Stage 1: Prepare for upgrade]
 a| . Determine whether the controller has aggregates on internal disk drives.
 +
 This step is required only if you are upgrading from a controller with internal disk drive.
@@ -60,7 +51,7 @@ Aggregate ownership at the end of Stage 1:
 * Node1 is the home owner and current owner of the node1 aggregates.
 * Node2 is the home owner and current owner of the node2 aggregates.
 
-|Stage 2: Retire node1
+| link:stage_2_index.html[Stage 2: Retire node1]
 a| . Relocate non-root aggregates from node1 to node2.
 . Move non-SAN data LIFSs owned by node1 to node2.
 . Record node1 information.
@@ -73,7 +64,7 @@ Aggregate ownership at the end of Stage 2:
 * Node2 is the current owner of node1 aggregates.
 * Node2 is the home owner and current owner of node2 aggregates.
 
-|Stage 3: Install and boot node3
+| link:stage_3_index.html[Stage 3: Install and boot node3]
 a| . Install and boot node3.
 . Set the UTA/UTA2 configuration on node3.
 . Map ports from node1 to node3.
@@ -88,13 +79,13 @@ Aggregate ownership at the end of Stage 3:
 * Node3 is the home owner and current owner of aggregates originally belonging to node1.
 * Node2 is the home owner and current owner of aggregates belonging to node2 but not the home owner.
 
-|Stage 4: Retire node2
+| link:stage_4_index.html[Stage 4: Retire node2]
 a| . Record node2 information.
 . Retire node2.
 
 No changes occur in aggregate ownership.
 
-|Stage 5: Install and boot node4
+| link:stage_5_index.html[Stage 5: Install and boot node4]
 a| . Install and boot node4.
 . Set the UTA/UTA2 configuration on node4.
 . Map ports from node2 to node4.
@@ -107,7 +98,7 @@ Aggregate ownership at the end of Stage 5:
 * Node3 is the home owner and current owner of the aggregates that originally belonged to node1.
 * Node4 is the home owner and current owner of aggregates that originally belonged to node2.
 
-|Stage 6: Complete the upgrade
+| link:stage_6_index.html[Stage 6: Complete the upgrade]
 a| . Confirm the new controllers are set up correctly.
 . Set up Storage Encryption on the new nodes.
 +
