@@ -1,18 +1,18 @@
 ---
 permalink: upgrade/upgrade-reset-default-configuration-node3-and-node4.html
 sidebar: sidebar
-keywords: ensure, configuration, information, boot, media, interfere, controller, upgrade, reset, node3, node4, node, default, setting, reset default configuration on the new nodes
-summary: To ensure that configuration information on the boot media does not interfere with the controller upgrade, you need to reset the configurations of node3 and node4 to the default configuration settings.
+keywords: confirm, configuration, information, boot, media, interfere, controller, upgrade, reset, node3, node4, node, default, setting, reset default configuration on the new nodes
+summary: To confirm that configuration information on the boot media does not interfere with the controller upgrade, you need to reset the configurations of node3 and node4 to the default configuration settings.
 ---
 = Reset the default configuration on the new nodes
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-To ensure that configuration information on the boot media does not interfere with the controller upgrade, you need to reset the configurations of node3 and node4 to the default configuration settings.
+To confirm that configuration information on the boot media does not interfere with the controller upgrade, you must reset the configurations of node3 and node4 to the default configuration settings.
 
 .About this task
-You need to perform the following steps on node3 and node4. You can perform the steps on each node in parallel.
+You must perform the following steps on node3 and node4. You can perform the steps on each node in parallel.
 
 . Boot the node to the boot menu:
 +
@@ -48,3 +48,5 @@ Rebooting to finish wipeconfig request.
 The system will initiate the `wipeconfig` procedure and reboot. When the procedure is complete, the system returns to the boot menu.
 
 . From the boot menu, enter 8 to reboot the node, and press *Ctrl-C* during autoboot to stop the node at the LOADER prompt.
+
+// Clean-up, 2022-03-09

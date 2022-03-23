@@ -2,8 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto/overview_of_the_arl_upgrade.html
 keywords: aggregate relocation, upgrade, process, overview, stages
-summary: Before you upgrade the nodes using ARL, you should understand how the procedure works is broken down into several stages.
-
+summary: "Understand how the procedure to upgrade controllers running ONTAP 9.5 to 9.7 by using `system controller replace` commands works."
 ---
 
 = Overview of the ARL upgrade
@@ -20,8 +19,8 @@ include::../_include/ru_auto_overview_arl_workflow_top.adoc[]
 |===
 | Stage | Steps
 
-|Stage 1. Prepare for the upgrade
-a|. Run prechecks to verify that the operation can be performed.
+| link:stage_1_index.html[Stage 1. Prepare for the upgrade]
+a|. Run prechecks to verify that you can perform the operation.
 
 . Prepare for netbooting (optional).
 
@@ -31,7 +30,7 @@ Aggregate ownership at the end of Stage 1:
 
 * Node2 is the home owner and current owner of the node2 aggregates.
 
-|Stage 2. Relocate and retire node1
+| link:stage_2_index.html[Stage 2. Relocate and retire node1]
 a|. Move non-root aggregates from node1 to node2.
 
 . Move non-SAN data LIFs owned by node1 to node2.
@@ -44,7 +43,7 @@ Aggregate ownership at the end of Stage 2:
 
 * Node2 is the home owner and current owner of node2 aggregates.
 
-|Stage 3. Install and boot node3
+| link:stage_3_index.html[Stage 3. Install and boot node3]
 a|. Install and boot node3.
 
 . Set the FC or CNA configuration.
@@ -63,7 +62,7 @@ Aggregate ownership at the end of Stage 3:
 
 * Node2 is the home owner and current owner of node2 aggregates.
 
-|Stage 4. Relocate and retire node2
+| link:stage_4_index.html[Stage 4. Relocate and retire node2]
 a|. Relocate non-root aggregates from node2 to node3.
 
 . Move non-SAN data LIFs owned by node2 to node 3.
@@ -78,7 +77,7 @@ Aggregate ownership at the end of Stage 4:
 
 * Node3 is the current owner of node2 aggregates.
 
-|Stage 5. Install and boot node4
+| link:stage_5_index.html[Stage 5. Install and boot node4]
 a|. Install and boot node4.
 
 . Set the FC or CNA configuration on node4.
@@ -95,7 +94,7 @@ Aggregate ownership at the end of Stage 5:
 
 * Node4 is the home owner and current owner of aggregates that originally belonged to node2.
 
-|Stage 6. Complete the upgrade
+| link:stage_6_index.html[Stage 6. Complete the upgrade]
 a|. Verify the system is set up correctly.
 
 . Set up Storage Encryption on the new controller module.

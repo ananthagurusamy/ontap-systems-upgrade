@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto/guidelines_for_upgrading_controllers_with_arl.html
 keywords: upgrade, controllers, guidelines, ARL, aggregate relocation, supported upgrades, two-node, cluster, troubleshoot
-summary: Upgrading a pair of controllers running ONTAP 9.5 to ONTAP 9.7 depends on the platform and the configuration of both the original and replacement controllers.
+summary: "Understand if you can upgrade controllers running ONTAP 9.5 to 9.7 by using `system controller replace` commands."
 ---
 
 = Guidelines for upgrading controllers with ARL
@@ -52,5 +52,6 @@ If you want to upgrade entry level controllers with internal drives,  refer to l
 
 If any problems occur while upgrading the controllers, you can refer to the link:troubleshoot.html[Troubleshoot] section at the end of the procedure for more information and possible solutions.
 
-If you do not find a solution to the problem you encountered, you should contact technical support.
+If you do not find a solution to the problem you encountered, contact technical support.
 // p.9 of PDF
+// Clean-up, 2022-03-09

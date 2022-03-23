@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: upgrade-arl-auto-app/stage_4_index.html
-keywords: relocate, retire, node2, LIF, node3, non-root aggregates
-summary: During Stage 4, all non-root aggregates are relocated from node2 to node3.
+keywords: relocate, retire, node2, LIF, node3, non-root aggregates, stage 4
+summary: "Stage 4 process sequence for an ARL upgrade using `system controller replace` commands on controllers running ONTAP 9.8 or later."
 ---
 
 = Stage 4. Relocate and retire node2

@@ -1,5 +1,11 @@
 Before you upgrade the nodes using ARL, you should understand how the procedure works. In this content, the procedure is broken down into several stages.
 
+== Upgrade the node pair
+
+To upgrade the node pair, you need to prepare the original nodes and then perform a series of steps on both the original and new nodes. You can then decommission the original nodes.
+
+== ARL upgrade sequence overview
+
 During the procedure, you upgrade the original controller hardware with the replacement controller hardware, one controller at a time, taking advantage of the HA pair configuration to relocate the ownership of non-root aggregates. All non-root aggregates must undergo two relocations to reach their final destination, which is the correct upgraded node.
 
 Each aggregate has a home owner and current owner. The home owner is the actual owner of the aggregate, and the current owner is the temporary owner.

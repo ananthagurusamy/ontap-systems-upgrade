@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto/install_boot_node3.html
 keywords: install, boot, node3 relocation, nodes, V-series, storage disks
-summary: Install node3 in the rack, transfer node1's connections to node3, boot node3, and install ONTAP.
+summary: "Install and boot node3 and install ONTAP software when upgrading controllers running ONTAP 9.5 to 9.7 by using `system controller replace` commands."
 ---
 
 = Install and boot node3
@@ -18,7 +18,7 @@ include::../_include/ru_auto_install_boot_node3_intro_step_5.adoc[]
 [start=6]
 .  [[auto9597_istall3_step6]]Configure the netboot connection by choosing one of the following actions.
 +
-NOTE: You should use the management port and IP as the netboot connection. Do not use a data LIF IP or a data outage might occur while the upgrade is being performed.
+NOTE: You must use the management port and IP as the netboot connection. Do not use a data LIF IP or a data outage might occur while the upgrade is being performed.
 
 +
 [cols=2*,options="header"cols="30,70"]

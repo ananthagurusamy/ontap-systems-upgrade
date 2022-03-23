@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-manual/verify_health_mcc_config.html
 keywords:  health, mcc, metrocluster, configuration, configure
-summary: Check the health of the MetroCluster configuration to verify proper operation.
+summary: "Verify the health of the MetroCluster configuration and correct operation during a manual ARL upgrade on controllers running ONTAP 9.7 or earlier."
 ---
 
 = Verify the health of the MetroCluster configuration
@@ -13,7 +13,7 @@ summary: Check the health of the MetroCluster configuration to verify proper ope
 :imagesdir: ./media/
 
 [.lead]
-You should check the health of the MetroCluster configuration to verify proper operation.
+You should check the health of the MetroCluster configuration to verify correct operation.
 
 .Steps
 

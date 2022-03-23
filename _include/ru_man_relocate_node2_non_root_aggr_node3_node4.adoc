@@ -87,3 +87,5 @@ The node2 aggregates were listed in the output of the command in <<man_relocate_
 . Send a post-upgrade AutoSupport message to NetApp for node4:
 +
 `system node autosupport invoke -node <node4> -type all -message "<node2> successfully upgraded from <platform_old> to <platform_new>"`
+
+// Clean-up, 2022-03-09

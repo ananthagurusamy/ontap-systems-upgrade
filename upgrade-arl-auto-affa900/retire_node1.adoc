@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto-affa900/retire_node1.html
 keywords: retiring, node, retire
-summary: Retire node1 by resuming the automated operation to disable the HA pair with node2 and shutting down node1 correctly.
+summary: "Disable the HA pair with node2 and shut node1 down during an AFF A700 to AFF A900 upgrade."
 ---
 
 = Retire node1
@@ -14,7 +14,7 @@ summary: Retire node1 by resuming the automated operation to disable the HA pair
 
 
 [.lead]
-To retire node1, resume the automated operation to disable the HA pair with node2 and shut down node1 correctly. You must later remove the AFF A700 controller module and NVS from the node1 chassis and then install the AFF A900 NVS and controller module on node1.
+To retire node1, resume the automated operation to disable the HA pair with node2 and shut down node1 correctly. You must later remove the AFF A700 controller module and the NVRAM module from the node1 chassis and then install the AFF A900 NVRAM module and controller module on node1.
 
 .Steps
 .	Resume the operation:
@@ -27,11 +27,11 @@ To retire node1, resume the automated operation to disable the HA pair with node
 +
 After node1 has completely halted, node1 should be at the LOADER> prompt. To see the LOADER> prompt, connect to the serial console of node1.
 
-== Remove the AFF A700 controller module and NVS
-At this stage, node1 is down and all data is served by node2. Because node1 and node2 are in the same chassis and powered by the same set of power supplies, do NOT power off the chassis. You must take care to remove only the node1 controller module and the node1 NVS. Typically, node1 is controller A located on the left side of the chassis when looking at the controllers from the rear of the system. The controller label is located on the chassis directly above the controller module.
+== Remove the AFF A700 controller module and NVRAM module
+At this stage, node1 is down and all data is served by node2. Because node1 and node2 are in the same chassis and powered by the same set of power supplies, do NOT power off the chassis. You must take care to remove only the node1 controller module and the node1 NVRAM module. Typically, node1 is controller A, located on the left side of the chassis when looking at the controllers from the rear of the system. The controller label is located on the chassis directly above the controller module.
 
 .Before you begin
-If you are not already grounded, properly ground yourself.
+If you are not already grounded, correctly ground yourself.
 
 === Remove the AFF A700 controller module
 Use the following procedure to remove the AFF A700 controller module.
@@ -60,22 +60,22 @@ image::../media/black_circle_two.png[Number two]
 +
 Make sure that you support the bottom of the controller module as you slide it out of the chassis.
 
-=== Remove the AFF A700 NVS module
-Use the following procedure to remove the AFF A700 NVS module.
+=== Remove the AFF A700 NVRAM module
+Use the following procedure to remove the AFF A700 NVRAM module.
 
-NOTE: The AFF A700 NVS module is in slot 6 and is double the height compared to the other modules in the system.
+NOTE: The AFF A700 NVRAM module is in slot 6 and is double the height of the other modules in the system.
 
 .Steps
-.	Unlock and remove the NVS from slot 6 of node1.
+.	Unlock and remove the NVRAM module from slot 6 of node1.
 ..	Depress the lettered and numbered cam button.
 +
 The cam button moves away from the chassis.
 ..	Rotate the cam latch down until it is in a horizontal position.
 +
-The NVS disengages from the chassis and moves a few inches.
-..	Remove the NVS from the chassis by pulling on the pull tabs on the sides of the module face.
+The NVRAM module disengages from the chassis and moves a few inches.
+..	Remove the NVRAM module from the chassis by pulling on the pull tabs on the sides of the module face.
 +
-image::../media/drw_a900_move-remove_NVRAM_module.png[Remove NVS]
+image::../media/drw_a900_move-remove_NVRAM_module.png[Remove the NVRAM module]
 +
 [cols=2*,cols="20,80"]
 
@@ -88,22 +88,22 @@ image::../media/black_circle_two.png[Number two]
 |I/O latch completely unlocked
 |===
 
-.	If you are using any add-on modules as coredump devices on the AFF A700 NVS, do NOT transfer them to the AFF A900 NVS.
+.	If you are using any add-on modules as coredump devices on the AFF A700 NVRAM module, do NOT transfer them to the AFF A900 NVRAM module.
 
-== Install the AFF A900 NVS and controller module on node1
-You must install the AFF A900 NVS and controller module that you received for the upgrade on node1. Do NOT move the coredump devices from the AFF A700 NVS module to the AFF A900 NVS module.
+== Install the AFF A900 NVRAM module and controller module on node1
+You must install the AFF A900 NVRAM module and controller module that you received for the upgrade on node1. Do NOT move the coredump devices from the AFF A700 NVRAM module to the AFF A900 NVRAM module.
 
 .Before you begin
-If you are not already grounded, properly ground yourself.
+If you are not already grounded, correctly ground yourself.
 
-=== Install the AFF A900 NVS
-Use the following procedure to install the AFF A900 NVS in slot 6 of node1.
+=== Install the AFF A900 NVRAM module
+Use the following procedure to install the AFF A900 NVRAM module in slot 6 of node1.
 
 .Steps
-.	Align the NVS with the edges of the chassis opening in slot 6.
-.	Gently slide the NVS into the slot until the lettered and numbered I/O cam latch begins to engage with the I/O cam pin, and then push the I/O cam latch all the way up to lock the NVS in place.
+.	Align the NVRAM module with the edges of the chassis opening in slot 6.
+.	Gently slide the NVRAM module into the slot until the lettered and numbered I/O cam latch begins to engage with the I/O cam pin, and then push the I/O cam latch all the way up to lock the NVRAM module in place.
 +
-image::../media/drw_a900_move-remove_NVRAM_module.png[Install NVS]
+image::../media/drw_a900_move-remove_NVRAM_module.png[Install the NVRAM module]
 +
 [cols=2*,cols="20,80"]
 
@@ -120,21 +120,21 @@ image::../media/black_circle_two.png[Number two]
 Use the following procedure to install the AFF A900 controller module in node1.
 
 .Steps
-.	Align the end of the controller module with the opening A in the chassis, and then gently push the controller module halfway into the system.
+.	Align the end of the controller module with opening A in the chassis, and then gently push the controller module halfway into the system.
 +
-NOTE:	Do not completely insert the controller module in the chassis until instructed to do so.
+NOTE:	Do not completely insert the controller module in the chassis until instructed to do so later in the procedure.
 
 .	Cable the management and console ports to the node1 controller module.
 +
-NOTE:	Because the chassis is already powered ON, node1 starts BIOS initialization followed by autoboot as soon as it is fully seated. To interrupt the node1 boot, before completely inserting controller module into the slot, it is recommended to connect the serial console and management cables to the node1 controller module.
+NOTE:	Because the chassis is already powered ON, node1 starts BIOS initialization followed by autoboot as soon as it is fully seated. To interrupt the node1 boot, before completely inserting the controller module into the slot, it is recommended that you connect the serial console and management cables to the node1 controller module.
 
 .	Firmly push the controller module into the chassis until it meets the midplane and is fully seated.
 +
 The locking latch rises when the controller module is fully seated.
 +
-WARNING: Do not use excessive force when sliding the controller module into the chassis to avoid damaging the connectors.
+WARNING: To avoid damaging the connectors, do not use excessive force when sliding the controller module into the chassis.
 +
-image::../media/drw_9500_remove_PCM.png[Install controller module]
+image::../media/drw_9500_remove_PCM.png[Install the controller module]
 +
 [cols=2*,cols="20,80"]
 
@@ -148,7 +148,7 @@ image::../media/black_circle_two.png[Number two]
 |===
 
 .	Connect the serial console as soon as the module is seated and be ready to interrupt AUTOBOOT of node1.
-.	After you interrupt AUTOBOOT, node1 stops at the LOADER prompt. If you do not interrupt AUTOBOOT on time and node1 starts booting, wait for the prompt to press *Ctrl-C* to go into the boot menu. After the node stops at the boot menu, use option `8` to reboot the node and interrupt the AUTOBOOT during reboot.
+.	After you interrupt AUTOBOOT, node1 stops at the LOADER prompt. If you do not interrupt AUTOBOOT on time and node1 starts booting, wait for the prompt and press *Ctrl-C* to go into the boot menu. After the node stops at the boot menu, use option `8` to reboot the node and interrupt the AUTOBOOT during reboot.
 .	At the LOADER> prompt of node1, set the default environment variables:
 +
 `set-defaults`

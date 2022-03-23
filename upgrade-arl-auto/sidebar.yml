@@ -19,8 +19,6 @@ entries:
   url: /upgrade-arl-auto/verify_switchover_healing_switchback.html
 - title: Overview of the ARL upgrade
   url: /upgrade-arl-auto/overview_of_the_arl_upgrade.html
-- title: Upgrade the node pair
-  url: /upgrade-arl-auto/upgrade_node_pair.html
 - title: "Stage 1. Prepare for upgrade"
   entries:
     - title: Overview

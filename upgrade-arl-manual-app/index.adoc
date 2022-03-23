@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-manual-app/index.html
 keywords:  controller, aggregate, relocation, flexarray, manual, upgrade, metrocluster
-summary: You upgrade the original controller hardware with the replacement controller hardware, relocating the ownership of non-root aggregates.
+summary: "Using the manual ARL upgrade procedure to upgrade controller hardware running ONTAP 9.8 or later, relocating the ownership of non-root aggregates."
 ---
 
 = Overview
@@ -13,7 +13,20 @@ summary: You upgrade the original controller hardware with the replacement contr
 :imagesdir: ./media/
 
 [.lead]
-*You can use this aggregate relocation procedure to manually upgrade controller hardware running ONTAP 9.8 or later.*
+This procedure describes how to upgrade the controller hardware using aggregate relocation (ARL) for the following system configurations:
+
+[cols=3*,options="header",cols="20,20,60"]
+|===
+|Method |ONTAP version |Supported systems
+
+|Manual upgrade using ARL
+|9.8 or earlier
+a|* FAS system to FAS system
+* FAS system to a system with FlexArray Virtualization Software or a V-Series system
+* AFF system to AFF system
+* System with FlexArray Virtualization Software or a V-Series system to a FAS system, provided that the system with FlexArray Virtualization Software or V-Series system has no array LUNs.
+* V-Series system to a system with FlexArray Virtualization Software or a V-Series system
+|===
 
 include::../_include/ru_man_use_arl_overview.adoc[]
 

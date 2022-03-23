@@ -1,5 +1,5 @@
 section: upgrade-arl-auto-affa900
-title: Use "system controller replace" commands to upgrade AFF A700 to AFF A900 running ONTAP 9.10.1 RC2 or later
+title: Use "system controller replace" commands to upgrade AFF A700 to AFF A900 running ONTAP 9.10.1 or later
 entries:
 - title: Overview
   url: /upgrade-arl-auto-affa900/index.html
@@ -13,8 +13,6 @@ entries:
   url: /upgrade-arl-auto-affa900/guidelines_for_upgrading_controllers_with_arl.html
 - title: Overview of the ARL upgrade
   url: /upgrade-arl-auto-affa900/overview_of_the_arl_upgrade.html
-- title: Upgrade the node pair
-  url: /upgrade-arl-auto-affa900/upgrade_node_pair.html
 - title: "Stage 1. Prepare for upgrade"
   entries:
     - title: Verify the upgrade hardware
@@ -33,9 +31,9 @@ entries:
       url: /upgrade-arl-auto-affa900/retire_node1.html
     - title: Netboot node1
       url: /upgrade-arl-auto-affa900/netboot_node1.html
-- title: "Stage 3. Boot node1 with the AFF A900 controller module and NVS"
+- title: "Stage 3. Boot node1 with the AFF A900 controller module and NVRAM module"
   entries:
-    - title: Boot node1 with the AFF A900 controller module and NVS
+    - title: Boot node1 with the AFF A900 controller module and NVRAM module
       url: /upgrade-arl-auto-affa900/boot_node1_with_a900_controller_and_nvs.html
     - title: Verify the node1 installation
       url: /upgrade-arl-auto-affa900/verify_node1_installation.html
@@ -49,15 +47,15 @@ entries:
       url: /upgrade-arl-auto-affa900/relocate_non_root_aggr_nas_lifs_from_node2_to_node1.html
     - title: Retire node2
       url: /upgrade-arl-auto-affa900/retire_node2.html
-- title: "Stage 5. Install the AFF A900 NVS and controller module on node2"
+- title: "Stage 5. Install the AFF A900 NVRAM module and controller module on node2"
   entries:
-   - title: Install AFF A900 NVS and controller module on node2
+   - title: Install AFF A900 NVRAM module and controller module on node2
      url: /upgrade-arl-auto-affa900/install_a900_nvs_and_controller_on_node2.html
    - title: Netboot node2
      url: /upgrade-arl-auto-affa900/netboot_node2.html
-- title: "Stage 6. Boot node2 with the AFF A900 controller module and NVS"
+- title: "Stage 6. Boot node2 with the AFF A900 controller module and NVRAM module"
   entries:
-   - title: Boot node2 with the AFF A900 controller module and NVS
+   - title: Boot node2 with the AFF A900 controller module and NVRAM module
      url: /upgrade-arl-auto-affa900/boot_node2_with_a900_controller_and_nvs.html
    - title: Verify the node2 installation
      url: /upgrade-arl-auto-affa900/verify_node2_installation.html

@@ -1,4 +1,4 @@
-NOTE: The home owner for the aggregates and LIFs are not modified; only the current owner is modified.
+NOTE: The home owner for the aggregates and LIFs is not modified; only the current owner is modified.
 
 .Steps
 
@@ -8,7 +8,7 @@ NOTE: The home owner for the aggregates and LIFs are not modified; only the curr
 +
 All the non-root aggregates and NAS data LIFs are migrated from node1 to node2.
 +
-The operation pauses to allow you to verify whether all node1 non-root aggregates and non-SAN data LIFs have been migrated to node2.
+The operation pauses to enable you to verify whether all node1 non-root aggregates and non-SAN data LIFs have been migrated to node2.
 
 . Check the status of the aggregate relocation and NAS data LIF move operations:
 +

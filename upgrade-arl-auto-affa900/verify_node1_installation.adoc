@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: upgrade-arl-auto-affa900/verify_node1_installation.html
-keywords: verifying, verify, node1, install, installation, aff, a900, nvs, controller
-summary: Verify the node1 installation with the AFF A900 controller module and NVS.
+keywords: verifying, verify, node1, install, installation, aff, a900, NVRAM, controller
+summary: Verify the node1 installation with the AFF A900 controller module and NVRAM module.
 ---
 
 = Verify the node1 installation
@@ -13,7 +13,7 @@ summary: Verify the node1 installation with the AFF A900 controller module and N
 :imagesdir: ./media/
 
 [.lead]
-You must verify the node1 installation with the AFF A900 controller module and NVS. Because there is no change to physical ports, you are not required to map the physical ports from the AFF A700 node1 to the AFF A900 node1.
+You must verify the node1 installation with the AFF A900 controller module and NVRAM module. Because there is no change to physical ports, you are not required to map the physical ports from the AFF A700 node1 to the AFF A900 node1.
 
 .About this task
 After you boot node1 with the AFF A900 controller module, you must verify that it is installed correctly. You must wait for node1 to join quorum and then resume the controller replacement operation.
@@ -61,7 +61,7 @@ To complete the Network Reachability task, the ONTAP network configuration must 
 2 entries were displayed.
 ----
 +
-NOTE:	In this guide section _Re-creating VLANs, ifgrps, and broadcast domains_ has been renamed _Restore network configuration on node1_.
+NOTE:	In this procedure, section _Re-creating VLANs, ifgrps, and broadcast domains_ has been renamed _Restore network configuration on node1_.
 
 .	With the controller replacement in a paused state, proceed to <<Restore network configuration on node1>>.
 
@@ -117,7 +117,7 @@ Node1
 22 entries were displayed.
 ----
 +
-In the above example, node1 booted after the controller replacement. Some ports do not have reachability because there is no physical connectivity. You must repair any ports with a reachability status other than `ok`.
+In the preceding example, node1 booted after the controller replacement. Some ports do not have reachability because there is no physical connectivity. You must repair any ports with a reachability status other than `ok`.
 +
 NOTE:	During an AFF A700 to an AFF A900 controller upgrade, the network ports and their connectivity should not change. All ports should reside in the correct broadcast domains and the network port reachability should not change. However, before moving LIFs from node2 back to node1, you must verify the reachability and health status of the network ports.
 
@@ -140,7 +140,7 @@ Cluster ::> reachability repair -node node1 -port e11b
 Warning: Repairing port "node1:e11b" may cause it to move into a different broadcast domain, which can cause LIFs to be re-homed away from the port. Are you sure you want to continue? {y|n}:
 ----
 +
-A warning message, as shown above, is expected for ports with a reachability status that might be different from the reachability status of the broadcast domain where it is currently located. Review the connectivity of the port and answer `y` or `n` as appropriate.
+A warning message, as shown in the preceding example, is expected for ports with a reachability status that might be different from the reachability status of the broadcast domain where it is currently located. Review the connectivity of the port and answer `y` or `n` as appropriate.
 +
 Verify that all physical ports have their expected reachability:
 +
@@ -160,7 +160,7 @@ When all ports are correctly configured and added to the correct broadcast domai
 +
 `network port broadcast-domain show`
 
-.	Restore LIF home ports, specifying the Vserver(s) and LIF(s) home ports, if any, that need to be restored by using the following steps:
+.	Restore LIF home ports, specifying the Vserver and LIF home ports, if any, that need to be restored by using the following steps:
 
 ..	List any LIFs that are displaced:
 +
