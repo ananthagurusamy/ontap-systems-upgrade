@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-manual-app/guidelines_upgrade_with_arl.html
 keywords: guidelines, upgrade
-summary: "Understand if you can use the manual ARL upgrade procedure for a pair of controllers running ONTAP 9.8 or later."
+summary: Guidelines for upgrade controllers with ARL
 ---
 
 = Guidelines for upgrading controllers with ARL
@@ -22,13 +22,12 @@ You can upgrade a pair of nodes using ARL under the following circumstances:
 * Both the original controllers and the replacement controllers must be running the same version of ONTAP 9.8 before the upgrade.
 
 include::../_include/ru_man_supported_upgrades_chunk_a.adoc[]
-* For some ARL controller upgrades you can use temporary cluster ports on the replacement controller for the upgrade. For example, if you upgrade from an AFF A300 to an AFF A400 system, depending on the AFF A400 configuration, you can use any of the two mezzanine ports or add a four-port 10GbE network interface card to provide temporary cluster ports. After you complete a controller upgrade using temporary cluster ports, you can nondisruptively migrate clusters to 100GbE ports on the replacement controller.
+* For some ARL controller upgrades you can use temporary cluster ports on the replacement controller for the upgrade. For example, if you upgrade from an AFF A300 to an AFF A400 system, depending on the AFF A400 configuration, you can use any of the two mezzanine ports or add a four-port 10 GbE network interface card to provide temporary cluster ports. After you complete a controller upgrade using temporary cluster ports, you can nondisruptively migrate clusters to 100 GbE ports on the replacement controller.
 //BURT 1367155 30-Aug-2021
 include::../_include/ru_man_supported_upgrades_chunk_b.adoc[]
 
-If you have a system with more than two cluster ports per node, such as an FAS8080 or an AFF8080 system, you must migrate and re-home the cluster LIFs to two cluster ports per node before you start the controller upgrade.If you perform the controller upgrade with more than two cluster ports per node, cluster LIFs might be missing on the new controller after the upgrade.
+ If you have a system with more than two cluster ports per node, such as an FAS8080 or an AFF8080 system, before you start the upgrade, you must migrate and re-home the cluster LIFs to two cluster ports per node If you perform the controller upgrade with more than two cluster ports per node, cluster LIFs might be missing on the new controller after the upgrade.
 // BURT 1418719 31-Jan-2022
-// BURT 1462831, 2022-03-28
 
 == Upgrades not supported for ARL
 
@@ -69,3 +68,5 @@ If you are upgrading nodes in a two-node switchless cluster, you can leave the n
 == Troubleshooting
 
 include::../_include/ru_man_troubleshooting.adoc[]
+
+// BURT 1463821, 2022-03-29
