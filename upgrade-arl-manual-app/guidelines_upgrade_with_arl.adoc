@@ -26,7 +26,7 @@ include::../_include/ru_man_supported_upgrades_chunk_a.adoc[]
 //BURT 1367155 30-Aug-2021
 include::../_include/ru_man_supported_upgrades_chunk_b.adoc[]
 
- If you have a system with more than two cluster ports per node, such as an FAS8080 or an AFF8080 system, before you start the upgrade, you must migrate and re-home the cluster LIFs to two cluster ports per node If you perform the controller upgrade with more than two cluster ports per node, cluster LIFs might be missing on the new controller after the upgrade.
+If you have a system with more than two cluster ports per node, such as an FAS8080 or an AFF8080 system, before you start the upgrade, you must migrate and re-home the cluster LIFs to two cluster ports per node. If you perform the controller upgrade with more than two cluster ports per node, cluster LIFs might be missing on the new controller after the upgrade.
 // BURT 1418719 31-Jan-2022
 
 == Upgrades not supported for ARL
