@@ -70,7 +70,7 @@ Do you want to continue (y/n)? y
 ----
 
 . Enter `y` to continue.
-. Ensure that node1's root aggregate is set to `root` in the options field and that other aggregates are online:
+. Confirm that node1's root aggregate is set to `root` in the options field and that other aggregates are online:
 +
 `aggr status`
 +
@@ -86,3 +86,5 @@ You should see output similar to the following:
 . Exit Maintenance mode:
 +
 `halt`
+
+// Clean-up, 2022-03-09

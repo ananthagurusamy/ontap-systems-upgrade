@@ -1,4 +1,4 @@
-Before you can replace node1 with node3, you need to move the non-root aggregates from node1 to node2 by using the storage aggregate relocation command and then verifying the relocation.
+Before you can replace node1 with node3, you must move the non-root aggregates from node1 to node2 by using the storage aggregate relocation command and then verifying the relocation.
 
 .Steps
 
@@ -11,7 +11,7 @@ Before you can replace node1 with node3, you need to move the non-root aggregate
 `storage aggregate relocation start -node <node1> -destination <node2> -aggregate-list * -ndo-controller-upgrade true`
 .. When prompted, enter `y`.
 +
-Relocation will occur in the background. It could take anywhere from a few seconds to a couple of minutes to relocate an aggregate. The time includes both client outage and nonoutage portions. The command does not relocate any offline or restricted aggregates.
+Relocation will occur in the background. It could take anywhere from a few seconds to a couple of minutes to relocate an aggregate. The time includes both client outage and non-outage portions. The command does not relocate any offline or restricted aggregates.
 
 .. Return to the admin level by entering the following command:
 +
@@ -96,3 +96,5 @@ Node owns partner's aggregates as part of the nondisruptive controller upgrade p
 `storage aggregate show -owner-name <node1> -ha-policy sfo -state online`
 +
 The output should not display any online non-root aggregates, which have already been relocated to node2.
+
+// Clean-up, 2022-03-09

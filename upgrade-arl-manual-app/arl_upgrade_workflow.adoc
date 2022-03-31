@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-manual-app/arl_upgrade_workflow.html
 keywords: upgrade workflow, procedure steps, stages
-summary: ARL upgrade workflow
+summary: "Understand how the manual ARL upgrade procedure for a pair of controllers running ONTAP 9.8 or later works."
 ---
 
 = ARL upgrade workflow
@@ -13,7 +13,13 @@ summary: ARL upgrade workflow
 :imagesdir: ./media/
 
 [.lead]
-Before you upgrade the nodes using ARL, you should understand how the procedure works. In this document, the procedure is broken down into several stages.
+Before you upgrade the nodes using ARL, you must understand how the procedure works. In this document, the procedure is broken down into several stages.
+
+== Upgrade the node pair
+
+To upgrade the node pair, you must prepare the original nodes and then perform a series of steps on both the original and new nodes. You can then decommission the original nodes.
+
+== ARL upgrade sequence overview
 
 During the procedure, you upgrade the original controller hardware with the replacement controller hardware, one controller at a time, taking advantage of the HA pair configuration to relocate the ownership of non-root aggregates. All non-root aggregates must undergo two relocations to reach their final destination, which is the correct upgraded node.
 
@@ -29,7 +35,7 @@ The following table describes the high-level tasks you perform during each stage
 |===
 | Stage | Steps
 
-| Stage 1: Prepare for upgrade
+| link:stage_1_index.html[Stage 1: Prepare for upgrade]
 a| . Determine whether the controller has aggregates on internal disk drives.
 +
 This step is required only if you are upgrading from a controller with internal disk drive.
@@ -45,7 +51,7 @@ Aggregate ownership at the end of Stage 1:
 * Node1 is the home owner and current owner of the node1 aggregates.
 * Node2 is the home owner and current owner of the node2 aggregates.
 
-|Stage 2: Retire node1
+| link:stage_2_index.html[Stage 2: Retire node1]
 a| . Relocate non-root aggregates from node1 to node2.
 . Move non-SAN data LIFSs owned by node1 to node2.
 . Record node1 information.
@@ -58,7 +64,7 @@ Aggregate ownership at the end of Stage 2:
 * Node2 is the current owner of node1 aggregates.
 * Node2 is the home owner and current owner of node2 aggregates.
 
-|Stage 3: Install and boot node3
+| link:stage_3_index.html[Stage 3: Install and boot node3]
 a| . Install and boot node3.
 . Set the UTA/UTA2 configuration on node3.
 . Map ports from node1 to node3.
@@ -72,13 +78,13 @@ Aggregate ownership at the end of Stage 3:
 * Node3 is the home owner and current owner of aggregates originally belonging to node1.
 * Node2 is the home owner and current owner of aggregates belonging to node2 but not the home owner.
 
-|Stage 4: Retire node2
+| link:stage_4_index.html[Stage 4: Retire node2]
 a| . Record node2 information.
 . Retire node2.
 
 No changes occur in aggregate ownership.
 
-|Stage 5: Install and boot node4
+| link:stage_5_index.html[Stage 5: Install and boot node4]
 a| . Install and boot node4.
 . Set the UTA/UTA2 configuration on node4.
 . Map ports from node2 to node4.
@@ -90,8 +96,8 @@ Aggregate ownership at the end of Stage 5:
 * Node3 is the home owner and current owner of the aggregates that originally belonged to node1.
 * Node4 is the home owner and current owner of aggregates that originally belonged to node2.
 
-|Stage 6: Complete the upgrade
-a| . Ensure the new controllers are set up correctly.
+| link:stage_6_index.html[Stage 6: Complete the upgrade]
+a| . Confirm the new controllers are set up correctly.
 . Set up Storage Encryption on the new nodes.
 +
 This task is required only if you are upgrading to a system with self-encrypting drives.
@@ -102,3 +108,5 @@ This task is required only if you are upgrading to a system with self-encrypting
 
 No changes occur in aggregate ownership.
 |===
+
+// Clean-up, 2022-03-09

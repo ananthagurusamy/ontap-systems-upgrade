@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-manual/map_ports_node2_node4.html
 keywords: map, node2, node4, physical ports, cluster, network, connectivity
-summary: Verify that the physical ports on node2 map correctly to the physical ports on node4.
+summary: "Verify that the physical ports on node2 map correctly to node4 during a manual ARL upgrade on controllers running ONTAP 9.7 or earlier."
 ---
 
 = Map ports from node2 to node4
@@ -13,8 +13,8 @@ summary: Verify that the physical ports on node2 map correctly to the physical p
 :imagesdir: ./media/
 
 [.lead]
-// COPIED FROM 9.8 GUIDE...CHECK FOR REUSE, THEN REMOVE THIS COMMENT
-You need to make sure that the physical ports on node2 map correctly to the physical ports on node4, which will let node4 communicate with other nodes in the cluster and with the network after the upgrade.
+
+You must make sure that the physical ports on node2 map correctly to the physical ports on node4, which will let node4 communicate with other nodes in the cluster and with the network after the upgrade.
 
 .Before you begin
 
@@ -209,3 +209,4 @@ Cluster          NodeB_clus2:7700               TCP/ctlopcp
 +
 Repeat Step 11 to verify that the cluster LIF is now listening on port 7700.
 // 2021-11-03, BURT 1429264
+// Clean up, 2022-03-09

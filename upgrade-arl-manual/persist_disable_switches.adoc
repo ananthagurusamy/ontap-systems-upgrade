@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-manual/persist_disable_switches.html
 keywords: disable, switches, fabric, persistent, modify, configuration, configure
-summary:  Disable the switches in the fabric persistently so that you can modify its configuration.
+summary:  "Disable Brocade and Cisco switches in the fabric and modify configuration during a manual ARL upgrade on controllers running ONTAP 9.7 or earlier."
 ---
 
 = Persistenly disable the switches

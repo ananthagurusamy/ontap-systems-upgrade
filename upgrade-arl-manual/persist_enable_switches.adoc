@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-manual/persist_enable_switches.html
 keywords: enable, switches, fabric, persistent
-summary: Enable the switches in the fabric persistently, Brocade, Cisco
+summary: "Enable Brocade and Cisco switches in the fabric persistently during a manual ARL upgrade on controllers running ONTAP 9.7 or earlier."
 ---
 
 = Persistently enable the switches

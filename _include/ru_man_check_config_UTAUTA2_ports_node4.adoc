@@ -8,7 +8,7 @@ You must have the correct SFP+ modules for the UTA/UTA2 ports.
 
 .About this task
 
-UTA/UTA2 ports can be configured into native FC mode or UTA/UTA2A mode. FC mode supports FC initiator and FC target; UTA/UTA2 mode allows concurrent NIC and FCoE traffic to share the same 10 GbE SFP+ interface and supports FC target.
+UTA/UTA2 ports can be configured into native FC mode or UTA/UTA2A mode. FC mode supports FC initiator and FC target; UTA/UTA2 mode enables concurrent NIC and FCoE traffic to share the same 10GbE SFP+ interface and supports FC target.
 
 NOTE: NetApp marketing materials might use the term UTA2 to refer to CNA adapters and ports. However, the CLI uses the term CNA.
 
@@ -18,7 +18,7 @@ UTA/UTA2 ports might be on an adapter or on the controller with the following co
 * UTA/UTA2 cards ordered separately from the controller are shipped with the default FC target personality.
 * Onboard UTA/UTA2 ports on new controllers are configured (before shipment) to have the personality you requested.
 
-However, you should check the configuration of the UTA/UTA2 ports on node4 and change it, if necessary.
+However, you can check the configuration of the UTA/UTA2 ports on node4 and change it, if necessary.
 
 *Attention*: If your system has storage disks, you enter the commands in this section at the cluster prompt unless directed to enter Maintenance mode. If you have a MetroCluster FC system, V-Series system or a system with FlexArray Virtualization software that is connected to storage arrays,  you must be in Maintenance mode to configure UTA/UTA2 ports.
 
@@ -110,7 +110,7 @@ Adapters in target mode are automatically offline in Maintenance mode.
 * `-t` is the FC4 type: target or initiator.
 
 +
-NOTE: You need to use FC initiator for tape drives and FlexArray Virtualization systems. You need to use the FC target for SAN clients.
+NOTE: You must use FC initiator for tape drives and FlexArray Virtualization systems. You must use the FC target for SAN clients.
 
 . Verify the settings by entering the following command and examining its output:
 +
@@ -203,3 +203,5 @@ f-a    2b      fc      target    cna      -          online
 |Is a V-Series system or has FlexArray Virtualization Software and is connected to storage arrays
 |Return to the section _Install and boot node4_, and resume the section at link:install_boot_node4.html#Step9[Step 9].
 |===
+
+// Clean-up, 2022-03-09

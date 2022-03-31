@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto-app/verify_node4_installation.html
 keywords: verify, node4, installation, physical ports, node2, node, LIF, MetroCluster
-summary: Verify the node4 installation
+summary: "Verify that node2's physical ports map correctly to node4 and restore network configuration on node4 when upgrading controllers running ONTAP 9.8 or later by using `system controller replace` commands."
 ---
 
 = Verify the node4 installation
@@ -19,7 +19,7 @@ summary: Verify the node4 installation
 //
 
 [.lead]
-You must verify that the physical ports from node2 map correctly to the physical ports on node4. This will allow node4 to communicate with other nodes in the cluster and with the network after the upgrade.
+You must verify that the physical ports from node2 map correctly to the physical ports on node4. This will enable node4 to communicate with other nodes in the cluster and with the network after the upgrade.
 
 .About this task
 
@@ -239,7 +239,7 @@ If the interface group’s reachability status is not `ok`, assign it to the app
 +
 `network port broadcast-domain add-port`
 +
-Verify that there are no unreachable or unexpected ports present. Check the reachability status for all physical ports by using the following command and examining the output to ensure the status is `ok`:
+Verify that there are no unreachable or unexpected ports present. Check the reachability status for all physical ports by using the following command and examining the output to confirm the status is `ok`:
 +
 `network port reachability show -detail`
 
@@ -313,3 +313,4 @@ When all ports are correctly configured and added to the correct broadcast domai
 +
 `network interface show -fields home- port,status-admin`
 // 11 DEC 2020, thomi, checked
+// Clean-up, 2022-03-09

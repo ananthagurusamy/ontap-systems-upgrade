@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-manual-app/map_ports_node2_node4.html
 keywords: map, node2, node4, physical ports, cluster, network, connectivity
-summary: Verify that the physical ports on node2 map correctly to the physical ports on node4.
+summary: "Verify that the physical ports on node2 map correctly to node4 during a manual ARL upgrade on controllers running ONTAP 9.8 or later."
 ---
 
 = Map ports from node2 to node4
@@ -13,7 +13,7 @@ summary: Verify that the physical ports on node2 map correctly to the physical p
 :imagesdir: ./media/
 
 [.lead]
-You need to make sure that the physical ports on node2 map correctly to the physical ports on node4, which will let node4 communicate with other nodes in the cluster and with the network after the upgrade.
+You must make sure that the physical ports on node2 map correctly to the physical ports on node4, which will let node4 communicate with other nodes in the cluster and with the network after the upgrade.
 
 .Before you begin
 
@@ -110,7 +110,7 @@ A warning like the following is expected. Review and enter y or n, as appropriat
 ----
 Warning: Repairing port "node_name:port" may cause it to move into a different broadcast domain, which can cause LIFs to be re-homed away from the port. Are you sure you want to continue? {y|n}:
 ----
-.. To allow ONTAP to complete the repair, wait for about a minute after running the `reachability repair` command on the last port.
+.. To enable ONTAP to complete the repair, wait for about a minute after running the `reachability repair` command on the last port.
 .. List all broadcast domains on the cluster:
 +
 `broadcast-domain show`

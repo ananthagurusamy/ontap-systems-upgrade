@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-manual/move_nas_lifs_node2_node3.html
 keywords: move, nas, lif, node2, node3, san, cifs, nfs
-summary: You need to move the NAS data LIFs owned by node2 to node3.
+summary: "Move node2's NAS data LIFs to node3 during a manual ARL upgrade on controllers running ONTAP 9.7 or earlier."
 ---
 
 = Move NAS data LIFs owned by node2 to node3

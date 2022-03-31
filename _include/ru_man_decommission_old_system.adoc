@@ -11,9 +11,10 @@ You can choose one of the following to locate your system:
 * Serial Number (located on the back of the unit)
 * Serial Numbers for My Location
 
-. Click *Go!*
+. Select *Go!*
 +
 A table displays cluster information, including the serial numbers.
 
 . Locate the cluster in the table and select *Decommission this system* from the Product Tool Set drop-down menu.
 // 26 feb 2021:  formatted from CMS
+// Clean up, 2022-03-09
