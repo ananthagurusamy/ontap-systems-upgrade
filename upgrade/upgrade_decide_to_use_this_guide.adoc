@@ -25,7 +25,7 @@ Upgrading by moving volumes is nondisruptive.
 
 * You plan to convert a node of a supported model to a disk shelf, and then attach it to the new nodes.
 
-If you are upgrading a two-node MetroCluster configuration, you must use the procedure in the https://docs.netapp.com/us-en/ontap-metrocluster/upgrade/index.html[MetroCluster® Upgrade and Expansion^] content.
+If you are upgrading a two-node MetroCluster configuration, you must use the procedure in the https://docs.netapp.com/us-en/ontap-metrocluster/upgrade/concept_choosing_an_upgrade_method_mcc.html[MetroCluster® Upgrade and Expansion^] content.
 
 This content does not describe how to use aggregate relocation (ARL) to upgrade controller hardware, which is described in the link:https://docs.netapp.com/us-en/ontap-systems-upgrade/upgrade-arl/index.html[ARL controller hardware upgrade^] content.
 
