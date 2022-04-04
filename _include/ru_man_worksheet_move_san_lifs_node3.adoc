@@ -1,0 +1,28 @@
+To help verify that you have the correct configuration after moving node1's NAS data LIFs from node2 to node3, you can use the following worksheet to record the `adapter` and `switch-port` information for each LIF.
+
+Record the LIF `adapter` information from the `network interface show -data-protocol fc*` command output and the `switch-port` information from the `fcp adapter show -fields switch-port,fc-wwpn` output for node2.
+
+After you complete the migration to node3, record the LIF `adapter` and `switch-port` information for the LIFs on node3 and verify that each LIF is still connected to the same `switch-port`.
+
+[cols=6*,options="header"]
+|===
+3+a|Node2 3+a|Node3
+h|LIF h|`adapter` h|`switch-port` h|LIF h|`adapter` h|`switch-port`
+
+| | | | | |
+| | | | | |
+| | | | | |
+| | | | | |
+| | | | | |
+| | | | | |
+| | | | | |
+| | | | | |
+| | | | | |
+| | | | | |
+| | | | | |
+| | | | | |
+| | | | | |
+| | | | | |
+|===
+
+//BURT 1400783 04-Apr-2022

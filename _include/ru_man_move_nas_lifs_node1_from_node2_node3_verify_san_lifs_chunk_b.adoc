@@ -29,7 +29,11 @@ cluster::> net int show -data-protocol iscsi|fcp -home-node node3
               lif2        up/up       172.17.176.121/24   node3          e1a      true
 ----
 
-.. Verify that the new port, switch, and adapter configurations are correct by comparing the output from the `fcp adapter show` command with the new configuration information recorded in the worksheet in <<worksheet_step2,Step 2>>. List the new SAN LIF configurations on node 3:
+.. Verify that the new port, switch, and adapter configurations are correct by comparing the output from the `fcp adapter show` command with the configuration information recorded in the worksheet in <<worksheet_step2,Step 2>>.
++
+NOTE: If a SAN LIF in the new configuration is not on an adapter that is attached to the same `switch-port`, it might cause a system outage when you reboot the node.
++
+List the new SAN LIF configurations on node 3:
 +
 `fcp adapter show -fields switch-port,fc-wwpn`
 +

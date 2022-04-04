@@ -7,8 +7,8 @@ Remote LIFs handle traffic to SAN LUNs during the upgrade procedure. Moving SAN 
 . [[step1]]List all the NAS data LIFs not owned by node2 by entering the following command on either node and capturing the output:
 +
 `network interface show -role data -curr-node <node2> -is-home false -home-node <node3>`
-[[worksheet_step2]]
-. If the cluster is configured for SAN LIFs, record the SAN LIFs and existing configuration information in the link:worksheet_information_before_moving_san_lifs.html[worksheet] for use later in the procedure.
+
+. [[worksheet_step2]]If the cluster is configured for SAN LIFs, record the SAN LIFs `adapter` and `switch-port` configuration information in the link:worksheet_information_before_moving_san_lifs.html[worksheet] for use later in the procedure.
 .. List the SAN LIFs on node 2 and examine the output:
 +
 `network interface show -data-protocol fc*`
@@ -18,22 +18,22 @@ The system returns output similar to the following example:
 ----
 cluster1::> net int show -data-protocol fc*
   (network interface show)
-            Logical    Status     Network            Current       Current Is
-Vserver     Interface  Admin/Oper Address/Mask       Node          Port    Home
------------ ---------- ---------- ------------------ ------------- ------- ----
+             Logical     Status     Network            Current        Current Is
+Vserver      Interface   Admin/Oper Address/Mask       Node           Port    Home
+-----------  ----------  ---------- ------------------ -------------  ------- ----
 svm2_cluster1
-            lif_svm2_cluster1_340
-                         up/up   20:02:00:50:56:b0:39:99
-                                                    cluster1-01    1b      true
-            lif_svm2_cluster1_398
-                         up/up   20:03:00:50:56:b0:39:99
-                                                    cluster1-02    1a      true
-            lif_svm2_cluster1_691
-                         up/up   20:01:00:50:56:b0:39:99
-                                                    cluster1-01    1a      true
-            lif_svm2_cluster1_925
-                         up/up   20:04:00:50:56:b0:39:99
-                                                    cluster1-02    1b      true
+             lif_svm2_cluster1_340
+                         up/up      20:02:00:50:56:b0:39:99
+                                                       cluster1-01    1b      true
+             lif_svm2_cluster1_398
+                         up/up      20:03:00:50:56:b0:39:99
+                                                       cluster1-02    1a      true
+             lif_svm2_cluster1_691
+                         up/up      20:01:00:50:56:b0:39:99
+                                                       cluster1-01    1a      true
+             lif_svm2_cluster1_925
+                         up/up      20:04:00:50:56:b0:39:99
+                                                       cluster1-02    1b      true
 4 entries were displayed.
 ----
 
@@ -46,28 +46,26 @@ The system returns output similar to the following example:
 ----
 cluster1::> fcp adapter show -fields switch-port,fc-wwpn
   (network fcp adapter show)
-node        adapter fc-wwpn                 switch-port
------------ ------- ----------------------- -------------
-cluster1-01 0a      50:0a:09:82:9c:13:38:00 ACME Switch:0
-cluster1-01 0b      50:0a:09:82:9c:13:38:01 ACME Switch:1
-cluster1-01 0c      50:0a:09:82:9c:13:38:02 ACME Switch:2
-cluster1-01 0d      50:0a:09:82:9c:13:38:03 ACME Switch:3
-cluster1-01 0e      50:0a:09:82:9c:13:38:04 ACME Switch:4
-cluster1-01 0f      50:0a:09:82:9c:13:38:05 ACME Switch:5
-cluster1-01 1a      50:0a:09:82:9c:13:38:06 ACME Switch:6
-cluster1-01 1b      50:0a:09:82:9c:13:38:07 ACME Switch:7
-cluster1-02 0a      50:0a:09:82:9c:6c:36:00 ACME Switch:0
-cluster1-02 0b      50:0a:09:82:9c:6c:36:01 ACME Switch:1
-cluster1-02 0c      50:0a:09:82:9c:6c:36:02 ACME Switch:2
-cluster1-02 0d      50:0a:09:82:9c:6c:36:03 ACME Switch:3
-cluster1-02 0e      50:0a:09:82:9c:6c:36:04 ACME Switch:4
-cluster1-02 0f      50:0a:09:82:9c:6c:36:05 ACME Switch:5
-cluster1-02 1a      50:0a:09:82:9c:6c:36:06 ACME Switch:6
-cluster1-02 1b      50:0a:09:82:9c:6c:36:07 ACME Switch:7
+node         adapter  fc-wwpn                  switch-port
+-----------  -------  -----------------------  -------------
+cluster1-01  0a       50:0a:09:82:9c:13:38:00  ACME Switch:0
+cluster1-01  0b       50:0a:09:82:9c:13:38:01  ACME Switch:1
+cluster1-01  0c       50:0a:09:82:9c:13:38:02  ACME Switch:2
+cluster1-01  0d       50:0a:09:82:9c:13:38:03  ACME Switch:3
+cluster1-01  0e       50:0a:09:82:9c:13:38:04  ACME Switch:4
+cluster1-01  0f       50:0a:09:82:9c:13:38:05  ACME Switch:5
+cluster1-01  1a       50:0a:09:82:9c:13:38:06  ACME Switch:6
+cluster1-01  1b       50:0a:09:82:9c:13:38:07  ACME Switch:7
+cluster1-02  0a       50:0a:09:82:9c:6c:36:00  ACME Switch:0
+cluster1-02  0b       50:0a:09:82:9c:6c:36:01  ACME Switch:1
+cluster1-02  0c       50:0a:09:82:9c:6c:36:02  ACME Switch:2
+cluster1-02  0d       50:0a:09:82:9c:6c:36:03  ACME Switch:3
+cluster1-02  0e       50:0a:09:82:9c:6c:36:04  ACME Switch:4
+cluster1-02  0f       50:0a:09:82:9c:6c:36:05  ACME Switch:5
+cluster1-02  1a       50:0a:09:82:9c:6c:36:06  ACME Switch:6
+cluster1-02  1b       50:0a:09:82:9c:6c:36:07  ACME Switch:7
 16 entries were displayed
 ----
-+
-NOTE: In the new configuration, you must verify that the SAN LIFs are on adapters that are attached to the same switch and port. If a SAN LIF in the new configuration is not on a physical port that is attached to the same switch, you might cause a system outage when you reboot the node.
 
 . [[step3]]Take one of the following actions:
 +
@@ -78,7 +76,7 @@ NOTE: In the new configuration, you must verify that the SAN LIFs are on adapter
 |Had interface groups or VLANs configured
 |Go to <<man_lif_verify_3_step3,Step 4>>.
 |Did not have interface groups or VLANs configured
-|Skip Step 3 and go to <<man_lif_verify_3_step4,Step 5>>.
+|Skip Step 4 and go to <<man_lif_verify_3_step4,Step 5>>.
 |===
 
 . [[man_lif_verify_3_step3]]Perform the following substeps to migrate any NAS data LIFs hosted on interface groups and VLANs that were originally on node1 from node2 to node3:
@@ -106,7 +104,7 @@ NOTE: In the new configuration, you must verify that the SAN LIFs are on adapter
 |If the cluster is configured for... |Then...
 
 |NAS
-|Complete <<man_lif_verify_3_step5,Step 6>> and <<man_lif_verify_3_step6,Step 7>>, skip Step 7, and complete <<man_lif_verify_3_step8,Step 9>> through <<man_lif_verify_3_step11,Step 12>>.
+|Complete <<man_lif_verify_3_step5,Step 6>> and <<man_lif_verify_3_step6,Step 7>>, skip Step 8, and complete <<man_lif_verify_3_step8,Step 9>> through <<man_lif_verify_3_step11,Step 12>>.
 |SAN
 |Disable all the SAN LIFs on the node to take them down for the upgrade:
 

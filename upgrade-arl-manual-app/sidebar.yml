@@ -11,7 +11,7 @@ entries:
     url: /upgrade-arl-manual-app/guidelines_upgrade_with_arl.html
   - title: "Required tools and documentation"
     url: /upgrade-arl-manual-app/required_tools_documentation.html
-  - title: " Worksheet:  Information to collect before and during the controller upgrade"
+  - title: "Worksheet: Information to collect before and during the controller upgrade"
     url: /upgrade-arl-manual-app/worksheet_information_before_during_upgrade.html
   - title: "Stage 1. Prepare for upgrade"
     entries:
@@ -54,7 +54,9 @@ entries:
       - title: "Map ports from node1 to node3"
         url: /upgrade-arl-manual-app/map_ports_node1_node3.html
       - title: "Move NAS data LIFs owned by node1 from node2 to node3 and verify SAN LIFs on node3"
-        url: /upgrade-arl-manual-app/move_nas_lifs_node1_from_node2_node3_verify_san_lifs_node3.html
+        url: /upgrade-arl-manual-app/required_tools_documentation.html
+      - title: "Worksheet: Information to record before moving NAS data LIFs to node3"
+        url: /upgrade-arl-manual-app/worksheet_information_before_moving_san_lifs_node3.html
       - title: "Relocate non-root aggregates from node2 to node3"
         url: /upgrade-arl-manual-app/relocate_non_root_aggr_node2_node3.html
       - title: "Move NAS data LIFs owned by node2 to node3"
@@ -79,6 +81,8 @@ entries:
         url: /upgrade-arl-manual-app/map_ports_node2_node4.html
       - title: "Move NAS data LIFs owned by node2 from node3 to node4 and verify SAN LIFs on node4"
         url: /upgrade-arl-manual-app/move_nas_lifs_node2_from_node3_node4_verify_san_lifs_node4.html
+      - title: "Worksheet: Information to record before moving NAS data LIFs to node4"
+        url: /upgrade-arl-manual-app/worksheet_information_before_moving_san_lifs_node4.html
       - title: "Relocate node2's non-root aggregates from node3 to node4"
         url: /upgrade-arl-manual-app/relocate_node2_non_root_aggr_node3_node4.html
   - title: "Stage 6. Complete the upgrade"
