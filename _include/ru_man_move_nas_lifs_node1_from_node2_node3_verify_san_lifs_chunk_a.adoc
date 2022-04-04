@@ -8,7 +8,7 @@ Remote LIFs handle traffic to SAN LUNs during the upgrade procedure. Moving SAN 
 +
 `network interface show -role data -curr-node <node2> -is-home false -home-node <node3>`
 
-. [[worksheet_step2]]If the cluster is configured for SAN LIFs, record the SAN LIFs `adapter` and `switch-port` configuration information in the link:worksheet_information_before_moving_san_lifs.html[worksheet] for use later in the procedure.
+. [[worksheet_step2]]If the cluster is configured for SAN LIFs, record the SAN LIFs `adapter` and `switch-port` configuration information in the link:worksheet_information_before_moving_san_lifs_node3.html[worksheet] for use later in the procedure.
 .. List the SAN LIFs on node 2 and examine the output:
 +
 `network interface show -data-protocol fc*`
@@ -66,6 +66,7 @@ cluster1-02  1a       50:0a:09:82:9c:6c:36:06  ACME Switch:6
 cluster1-02  1b       50:0a:09:82:9c:6c:36:07  ACME Switch:7
 16 entries were displayed
 ----
+//BURT 1400783 04-Apr-2022
 
 . [[step3]]Take one of the following actions:
 +

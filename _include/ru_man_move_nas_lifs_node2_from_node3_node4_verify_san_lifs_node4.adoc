@@ -8,7 +8,7 @@ Remote LIFs handle traffic to SAN LUNs during the upgrade procedure. Moving SAN 
 +
 `network interface show -role data -curr-node node3 -is-home false`
 
-. [[worksheet_step2_node2]]If the cluster is configured for SAN LIFs, record the SAN LIFs and existing configuration information in the link:worksheet_information_before_moving_san_lifs.html[worksheet] for use later in the procedure.
+. [[worksheet_step2_node2]]If the cluster is configured for SAN LIFs, record the SAN LIFs and existing configuration information in the link:worksheet_information_before_moving_san_lifs_node4.html[worksheet] for use later in the procedure.
 .. List the SAN LIFs on node 3 and examine the output:
 +
 `network interface show -data-protocol fc*`
@@ -66,7 +66,7 @@ cluster1-02  1a       50:0a:09:82:9c:6c:36:06  ACME Switch:6
 cluster1-02  1b       50:0a:09:82:9c:6c:36:07  ACME Switch:7
 16 entries were displayed
 ----
-
+//BURT 1400783 04-Apr-2022
 . Take one of the following actions:
 +
 [cols=2*,options="header",cols="35,65"]
@@ -184,7 +184,7 @@ vs1
 ----
 .. Verify that the new port, switch, and adapter configurations are correct by comparing the output from the `fcp adapter show` command with the new configuration information recorded in the worksheet in <<worksheet_step2_node2,Step 2>>.
 +
-NOTE: If a SAN LIF in the new configuration is not on a physical port that is attached to the same switch, it might cause a system outage when you reboot the node.
+NOTE: If a SAN LIF in the new configuration is not on an adapter that is still attached to the same `switch-port`, it might cause a system outage when you reboot the node.
 +
 List the new SAN LIF configurations on node 4:
 +
@@ -216,6 +216,7 @@ cluster1-02  1b       50:0a:09:82:9c:6c:36:07  ACME Switch:7
 16 entries were displayed
 ----
 
+//BURT 1400783 04-Apr-2022
 .. If node4 has any SAN LIFs or groups of SAN LIFs that are on a port that did not exist on node2, move them to an appropriate port on node4 by entering one of the following commands:
 
 ... Set the LIF status to down:
