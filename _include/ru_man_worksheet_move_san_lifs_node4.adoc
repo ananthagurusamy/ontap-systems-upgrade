@@ -1,4 +1,4 @@
-To help verify that you have the correct configuration after moving node2's SAN LIFs from node3 to node4, you can use the following worksheet to record the `adapter` and `switch-port` information for each LIF.
+To help verify that you have the correct configuration after moving the SAN LIFs from node3 to node4, you can use the following worksheet to record the `adapter` and `switch-port` information for each LIF.
 
 Record the LIF `adapter` information from the `network interface show -data-protocol fc*` command output and the `switch-port` information from the `fcp adapter show -fields switch-port,fc-wwpn` output for node3.
 

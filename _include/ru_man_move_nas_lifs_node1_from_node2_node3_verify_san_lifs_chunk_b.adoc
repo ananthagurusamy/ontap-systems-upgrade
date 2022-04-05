@@ -29,9 +29,7 @@ cluster::> net int show -data-protocol iscsi|fcp -home-node node3
               lif2        up/up       172.17.176.121/24   node3          e1a      true
 ----
 
-.. Verify that the new port, switch, and adapter configurations are correct by comparing the output from the `fcp adapter show` command with the configuration information recorded in the worksheet in <<worksheet_step2,Step 2>>.
-+
-NOTE: If a SAN LIF in the new configuration is not on an adapter that is still attached to the same `switch-port`, it might cause a system outage when you reboot the node.
+.. Verify that the new and `adapter` and `switch-port` configurations are correct by comparing the output from the `fcp adapter show` command with the configuration information that you recorded in the worksheet in <<worksheet_step2,Step 2>>.
 +
 List the new SAN LIF configurations on node 3:
 +
@@ -62,8 +60,11 @@ cluster1-02 1a      50:0a:09:82:9c:6c:36:06 ACME Switch:6
 cluster1-02 1b      50:0a:09:82:9c:6c:36:07 ACME Switch:7
 16 entries were displayed
 ----
++
+NOTE: If a SAN LIF in the new configuration is not on an adapter that is still attached to the same `switch-port`, it might cause a system outage when you reboot the node.
 
 //BURT 1400783 04-Apr-2022
+
 .. If node3 has any SAN LIFs or groups of SAN LIFs that are on a port that did not exist on node1 or that need to be mapped to a different port, move them to an appropriate port on node3 by completing the following substeps:
 
 ... Set the LIF status to "down":
