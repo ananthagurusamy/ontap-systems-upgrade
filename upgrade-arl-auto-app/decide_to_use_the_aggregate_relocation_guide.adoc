@@ -42,13 +42,17 @@ NOTE: You can use NetApp Storage Encryption (NSE) and NetApp Volume Encryption (
 |AFF8020, AFF8040, AFF8060, AFF8080
 |AFF A300, AFF A400, AFF A700, AFF A800^1^
 |FAS8200
-|FAS8700, FAS9000, FAS8300^3^
+|FAS8700, FAS9000, FAS8300^3^, FAS9500
 |AFF A300
-|AFF A700, AFF A800^1^, AFF A400^3^
+|AFF A700, AFF A800^1^, AFF A400^3^, AFF A900
 |AFF A320
 |AFF A400^2^
+|FAS8060, FAS8080, FAS8300, FAS8700, FAS9000
+|FAS9500
+|AFF8060, AFF8080, AFF A400, AFF A700
+|AFF A900
 |===
-
+// BURT 1455656 8-Apr-2022
 NOTE: If your controller upgrade model combination is not in the above table, contact technical support.
 
 ^1^For the additional steps needed for AFF A800 systems, go to the step that references A800 in section link:set_fc_or_uta_uta2_config_on_node3.html#step23[Check and configure UTA/UTA2 ports on node3, Step 23], or link:set_fc_or_uta_uta2_config_node4.html#step23[Check and configure UTA/UTA2 ports on node4, Step 23].
