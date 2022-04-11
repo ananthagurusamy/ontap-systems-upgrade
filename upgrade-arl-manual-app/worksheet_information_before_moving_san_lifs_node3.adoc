@@ -1,0 +1,16 @@
+---
+sidebar: sidebar
+permalink: upgrade-arl-manual-app/worksheet_information_before_moving_san_lifs_node3.html
+keywords: worksheet, information, SAN, LIF, switch, port, adapter
+summary: "Record node1 NAS data LIF configuration information during a manual ARL upgrade on controllers running ONTAP 9.8 or later."
+---
+
+= Worksheet: Information to record before moving NAS data LIFs to node3
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+include::../_include/ru_man_worksheet_move_san_lifs_node3.adoc[]
