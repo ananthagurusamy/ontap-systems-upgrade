@@ -75,7 +75,7 @@ cluster1-02  1b       50:0a:09:82:9c:6c:36:07  ACME Switch:7
 |Had interface groups or VLANs configured
 |Go to <<man_lif_verify_4_Step3,Step 4>>.
 |Did not have interface groups or VLANs configured
-|Skip Step 4 and go to <<man_lif_verify_4_Step4,Step5>>.
+|Skip Step 4 and go to <<man_lif_verify_4_Step4,Step 5>>.
 |===
 
 . [[man_lif_verify_4_Step3]]Take the following steps to migrate any NAS data LIFs hosted on interface groups and VLANs that originally were on node2 from node3 to node4.
