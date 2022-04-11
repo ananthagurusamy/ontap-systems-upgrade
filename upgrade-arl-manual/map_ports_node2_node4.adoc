@@ -92,7 +92,7 @@ cluster::*> set -privilege admin
 cluster::>
 ----
 . Get node4 into quorum by performing the following steps:
-.. Boot node4. See link:install_boot_node4.html[Install and boot node 4] to boot the node if you have not already done so.
+.. Boot node4. See link:install_boot_node4.html[Install and boot node4] to boot the node if you have not already done so.
 .. Verify that the new cluster ports are in the Cluster broadcast domain:
 +
 `network port show -node <node> -port <port> -fields broadcast-domain`

@@ -58,7 +58,7 @@ a| . Install and boot node3.
 . Check and configure the UTA/UTA2 ports.
 . Verify node3 is successfully installed.
 . Restore node3 network configuration.
-. Move non-SAN data LIFs ownde by node 1 from node2 to node3.
+. Move non-SAN data LIFs owned by node1 from node2 to node3.
 . Relocate non-root aggregates owned by node1 from node2 to node3.
 
 Aggregate ownership at the end of Stage 3:
@@ -68,7 +68,7 @@ Aggregate ownership at the end of Stage 3:
 
 | link:stage_4_index.html[Stage 4. Relocate and retire node2]
 a| . Relocate non-root aggregates from node2 to node3.
-. Relocate non-SAN data LIFs owned by node2 to node 3.
+. Relocate non-SAN data LIFs owned by node2 to node3.
 . Retire node2.
 
 Aggregate ownership at the end of Stage 4:

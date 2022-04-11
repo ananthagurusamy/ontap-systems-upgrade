@@ -100,7 +100,7 @@ You will use the information in the section link:map_ports_node2_node4.html[Map 
 |Complete <<man_record_2_step9,Step 9>> and <<man_record_2_step10,Step 10>> and then go to the next section, link:retire_node2.html[Retire node2].
 |===
 
-. [[man_record_2_step9]]Display the attributes of node 2:
+. [[man_record_2_step9]]Display the attributes of node2:
 +
 `system node show -instance -node node2`
 +

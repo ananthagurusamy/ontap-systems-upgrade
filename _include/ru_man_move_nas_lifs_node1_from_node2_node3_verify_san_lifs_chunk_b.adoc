@@ -31,7 +31,7 @@ cluster::> net int show -data-protocol iscsi|fcp -home-node node3
 
 .. Verify that the new and `adapter` and `switch-port` configurations are correct by comparing the output from the `fcp adapter show` command with the configuration information that you recorded in the worksheet in <<worksheet_step2,Step 2>>.
 +
-List the new SAN LIF configurations on node 3:
+List the new SAN LIF configurations on node3:
 +
 `fcp adapter show -fields switch-port,fc-wwpn`
 +
