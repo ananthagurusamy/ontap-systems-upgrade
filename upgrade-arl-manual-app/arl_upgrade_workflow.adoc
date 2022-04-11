@@ -68,7 +68,7 @@ Aggregate ownership at the end of Stage 2:
 a| . Install and boot node3.
 . Set the UTA/UTA2 configuration on node3.
 . Map ports from node1 to node3.
-. Move non-SAN data LIFs owned by node 1 from node2 to node3 and verify SNA LIFs on node3.
+. Move non-SAN data LIFs owned by node1 from node2 to node3 and verify SNA LIFs on node3.
 . Relocate non-root aggregates from node2 to node3.
 . Move non-SAN data LIFs owned by node2 to node3.
 

@@ -65,7 +65,7 @@ Aggregate ownership at the end of Stage 3:
 | link:stage_4_index.html[Stage 4. Relocate and retire node2]
 a|. Relocate non-root aggregates from node2 to node3.
 
-. Move non-SAN data LIFs owned by node2 to node 3.
+. Move non-SAN data LIFs owned by node2 to node3.
 
 . Retire node2.
 
