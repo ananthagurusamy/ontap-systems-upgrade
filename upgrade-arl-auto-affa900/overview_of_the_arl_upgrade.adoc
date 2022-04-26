@@ -38,8 +38,8 @@ Aggregate ownership at the end of Stage 1:
 a| .	Relocate non-root aggregates and NAS data LIFs owned by node1 to node2
 . Relocate failed or vetoed aggregates
 . Retire node1
-.	Remove the AFF A700 controller module and NVRAM module
-.	Install the AFF A900 NVRAM module and controller module on node1
+.	Remove the AFF A700 or FAS9000 controller module and NVRAM module
+.	Install the AFF A900 or FAS9500 NVRAM module and controller module on node1
 .	Netboot node1
 
 Aggregate ownership at the end of Stage 2:
@@ -48,7 +48,7 @@ Aggregate ownership at the end of Stage 2:
 * Node2 is the home owner and current owner of node2 aggregates
 
 | link:boot_node1_with_a900_controller_and_nvs.html[Stage 3: Boot node1 with the AFF A900 controller module NVRAM module]
-a| . Boot node1 with the AFF A900 controller module and NVRAM module
+a| . Boot node1 with the AFF A900 or FAS9500 controller module and NVRAM module
 .	Verify that node1 is successfully installed
 .	Restore node1 network configuration
 .	Restore key-manager configuration on the upgraded node1
@@ -56,7 +56,7 @@ a| . Boot node1 with the AFF A900 controller module and NVRAM module
 
 Aggregate ownership at the end of Stage 3:
 
-* Upgraded AFF A900 node1 is the home owner and current owner of node1 aggregates
+* Upgraded AFF A900 or FAS9500 node1 is the home owner and current owner of node1 aggregates
 * Node2 is the home owner and current owner of node2 aggregates
 
 | link:relocate_non_root_aggr_nas_lifs_from_node2_to_node1.html[Stage 4: Relocate resources from node2 and retire node2]
@@ -79,7 +79,7 @@ Aggregate ownership at the end of Stage 5:
 *	Upgraded node2 is the home owner and current owner of aggregates that originally belonged to node2.
 
 | link:boot_node2_with_a900_controller_and_nvs.html[Stage 6: Boot node2 with the AFF A900 controller module and NVRAM module]
-a| .	Boot node2 with the AFF A900 controller module and NVRAM module
+a| .	Boot node2 with the AFF A900 or FAS9500 controller module and NVRAM module
 .	Verify that node2 is correctly installed
 .	Restore node2 network configuration
 .	Move non-root aggregates and NAS data LIFs back to node2
@@ -91,3 +91,5 @@ a| . Verify that the new controllers are set up correctly
 . Decommission the old system.
 . Resume NetApp SnapMirror operations
 |===
+
+//BURT 1452254, 2022-04-26
