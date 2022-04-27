@@ -1,5 +1,5 @@
 section: upgrade-arl-auto-affa900
-title: Use "system controller replace" commands to upgrade AFF A700 to AFF A900 running ONTAP 9.10.1 or later
+title: Use "system controller replace" commands to upgrade AFF A700 to AFF A900 or FAS9000 to FAS9500 
 entries:
 - title: Overview
   url: /upgrade-arl-auto-affa900/index.html
