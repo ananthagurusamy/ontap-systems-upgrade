@@ -33,7 +33,7 @@ At this stage, node1 is down and all data is served by node2. Because node1 and 
 .Before you begin
 If you are not already grounded, correctly ground yourself.
 
-=== Remove the AFF A700 controller module
+=== Remove the AFF A700 or FAS9000 controller module
 Use the following procedure to remove the AFF A700 or FAS9000 controller module.
 
 .Steps

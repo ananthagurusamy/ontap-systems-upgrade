@@ -5,7 +5,7 @@ keywords: guidelines, upgrade, aff, a900, a700, ontap, controllers
 summary: "Understand if you can use ARL to upgrade an AFF A700 to an AFF A900."
 ---
 
-= Guidelines for upgrading from an AFF A700 to an AFF A900 or from FAS9000 to an FAS9500 with ARL
+= Guidelines for upgrading from an AFF A700 to an AFF A900 or from an FAS9000 to an FAS9500 with ARL
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,8 +13,6 @@ summary: "Understand if you can use ARL to upgrade an AFF A700 to an AFF A900."
 :imagesdir: ./media/
 
 [.lead]
-Using ARL to upgrade a pair of AFF A700 controllers running ONTAP 9.10.1 or later to an AFF A900 system depends on the system and the configuration of both the original and replacement controllers.
-
 Using ARL to upgrade a pair of AFF A700 controllers to AFF A900 running ONTAP 9.10.1 or later and a pair of FAS9000 controllers to an FAS9500 running 9.10.1P3 or later depends on the system and the configuration of both the original and replacement controllers.
 
 == Supported upgrades for ARL
