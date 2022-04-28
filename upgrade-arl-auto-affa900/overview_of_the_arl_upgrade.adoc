@@ -34,7 +34,7 @@ Aggregate ownership at the end of Stage 1:
 * Node1 is the home owner and current owner of the node1 aggregates
 * Node2 is the home owner and current owner of the node2 aggregates
 
-| link:relocate_non_root_aggr_and_nas_data_lifs_node1_node2.html[Stage 2: Relocate resources from node1 and retire AFF A700 node1]
+| link:relocate_non_root_aggr_and_nas_data_lifs_node1_node2.html[Stage 2: Relocate resources from node1 and retire AFF A700 or FAS9000 node1]
 a| .	Relocate non-root aggregates and NAS data LIFs owned by node1 to node2
 . Relocate failed or vetoed aggregates
 . Retire node1
