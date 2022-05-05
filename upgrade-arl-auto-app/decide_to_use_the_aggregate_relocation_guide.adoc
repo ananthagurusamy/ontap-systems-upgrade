@@ -62,7 +62,7 @@ NOTE: You can use NetApp Storage Encryption (NSE) and NetApp Volume Encryption (
 |AFF A400^2^
 
 |AFF A400, AFF A700
-|AFF A900
+|AFF A900^4^
 |===
 // BURT 1455656 8-Apr-2022
 NOTE: If your controller upgrade model combination is not in the above table, contact technical support.
@@ -79,8 +79,10 @@ NOTE: If your controller upgrade model combination is not in the above table, co
 * After you complete a controller upgrade by using temporary cluster ports, you can nondisruptively migrate cluster LIFs to e3a and e3b, 100GbE ports on an AFF A400 system, and e0c and e0d, 100GbE ports on an FAS8300 system.
 // BURT 1367153 30-Aug-2021
 
-^5^ARL automated upgrade are not supported for FAS8020, FAS8040, AFF8020, and AFF8040 systems from ONTAP 9.11.1.
+^4^Beginning with ONATP 9.10.1, ARL automated upgrade is supported from an AFF8080 system running ONTAP 9.8 or later to an AFF A900 system running 9.10.1 or later.
 
+^5^ARL automated upgrade is not supported for FAS8020, FAS8040, AFF8020, and AFF8040 systems from ONTAP 9.11.1.
+//BURT 1455646 5-May-2022
 include::../_include/ru_auto_decide_use_arl_guide_end.adoc[]
 
 // 2021-04-14 Burt 1367155
