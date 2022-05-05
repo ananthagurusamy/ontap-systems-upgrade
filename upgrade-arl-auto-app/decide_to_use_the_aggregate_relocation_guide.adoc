@@ -40,7 +40,7 @@ NOTE: You can use NetApp Storage Encryption (NSE) and NetApp Volume Encryption (
 |FAS8020^5^, FAS8040^5^, FAS8060, FAS8080
 |FAS8200, FAS8300, FAS8700, FAS9000
 
-|FAS8060, FAS8080
+|FAS8060, FAS8080^4^
 |FAS9500
 
 |AFF8020^5^, AFF8040^5^, AFF8060, AFF8080
@@ -62,7 +62,7 @@ NOTE: You can use NetApp Storage Encryption (NSE) and NetApp Volume Encryption (
 |AFF A400^2^
 
 |AFF A400, AFF A700
-|AFF A900^4^
+|AFF A900
 |===
 // BURT 1455656 8-Apr-2022
 NOTE: If your controller upgrade model combination is not in the above table, contact technical support.
