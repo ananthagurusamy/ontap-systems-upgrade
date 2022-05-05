@@ -5,7 +5,7 @@ keywords: boot, NVRAM, controller, module, node2, aff, a700, a900
 summary: Boot node2 with the AFF A900 controller module and NVRAM module.
 ---
 
-= Boot node2 with the AFF A900 or FAS9500 controller module and NVRAM module
+= Boot node2 with AFF A900 or FAS9500 controller module and NVRAM module
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,7 +13,7 @@ summary: Boot node2 with the AFF A900 controller module and NVRAM module.
 :imagesdir: ./media/
 
 [.lead]
-Node2 with the AFF A900 or FAS9500 controller module and NVRAM module is now ready for upgrade. Upgrading from an AFF A700 to an AFF A900 or from an FAS9000 to an FAS9500 by swapping the controller module and NVRAM module involves moving only the console and management connections. This section provides the steps required to boot node2 with the AFF A900 or FAS9500 controller module and NVRAM module.
+Node2 with the AFF A900 or the FAS9500 controller module and NVRAM module is now ready for upgrade. Upgrading from an AFF A700 to an AFF A900 or from an FAS9000 to an FAS9500 by swapping the controller module and NVRAM module involves moving only the console and management connections. This section provides the steps required to boot node2 with the AFF A900 or FAS9500 controller module and NVRAM module.
 
 .Steps
 .	[[boot_node2_step1]]If NetApp Storage Encryption (NSE) is in use on this configuration, the `setenv bootarg.storageencryption.support` command must be set to `true`, and the `kmip.init.maxwait` variable must be set to `off` to avoid a boot loop after the node2 configuration is loaded:

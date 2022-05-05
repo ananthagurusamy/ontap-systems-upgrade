@@ -91,7 +91,10 @@ image::../media/black_circle_two.png[Number two]
 .	If you are using any add-on modules as coredump devices on the AFF A700 or FAS9000 NVRAM module, do NOT transfer them to the AFF A900 or FAS9500 NVRAM module.
 
 == Install the AFF A900 or FAS9500 NVRAM module and controller module on node1
-You must install the AFF A900 or FAS9500 NVRAM module and controller module that you received for the upgrade on node1. On the AFF A900, do NOT move the coredump devices from the AFF A700 NVRAM module to the AFF A900 NVRAM module.  On the FAS9000, move all flash cache modules in slot 6 to the FAS9500 NVRAM module.
+You must install the AFF A900 or FAS9500 NVRAM module and controller module that you received for the upgrade on node1.
+
+* On the AFF A900, do NOT move the coredump devices from the AFF A700 NVRAM module to the AFF A900 NVRAM module.
+* On the FAS9000, move all flash cache modules in slot 6 to the FAS9500 NVRAM module.
 
 .Before you begin
 If you are not already grounded, correctly ground yourself.

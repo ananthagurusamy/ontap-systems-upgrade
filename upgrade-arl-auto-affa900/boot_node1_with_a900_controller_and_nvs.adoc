@@ -25,7 +25,7 @@ Node1 with the AFF A900 or FAS9500 controller module and NVRAM module is now rea
 .	Boot the node into `boot_menu`:
 +
 `boot_ontap menu`
-.	The node stops at the boot menu. Enter "22/7" and select the hidden option `boot_after_controller_replacement`. To reassign the AFF A700 or FAS9000 node1 disks to AFF A900 or FAS9500 node1, at the prompt, enter the actual node name of node1. Use the following example as a reference:
+.	The node stops at the boot menu. Enter "22/7" and select the hidden option `boot_after_controller_replacement`. To reassign the node1 disks from the AFF A700 to AFF A900 or from FAS9000 to FAS9500, at the prompt, enter the actual node name of node1. Use the following example as a reference:
 +
 ----
 LOADER-A> boot_ontap menu
