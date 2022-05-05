@@ -83,6 +83,7 @@ NOTE: If your controller upgrade model combination is not in the above table, co
 
 ^5^ARL automated upgrade is not supported for FAS8020, FAS8040, AFF8020, and AFF8040 systems from ONTAP 9.11.1.
 //BURT 1455646 5-May-2022
+
 include::../_include/ru_auto_decide_use_arl_guide_end.adoc[]
 
 // 2021-04-14 Burt 1367155
