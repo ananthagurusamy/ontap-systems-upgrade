@@ -31,7 +31,7 @@ entries:
       url: /upgrade-arl-auto-affa900/retire_node1.html
     - title: Netboot node1
       url: /upgrade-arl-auto-affa900/netboot_node1.html
-- title: "Stage 3. Boot node1 with the AFF A900 or FAS9500 controller module and NVRAM module"
+- title: "Stage 3. Boot node1 with the AFF A900 or FAS9500 controller and NVRAM modules"
   entries:
     - title: Boot node1 with the AFF A900 controller and NVRAM modules
       url: /upgrade-arl-auto-affa900/boot_node1_with_a900_controller_and_nvs.html

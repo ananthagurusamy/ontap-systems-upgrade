@@ -13,11 +13,11 @@ summary: "Decide whether to use the ARL procedure to upgrade an AFF A700 to an A
 :imagesdir: ./media/
 
 [.lead]
-This content describes how to upgrade storage controllers in an AFF A700 HA pair with new AFF A900 controllers or controllers in an FAS9000 HA pair with new FAS9500 controllers, while keeping all the existing data and disks. This is a complex procedure that should be used only by experienced administrators.
+This content describes how to upgrade storage controllers in an AFF A700 HA pair with new AFF A900 controllers or controllers in a FAS9000 HA pair with new FAS9500 controllers, while keeping all the existing data and disks. This is a complex procedure that should be used only by experienced administrators.
 
 Use this procedure under the following circumstances:
 
-*	You have verified with your NetApp sales representative that you have received an AFF A900 or FAS9500 controller module and NVRAM module and the parts required for the upgrade.
+*	You have verified with your NetApp sales representative that you have received the AFF A900 or FAS9500 controller and NVRAM modules and the parts required for the upgrade.
 *	You are running ONTAP 9.10.1 or later for an AFF A900 controller.
 * You are running ONTAP 9.10.1P3 or later for a FAS9500 controller.
 *	You do not want to add the new controllers as a new HA pair to the cluster and migrate the data by using volume moves.

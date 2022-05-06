@@ -13,7 +13,7 @@ summary: Boot node1 with the AFF A900 controller module and NVRAM module.
 :imagesdir: ./media/
 
 [.lead]
-Node1 with the AFF A900 or FAS9500 controller module and NVRAM module is now ready for boot up. An AFF A700 to an AFF A900 or a FAS9000 to a FAS9500 upgrade by swapping the controller and NVRAM modules involves moving only the console and management connections. This section provides the steps required to boot node1 with the AFF A900 or FAS9500 controller and NVRAM modules.
+Node1 with the AFF A900 or FAS9500 controller and NVRAM modules is now ready for boot up. An AFF A700 to AFF A900 or a FAS9000 to FAS9500 upgrade by swapping the controller and NVRAM modules involves moving only the console and management connections. This section provides the steps required to boot node1 with the AFF A900 or FAS9500 controller and NVRAM modules.
 
 .Steps
 
