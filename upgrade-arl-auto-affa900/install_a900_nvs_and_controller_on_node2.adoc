@@ -25,7 +25,7 @@ Use the following procedure to install the AFF A900 or the FAS9500 NVRAM module 
 .	Align the NVRAM module with the edges of the chassis opening in slot 6.
 .	Gently slide the NVRAM module into the slot until the lettered and numbered I/O cam latch begins to engage with the I/O cam pin, and then push the I/O cam latch all the way up to lock the NVRAM module in place.
 
-== Install the AFF A900 or the FAS9500 controller module in node2.
+== Install the AFF A900 or the FAS9500 controller module in node2
 Use the following procedure to install the AFF A900 or the FAS9500 controller module in node2.
 
 .Steps
