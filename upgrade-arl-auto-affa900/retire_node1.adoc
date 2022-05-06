@@ -14,7 +14,7 @@ summary: "Disable the HA pair with node2 and shut node1 down during an AFF A700 
 
 
 [.lead]
-To retire node1, resume the automated operation to disable the HA pair with node2 and shut down node1 correctly. You must later remove the AFF A700 controller module and the NVRAM module from the node1 chassis and then install the AFF A900 NVRAM module and controller module on node1.
+To retire node1, resume the automated operation to disable the HA pair with node2 and shut down node1 correctly. You must later remove the AFF A700 or the FAS9000 controller module and the NVRAM module from the node1 chassis and then install the AFF A900 or the FAS9500 NVRAM module and controller module on node1.
 
 .Steps
 .	Resume the operation:
