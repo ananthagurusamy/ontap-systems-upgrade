@@ -13,6 +13,6 @@ summary: "Use the partially automated ARL procedure to upgrade an AFF A700 to an
 :imagesdir: ./media/
 
 [.lead]
-During this controller upgrade, you replace an AFF A700 controller with an AFF A900 controller or an FAS9000 controller with an FAS9500 controller. This content provides the steps for the automated procedure, which uses automatic disk assignment and network port reachability checks to simplify the controller upgrade experience.
+During this controller upgrade, you replace an AFF A700 controller with an AFF A900 controller or a FAS9000 controller with a FAS9500 controller. This content provides the steps for the automated procedure, which uses automatic disk assignment and network port reachability checks to simplify the controller upgrade experience.
 
 //BURT 1452254, 2022-04-26

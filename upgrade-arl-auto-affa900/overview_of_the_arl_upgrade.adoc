@@ -38,8 +38,8 @@ Aggregate ownership at the end of Stage 1:
 a| .	Relocate non-root aggregates and NAS data LIFs owned by node1 to node2
 . Relocate failed or vetoed aggregates
 . Retire node1
-.	Remove the AFF A700 or FAS9000 controller module and NVRAM module
-.	Install the AFF A900 or FAS9500 NVRAM module and controller module on node1
+.	Remove the AFF A700 or FAS9000 controller and NVRAM modules
+.	Install the AFF A900 or FAS9500 NVRAM and controller modules on node1
 .	Netboot node1
 
 Aggregate ownership at the end of Stage 2:
@@ -48,7 +48,7 @@ Aggregate ownership at the end of Stage 2:
 * Node2 is the home owner and current owner of node2 aggregates
 
 | link:boot_node1_with_a900_controller_and_nvs.html[Stage 3: Boot node1 with the AFF A900 or FAS9500 controller module and NVRAM module]
-a| . Boot node1 with the AFF A900 or FAS9500 controller module and NVRAM module
+a| . Boot node1 with the AFF A900 or FAS9500 controller and NVRAM modules
 .	Verify that node1 is successfully installed
 .	Restore node1 network configuration
 .	Restore key-manager configuration on the upgraded node1
@@ -69,8 +69,8 @@ Aggregate ownership at the end of Stage 4:
 *	Node2 is the home owner of node2 aggregates
 *	Upgraded node1 is the current owner of node2 aggregates
 
-| link:install_a900_nvs_and_controller_on_node2.html[Stage 5: Install the AFF A900 or FAS9500 NVRAM module and controller module on node2]
-a| .	Install the AFF A900 or FAS9500 NVRAM module and controller module on node2
+| link:install_a900_nvs_and_controller_on_node2.html[Stage 5: Install the AFF A900 or FAS9500 NVRAM and controller modules on node2]
+a| .	Install the AFF A900 or FAS9500 NVRAM and controller modules on node2
 .	Netboot node2
 
 Aggregate ownership at the end of Stage 5:

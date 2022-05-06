@@ -14,7 +14,7 @@ summary: "Disable the HA pair with node2 and shut node1 down during an AFF A700 
 
 
 [.lead]
-To retire node1, resume the automated operation to disable the HA pair with node2 and shut down node1 correctly. You must later remove the AFF A700 or the FAS9000 controller module and the NVRAM module from the node1 chassis and then install the AFF A900 or the FAS9500 NVRAM module and controller module on node1.
+To retire node1, resume the automated operation to disable the HA pair with node2 and shut down node1 correctly. You must later remove the AFF A700 or the FAS9000 controller and NVRAM modules from the node1 chassis and then install the AFF A900 or the FAS9500 NVRAM and controller modules on node1.
 
 .Steps
 .	Resume the operation:
@@ -27,7 +27,7 @@ To retire node1, resume the automated operation to disable the HA pair with node
 +
 After node1 has completely halted, node1 should be at the LOADER> prompt. To see the LOADER> prompt, connect to the serial console of node1.
 
-== Remove the AFF A700 or FAS9000 controller module and NVRAM module
+== Remove the AFF A700 or FAS9000 controller and NVRAM modules
 At this stage, node1 is down and all data is served by node2. Because node1 and node2 are in the same chassis and powered by the same set of power supplies, do NOT power off the chassis. You must take care to remove only the node1 controller module and the node1 NVRAM module. Typically, node1 is controller A, located on the left side of the chassis when looking at the controllers from the rear of the system. The controller label is located on the chassis directly above the controller module.
 
 .Before you begin
@@ -90,8 +90,8 @@ image::../media/black_circle_two.png[Number two]
 
 .	If you are using any add-on modules as coredump devices on the AFF A700 or FAS9000 NVRAM module, do NOT transfer them to the AFF A900 or FAS9500 NVRAM module.
 
-== Install the AFF A900 or FAS9500 NVRAM module and controller module on node1
-You must install the AFF A900 or FAS9500 NVRAM module and controller module that you received for the upgrade on node1.
+== Install the AFF A900 or FAS9500 NVRAM and controller modules on node1
+You must install the AFF A900 or FAS9500 NVRAM and controller modules that you received for the upgrade on node1.
 
 * On the AFF A900, do NOT move the coredump devices from the AFF A700 NVRAM module to the AFF A900 NVRAM module.
 * On the FAS9000, move all flash cache modules in slot 6 to the FAS9500 NVRAM module.

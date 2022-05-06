@@ -18,14 +18,14 @@ This content describes how to upgrade storage controllers in an AFF A700 HA pair
 Use this procedure under the following circumstances:
 
 *	You have verified with your NetApp sales representative that you have received an AFF A900 or FAS9500 controller module and NVRAM module and the parts required for the upgrade.
-*	You are running ONTAP 9.10.1 or later for an AFF A900 controller 
-* You are running ONTAP 9.10.1P3 or later for an FAS9500 controller.
+*	You are running ONTAP 9.10.1 or later for an AFF A900 controller.
+* You are running ONTAP 9.10.1P3 or later for a FAS9500 controller.
 *	You do not want to add the new controllers as a new HA pair to the cluster and migrate the data by using volume moves.
 *	You are experienced in administering ONTAP and are comfortable with the risks of working in diagnostic privilege mode.
 
 Do *NOT* use this procedure under the following circumstances:
 
-* You are using FlexArray Virtualization Software on AFF A700 or FAS9500 systems.
+* You are using FlexArray Virtualization Software on the AFF A700 or FAS9500 systems.
 * You are using a shared switch for cluster-interconnect and Ethernet attached storage.
 
 For upgrading Fabric MetroCluster or MetroCluster IP configurations, see link:other_references.html[References] to link to the _MetroCluster Upgrade and Expansion_ content.

@@ -13,7 +13,7 @@ summary: Verify the node2 installation with the AFF A900 controller module and N
 :imagesdir: ./media/
 
 [.lead]
-You must verify the node2 installation with the AFF A900 or FAS9500 controller module and NVRAM module. Because there is no change to physical ports, you are not required to map the physical ports from the AFF A700 node2 to the AFF A900 node2 or from the FAS9000 node2 to the FAS9500 node2.
+You must verify the node2 installation with the AFF A900 or FAS9500 controller and NVRAM modules. Because there is no change to physical ports, you are not required to map the physical ports from the old node2 to the replacement node2.
 
 .About this task
 After you boot node1 with the AFF A900 or FAS9500 controller module, you must verify that it is installed correctly. You must wait for node2 to join quorum and then resume the controller replacement operation.
