@@ -211,7 +211,7 @@ As the reachability repair is performed, ONTAP attempts to place the ports in th
 
 .. Add a member port to an interface group:
 +
-`network port ifgrp add-port -node <node_name> - ifgrp <ifgrp> -port <port_name>`
+`network port ifgrp add-port -node _node_name_ -ifgrp _ifgrp_ -port _port_name_`
 
 .. The interface group is automatically added to the broadcast domain about a minute after the first member port is added.
 .. Verify that the interface group was added to the appropriate broadcast domain:
@@ -311,6 +311,7 @@ When all ports are correctly configured and added to the correct broadcast domai
 
 . Verify that all LIFs have a home port and are administratively up:
 +
-`network interface show -fields home- port,status-admin`
+`network interface show -fields home-port, status-admin`
 // 11 DEC 2020, thomi, checked
 // Clean-up, 2022-03-09
+// 2022-05-12 , 1476241

@@ -201,7 +201,7 @@ As the reachability repair is performed, ONTAP attempts to place the ports in th
 
 .. Add a member port to an interface group:
 +
-`network port ifgrp add-port -node <node_name> - ifgrp <ifgrp> -port <port_name>`
+`network port ifgrp add-port -node _node_name_ -ifgrp _ifgrp_ -port _port_name_`
 
 .. The interface group is automatically added to the broadcast domain about a minute after the first member port is added.
 .. Verify that the interface group was added to the appropriate broadcast domain:
@@ -236,7 +236,7 @@ Verify that there are no unreachable or unexpected ports present. Check the reac
 . [[step8]]Restore any VLANs that might have become displaced by using the following steps:
 .. List displaced VLANs:
 +
-`displaced- vlans show`
+`cluster controller-replacement network displaced-vlans show`
 +
 Output like the following should display:
 +
@@ -253,7 +253,7 @@ Node1       a0a       822, 823
 
 .. Restore VLANs that were displaced from their previous base ports:
 +
-`displaced- vlans restore`
+`cluster controller-replacement network displaced-vlans restore`
 +
 The following is an example of restoring VLANs that have been displaced from interface group "a0a" back onto the same interface group:
 +
@@ -271,7 +271,7 @@ When a VLAN restore is successful, the displaced VLANs are created on the specif
 +
 Wait about one minute for newly restored VLANs to be placed into their appropriate broadcast domains.
 
-.. Create new VLAN ports as needed for VLAN ports that are not in the `displaced- vlans show` output but should be configured on other physical ports.
+.. Create new VLAN ports as needed for VLAN ports that are not in the `cluster controller-replacement network displaced-vlans show` output but should be configured on other physical ports.
 . [[step9]]Delete any empty broadcast domains after all port repairs have been completed:
 +
 `broadcast-domain delete -broadcast-domain <broadcast_domain_name>`
@@ -297,10 +297,12 @@ When all ports are correctly configured and added to the correct broadcast domai
 
 .. Restore LIF home nodes and home ports:
 +
-`displaced-interface restore-home-node -node <node_name> -vserver <vserver_name> - lif-name <LIF_name>`
+`cluster controller-replacement network displaced-interface restore-home-node -node _node_name_ -vserver _vserver_name_ -lif-name _LIF_name_`
 
 . Verify that all LIFs have a home port and are administratively up:
 +
-`network interface show -fields home- port,status-admin`
+`network interface show -fields home-port, status-admin`
 
 // Clean-up, 2022-03-09
+// 2022-05-12 , 1476241
+// BURT 1476241,2022-05-12
