@@ -11,7 +11,7 @@ This procedure includes steps that are performed on the new controller module. Y
 `security key-manager external show-status`
 // BURT 1450483 11-Feb-2022
 +
-`security key-manager onboard shoecw-backup`
+`security key-manager onboard show-backup`
 // BURT 1450483 11-Feb-2022
 . Add the key management servers listed in the previous step to the key management server list in the new controller.
 ..  Add the key management server:

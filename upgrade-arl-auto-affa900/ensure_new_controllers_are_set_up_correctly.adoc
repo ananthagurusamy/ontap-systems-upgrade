@@ -112,7 +112,7 @@ Refer to link:other_references.html[References] to link to the _System Administr
 
 .. Enter the following command:
 +
-`storage failover modify -node <node_name> - cifs- ndo-duration default|medium|low`
+`storage failover modify -node _node_name_ -cifs- ndo-duration _default|medium|low_`
 +
 * Enter `medium` if the system will have workloads in which 50% to 75% of the operations will be 4 KB or smaller.
 * Enter `low` if the system will have workloads in which 75% to 100% of the operations will be 4 KB or smaller.

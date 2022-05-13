@@ -197,7 +197,7 @@ As the reachability repair is performed, ONTAP attempts to place the ports in th
 . [[step5]]If interface group configuration does not match the new controller physical port layout, modify it by using the following steps.
 .. You must first remove physical ports that should be interface group member ports from their broadcast domain membership. You can do this by using the following command:
 +
-`network port broadcast-domain remove-ports -broadcast-domain <broadcast-domain_name> -ports <node_name:port_name>`
+`network port broadcast-domain remove-ports -broadcast-domain _broadcast-domain_name_ -ports _node_name:port_name_`
 
 .. Add a member port to an interface group:
 +
@@ -206,7 +206,7 @@ As the reachability repair is performed, ONTAP attempts to place the ports in th
 .. The interface group is automatically added to the broadcast domain about a minute after the first member port is added.
 .. Verify that the interface group was added to the appropriate broadcast domain:
 +
-`network port reachability show -node <node_name> -port <ifgrp>`
+`network port reachability show -node _node_name_ -port _ifgrp_`
 +
 If the interface group’s reachability status is not `ok`, assign it to the appropriate broadcast domain:
 +
