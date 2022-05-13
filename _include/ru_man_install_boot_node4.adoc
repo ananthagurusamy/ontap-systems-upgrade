@@ -153,17 +153,17 @@ NOTE: You must use the management port and IP address as the netboot connection.
 `ifconfig e0M -auto`
 |Not running |Manually configure the connection by entering the following command at the boot environment prompt:
 
-`ifconfig e0M -addr=<filer_addr> mask=<netmask> -gw=<gateway> dns=<dns_addr> domain=<dns_domain>`
+`ifconfig e0M -addr=_filer_addr_ mask=_netmask_ -gw=_gateway_ dns=_dns_addr_ domain=_dns_domain_`
 
-`<filer_addr>` is the IP address of the storage system.
+`_filer_addr_` is the IP address of the storage system.
 
-`<netmask>` is the network mask of the storage system.
+`_netmask_` is the network mask of the storage system.
 
-`<gateway>` is the gateway for the storage system.
+`_gateway_` is the gateway for the storage system.
 
-`<dns_addr>` is the IP address of a name server on your network.
+`_dns_addr_` is the IP address of a name server on your network.
 
-`<dns_domain>` is the Domain Name Service (DNS) domain name. If you use this optional parameter, you do not need a fully qualified domain name in the netboot server URL; you need only the server's host name.
+`_dns_domain_` is the Domain Name Service (DNS) domain name. If you use this optional parameter, you do not need a fully qualified domain name in the netboot server URL; you need only the server's host name.
 
 *Note*: Other parameters might be necessary for your interface. Enter `help ifconfig` at the firmware prompt for details.
 |===
@@ -240,18 +240,18 @@ DISK         OWNER                       POOL   SERIAL NUMBER   HOME
 |Disk type... |Run the command...
 |With shared disks |`disk reassign -s`
 
-`<node2_sysid> -d <node4_sysid> -p <node3_sysid>`
+`_node2_sysid_ -d _node4_sysid_ -p _node3_sysid_`
 |Without shared |`disks disk reassign -s`
 
-`<node2_sysid> -d <node4_sysid>`
+`_node2_sysid_ -d _node4_sysid_`
 |===
 +
-For the `<node2_sysid>` value, use the information captured in link:record_node2_information.html#man_node2_info_step10[Step 10] of the _Record node2 information_ section. For `<node4_sysid>`, use the information captured in <<man_install4_step23,Step 23>>.
+For the `<node2_sysid>` value, use the information captured in link:record_node2_information.html#man_node2_info_step10[Step 10] of the _Record node2 information_ section. For `_node4_sysid_`, use the information captured in <<man_install4_step23,Step 23>>.
 +
 NOTE: The `-p` option is only required in maintenance mode when shared disks are present.
 
 +
-The `disk reassign` command will reassign only those disks for which `<node2_sysid>` is the current owner.
+The `disk reassign` command will reassign only those disks for which `_node2_sysid_` is the current owner.
 +
 The system displays the following message:
 +
@@ -295,13 +295,13 @@ The following procedure sets node4 to boot from the root aggregate of node2:
 `aggr status`
 .. If necessary, bring the node2 aggregate online:
 +
-`aggr_online root_aggr_from_<node2>`
+`aggr_online root_aggr_from___node2_`
 .. Prevent the node4 from booting from its original root aggregate:
 +
-`aggr offline <root_aggr_on_node4>`
+`aggr offline _root_aggr_on_node4_`
 .. Set the node2 root aggregate as the new root aggregate for node4:
 +
-`aggr options aggr_from_<node2> root`
+`aggr options aggr_from___node2_ root`
 
 . Verify that the controller and chassis are configured as `ha` by entering the following command and observing the output:
 +
@@ -348,7 +348,7 @@ The system stops at the boot environment prompt.
 
 . If necessary, set the date on node4:
 +
-`set date <mm/dd/yyyy>`
+`set date _mm/dd/yyyy_`
 
 . On node4, check the time at the boot environment prompt:
 +
@@ -356,7 +356,7 @@ The system stops at the boot environment prompt.
 
 . If necessary, set the time on node4:
 +
-`set time <hh:mm:ss>`
+`set time _hh:mm:ss_`
 
 . Verify the partner system ID is set correctly as noted in <<man_install4_Step26,Step 26>> under option.
 +
@@ -364,7 +364,7 @@ The system stops at the boot environment prompt.
 
 . If necessary, set the partner system ID on node4:
 +
-`setenv partner-sysid <node3_sysid>`
+`setenv partner-sysid _node3_sysid_`
 
 .. Save the settings:
 +
@@ -394,3 +394,4 @@ The node might complete one round of rebooting before booting normally.
 . Log in to node4.
 
 // Clean-up, 2022-03-09
+// BURT 1478241, 2022-05-13

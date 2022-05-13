@@ -13,7 +13,7 @@ This procedure includes steps that are performed on the new controller module. Y
 . Add the key management servers listed in the previous step to the key management server list in the new controller:
 .. Add the key management server:
 +
-`security key-manager external add-servers -key-servers <key_management_server_ip_address>`
+`security key-manager external add-servers -key-servers _key_management_server_ip_address_`
 // BURT 1450483 11-Feb 2022
 .. Repeat the previous step for each listed key management server. You can link up to four key management servers.
 .. Verify the that the key management servers were added successfully:

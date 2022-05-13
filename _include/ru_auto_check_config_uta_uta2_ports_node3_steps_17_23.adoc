@@ -10,7 +10,7 @@
 +
 Change the ports back to initiator mode:
 +
-`ucadmin modify -m fc -t initiator -f <adapter name>`
+`ucadmin modify -m fc -t initiator -f _adapter name_`
 
 . [[step20]]Verify that the ports have been changed to initiator mode:
 +
@@ -47,15 +47,15 @@ The following procedure sets node3 to boot from the root aggregate of node1:
 
 .. If necessary, bring the node1 aggregate online:
 +
-`aggr_online root_aggr_from_<node1>`
+`aggr_online root_aggr_from___node1__`
 
 .. Prevent the node3 from booting from its original root aggregate:
 +
-`aggr offline <root_aggr_on_node3>`
+`aggr offline _root_aggr_on_node3_`
 
 .. Set the node1 root aggregate as the new root aggregate for node3:
 +
-`aggr options aggr_from_<node1> root`
+`aggr options aggr_from___node1__ root`
 
 .. Verify that the root aggregate of node3 is offline and the root aggregate for the disks brought over from node1 is online and set to root:
 +

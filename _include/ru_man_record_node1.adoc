@@ -42,7 +42,7 @@ The system displays output similar to the following example:
 
 .	[[man_record_node1_step3]]Find the cluster network and node-management ports on node1 by entering the following command on either controller:
 +
-`network interface show -curr-node <node1> -role cluster,intercluster,node-mgmt,cluster-mgmt`
+`network interface show -curr-node _node1_ -role cluster,intercluster,node-mgmt,cluster-mgmt`
 +
 The system displays the cluster, intercluster, node-management, and cluster-management LIFs for the node in the cluster, as shown in the following example:
 +
@@ -71,7 +71,7 @@ The output information is required to map the new controller ports to the old co
 
 .	Enter the following command on node1:
 +
-`network port show -node <node1> -type physical`
+`network port show -node _node1_ -type physical`
 +
 The system displays the physical ports on the node as shown in the following example:
 +
@@ -102,7 +102,7 @@ The broadcast domains will need to be mapped to the new ports on the new control
 
 .	Enter the following command on node1:
 +
-`network fcp adapter show -node <node1>`
+`network fcp adapter show -node _node1_`
 +
 The system displays the FC ports on the node, as shown in the following example:
 +
@@ -148,7 +148,7 @@ You will use the information in the section link:map_ports_node1_node3.html[Map 
 
 .	[[man_record_node1_step11]]Enter the following command on either controller:
 +
-`system node show -instance -node <node1>`
+`system node show -instance -node _node1_`
 +
 The system displays information about node1 as shown in the following example:
 +
@@ -171,3 +171,4 @@ The system displays information about node1 as shown in the following example:
 .	[[man_record_node1_step12]]Record the NVRAM System ID number to use in the section link:install_boot_node3.html[Install and boot node3].
 
 // Clean-up, 2022-03-09
+// 1476241, 2022-05-13

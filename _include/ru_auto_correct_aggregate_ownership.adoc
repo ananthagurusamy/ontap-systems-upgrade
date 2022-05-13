@@ -30,6 +30,6 @@ aggr4       node1      node1       online
 
 You must restart the controller replacement process:
 
-`system controller replace start -nodes <node_names>`
+`system controller replace start -nodes _node_names_`
 
 // BURT 1476241, 2022-05-11

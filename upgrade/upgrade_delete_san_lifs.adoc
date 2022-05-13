@@ -14,7 +14,7 @@ If the cluster is in a SAN environment, you must delete any SAN LIFs that you no
 .Steps
 . If you have iSCSI initiators, complete the following steps:
 .. Display a list of active initiators currently connected to an SVM on the original nodes, once for each of the old LIFs: +
- `iscsi connection show -vserver <Vserver_name> -lif <old_lif>`
+ `iscsi connection show -vserver _Vserver_name_ -lif _old_lif_`
 +
 The following example shows the output of the command with an active initiator connected to SVM vs1:
 +
@@ -47,7 +47,9 @@ js11      ps0          mixed    LIF1,                   igroup1
 
 . If any iSCSIs or FC LIFs on an original node are members of a port set, remove them from the port set:
 +
-`lun portset remove -vserver <vserver_name> -portset <portset_name> -port-name <lif_name>`
+`lun portset remove -vserver _vserver_name_ -portset _portset_name_ -port-name _lif_name_`
 . Delete the LIFs on the original nodes:
 +
-`network interface delete -vserver <vserver_name> -lif <lif_name>`
+`network interface delete -vserver _vserver_name_ -lif _lif_name_`
+
+// BURT 1476241 2022-05-13

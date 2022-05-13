@@ -4,11 +4,11 @@ Before you can replace node2 with node4, you must send an AutoSupport message fo
 
 . [[step1]] Send an AutoSupport message to NetApp for node2:
 +
-`system node autosupport invoke -node <node2> -type all -message "Upgrading <node2> from <platform_old> to <platform_new>"`
+`system node autosupport invoke -node _node2_ -type all -message "Upgrading _node2_ from _platform_old_ to _platform_new_"`
 
 . Verify that the AutoSupport message was sent:
 +
-`system node autosupport show -node <node2> -instance`
+`system node autosupport show -node _node2_ -instance`
 +
 The fields "Last Subject Sent:"" and "Last Time Sent:"" contain the message title of the last message that was sent and the time when the message was sent.
 
@@ -20,11 +20,11 @@ The fields "Last Subject Sent:"" and "Last Time Sent:"" contain the message titl
 
 .. List the aggregates that are owned by node2:
 +
-`storage aggregate show -owner-name <node2>`
+`storage aggregate show -owner-name _node2_`
 
 .. Start aggregate relocation:
 +
-`storage aggregate relocation start -node <node2> -destination <node3> -aggregate-list * -ndo-controller-upgrade true`
+`storage aggregate relocation start -node _node2_ -destination _node3_ -aggregate-list * -ndo-controller-upgrade true`
 +
 NOTE: The command locates only non-root aggregates.
 
@@ -38,7 +38,7 @@ Relocation occurs in the background. It can take anywhere from a few seconds to 
 
 . Verify the relocation status of node2:
 +
-`storage aggregate relocation show -node <node2>`
+`storage aggregate relocation show -node _node2_`
 +
 The output will display "Done" for an aggregate after it has been relocated.
 +
@@ -59,7 +59,7 @@ a|.. Display a detailed status message:
 +
 You can also check the EMS logs to see the corrective action that is needed.
 +
-*Note*: The `event log show` command lists any errors that have occurred.
+NOTE: The `event log show` command lists any errors that have occurred.
 
 .. Perform the corrective action.
 
@@ -69,7 +69,7 @@ You can also check the EMS logs to see the corrective action that is needed.
 
 .. Relocate any failed or vetoed aggregates:
 +
-`storage aggregate relocation start -node <node2> -destination <node3> -aggregate-list * -ndo-controllerupgrade true`
+`storage aggregate relocation start -node _node2_ -destination _node3_ -aggregate-list * -ndo-controllerupgrade true`
 
 .. When prompted, enter `y`.
 
@@ -92,23 +92,24 @@ For more information about the storage aggregate relocation commands, go to link
 
 . [[man_relocate_2_3_step6]]Verify that all of the non-root aggregates are online on node3:
 +
-`storage aggregate show -node <node3> -state offline -root false`
+`storage aggregate show -node _node3_ -state offline -root false`
 +
 If any aggregates have gone offline or have become foreign, you must bring them online, once for each aggregate:
 +
-`storage aggregate online -aggregate <aggr_name>`
+`storage aggregate online -aggregate _aggr_name_`
 
 . Verify that all of the volumes are online on node3:
 +
-`volume show -node <node3> -state offline`
+`volume show -node _node3_ -state offline`
 +
 If any volumes are offline on node3, you must bring them online, once for each volume:
 +
-`volume online -vserver <Vserver-name> -volume <volume-name>`
+`volume online -vserver _Vserver-name_ -volume _volume-name_`
 
 . Verify that node2 does not own any online non-root aggregates:
 +
-`storage aggregate show -owner-name <node2> -ha-policy sfo -state online`
+`storage aggregate show -owner-name _node2_ -ha-policy sfo -state online`
 +
 The command output should not display online non-root aggregates because all of the non-root online aggregates have already been relocated to node3.
 // 24 FEB 2021:  formatted from CMS
+// 1476241, 2022-05-13

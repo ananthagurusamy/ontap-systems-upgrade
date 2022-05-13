@@ -41,17 +41,17 @@ a|Modify the FC ports on node4 as needed:
 
 * To program target ports:
 +
-`ucadmin modify -m fc -t target <adapter>`
+`ucadmin modify -m fc -t target _adapter_`
 * To program initiator ports:
 +
-`ucadmin modify -m fc -t initiator <adapter>`
+`ucadmin modify -m fc -t initiator _adapter_`
 
 `-t` is the FC4 type: target or initiator.
 |Is a V-Series system or has FlexArray Virtualization Software and is connected to storage arrays
 
 |Modify the FC ports on node4 as needed:
 
-`ucadmin modify -m fc -t initiator -f <adapter_port_name>`
+`ucadmin modify -m fc -t initiator -f _adapter_port_name_`
 
 `-t` is the FC4 type, target or initiator.
 
