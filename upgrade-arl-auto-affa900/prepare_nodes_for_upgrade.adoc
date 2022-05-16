@@ -21,7 +21,7 @@ During Stage 1, you must prepare the nodes for the upgrade and run a series of p
 +
 `set -privilege advanced`
 +
-`system controller replace start -nodes <node_names>`
+`system controller replace start -nodes _node_names_`
 +
 You will see output similar to the following:
 +
@@ -99,23 +99,23 @@ If node affinity jobs are running, the check fails.
 +
 You must run and save the output of the following commands individually:
 +
-* vserver services name-service dns show
-* network interface show -curr-node <nodename> -role cluster,intercluster,node-mgmt,cluster-mgmt,data
-* network port show -node <node_name> -type physical
-* service-processor show -node * -instance
-* network fcp adapter show -node <node_name>
-* network port ifgrp show
-* system node show -instance -node <node_name>
-* run -node <node_name> sysconfig
-* storage aggregate show -node <node_name>
-* volume show -node <node_name>
-* storage array config show -switch <switch_name>
-* system license show -owner <node_name>
-* storage encryption disk show
-* security key-manager onboard show-backup
-* security key-manager external show
-* security key-manager external show-status
-* reachability show -detail
+* `vserver services name-service dns show`
+* `network interface show -curr-node _nodename_ -role cluster,intercluster,node-mgmt,cluster-mgmt,data`
+* `network port show -node _node_name_ -type physical`
+* `service-processor show -node * -instance`
+* `network fcp adapter show -node _node_name_`
+* `network port ifgrp show`
+* `system node show -instance -node _node_name_`
+* `run -node _node_name_ sysconfig`
+* `storage aggregate show -node _node_name>`
+* `volume show -node _node_name_`
+* `storage array config show -switch _switch_name_`
+* `system license show -owner _node_name_`
+* `storage encryption disk show`
+* `security key-manager onboard show-backup`
+* `security key-manager external show`
+* `security key-manager external show-status`
+* `reachability show -detail`
 
 NOTE: If NetApp Volume Encryption using Onboard Key Manager is in use, keep the key-manager passphrase ready to complete the key manager resync later in the procedure.
 
@@ -130,3 +130,5 @@ If you do not have new license keys, currently licensed features in the cluster 
 Refer to link:other_references.html[References] to link to the _NetApp Support Site_ where you can obtain new 2-character license keys for 9.10.1 or later. The keys are available in the _My Support_ section under _Software licenses_. If the site does not have the license keys you need, contact your NetApp sales representative.
 
 For detailed information about licensing, refer to link:other_references.html[References] to link to the _System Administration Reference_.
+
+// BURT 1476251, 2022-05-16

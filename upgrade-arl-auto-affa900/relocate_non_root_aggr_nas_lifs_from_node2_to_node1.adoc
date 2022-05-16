@@ -42,19 +42,21 @@ aggr_2	      825.0GB	    825.0GB	 0%	 online	  1	 node1	  raid_dp  normal
 +
 If the aggregates have gone offline or become foreign on node1, bring them online by using the following command on the new node1, once for each aggregate:
 +
-`storage aggregate online -aggregate <aggr_name>`
+`storage aggregate online -aggregate _aggr_name_`
 .	Verify that all the volumes are online on node1 by using the following command on node1 and examining its output:
 +
 `volume show -node node1 -state offline`
 +
 If any volumes are offline on node1, bring them online by using the following command on node1, once for each volume:
 +
-`volume online -vserver <vserver-name> -volume <volume-name>`
+`volume online -vserver _vserver-name_ -volume _volume-name_`
 +
 The `<vserver-name>` to use with this command is found in the output of the previous `volume show` command.
 .	Verify that the LIFs have been moved to the correct ports and have a status of `up`. If any LIFs are down, set the administrative status of the LIFs to up by entering the following command, once for each LIF:
 +
-`network interface modify -vserver <vserver_name> -lif <LIF_name> -home-node <nodename> - status-admin up`
+`network interface modify -vserver _vserver_name_ -lif _LIF_name_ -home-node _nodename_ - status-admin up`
 .	Verify that there are no data LIFs remaining on node2 by using the following command and examining the output:
 +
-`network interface show -curr-node <node2> -role data`
+`network interface show -curr-node _node2_ -role data`
+
+// BURT 1476251, 2022-05-16

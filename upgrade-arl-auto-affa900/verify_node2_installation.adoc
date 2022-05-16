@@ -155,8 +155,10 @@ When all ports are correctly configured and added to the correct broadcast domai
 `displaced-interface show`
 ..	Restore LIF home nodes and home ports:
 +
-`displaced-interface restore-home-node -node <node_name> -vserver <vserver_name> -lif-name <LIF_name>`
+`displaced-interface restore-home-node -node _node_name_ -vserver _vserver_name_ -lif-name _LIF_name_`
 
 .	Verify that all LIFs have a home port and are administratively up:
 +
 `network interface show -fields home-port,status-admin`
+
+// BURT 1476251, 2022-05-16

@@ -45,12 +45,12 @@ NOTE:	You must use the management port and IP as the netboot connection. Do not 
 `ifconfig e0M -auto`
 |Not running
 a|Manually configure the connection by using the following command at the boot environment prompt:
-`ifconfig e0M -addr=<filer_addr> -mask=<netmask> -gw=<gateway> - dns=<dns_addr> domain=<dns_domain>`
-`<filer_addr>` is the IP address of the storage system.
-`<netmask>` is the network mask of the storage system.
-`<gateway>` is the gateway for the storage system.
-`<dns_addr>` is the IP address of a name server on your network. This parameter is optional.
-`<dns_domain>` is the Domain Name Service (DNS) domain name. This parameter is optional.
+`ifconfig e0M -addr=_filer_addr_ -mask=_netmask_ -gw=_gateway_ - dns=_dns_addr_ domain=_dns_domain_`
+`_filer_addr_` is the IP address of the storage system.
+`_netmask_` is the network mask of the storage system.
+`_gateway_` is the gateway for the storage system.
+`_dns_addr_` is the IP address of a name server on your network. This parameter is optional.
+`_dns_domain_` is the Domain Name Service (DNS) domain name. This parameter is optional.
 
 NOTE:	Other parameters might be necessary for your interface. Enter `help ifconfig` at the firmware prompt for details.
 |===
@@ -155,7 +155,7 @@ Node1 should stop at the LOADER prompt.
 `show date`
 .	If necessary, set the date on node1:
 +
-`set date <mm/dd/yyyy>`
+`set date _mm/dd/yyyy_`
 +
 NOTE: Set the corresponding UTC date on node1.
 
@@ -165,15 +165,15 @@ NOTE: Set the corresponding UTC date on node1.
 
 .	If necessary, set the time on node1:
 +
-`set time <hh:mm:ss>`
+`set time _hh:mm:ss_`
 +
 NOTE: Set the corresponding UTC time on node1.
 
 .	Set the partner system ID on node1:
 +
-`setenv partner-sysid <node2_sysid>`
+`setenv partner-sysid _node2_sysid_`
 +
-You can obtain the node2 system ID from the `node show -node <node2>` command output on node2.
+You can obtain the node2 system ID from the `node show -node _node2_` command output on node2.
 +
 ..	Save the settings:
 +
@@ -183,3 +183,5 @@ You can obtain the node2 system ID from the `node show -node <node2>` command ou
 `printenv partner-sysid`
 +
 For node1, the `partner-sysid` must be that of node2.
+
+// BURT 1476251, 2022-05-16
