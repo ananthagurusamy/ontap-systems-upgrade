@@ -273,7 +273,7 @@ Enter the appropriate form of the `disk reassign` command based on whether your 
 |If disk type is... |Then run the command...
 
 |With shared disks
-|`disk reassign -s _node1_sysid_ -d _node3_sysid_ -p <node2_sysid>`
+|`disk reassign -s _node1_sysid_ -d _node3_sysid_ -p _node2_sysid_`
 |Without shared disks
 |`disk reassign -s _node1_sysid_ -d _node3_sysid_`
 |===

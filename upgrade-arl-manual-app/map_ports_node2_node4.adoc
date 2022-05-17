@@ -92,7 +92,7 @@ Cluster          NodeB_clus2:7700               TCP/ctlopcp
 
 .. If necessary, for each cluster LIF that is not listening on port 7700, set the administrative status of the LIF to `down` and then `up`:
 +
-`::> net int modify -vserver Cluster -lif <cluster-lif> -status-admin down; net int modify -vserver Cluster -lif <cluster-lif> -status-admin up`
+`::> net int modify -vserver Cluster -lif _cluster-lif_ -status-admin down; net int modify -vserver Cluster -lif _cluster-lif_ -status-admin up`
 +
 Repeat substep (f) to verify that the cluster LIF is now listening on port 7700.
 // 2021-11-03, BURT 1429264
@@ -103,7 +103,7 @@ Repeat substep (f) to verify that the cluster LIF is now listening on port 7700.
 `network port reachability show`
 .. Repair the reachability of the physical ports, followed by VLAN ports, by running the following command on each port, one port at a time:
 +
-`reachability repair -node <node_name> -port _port_name_`
+`reachability repair -node _node_name_ -port _port_name_`
 +
 A warning like the following is expected. Review and enter y or n, as appropriate:
 +

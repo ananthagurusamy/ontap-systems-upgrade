@@ -4,7 +4,7 @@ Before you can shut down and retire node2, you must record information about its
 
 . Find the cluster network, node-management, intercluster, and cluster-management ports on node2:
 +
-`network interface show -curr-node <node_name> -role cluster,intercluster,nodemgmt,cluster-mgmt`
+`network interface show -curr-node _node_name_ -role cluster,intercluster,nodemgmt,cluster-mgmt`
 +
 The system displays the LIFs for that node and other nodes in the cluster, as shown in the following example:
 +

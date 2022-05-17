@@ -237,7 +237,7 @@ node2                 true    true
 
 . [[man_prepare_nodes_step15]] Confirm that node1 and node2 are running the same ONTAP release:
 +
-`system node image show -node <node1,node2> -iscurrent true`
+`system node image show -node _node1,node2_ -iscurrent true`
 +
 The following example shows the output of the command:
 +
@@ -257,7 +257,7 @@ node2
 
 . Verify that neither node1 nor node2 owns any data LIFs that belong to other nodes in the cluster and check the `Current Node` and `Is Home` columns in the output:
 +
-`network interface show -role data -is-home false -curr-node <node_name>`
+`network interface show -role data -is-home false -curr-node _node_name_`
 +
 The following example shows the output when node1 has no LIFs that are home-owned by other nodes in the cluster:
 +
@@ -289,7 +289,7 @@ For detailed information about the `network interface revert` command, refer to 
 
 . Check whether node1 or node2 owns any failed disks:
 +
-`storage disk show -nodelist <node1,node2> -broken`
+`storage disk show -nodelist _node1,node2_ -broken`
 +
 If any of the disks have failed, remove them, following instructions in the _Disk and aggregate management with the CLI_. (Refer to link:other_references.html[References] to link to _Disk and aggregate management with the CLI_.)
 

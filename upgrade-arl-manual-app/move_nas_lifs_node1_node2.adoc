@@ -79,7 +79,7 @@ Remote LIFs handle traffic to SAN LUNs during the upgrade procedure. Moving SAN 
 
 .	[[step7]]Modify the home node of the migrated LIFs:
 +
-`network interface modify -vserver _Vserver-name_ -lif _LIF_name_ -home-node <node2> -home-port _port_name_`
+`network interface modify -vserver _Vserver-name_ -lif _LIF_name_ -home-node _node2_ -home-port _port_name_`
 
 .	[[man_lif_1_2_step8]]Verify whether the LIF is using the port as its home or current port. If the port is not home or current port then go to <<man_lif_1_2_step9,Step 9>>:
 +
