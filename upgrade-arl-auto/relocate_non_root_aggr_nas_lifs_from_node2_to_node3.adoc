@@ -27,7 +27,7 @@ include::../_include/ru_auto_relocate_non_root_aggr_nas_lifs_from_node2_to_node3
 .. Record VLAN and interface group information so you can re-create the VLANs and interface groups on node3 after node3 is booted up.
 .. Remove the VLANs from the interface groups:
 +
-`network port vlan delete -node _nodename_ -port <ifgrp> -vlan-id _VLAN_ID_`
+`network port vlan delete -node _nodename_ -port _ifgrp_ -vlan-id _VLAN_ID_`
 
 .. Check if there are any interface groups configured on the node by entering the following command and examining its output:
 +

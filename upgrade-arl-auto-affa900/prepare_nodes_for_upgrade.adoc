@@ -107,7 +107,7 @@ You must run and save the output of the following commands individually:
 * `network port ifgrp show`
 * `system node show -instance -node _node_name_`
 * `run -node _node_name_ sysconfig`
-* `storage aggregate show -node _node_name>`
+* `storage aggregate show -node _node_name_`
 * `volume show -node _node_name_`
 * `storage array config show -switch _switch_name_`
 * `system license show -owner _node_name_`

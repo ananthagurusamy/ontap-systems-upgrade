@@ -91,7 +91,7 @@ cluster::>
 .. Boot node4. See link:install_boot_node4.html[Install and boot node4] to boot the node if you have not already done so.
 .. Verify that the new cluster ports are in the Cluster broadcast domain:
 +
-`network port show -node <node> -port _port_ -fields broadcast-domain`
+`network port show -node _node_ -port _port_ -fields broadcast-domain`
 +
 The following example shows that port "e0a" is in the Cluster domain on node4:
 +

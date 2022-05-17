@@ -8,4 +8,4 @@ You can resume SnapMirror transfers that were quiesced before upgrade and resume
 
 . Resume the SnapMirror relationship:
 +
-`snapmirror resume -destination–vserver <vserver_name>`
+`snapmirror resume -destination–vserver _vserver_name_`

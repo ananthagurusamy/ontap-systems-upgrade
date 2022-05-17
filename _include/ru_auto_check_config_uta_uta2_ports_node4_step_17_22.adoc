@@ -11,7 +11,7 @@
 +
 Change the ports back to initiator mode:
 +
-`ucadmin modify -m fc -t initiator -f <adapter name>`
+`ucadmin modify -m fc -t initiator -f _adapter name_`
 
 . Verify that the ports have been changed to initiator mode:
 +

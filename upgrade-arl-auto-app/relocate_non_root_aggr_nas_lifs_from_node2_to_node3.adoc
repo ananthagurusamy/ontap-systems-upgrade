@@ -23,6 +23,7 @@ include::../_include/ru_auto_relocate_non_root_aggr_nas_lifs_from_node2_to_node3
 [start=5]
 .  [[Step5]]Verify that there are no data LIFs remaining on node2 by entering the following command and examining the output:
 +
-`network interface show -curr-node <node2> -role data`
+`network interface show -curr-node _node2_ -role data`
 // 10 Dec 2020, thomi, checked
 // BURT 1476241, 2022-05-13
+// 2022-05-17, BURT 1476241
