@@ -25,7 +25,7 @@ Use this procedure under the following circumstances:
 
 Do *NOT* use this procedure under the following circumstances:
 
-* You are using FlexArray Virtualization Software on the AFF A700 or FAS9500 systems.
+* You are using FlexArray Virtualization Software on the AFF A700 or FAS9000 systems.
 * You are using a shared switch for cluster-interconnect and Ethernet attached storage.
 
 For upgrading Fabric MetroCluster or MetroCluster IP configurations, see link:other_references.html[References] to link to the _MetroCluster Upgrade and Expansion_ content.

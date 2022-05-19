@@ -14,7 +14,7 @@ summary: "Disable the HA pair with node2 and shut node1 down during an AFF A700 
 
 
 [.lead]
-To retire node1, resume the automated operation to disable the HA pair with node2 and shut down node1 correctly. You must later remove the AFF A700 or the FAS9000 controller and NVRAM modules from the node1 chassis and then install the AFF A900 or the FAS9500 NVRAM and controller modules on node1.
+To retire node1, resume the automated operation to disable the HA pair with node2 and shut down node1 correctly. You must later remove the AFF A700 or the FAS9000 controller and NVRAM modules from the node1 chassis and then install the AFF A900 or the FAS9500 controller and NVRAM modules on node1.
 
 .Steps
 .	Resume the operation:
@@ -88,7 +88,8 @@ image::../media/black_circle_two.png[Number two]
 |I/O latch completely unlocked
 |===
 
-.	If you are using any add-on modules as coredump devices on the AFF A700 or FAS9000 NVRAM module, do NOT transfer them to the AFF A900 or FAS9500 NVRAM module.
+.	If you are using any add-on modules as coredump devices on the AFF A700 NVRAM module, do NOT transfer them to the AFF A900 NVRAM module.
+
 
 == Install the AFF A900 or FAS9500 NVRAM and controller modules on node1
 You must install the AFF A900 or FAS9500 NVRAM and controller modules that you received for the upgrade on node1.
