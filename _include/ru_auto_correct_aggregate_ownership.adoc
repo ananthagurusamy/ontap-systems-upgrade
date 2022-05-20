@@ -26,7 +26,7 @@ aggr4       node1      node1       online
 4 entries were displayed.
 ----
 
-==== After you finish
+=== After you finish
 
 You must restart the controller replacement process:
 
