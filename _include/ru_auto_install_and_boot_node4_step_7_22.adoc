@@ -96,7 +96,7 @@ Interrupt the autoboot by pressing Ctrl-C at the boot environment prompt.
 
 . If necessary, set the partner system ID on node4:
 +
-`setenv partner- sysid _node2_sysid_`
+`setenv partner-sysid _node2_sysid_`
 
 .. Save the settings:
 +
