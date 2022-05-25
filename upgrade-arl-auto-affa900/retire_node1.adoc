@@ -88,9 +88,6 @@ image::../media/black_circle_two.png[Number two]
 |I/O latch completely unlocked
 |===
 
-.	If you are using any add-on modules as coredump devices on the AFF A700 NVRAM module, do NOT transfer them to the AFF A900 NVRAM module.
-
-
 == Install the AFF A900 or FAS9500 NVRAM and controller modules on node1
 You must install the AFF A900 or FAS9500 NVRAM and controller modules that you received for the upgrade on node1.
 

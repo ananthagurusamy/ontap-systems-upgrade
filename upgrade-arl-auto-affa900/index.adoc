@@ -20,7 +20,7 @@ This procedure describes how to upgrade the controller hardware using aggregate 
 |Method |ONTAP version |Supported systems |Description
 
 |Using `system controller replace` commands
-|9.10 or later
+|9.10.1 or later
 |AFF A700 to AFF A900
 |Converts an AFF A700 system to an AFF A900 system, keeping the A700 chassis
 |Using `system controller replace` commands
