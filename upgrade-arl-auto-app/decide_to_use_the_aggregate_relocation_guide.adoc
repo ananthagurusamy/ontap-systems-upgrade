@@ -81,12 +81,14 @@ NOTE: If your controller upgrade model combination is not in the above table, co
 
 ^4^ARL automated upgrade is supported from an AFF8060 system running ONTAP 9.8P13 or later to an AFF A900 system running 9.10.1 or later.
 // BURT 1480916 27-May-2022
+
 ^5^ARL automated upgrade is supported from an AFF8080 system running ONTAP 9.8P10 or later to an AFF A900 system running 9.10.1 or later.
 
 ^6^For FAS8020, FAS8040, AFF8020, and AFF8040 systems, support for ARL automated upgrade is continued for ONTAP 9.9.1 and 9.10.1 and removed from ONTAP 9.11.1.
 
 ^7^ARL automated upgrade is supported from a FAS8060 system running ONTAP 9.8P13 or later to a FAS9500 system running 9.10.1P3 or later.
 // BURT 1480916 27-May-2022
+
 ^8^ARL automated upgrade is supported from a FAS8080 system running ONTAP 9.8P12 or later to a FAS9500 system running 9.10.1P3 or later.
 //BURT 1455646 5-May-2022
 
