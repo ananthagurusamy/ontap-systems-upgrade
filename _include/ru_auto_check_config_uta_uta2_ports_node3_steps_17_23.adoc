@@ -22,7 +22,7 @@ Change the ports back to initiator mode:
 +
 [NOTE]
 ====
-If you are upgrading from a system with only external disks to a system that supports only external disks, go to <<auto_check3_step22,Step 22>>.
+If you are upgrading from a system that only uses external disks to a system that only supports external disks, go to <<auto_check3_step22,Step 22>>.
 
 If you are upgrading from system with external disks to a system that supports both internal and external disks, for example, an AFF A800 system, go to <<auto_check3_step23,Step 23>>.
 ====
