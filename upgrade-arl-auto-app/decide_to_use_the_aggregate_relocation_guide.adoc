@@ -79,9 +79,9 @@ NOTE: If your controller upgrade model combination is not in the above table, co
 ^3^For FAS8020, FAS8040, AFF8020, and AFF8040 systems, support for ARL automated upgrade is continued for ONTAP 9.9.1 and 9.10.1 and removed from ONTAP 9.11.1.
 
 ^4^Verify the supported ONTAP versions for your controller upgrade.
-[cols=4*,options="header",cols="25,25,25,25"]
+[cols=4*,cols="25,25,25,25"]
 |===
-2+a|Old controller 2+a|Replacement controller
+2+h|Old controller 2+h|Replacement controller
 
 h|System h|ONTAP version h|System h|ONTAP version
 |AFF A320 |9.9.1 or later |AFF A400 |9.9.1 or later
