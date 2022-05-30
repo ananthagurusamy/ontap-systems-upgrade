@@ -18,6 +18,9 @@ After you verify network configuration on node2 and before you relocate aggregat
 .About this task
 Remote LIFs handle traffic to SAN LUNs during the upgrade procedure. Moving SAN LIFs is not necessary for cluster or service health during the upgrade. SAN LIFs are not moved unless they need to be mapped to new ports. After you bring node2 online, you must verify that the LIFs are healthy and located on the appropriate ports.
 
+NOTE: During an AFF A700 to AFF A900 upgrade, if the systems identifies the new controller as FAS9500 when you run the `system controller replace resume` command, you must set the `bootarg.init.flash_optimized` to `true` and save the new setting by using it the `saveenv` command at the Loader prompt.
+// BURT-1481586 30-May-2022
+
 .Steps
 . Resume the relocation operation:
 +

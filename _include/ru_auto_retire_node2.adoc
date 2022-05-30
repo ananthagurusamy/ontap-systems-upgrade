@@ -7,6 +7,9 @@ To retire node2, you must shut node2 down correctly and remove it from the rack 
 `system controller replace resume`
 +
 The node halts automatically.
++
+NOTE: During an AFF A700 to AFF A900 upgrade, if the systems identifies the new controller as FAS9500, you must set the `bootarg.init.flash_optimized` to `true` and save the new setting by using it the `saveenv` command at the Loader prompt.
+// BURT-1481586 30-May-2022
 
 .After you finish
 

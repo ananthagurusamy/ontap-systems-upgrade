@@ -16,7 +16,7 @@ summary: Boot node1 with the AFF A900 controller module and NVRAM module.
 Node1 with the AFF A900 controller module and NVRAM module is now ready for boot up. Upgrading from an AFF A700 to an AFF A900 by swapping the controller module and NVRAM module involves moving only the console and management connections. This section provides the steps required to boot node1 with the AFF A900 controller module and NVRAM module.
 
 .Steps
-
+[[aff_a900_boot_node1]]
 .	If NetApp Storage Encryption (NSE) is in use on this configuration, the `setenv bootarg.storageencryption.support` command must be set to `true`, and the `kmip.init.maxwait` variable must be set to `off` to avoid a boot loop after the node1 configuration is loaded:
 +
 `setenv bootarg.storageencryption.support true`
@@ -25,7 +25,12 @@ Node1 with the AFF A900 controller module and NVRAM module is now ready for boot
 .	Boot the node into `boot_menu`:
 +
 `boot_ontap menu`
-.	The node stops at the boot menu. Enter "22/7" and select the hidden option `boot_after_controller_replacement`. To reassign the AFF A700 node1 disks to AFF A900 node1, at the prompt, enter the actual node name of node1. Use the following example as a reference:
+.	The node stops at the boot menu. Enter "22/7" and select the hidden option `boot_after_controller_replacement`.
++
+NOTE: If the system reports `diskown.errorDuringIO:error` errors, you must reset the bootargs in <<aff_a900_boot_node1,Step 1>> and run the `boot_ontap` command.
+// BURT-1481586 30-May-2022
++
+To reassign the AFF A700 node1 disks to AFF A900 node1, at the prompt, enter the actual node name of node1. Use the following example as a reference:
 +
 ----
 LOADER-A> boot_ontap menu
