@@ -58,8 +58,8 @@ NOTE: You can use NetApp Storage Encryption (NSE) and NetApp Volume Encryption (
 |AFF A300
 |AFF A400^2^, AFF A700, AFF A800^1^, AFF A900
 
-|AFF A320
-|AFF A400^4^
+|AFF A320^4^
+|AFF A400
 
 |AFF A400, AFF A700
 |AFF A900
