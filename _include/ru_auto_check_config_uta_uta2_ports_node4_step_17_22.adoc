@@ -20,7 +20,7 @@ Change the ports back to initiator mode:
 . Exit maintenance mode:
 +
 `halt`
-++
++
 [NOTE]
 ====
 If you are upgrading from a system that uses only external disks to a system that only supports external disks, go to <<auto_check_4_step22,Step 22>>.
