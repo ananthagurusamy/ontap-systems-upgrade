@@ -1,3 +1,4 @@
+cd~
 ---
 sidebar: sidebar
 permalink: upgrade-arl-auto-app/decide_to_use_the_aggregate_relocation_guide.html
@@ -79,16 +80,16 @@ NOTE: If your controller upgrade model combination is not in the above table, co
 ^3^For FAS8020, FAS8040, AFF8020, and AFF8040 systems, support for ARL automated upgrade is continued for ONTAP 9.9.1 and 9.10.1 and removed from ONTAP 9.11.1.
 
 ^4^Verify the supported ONTAP versions for your controller upgrade.
-[cols=4*,cols="25,25,25,25"]
+[cols=4*,cols="20,30,20,30"]
 |===
 2+h|Old controller 2+h|Replacement controller
 
 h|System h|ONTAP version h|System h|ONTAP version
 |AFF A320 |9.9.1 or later |AFF A400 |9.9.1 or later
-|AFF8060 |9.8P13 or later |AFF A900 |9.10.1 or later
-|AFF8080 |9.8P10 or later |AFF A900 |9.10.1 or later
-|FAS8060 |9.8P13 or later |FAS9500 |9.10.1P3 or later
-|FAS8080 |9.8P12 or later |FAS9500 |9.10.1P3 or later
+|AFF8060 |9.8P13 or later patches |AFF A900 |9.10.1 or later
+|AFF8080 |9.8P10 or later patches |AFF A900 |9.10.1 or later
+|FAS8060 |9.8P13 or later patches |FAS9500 |9.10.1P3 or later
+|FAS8080 |9.8P12 or later patches |FAS9500 |9.10.1P3 or later
 |===
 // BURT 1379899 30-Aug-2021
 //BURT 1455646 5-May-2022
