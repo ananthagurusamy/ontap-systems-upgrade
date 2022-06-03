@@ -1,4 +1,3 @@
-cd~
 ---
 sidebar: sidebar
 permalink: upgrade-arl-auto-app/decide_to_use_the_aggregate_relocation_guide.html
