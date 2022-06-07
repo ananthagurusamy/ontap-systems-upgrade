@@ -5,7 +5,7 @@ keywords: guidelines, upgrade, aff, a900, a700, ontap, controllers
 summary: "Understand if you can use ARL to upgrade an AFF A700 to an AFF A900."
 ---
 
-= Guidelines for upgrading from an AFF A700 to an AFF A900 with ARL
+= Guidelines for upgrading controllers
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,13 +13,16 @@ summary: "Understand if you can use ARL to upgrade an AFF A700 to an AFF A900."
 :imagesdir: ./media/
 
 [.lead]
-Using ARL to upgrade a pair of AFF A700 controllers running ONTAP 9.10.1 or later to an AFF A900 system depends on the system and the configuration of both the original and replacement controllers.
+Using ARL to upgrade a pair of controllers in the following system configurations:
+
+* Upgrade a pair of AFF A700 controllers to an AFF A900 system running ONTAP 9.10.1 or later
+* Upgrade a pair of FAS9000 controllers to a FAS9500 system running ONTAP 9.10.1P3 or later
 
 == Supported upgrades for ARL
 
-An AFF A700 to an AFF A900 upgrade using ARL and swapping only the controller module and the NVRAM module is the supported combination. If you have received a new AFF A900 system as a complete system, including a new chassis, refer to link:other_references.html[References] to link to the _Use "system controller replace" commands to upgrade controller hardware running ONTAP 9.8 or later_ content.
+Controller upgrade from an AFF A700 to an AFF A900 or from a FAS9000 to a FAS9500 using ARL and the NVRAM module is the supported combination. If you have received a new AFF A900 or FAS9500 system as a complete system, including a new chassis, refer to link:other_references.html[References] to link to the _Use "system controller replace" commands to upgrade controller hardware running ONTAP 9.8 or later_ content.
 
-WARNING: This procedure strictly applies to an AFF A700 to an AFF A900 upgrade running ONTAP 9.10.1 or later. Do not use this procedure to perform an upgrade between any other system combinations.
+WARNING: This procedure strictly applies to an AFF A700 to AFF A900 upgrade running ONTAP 9.10.1 or later and a FAS9000 to FAS9500 upgrade running 9.10.1P3 or later. Do NOT use this procedure to perform an upgrade between any other system combinations.
 
 Controller upgrade using ARL is supported on systems configured with SnapLock Enterprise and SnapLock Compliance volumes.
 
@@ -32,3 +35,5 @@ If you are upgrading nodes in a two-node switchless cluster, you can leave the n
 If any problems occur while upgrading the controllers, see the link:troubleshoot_index.html[Troubleshoot] section at the end of the procedure for more information and possible solutions.
 
 If you do not find a solution to the problem you encountered, contact technical support.
+
+//BURT 1452254, 2022-04-26

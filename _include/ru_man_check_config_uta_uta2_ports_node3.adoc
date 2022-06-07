@@ -40,7 +40,7 @@ NOTE: *Attention*: If your system has storage disks, you must enter the commands
 
 .Steps
 
-. [[step1]]Check how the ports are currently configured entering on of the following commands on node3:
+. Check how the ports are currently configured entering on of the following commands on node3:
 +
 [cols="35,65"]
 |===
