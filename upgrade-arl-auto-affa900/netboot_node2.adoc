@@ -13,9 +13,9 @@ summary: After swapping the corresponding AFF A900 node2 controller module and N
 :imagesdir: ./media/
 
 [.lead]
-After swapping the corresponding AFF A900 node2 controller module and NVRAM, module you might need to netboot them. The term netboot means that you are booting from an ONTAP image stored on a remote server. When preparing for netboot, you must put a copy of the ONTAP 9 boot image onto a web server that the system can access.
+After swapping the corresponding AFF A900 or FAS9500 node2 controller module and NVRAM, module you might need to netboot them. The term netboot means that you are booting from an ONTAP image stored on a remote server. When preparing for netboot, you must put a copy of the ONTAP 9 boot image onto a web server that the system can access.
 
-It is not possible to check the version of ONTAP installed on the boot media of an AFF A900 controller module unless it is installed in a chassis and powered ON. The ONTAP version on the AFF A900 boot media must be same as the ONTAP version running on the AFF A700 system that is being upgraded and both the primary and backup boot images must match. You can configure the images by performing a netboot followed by the `wipeconfig` command from the boot menu. If the controller module was previously used in another cluster, the `wipeconfig` command clears any residual configuration on the boot media.
+It is not possible to check the version of ONTAP installed on the boot media of an AFF A900 or a FAS9500 controller module unless it is installed in a chassis and powered ON. The ONTAP version on the AFF A900 or the FAS9500 boot media must be the same as the ONTAP version running on the AFF A700 or the FAS9000 system that you are upgrading and both the primary and backup boot images must match. You can configure the images by performing a netboot followed by the `wipeconfig` command from the boot menu. If the controller module was previously used in another cluster, the `wipeconfig` command clears any residual configuration on the boot media.
 
 NOTE:	You can also use the USB boot option to perform the netboot. See the link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/How_to_use_the_boot_recovery_LOADER_command_for_installing_ONTAP_for_initial_setup_of_a_system[NetApp KB Article: How to use the boot_recovery LOADER command for installing ONTAP for initial setup of a system^].
 
@@ -61,7 +61,7 @@ NOTE:	Other parameters might be necessary for your interface. Enter `help ifconf
 +
 NOTE:	Do not interrupt the boot.
 
-.	Wait for the node2 now running on the AFF A900 controller module to boot and display the boot menu options as shown in the following output:
+.	Wait for the node2 now running on the AFF A900 or FAS9500 controller module to boot and display the boot menu options as shown in the following output:
 +
 ----
 Please choose one of the following:
@@ -176,3 +176,5 @@ NOTE: This is the system ID of the node1 that you are upgrading to an AFF A900.
 `printenv partner-sysid`
 +
 For node2, the `partner-sysid` must be that of node1.
+
+//BURT 1452254, 2022-04-27
