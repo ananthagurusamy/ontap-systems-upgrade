@@ -13,7 +13,7 @@ summary: "Relocate node2's non-root aggregates to node1 during an AFF A700 to AF
 :imagesdir: ./media/
 
 [.lead]
-Before you can replace node2 with the AFF A900 controller module and the NVRAM module, you must first relocate the non-root aggregates that are owned by node2 to node1.
+Before you can replace node2 with the AFF A900 or the FAS9500 controller module and the NVRAM module, you must first relocate the non-root aggregates that are owned by node2 to node1.
 
 .Before you begin
 After the post-checks from the previous stage complete, the resource release for node2 starts automatically. The non-root aggregates and non-SAN data LIFs are migrated from node2 to the new node1.
@@ -58,3 +58,5 @@ The `<vserver-name>` to use with this command is found in the output of the prev
 .	Verify that there are no data LIFs remaining on node2 by using the following command and examining the output:
 +
 `network interface show -curr-node <node2> -role data`
+
+//BURT 1452254, 2022-04-27
