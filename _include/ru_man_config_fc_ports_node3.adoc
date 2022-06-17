@@ -14,7 +14,7 @@ NOTE: *Important*: If your system has storage disks, enter the commands in this 
 
 .Steps
 
-. [[step1]]Take one of the following actions:
+. Take one of the following actions:
 +
 [cols="35,65"]
 |===

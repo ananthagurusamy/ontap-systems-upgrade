@@ -5,7 +5,7 @@ keywords: boot, NVRAM, controller, module, node2, aff, a700, a900
 summary: Boot node2 with the AFF A900 controller module and NVRAM module.
 ---
 
-= Boot node2 with the AFF A900 controller module and NVRAM module
+= Boot node2 with AFF A900 or FAS9500 controller and NVRAM modules
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,7 +13,7 @@ summary: Boot node2 with the AFF A900 controller module and NVRAM module.
 :imagesdir: ./media/
 
 [.lead]
-Node2 with the AFF A900 controller module and NVRAM module is now ready for upgrade. Upgrading from an AFF A700 to an AFF A900 by swapping the controller module and NVRAM module involves moving only the console and management connections. This section provides the steps required to boot node2 with the AFF A900 controller module and NVRAM module.
+Node2 with the AFF A900 or FAS9500 controller and NVRAM modules is now ready for upgrade. An AFF A700 to AFF A900 or FAS9000 to FAS9500 upgrade by swapping the controller and NVRAM modules involves moving only the console and management connections. This section provides the steps required to boot node2 with the AFF A900 or FAS9500 controller and NVRAM modules.
 
 .Steps
 .	[[boot_node2_step1]]If NetApp Storage Encryption (NSE) is in use on this configuration, the `setenv bootarg.storageencryption.support` command must be set to `true`, and the `kmip.init.maxwait` variable must be set to `off` to avoid a boot loop after the node2 configuration is loaded:
@@ -24,7 +24,7 @@ Node2 with the AFF A900 controller module and NVRAM module is now ready for upgr
 .	Boot the node into `boot_menu`:
 +
 `boot_ontap menu`
-.	The node stops at the boot menu. Enter "22/7" and select the hidden option `boot_after_controller_replacement`. To reassign the AFF A700 node1 disks to AFF A900 node1, at the prompt, enter the actual node name of node2. Use the following example as a reference:
+.	The node stops at the boot menu. Enter "22/7" and select the hidden option `boot_after_controller_replacement`. To reassign the AFF A700 or FAS9000 node1 disks to the AFF A900 or FAS9500 node1, at the prompt, enter the actual node name of node2. Use the following example as a reference:
 +
 ----
 LOADER-A> boot_ontap menu
@@ -157,3 +157,5 @@ The system IDs shown in the preceding example are example IDs. The actual system
 
 Between entering node names at the prompt and the login prompt, the node reboots a few times to restore the environment variables, update firmware on the cards in the system, and for other ONTAP updates.
 ====
+
+//BURT 1452254, 2022-04-27
