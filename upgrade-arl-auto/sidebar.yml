@@ -28,6 +28,7 @@ entries:
     - title: Get an IP address of an external key management server for storage encryption
       url: /upgrade-arl-auto/get_ip_address_of_external_kms_for_storage_encryption.html
 - title: "Stage 2. Relocate and retire node1"
+  pdf-filename: upgrade-arl-auto-stage2
   entries:
     - title: Overview
       url: /upgrade-arl-auto/stage_2_index.html
