@@ -13,10 +13,10 @@ summary: Verify the node2 installation with the AFF A900 controller module and N
 :imagesdir: ./media/
 
 [.lead]
-You must verify the node2 installation with the AFF A900 controller module and NVRAM module. Because there is no change to physical ports, you are not required to map the physical ports from the AFF A700 node2 to the AFF A900 node2.
+You must verify the node2 installation with the AFF A900 or FAS9500 controller and NVRAM modules. Because there is no change to physical ports, you are not required to map the physical ports from the old node2 to the replacement node2.
 
 .About this task
-After you boot node1 with the AFF A900 controller module, you must verify that it is installed correctly. You must wait for node2 to join quorum and then resume the controller replacement operation.
+After you boot node1 with the AFF A900 or FAS9500 controller module, you must verify that it is installed correctly. You must wait for node2 to join quorum and then resume the controller replacement operation.
 
 At this point in the procedure, the operation pauses while node2 joins quorum.
 
@@ -160,3 +160,5 @@ When all ports are correctly configured and added to the correct broadcast domai
 .	Verify that all LIFs have a home port and are administratively up:
 +
 `network interface show -fields home-port,status-admin`
+
+//BURT 1452254, 2022-04-27
