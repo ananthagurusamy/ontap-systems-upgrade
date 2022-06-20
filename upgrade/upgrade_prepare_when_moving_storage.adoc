@@ -69,7 +69,24 @@ a|
 |===
 
 . Obtain information about the default cluster ports, data ports, and node management ports for each new node that you are upgrading to: https://hwu.netapp.com[NetApp Hardware Universe^]
-. [[prepare_move_store_5]]Download and prepare the files used for performing netboot.
+
+[[assign_lifs]]
+. If you are replacing an ONTAP node with a different model, you must reassign the management or intercluster LIFs on the network ports on the original system that will be used as high availability (HA) ports on the replacement system.
++
+WARNING: Management or intercluster LIFs that are configured on affected network ports on the original system might lead to an upgrade failure by preventing the HA configuration from using the ports when booting onto the replacement system.
+
+.. Identify the network ports on the original system that will be used as high availability (HA) ports on the replacement system.
+.. Identify the management or intercluster LIFs configured on the affected network ports:
++
+`network interface show -home-port <port-name>`
+.. Assign the affected LIFs to a network port that will not be used a HA port on the replacement system:
++
+`network interface modify -vserver <vserver-name> -lif <lif-name> -home-port <new-port-name>`
+`network interface revert -vserver <vserver-name> -lif <lif-name>`
+// 20 June2022, GH issue #38
+
+[[prepare_move_store_5]]
+. Download and prepare the files used for performing netboot.
 +
 After you install the new nodes, you might need to netboot to ensure the new nodes are running the same version of ONTAP as the original nodes. The term netboot means you are booting from an ONTAP image stored on a remote server. When preparing for netboot, you must put a copy of the ONTAP 9 boot image onto a web server that the system can access.
 

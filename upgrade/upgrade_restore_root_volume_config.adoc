@@ -12,6 +12,9 @@ summary: 'You must restore configuration information from the root volume to the
 [.lead]
 You must restore configuration information from the root volume to the boot devices.
 
+NOTE: If you are performing an in-place controller upgrade that replaces an ONTAP node with a different model, before restoring the configuration information, if required, verify that you have xref:upgrade-prepare-when-moving-storage.html#assign_lifs[reassigned the management or intercluster LIFs] configured on network ports on the original system that are being used as high availability ports on the replacement system.
+// 20 June2022, GH issue #38
+
 .About this task
 You must perform these steps on node3 and node4, completing each step on one node and then
 the other before going on to the next step.
