@@ -182,7 +182,7 @@ In the above example, node2_node4 is just booted after controller replacement. I
 
 . [[auto_restore_4_Step4]]Repair the reachability for each of the ports on node4 with a reachability status other than `ok`. Run the following command, first on any physical ports, then on any VLAN ports, one at a time:
 +
-`network port reachability repair -node <node_name>  -port <port_name>`
+`network port reachability repair -node _node_name_  -port _port_name_`
 +
 The output looks like the following example:
 +

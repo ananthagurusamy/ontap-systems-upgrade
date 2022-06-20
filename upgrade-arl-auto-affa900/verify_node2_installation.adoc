@@ -111,7 +111,7 @@ In the preceding example, node2 has booted and joined quorum after controller re
 
 .	[[restore_node2_step4]]Repair the reachability for each of the ports on node2 with a reachability status other than `ok` by using the following command, in the following order:
 +
-`network port reachability repair -node <node_name>  -port <port_name>`
+`network port reachability repair -node _node_name_  -port _port_name_`
 +
 --
 ..	Physical ports
