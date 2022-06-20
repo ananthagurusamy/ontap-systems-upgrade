@@ -42,7 +42,6 @@ After upgrading, you must immediately configure Storage Encryption and establish
 +
 `storage encryption disk modify -disk * -data-key-id <authentication_key_id>`
 
-
 == Manage authentication using KMIP servers
 
 With ONTAP 9.5 to 9.7, you can use Key Management Interoperability Protocol (KMIP) servers to manage authentication keys.
