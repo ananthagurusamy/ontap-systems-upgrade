@@ -81,6 +81,7 @@ WARNING: Management or intercluster LIFs that are configured on affected network
 .. Assign the affected LIFs to a network port that will not be used a HA port on the replacement system:
 +
 `network interface modify -vserver <vserver-name> -lif <lif-name> -home-port <new-port-name>`
++
 `network interface revert -vserver <vserver-name> -lif <lif-name>`
 // 20 June2022, GH issue #38
 
