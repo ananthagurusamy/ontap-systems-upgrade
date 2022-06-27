@@ -14,6 +14,7 @@ entries:
 - title: Overview of the ARL upgrade
   url: /upgrade-arl-auto-affa900/overview_of_the_arl_upgrade.html
 - title: "Stage 1. Prepare for upgrade"
+  pdf-filename: "Stage 1. Prepare for upgrade (upgrade to AFF A900 or FAS9500)"
   entries:
     - title: Verify the upgrade hardware
       url: /upgrade-arl-auto-affa900/verify_upgrade_hardware.html
