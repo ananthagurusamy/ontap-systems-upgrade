@@ -29,6 +29,7 @@ entries:
       - title: "Get an IP address of an external key management server for storage encryption"
         url: /upgrade-arl-auto-app/get_ip_address_of_external_kms_for_storage_encryption.html
   - title: "Stage 2. Relocate and retire node1"
+    pdf-filename: "Stage 2. Relocate and retire node1 (upgrade with ‘system controller replace’ in ONTAP 9.8 or later)"
     entries:
       - title: Overview
         url: /upgrade-arl-auto-app/stage_2_index.html
@@ -41,6 +42,7 @@ entries:
       - title: "Prepare for netboot"
         url: /upgrade-arl-auto-app/prepare_for_netboot.html
   - title: "Stage 3. Install and boot node3"
+    pdf-filename: "Stage 3. Install and boot node3 (upgrade with ‘system controller replace’ in ONTAP 9.8 or later)"
     entries:
       - title: Overview
         url: /upgrade-arl-auto-app/stage_3_index.html
@@ -63,6 +65,7 @@ entries:
       - title: "Retire node2"
         url: /upgrade-arl-auto-app/retire_node2.html
   - title: "Stage 5. Install and boot node4"
+    pdf-filename: "Stage 5. Install and boot node4 (upgrade with ‘system controller replace’ in ONTAP 9.8 or later)"
     entries:
       - title: Overview
         url: /upgrade-arl-auto-app/stage_5_index.html
@@ -77,6 +80,7 @@ entries:
       - title: "Move non-root aggregates and NAS data LIFs owned by node2 from node3 to node4"
         url: /upgrade-arl-auto-app/move_non_root_aggr_and_nas_data_lifs_node2_from_node3_to_node4.html
   - title: "Stage 6. Complete the upgrade"
+    pdf-filename: "Stage 6. Complete the upgrade (upgrade with ‘system controller replace’ in ONTAP 9.8 or later)"
     entries:
       - title: Overview
         url: /upgrade-arl-auto-app/stage_6_index.html
@@ -91,6 +95,7 @@ entries:
       - title: "Resume SnapMirror operations"
         url: /upgrade-arl-auto-app/resume_snapmirror_operations.html
   - title: "Troubleshoot"
+    pdf-filename: "Troubleshoot (upgrade with ‘system controller replace’ in ONTAP 9.8 or later)"
     entries:
       - title: Overview
         url: /upgrade-arl-auto-app/troubleshoot_index.html

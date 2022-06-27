@@ -76,7 +76,8 @@ entries:
     url: /upgrade-arl-auto-affa900/decommission_old_system.html
   - title: Resume SnapMirror operations
     url: /upgrade-arl-auto-affa900/resume_snapmirror_operations.html
-- title: Troubleshoot
+- title: "Troubleshoot"
+  pdf-filename: "Troubleshoot (upgrade to AFF A900 or FAS9500)"
   entries:
   - title: Overview
     url: /upgrade-arl-auto-affa900/troubleshoot_index.html
