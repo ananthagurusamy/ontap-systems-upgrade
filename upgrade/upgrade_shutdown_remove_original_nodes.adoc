@@ -14,7 +14,7 @@ When shutting down and removing the original nodes you must send an AutoSupport 
 .Steps
 . Send an AutoSupport message from node1 and node2 to inform technical support of the upgrade:
 +
-`system node autosupport invoke -node <node_name> -type all -message "MAINT=2h Upgrading node_name from <platform_original> to <platform_new>"`
+`system node autosupport invoke -node _node_name_ -type all -message "MAINT=2h Upgrading _node_name_ from _platform_original_ to _platform_new_"`
 . Disable high availability or storage failover on node1 and node2:
 +
 [options="header" cols="1,2"]
@@ -26,17 +26,17 @@ Two-node cluster
 a|
 
  .. `cluster ha modify -configured false`
- .. `storage failover modify -node <node_name> -enabled false`
+ .. `storage failover modify -node _node_name_ -enabled false`
 
 a|
 Cluster with more than two nodes
 a|
-`storage failover modify -node <node_name> -enabled false`
+`storage failover modify -node _node_name_ -enabled false`
 |===
 
 . Halt the node:
 +
-`system node halt -node <node_name>`
+`system node halt -node _node_name_`
 +
 You can suppress the quorum check during the reboot process by using the `-ignore-quorum-warnings` option.
 
@@ -112,3 +112,4 @@ Use "storage failover modify -node <nodename> -onreboot false" to turn it OFF.
 . Remove the chassis containing node1 and node2.
 
 // Clean-up, 2022-03-09
+// BURT 1476241 2022-05-13

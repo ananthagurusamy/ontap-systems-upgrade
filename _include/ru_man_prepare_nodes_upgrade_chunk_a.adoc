@@ -136,7 +136,7 @@ If either node is in partial giveback, use the `storage failover giveback` comma
 
 . [[man_prepare_nodes_step9]]Confirm that neither node1 nor node2 owns the aggregates for which it is the current owner (but not the home owner):
 +
-`storage aggregate show -node <node_name> -is-home false -fields owner-name,homename,state`
+`storage aggregate show -nodes _node_name_ -is-home false -fields owner-name, home-name, state`
 +
 If neither node1 nor node2 owns aggregates for which it is the current owner (but not the home owner), the system will return a message similar to the following example:
 +
@@ -177,11 +177,11 @@ aggr4         node1        node2        online
 
 .. Return the aggregates currently owned by the partner node to the home owner node:
 +
-`storage failover giveback -ofnode <home_node_name>`
+`storage failover giveback -ofnode _home_node_name_`
 
 .. Verify that neither node1 nor node2 still owns aggregates for which it is the current owner (but not the home owner):
 +
-`storage aggregate show -nodes <node_name> -is-home false -fields owner-name,home-name,state`
+`storage aggregate show -nodes _node_name_ -is-home false -fields owner-name, home-name, state`
 +
 The following example shows the output of the command when a node is both the current owner and home owner of aggregates:
 +
@@ -237,7 +237,7 @@ node2                 true    true
 
 . [[man_prepare_nodes_step15]] Confirm that node1 and node2 are running the same ONTAP release:
 +
-`system node image show -node <node1,node2> -iscurrent true`
+`system node image show -node _node1,node2_ -iscurrent true`
 +
 The following example shows the output of the command:
 +
@@ -257,7 +257,7 @@ node2
 
 . Verify that neither node1 nor node2 owns any data LIFs that belong to other nodes in the cluster and check the `Current Node` and `Is Home` columns in the output:
 +
-`network interface show -role data -is-home false -curr-node <node_name>`
+`network interface show -role data -is-home false -curr-node _node_name_`
 +
 The following example shows the output when node1 has no LIFs that are home-owned by other nodes in the cluster:
 +
@@ -289,10 +289,11 @@ For detailed information about the `network interface revert` command, refer to 
 
 . Check whether node1 or node2 owns any failed disks:
 +
-`storage disk show -nodelist <node1,node2> -broken`
+`storage disk show -nodelist _node1,node2_ -broken`
 +
 If any of the disks have failed, remove them, following instructions in the _Disk and aggregate management with the CLI_. (Refer to link:other_references.html[References] to link to _Disk and aggregate management with the CLI_.)
 
 . Collect information about node1 and node2 by completing the following substeps and recording the output of each command:
 
 // Clean-up, 2022-03-09
+// 1476241, 2022-05-13

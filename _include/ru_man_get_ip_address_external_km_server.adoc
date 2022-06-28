@@ -25,4 +25,6 @@ After upgrading, you must immediately configure Storage Encryption and establish
 . Make a note of the new authentication key ID.
 . Rekey all self-encrypting drives with the new authentication key:
 +
-`storage encryption disk modify -disk * -data-key-id <authentication_key_id>`
+`storage encryption disk modify -disk * -data-key-id _authentication_key_id_`
+
+// BURT 1478241, 2022-05-13

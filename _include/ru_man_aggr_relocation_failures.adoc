@@ -40,7 +40,7 @@ You can fix the incorrect ownership problem after Stage 6 once storage failover 
 
 . [[man_aggr_fail_step1]]Enter the following command to get a list of aggregates:
 +
-`storage aggregate show -nodes <node4> -is-home true`
+`storage aggregate show -nodes _node4_ -is-home true`
 +
 To identify aggregates that were not correctly relocated, refer to the list of aggregates with the home owner of node1 that you obtained in the section link:prepare_nodes_for_upgrade.html[Prepare the nodes for upgrade] and compare it with output of the above command.
 
@@ -48,14 +48,14 @@ To identify aggregates that were not correctly relocated, refer to the list of a
 
 . [[man_aggr_fail_Step3]]Relocate the aggregates left behind on node4:
 +
-`storage aggregate relocation start -node <node4> -aggr <aggr_node_1> -destination <node3>`
+`storage aggregate relocation start -node _node4_ -aggr _aggr_node_1_ -destination _node3_`
 +
 Do not use the `-ndo-controller-upgrade` parameter during this relocation.
 
 . Enter the following command to verify that node3 is now the home owner of the aggregates:
 +
-`storage aggregate show -aggregate <aggr1,aggr2,aggr3...> -fields home-name`
+`storage aggregate show -aggregate _aggr1,aggr2,aggr3..._ -fields home-name`
 +
-`<aggr1,aggr2,aggr3...>` is the list of aggregates that had node1 as the original home owner.
+`_aggr1,aggr2,aggr3..._` is the list of aggregates that had node1 as the original home owner.
 +
 Aggregates that do not have node3 as home owner can be relocated to node3 using the same relocation command in <<man_aggr_fail_Step3,Step 3>>.

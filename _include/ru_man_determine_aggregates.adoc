@@ -8,7 +8,7 @@ If you are not upgrading controllers with aggregates on internal disk drives, sk
 
 . Enter the nodeshell, once for each of the original nodes.
 +
-`system node run -node <node_name>`
+`system node run -node _node_name_`
 
 . Display the internal drives:
 +

@@ -89,13 +89,13 @@ Contact your NetApp representative to obtain the correct SFP+ module.
 
 . If the adapter is in initiator mode, and if the UTA/UTA2 port is online, take the UTA/UTA2 port offline:
 +
-`storage disable adapter <adapter_name>`
+`storage disable adapter _adapter_name_`
 +
 Adapters in target mode are automatically offline in Maintenance mode.
 
 . [[auto_check_4_step7]]If the current configuration does not match the desired use, change the configuration as needed:
 +
-`ucadmin modify -m fc|cna -t initiator|target <adapter_name>`
+`ucadmin modify -m fc|cna -t initiator|target _adapter_name_`
 
 ** `-m` is the personality mode, FC or 10GbE UTA.
 ** `-t` is the FC4 type, `target` or `initiator`.
@@ -140,9 +140,9 @@ f-a   2b       fc             target       cna           -             online
 |If the system... |Then…
 
 |Has storage disks
-|`network fcp adapter modify -node <node_name> -adapter <adapter_name> -state up`
+|`network fcp adapter modify -node _node_name_ -adapter _adapter_name_ -state up`
 |Is a V-Series system or has FlexArray Virtualization Software and is connected to storage arrays
-|`fcp config <adapter_name> up`
+|`fcp config _adapter_name_ up`
 |===
 
 . Cable the port.

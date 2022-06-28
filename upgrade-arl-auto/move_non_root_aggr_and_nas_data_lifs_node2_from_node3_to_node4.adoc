@@ -71,7 +71,7 @@ If any aggregates fail to relocate or are vetoed, you must take manually relocat
 +
 .. Enter the following command and examine its output:
 +
-`network interface show -data-protocol iscsi|fcp -home-node <node4>`
+`network interface show -data-protocol iscsi|fcp -home-node _node4_`
 +
 The system returns output similar to the following example:
 +
@@ -94,33 +94,33 @@ vs1
 +
 ... Set the LIF status to down by entering the following command:
 +
-`network interface modify -vserver <vserver_name> -lif <lif_name> -status-admin down`
+`network interface modify -vserver _vserver_name_ -lif _lif_name_ -status-admin down`
 ... Remove the LIF from the port set:
 +
-`portset remove -vserver <vserver_name> -portset <portset_name> -port-name <port_name>`
+`portset remove -vserver _vserver_name_ -portset _portset_name_ -port-name _port_name_`
 ... Enter one of the following commands:
 +
 * Move a single LIF by entering the following command:
 +
-`network interface modify -vserver <vserver_name> -lif <lif_name> -home-port <new_home_port>`
+`network interface modify -vserver _vserver_name_ -lif _lif_name_ -home-port _new_home_port_`
 * Move all the LIFs on a single nonexistent or incorrect port to a new port by entering the following command:
 +
-`network interface modify {-home-port <port_on_node1> -home-node <node1> -role data} -home-port <new_home_port_on_node3>`
+`network interface modify {-home-port _port_on_node1_ -home-node _node1_ -role data} -home-port _new_home_port_on_node3_`
 * Add the LIFs back to the port set:
 +
-`portset add -vserver <vserver_name> -portset <portset_name> -port-name <port_name>`
+`portset add -vserver _vserver_name_ -portset _portset_name_ -port-name _port_name_`
 +
 NOTE: You must confirm that you move SAN LIFs to a port that has the same link speed as the original port.
 
 .. Modify the status of all LIFs to `up` so the LIFs can accept and send traffic on the node by entering the following command:
 +
-`network interface modify -home-port <port_name> -home-node <node4> -lif data -statusadmin up`
+`network interface modify -home-port _port_name_ -home-node _node4_ -lif data -statusadmin up`
 .. Enter the following command and examine its output to verify that LIFs have been moved to the correct ports and that the LIFs have the status of `up` by entering the following command on either node and examining the output:
 +
 `network interface show -home-node <node4> -role data`
 .. If any LIFs are down, set the administrative status of the LIFs to up by entering the following command, once for each LIF:
 +
-`network interface modify -vserver <vserver_name> -lif <lif_name> -status-admin up`
+`network interface modify -vserver _vserver_name_ -lif _lif_name_ -status-admin up`
 
 . Resume the operation to prompt the system to perform the required post-checks:
 +
@@ -136,3 +136,4 @@ The system performs the following post-checks:
 * Cluster LIF status check
 
 // Clean-up, 2022-03-09
+// 2022-05-16, BURT 1476241

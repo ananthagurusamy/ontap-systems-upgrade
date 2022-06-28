@@ -23,7 +23,7 @@ After you install and boot node3, you must verify that it is installed correctly
 
 . [[step2]]Verify that node3 can communicate with node2 and that all LIFs are up:
 +
-`network interface show -curr-node <node3>`
+`network interface show -curr-node _node3_`
 
 . [[step3]]Take one of the following actions:
 +
@@ -54,3 +54,4 @@ Time                Node   Severity      Event
 ----
 // 24 FEB 2021:  formatted from CMS
 // Clean-up, 2022-03-09
+// 2022-05-17, BURT 1476241
