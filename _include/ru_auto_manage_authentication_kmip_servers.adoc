@@ -6,7 +6,7 @@
 // BURT 1450483 11-Feb-2022
 . Add the key manager:
 +
-`security key-manager external add-servers -key-servers <key_management_server_ip_address>`
+`security key-manager external add-servers -key-servers _key_management_server_ip_address_`
 // BURT 1450483 11-Feb-2022
 . Verify that the key management servers are configured and available to all nodes in the cluster:
 +
@@ -14,7 +14,7 @@
 // BURT 1450483 11-Feb-2022
 . Restore the authentication keys from all linked key management servers to the new node:
 +
-`security key-manager external restore -node <new_controller_name>`
+`security key-manager external restore -node _new_controller_name_`
 // BURT 1450483 11-Feb-2022
 . Rekey all self-encrypting disks with the new authentication key:
 +

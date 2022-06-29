@@ -11,11 +11,11 @@ Before continuing with the procedure, you must confirm that all the SnapMirror r
 [NOTE]
 ====
 If the status is "Transferring", you must abort those transfers:
-`snapmirror abort -destination-vserver <vserver_name>`
+`snapmirror abort -destination-vserver _vserver_name_`
 ====
 +
 The abort fails if the SnapMirror relationship is not in the "Transferring" state.
 
 . Quiesce all relationships between the cluster:
 +
-`snapmirror quiesce -destination-vserver <vserver_name>`
+`snapmirror quiesce -destination-vserver _vserver_name_`

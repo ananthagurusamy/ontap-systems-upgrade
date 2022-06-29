@@ -66,7 +66,6 @@ a| .	Relocate non-root aggregates and NAS data LIFs from node2 to node1
 Aggregate ownership at the end of Stage 4:
 
 *	Upgraded node1 is the home owner and current owner of aggregates that originally belonged to node1
-*	Node2 is the home owner of node2 aggregates
 *	Upgraded node1 is the current owner of node2 aggregates
 
 | link:install_a900_nvs_and_controller_on_node2.html[Stage 5: Install the AFF A900 or FAS9500 NVRAM and controller modules on node2]
@@ -75,7 +74,7 @@ a| .	Install the AFF A900 or FAS9500 NVRAM and controller modules on node2
 
 Aggregate ownership at the end of Stage 5:
 
-*	Node1 is the home owner and current owner of the aggregates that originally belonged to node1.
+*	Upgraded node1 is the home owner and current owner of the aggregates that originally belonged to node1.
 *	Upgraded node2 is the home owner and current owner of aggregates that originally belonged to node2.
 
 | link:boot_node2_with_a900_controller_and_nvs.html[Stage 6: Boot node2 with the AFF A900 or FAS9500 controller and NVRAM modules]

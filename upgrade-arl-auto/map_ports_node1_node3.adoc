@@ -78,12 +78,12 @@ cluster::>
 
 .. Verify that the new cluster ports are in the Cluster broadcast domain:
 +
-`network port show -node <node> -port <port> -fields broadcast-domain`
+`network port show -node _node_ -port _port_ -fields broadcast-domain`
 +
 The following example shows that port "e0a" is in the Cluster domain on node3:
 +
 ----
- cluster::> network port show -node <node3> -port e0a -fields broadcast-domain
+ cluster::> network port show -node _node3_ -port e0a -fields broadcast-domain
 
  node       port broadcast-domain
  ---------- ---- ----------------
@@ -91,7 +91,7 @@ The following example shows that port "e0a" is in the Cluster domain on node3:
 ----
 .. If the cluster ports are not in the Cluster broadcast-domain, add them with the following command:
 +
-`broadcast-domain add-ports -ipspace Cluster -broadcast-domain Cluster -ports <node:port>`
+`broadcast-domain add-ports -ipspace Cluster -broadcast-domain Cluster -ports _node:port_`
 +
 This example adds Cluster port "e1b" on node3:
 +
@@ -111,11 +111,11 @@ network port modify -node node4 -port e1b -ipspace Cluster -mtu 9000
 
 .. Migrate the cluster LIFs to the new ports, once for each LIF:
 +
-`network interface migrate -vserver Cluster -lif <lif_name> -source-node <node3> -destination-node <node3> -destination-port <port_name>`
+`network interface migrate -vserver Cluster -lif _lif_name_ -source-node _node3_ -destination-node _node3_ -destination-port _port_name_`
 
 .. Modify the home port of the cluster LIFs:
 +
-`network interface modify -vserver Cluster -lif <lif_name> –home-port <port_name>`
+`network interface modify -vserver Cluster -lif _lif_name_ –home-port _port_name_`
 
 .. Remove the old ports from the Cluster broadcast domain:
 +
@@ -137,7 +137,7 @@ The following command removes port "e0d" on node3:
 
 .. Display the broadcast domain containing this port:
 +
-`network port broadcast-domain show -ports <node_name:port_name>`
+`network port broadcast-domain show -ports _node_name:port_name_`
 
 .. Add or remove ports from broadcast domains:
 +
@@ -147,7 +147,7 @@ The following command removes port "e0d" on node3:
 
 .. Modify a LIF’s home port:
 +
-`network interface modify -vserver vserver -lif <lif_name> –home-port <port_name>`
+`network interface modify -vserver vserver -lif _lif_name_ –home-port _port_name_`
 
 . Adjust the broadcast domain membership of network ports used for intercluster LIFs using the same commands shown in <<auto_map_3_step5,Step 5>>.
 
@@ -161,7 +161,7 @@ The following command removes port "e0d" on node3:
 
 .. To delete the ports:
 +
-`network port delete -node <node_name> -port <port_name>`
+`network port delete -node _node_name_ -port _port_name_`
 
 .. Return to the admin level:
 +
@@ -169,7 +169,7 @@ The following command removes port "e0d" on node3:
 
 . Adjust all the LIF failover groups:
 +
-`network interface modify -failover-group <failover_group> -failover-policy <failover_policy>`
+`network interface modify -failover-group _failover_group_ -failover-policy _failover_policy_`
 +
 The following command sets the failover policy to `broadcast-domain-wide` and uses the ports in failover group "fg1" as failover targets for LIF "data1" on node3:
 +
@@ -208,3 +208,4 @@ Repeat Step 11 to verify that the cluster LIF is now listening on port 7700.
 // 2021-11-03, BURT 1429264
 // bottom of pg. 38, 39, 40, and top of 41 in PDF
 // Clean-up, 2022-03-09
+// BURT 1476241 2022-05-13

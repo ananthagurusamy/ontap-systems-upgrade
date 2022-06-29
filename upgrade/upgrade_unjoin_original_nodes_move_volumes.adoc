@@ -13,7 +13,7 @@ summary: After the volumes have been moved to the new nodes, you unjoin the orig
 After the volumes have been moved to the new nodes, you unjoin the original nodes from the cluster. When you unjoin a node, the node's configuration is erased and all disks are initialized.
 
 .Steps
-. Disable high-availability configuration on the original nodes: `storage failover modify -node <original_node_name> -enabled false`
+. Disable high-availability configuration on the original nodes: `storage failover modify -node _original_node_name_ -enabled false`
 . Access the advanced privilege level:
 +
 `set -privilege advanced`
@@ -36,13 +36,13 @@ node3                true    true         false
 . If one of the original nodes holds epsilon, move epsilon to a different node:
  .. Remove epsilon from the original node:
  +
- `cluster modify -node <original_node_name> -epsilon false`
+ `cluster modify -node _original_node_name_ -epsilon false`
  .. Assign epsilon to a different node:
  +
- `cluster modify -node <new_node_name> -epsilon true`
+ `cluster modify -node _new_node_name_ -epsilon true`
 . From a node that will remain in the cluster, unjoin each original node from the cluster (advanced privilege level):
 +
-`cluster unjoin -node <original_node_name>`
+`cluster unjoin -node _original_node_name_`
 +
 The system displays a message similar to the following:
 +
@@ -72,3 +72,5 @@ This will erase all the data on the disks, are you sure?:
 . If the cluster has only two nodes remaining, configure high availability for the two-node cluster:
 +
 `cluster ha modify -configured true`
+
+// BURT 1476241 2022-05-13

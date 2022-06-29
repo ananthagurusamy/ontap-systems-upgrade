@@ -31,7 +31,7 @@ Before upgrading by moving storage, you must gather license information from the
 a|
 Shelves, numbers of disks in each shelf, flash storage details, memory, NVRAM, and network cards
 a|
-`system node run -node <node_name> sysconfig`
+`system node run -node _node_name_ sysconfig`
 a|
 Cluster network and node management LIFs
 a|
@@ -39,23 +39,23 @@ a|
 a|
 Physical ports
 a|
-`network port show -node <node_name> -type physical`
+`network port show -node _node_name_ -type physical`
 a|
 Failover groups
 a|
-`network interface failover-groups show -vserver <vserver_name>`
+`network interface failover-groups show -vserver _vserver_name_`
 
 Record the names and ports of failover groups that are not clusterwide.
 a|
 VLAN configuration
 a|
-`network port vlan show -node <node_name>`
+`network port vlan show -node _node_name_`
 
 Record each network port and VLAN ID pairing.
 a|
 Interface group configuration
 a|
-`network port ifgrp show -node <node_name> -instance`
+`network port ifgrp show -node _node_name_ -instance`
 
 Record the names of the interface groups and the ports assigned to them.
 a|
@@ -107,3 +107,4 @@ NOTE: You do not need to extract the contents of the `<ontap_version>_image.tgz`
 You will use information in the directory to xref:upgrade-set-up-new-nodes.adoc[set up the new nodes].
 
 // Clean-up, 2022-03-09
+// BURT 1476241 2022-05-13

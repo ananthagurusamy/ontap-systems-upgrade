@@ -81,16 +81,16 @@ cluster1-02  1b       50:0a:09:82:9c:6c:36:07  ACME Switch:7
 . [[man_lif_verify_4_Step3]]Take the following steps to migrate any NAS data LIFs hosted on interface groups and VLANs that originally were on node2 from node3 to node4.
 .. [[man_lif_verify_4_substepa]]Migrate any LIFs hosted on node3 that previously belonging to node2 on an interface group to a port on node4 that is capable of hosting LIFs on the same network by entering the following command, once for each LIF:
 +
-`network interface migrate -vserver <vserver_name> -lif <lif_name> -destination-node node4 –destination-port <netport|ifgrp>`
+`network interface migrate -vserver _vserver_name_ -lif _lif_name_ -destination-node node4 –destination-port _netport|ifgrp_`
 .. Modify the home port and home node of the LIFs in <<man_lif_verify_4_substepa,Substep a>> to the port and node currently hosting the LIFs by entering the following command, once for each LIF:
 +
-`network interface modify -vserver <vserver_name> -lif <datalif_name> -home-node node4 home-port <netport|ifgrp>`
+`network interface modify -vserver _vserver_name_ -lif _datalif_name_ -home-node node4 home-port _netport|ifgrp_`
 .. [[man_lif_verify_4_substepc]] Migrate any LIFs hosted on node3 that previously belonged to node2 on a VLAN port to a port on node4 that is capable of hosting LIFs on the same network by entering the following command, once for each LIF:
 +
-`network interface migrate -vserver <vserver_name> -lif <datalif_name> -destination-node node4 –destination-port <netport|ifgrp>`
+`network interface migrate -vserver _vserver_name_ -lif _datalif_name_ -destination-node node4 –destination-port _netport|ifgrp_`
 .. Modify the home port and home node of the LIFs in <<man_lif_verify_4_substepc,Substep c>> to the port and node currently hosting the LIFs by entering the following command, once for each LIF:
 +
-`network interface modify -vserver <vserver_name> -lif <datalif_name> -home-node <node4> home-port <netport|ifgrp>`
+`network interface modify -vserver _vserver_name_ -lif _datalif_name_ -home-node _node4_ home-port _netport|ifgrp_`
 
 . [[man_lif_verify_4_Step4]]Take one of the following actions:
 +
@@ -104,7 +104,7 @@ cluster1-02  1b       50:0a:09:82:9c:6c:36:07  ACME Switch:7
 
 . [[man_lif_verify_4_Step5]]If you have data ports that are not the same on your platforms, enter the following command to add the ports to the broadcast domain:
 +
-`network port broadcast-domain add-ports -ipspace <IPspace_name> -broadcast-domain mgmt ports <node:port>`
+`network port broadcast-domain add-ports -ipspace _IPspace_name_ -broadcast-domain mgmt ports _node:port_`
 +
 The following example adds port "e0a" on node "6280-1" and port "e0i" on node "8060-1" to broadcast domain mgmt in the IPspace Default:
 +
@@ -114,11 +114,11 @@ cluster::> network port broadcast-domain add-ports -ipspace Default  -broadcast-
 
 . Migrate each NAS data LIF to node4 by entering the following command, once for each LIF:
 +
-`network interface migrate -vserver <vserver-name> -lif <datalif-name> -destination-node <node4> -destination-port <netport|ifgrp> -home-node <node4>`
+`network interface migrate -vserver _vserver-name_ -lif _datalif-name_ -destination-node _node4_ -destination-port _netport|ifgrp_ -home-node _node4_`
 
 . Make sure that the data migration is persistent:
 +
-`network interface modify -vserver <vserver_name> -lif <datalif_name> -home-port <netport|ifgrp>`
+`network interface modify -vserver _vserver_name_ -lif _datalif_name_ -home-port _netport|ifgrp_`
 
 . [[man_lif_verify_4_Step8]]Verify the status of all links as `up` by entering the following command to list all the network ports and examining its output:
 +
@@ -155,7 +155,7 @@ node4
 `set -privilege advanced`
 .. Enter the following command, once for each old network port:
 +
-`network port delete -node <node_name> -port <port_name>`
+`network port delete -node _node_name_ -port _port_name_`
 .. Return to the admin level by entering the following command:
 +
 `set -privilege admin`
@@ -221,34 +221,35 @@ NOTE: If a SAN LIF in the new configuration is not on an adapter that is still a
 
 ... Set the LIF status to down:
 +
-`network interface modify -vserver <vserver_name> -lif <lif_name> -status-admin down`
+`network interface modify -vserver _vserver_name_ -lif _lif_name_ -status-admin down`
 ... Remove the LIF from the port set:
 +
-`portset remove -vserver <vserver_name> -portset <portset_name> -port-name <port_name>`
+`portset remove -vserver _vserver_name_ -portset _portset_name_ -port-name _port_name_`
 ... Enter one of the following commands:
 * Move a single LIF:
 +
-`network interface modify -lif <lif_name> -home-port <new_home_port>`
+`network interface modify -lif _lif_name_ -home-port _new_home_port_`
 * Move all the LIFs on a single nonexistent or incorrect port to a new port:
 +
-`network interface modify {-home-port <port_on_node2> -home-node <node2> -role data} -home-port <new_home_port_on_node4>`
+`network interface modify {-home-port _port_on_node2_ -home-node _node2_ -role data} -home-port _new_home_port_on_node4_`
 * Add the LIFs back to the port set:
 +
-`portset add -vserver <vserver_name> -portset <portset_name> -port-name <port_name>`
+`portset add -vserver _vserver_name_ -portset _portset_name_ -port-name _port_name_`
 
 +
 NOTE: You must move SAN LIFs to a port that has the same link speed as the original port.
 
 . Modify the status of all LIFs to `up` so the LIFs can accept and send traffic on the node by entering the following command:
 +
-`network interface modify -vserver <vserver_name> -home-port <port_name> -home-node <node4> lif <lif_name> -status-admin up`
+`network interface modify -vserver _vserver_name_ -home-port _port_name_ -home-node _node4_ lif _lif_name_ -status-admin up`
 
 . Verify that any SAN LIFs have been moved to the correct ports and that the LIFs have the status of `up` by entering the following command on either node and examining the output:
 +
-`network interface show -home-node <node4> -role data`
+`network interface show -home-node _node4_ -role data`
 
 . [[man_lif_verify_4_Step13]]If any LIFs are down, set the administrative status of the LIFs to `up` by entering the following command, once for each LIF:
 +
-`network interface modify -vserver <vserver_name> -lif <lif_name> -status-admin up`
+`network interface modify -vserver _vserver_name_ -lif _lif_name_ -status-admin up`
 
 // Clean-up, 2022-03-09
+// BURT 1478241, 2022-05-13

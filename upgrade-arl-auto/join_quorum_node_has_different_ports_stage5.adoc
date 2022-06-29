@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto/join_quorum_node_has_different_ports_stage5.html
 keywords: quorum, cluster, network ports, node, broadcast domain
-summary: "During stage 5, confirm that the new node joins the quorum when upgrading controllers running ONTAP 9.5 to 9.7 by using `system controller replace` commands."  
+summary: "During stage 5, confirm that the new node joins the quorum when upgrading controllers running ONTAP 9.5 to 9.7 by using `system controller replace` commands."
 ---
 
 = Join the quorum when a node has a different set of network ports
@@ -49,11 +49,11 @@ network port modify -node node3 -port e1b -ipspace Cluster -mtu 9000
 
 . Migrate the cluster LIFs to the new ports, once for each LIF, using the following command:
 +
-`network interface migrate -vserver Cluster -lif <lif_name> -source-node node3 destination-node node3 -destination-port <port_name>`
+`network interface migrate -vserver Cluster -lif _lif_name_ -source-node node3 destination-node node3 -destination-port _port_name_`
 
 . Modify the home port of the cluster LIFs as follows:
 +
-`network interface modify -vserver Cluster -lif <lif_name> –home-port <port_name>`
+`network interface modify -vserver Cluster -lif _lif_name_ –home-port _port_name_`
 
 . If the cluster ports are not in the Cluster broadcast-domain, add them with the following command:
 +
@@ -74,15 +74,16 @@ network port modify -node node3 -port e1b -ipspace Cluster -mtu 9000
 `network interface show -fields home-node,home-port`
 .. Display the broadcast domain containing this port:
 +
-`network port broadcast-domain show -ports <node_name:port_name>`
+`network port broadcast-domain show -ports _node_name:port_name_`
 
 .. Add or remove ports from broadcast domains:
 +
 `network port broadcast-domain add-ports network port broadcast-domain remove-port`
 .. Modify a home port of a LIF:
 +
-`network interface modify -vserver <vserver-name> -lif <lif_name> –home-port <port_name>`
+`network interface modify -vserver _vserver-name_ -lif _lif_name_ –home-port _port_name_`
 +
 Adjust the intercluster broadcast domains and migrate the intercluster LIFs, if necessary. The data LIFs remain unchanged.
 
 // Clean-up, 2022-03-09
+// BURT 1476241 2022-05-13
