@@ -67,7 +67,7 @@ For more information on creating and re-creating VLANs, interface groups, and br
 
 == Restore key-manager configuration on node4
 
-If you are using NetApp Volume Encryption (NVE) to encrypt volumes on the system you are upgrading, the encryption configuration must be synchronized to the new nodes. Encrypted volumes are taken offline when ARL is complete for node1 aggregates from node2 to node4.
+If you are using NetApp Volume Encryption (NVE) to encrypt volumes on the system you are upgrading, the encryption configuration must be synchronized to the new nodes. If you do not restore key-manager, when you relocate the node2 aggregates from node3 to node4 by using ARL, encrypted volumes will be taken offline.
 
 include::../_include/ru_auto_restore_key_manager_config_ontap_95_97.adoc[]
 

@@ -19,8 +19,15 @@ Change the ports back to initiator mode:
 . [[step21]]Exit maintenance mode:
 +
 `halt`
++
+[NOTE]
+====
+If you are upgrading from a system that supports external disks to a system that also supports external disks, go to <<auto_check3_step22,Step 22>>.
 
-. [[auto_check3_step22]]At the loader prompt boot up:
+If you are upgrading from a system that supports external disks to a system that supports both internal and external disks, for example, an AFF A800 system, go to <<auto_check3_step23,Step 23>>.
+====
+// GitHub issue #32
+. [[auto_check3_step22]]At the loader prompt, boot up:
 +
 `boot_ontap`
 +
