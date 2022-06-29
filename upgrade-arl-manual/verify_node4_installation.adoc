@@ -25,7 +25,7 @@ After you install and boot node4, you must verify that it is installed correctly
 
 . Verify that node4 can communicate with node3 and that all LIFs are up:
 +
-`network interface show -curr-node <node4>`
+`network interface show -curr-node _node4_`
 
 . Take one of the following actions:
 +
@@ -69,3 +69,4 @@ Time                Node   Severity      Event
 ----
 
 // Clean-up, 2022-03-09
+// 2022-05-17, BURT 1476241

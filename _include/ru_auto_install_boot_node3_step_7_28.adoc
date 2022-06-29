@@ -79,7 +79,7 @@ Interrupt the autoboot by pressing `Ctrl-C` at the boot environment prompt.
 
 . [[step17]]If necessary, set the date on node3:
 +
-`set date <mm/dd/yyyy>`
+`set date _mm/dd/yyyy_`
 
 . [[step18]]On node3, check the time by using the following command at the boot environment prompt:
 +
@@ -87,11 +87,11 @@ Interrupt the autoboot by pressing `Ctrl-C` at the boot environment prompt.
 
 . [[step19]]If necessary, set the time on node3:
 +
-`set time <hh:mm:ss>`
+`set time _hh:mm:ss_`
 
 . [[step20]]If necessary, set the partner system ID on node3:
 +
-`setenv partner-sysid <node2_sysid>`
+`setenv partner-sysid _node2_sysid_`
 
 .. Save the settings:
 +

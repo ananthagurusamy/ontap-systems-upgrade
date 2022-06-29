@@ -37,6 +37,6 @@ https://library.netapp.com/ecm/ecm_download_file/ECMP1140535[Migrating to a two-
 
 . Send an AutoSupport message from each original node to inform technical support of the upgrade:
 +
-`system node autosupport invoke -node <node_name> -type all -message "Upgrading node_name from <platform_original> to <platform_new>"`
+`system node autosupport invoke -node _node_name_ -type all -message "Upgrading node_name from _platform_original_ to _platform_new_"`
 
 // Clean-up, 2022-03-09

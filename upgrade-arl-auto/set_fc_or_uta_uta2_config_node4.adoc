@@ -165,12 +165,14 @@ The following procedure sets node4 to boot from the root aggregate of node2:
 
 .. If necessary, bring the node2 aggregate online:
 +
-`aggr_online root_aggr_from_<node2>`
+`aggr_online root_aggr_from___node2__`
 
 .. Prevent the node4 from booting from its original root aggregate:
 +
-`aggr offline <root_aggr_on_node4>`
+`aggr offline_<root_aggr_on_node4_`
 
 .. Set the node2 root aggregate as the new root aggregate for node4:
 +
-`aggr options aggr_from_<node2> root`
+`aggr options aggr_from___node2__ root`
+
+// 2022-05-16, BURT 1476241

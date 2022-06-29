@@ -50,11 +50,11 @@ NOTE: If you are upgrading a HA pair in a cluster with multiple HA pairs, you mu
 
 . If node2 holds epsilon, mark epsilon as `false` on the node so that it can be transferred to node3:
 +
-`cluster modify -node <node2> -epsilon false`
+`cluster modify -node _node2_ -epsilon false`
 
 . Transfer epsilon to node3 by marking epsilon `true` on node3:
 +
-`cluster modify -node <node3> -epsilon true`
+`cluster modify -node _node3_ -epsilon true`
 
 . Verify if the setup is a two-node switchless cluster:
 +
@@ -83,8 +83,9 @@ The value of this command must match the physical state of the system.
 `set -privilege admin`
 
 . Halt node2 by entering the following command on either controller:
-`system node halt -node <node2>`
+`system node halt -node _node2_`
 
 . After node2 shuts down completely, remove it from the chassis or the rack. You can decommission node2 after the upgrade is completed. See link:decommission_old_system.html[Decommission the old system].
 // 02 Mar 2021:  Formatted from CMS
 // Clean-up, 2022-03-09
+// 1476241, 2022-05-13
