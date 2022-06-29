@@ -40,7 +40,7 @@ After upgrading, you must immediately configure Storage Encryption and establish
 . Make a note of the new authentication key ID.
 . Rekey all self-encrypting drives with the new authentication key:
 +
-`storage encryption disk modify -disk * -data-key-id <authentication_key_id>`
+`storage encryption disk modify -disk * -data-key-id _authentication_key_id_`
 
 
 == Manage authentication using KMIP servers
@@ -51,11 +51,11 @@ Steps
 
 . Add a new controller:
 +
-`security key-manager setup -node <new_controller_name>`
+`security key-manager setup -node _new_controller_name_`
 
 . Add the key manager:
 +
-`security key-manager -add <key_management_server_ip_address>`
+`security key-manager -add _key_management_server_ip_address_`
 
 . Verify that the key management servers are configured and available to all nodes in the cluster:
 +
@@ -63,7 +63,7 @@ Steps
 
 . Restore the authentication keys from all linked key management servers to the new node:
 +
-`security key-manager restore -node <new_controller_name>`
+`security key-manager restore -node _new_controller_name_`
 
 . Rekey all self-encrypting disks with the new authentication key:
 +
@@ -89,3 +89,4 @@ include::../_include/ru_auto_manage_storage_encryption_okm.adoc[]
 include::../_include/ru_auto_quiesce_snapmirror_relationships.adoc[]
 
 // p. 20 of PDF-- include subheadings
+// BURT 1476241 2022-05-13

@@ -84,7 +84,7 @@ Interrupt the autoboot by pressing Ctrl-C at the boot environment prompt.
 
 . If necessary, set the date on node4:
 +
-`set date <mm/dd/yyyy>`
+`set date _mm/dd/yyyy_`
 
 . On node4, check the time by using the following command at the boot environment prompt:
 +
@@ -92,19 +92,19 @@ Interrupt the autoboot by pressing Ctrl-C at the boot environment prompt.
 
 . If necessary, set the time on node4:
 +
-`set time <hh:mm:ss>`
+`set time _hh:mm:ss_`
 
 . If necessary, set the partner system ID on node4:
 +
-`setenv partner- sysid <node2_sysid>`
+`setenv partner-sysid _node2_sysid_`
 
 .. Save the settings:
 +
 `saveenv`
 
-. [[auto_install4_step21]]On the new node, in boot loader, the `partner- sysid` parameter must be set. For node4, `partner- sysid` must be that of node3. Verify the `partner- sysid` for node3:
+. [[auto_install4_step21]]On the new node, in boot loader, the `partner-sysid` parameter must be set. For node4, `partner-sysid` must be that of node3. Verify the `partner-sysid` for node3:
 +
-`printenv partner- sysid`
+`printenv partner-sysid`
 
 . [[step22]]Take one of the following actions:
 +

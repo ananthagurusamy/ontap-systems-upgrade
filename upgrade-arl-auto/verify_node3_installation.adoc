@@ -49,19 +49,19 @@ For more information on creating and re-creating VLANs, interface groups, and br
 
 . Re-create the VLANs on node3 using the node1 information recorded in the link:relocate_non_root_aggr_and_nas_data_lifs_node1_node2.html[Relocate non-root aggregates and NAS data LIFs owned by node1 to node2] section:
 +
-`network port vlan create -node <node_name> -vlan <vlan-names>`
+`network port vlan create -node _node_name_ -vlan _vlan-names_`
 
 . Re-create the interface groups on node3 using the node1 information recorded in the link:relocate_non_root_aggr_and_nas_data_lifs_node1_node2.html[Relocate non-root aggregates and NAS data LIFs owned by node1 to node2] section:
 +
-`network port ifgrp create -node <node_name> -ifgrp <port_ifgrp_names>-distr-func`
+`network port ifgrp create -node _node_name_ -ifgrp _port_ifgrp_names_-distr-func`
 
 . Re-create the broadcast domains on node3 using the node1 information recorded in the link:relocate_non_root_aggr_and_nas_data_lifs_node1_node2.html[Relocate non-root aggregates and NAS data LIFs owned by node1 to node2] section:
 +
-`network port broadcast-domain create -ipspace Default -broadcast-domain <broadcast_domain_names> -mtu <mtu_size> -ports <node_name:port_name,node_name:port_name>`
+`network port broadcast-domain create -ipspace Default -broadcast-domain _broadcast_domain_names_ -mtu _mtu_size_ -ports _node_name:port_name,node_name:port_name_`
 
 . Add the node3 ports to the newly re-created broadcast domains:
 +
-`network port broadcast-domain add-ports -broadcast-domain <broadcast_domain_names> -ports <node_name:port_name,node_name:port_name>`
+`network port broadcast-domain add-ports -broadcast-domain _broadcast_domain_names_ -ports _node_name:port_name,node_name:port_name_`
 
 == Restore key-manager configuration on node3
 
@@ -71,3 +71,4 @@ include::../_include/ru_auto_restore_key_manager_config_ontap_95_97.adoc[]
 
 // bottom half of p. 42. in PDF
 // Clean-up, 2022-03-09
+// BURT 1476251, 2022-05-16

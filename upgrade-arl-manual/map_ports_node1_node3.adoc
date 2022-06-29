@@ -75,7 +75,7 @@ The value of this command must match the physical state of the system.
 
 .. Verify that the new cluster ports are in the Cluster broadcast domain:
 +
-`network port show -node <node-name> -port <port-name> -fields broadcast-domain`
+`network port show -node _node-name_ -port _port-name_ -fields broadcast-domain`
 +
 The following example shows that port "e0a" is in the "Cluster" domain on node3:
 +
@@ -89,7 +89,7 @@ The following example shows that port "e0a" is in the "Cluster" domain on node3:
 
 .. Add the correct ports to the Cluster broadcast domain:
 +
-`network port modify -node <node-name> -port <port-name> -ipspace Cluster -mtu 9000`
+`network port modify -node _node-name_ -port _port-name_ -ipspace Cluster -mtu 9000`
 +
 This example adds Cluster port "e1b" on node3:
 +
@@ -105,19 +105,19 @@ command failed: This operation is not permitted on a Vserver that is configured 
 +
 Enter the following command from the corresponding sync-source SVM on the remote site to reallocate the sync-destination LIF to an appropriate port:
 +
-`metrocluster vserver resync -vserver <Vserver-name>`
+`metrocluster vserver resync -vserver _Vserver-name_`
 
 .. Migrate the cluster LIFs to the new ports, once for each LIF:
 +
-`network interface migrate -vserver Cluster -lif <LIF-name> -source-node <node3> -destination-node <node3> -destination-port <port-name>`
+`network interface migrate -vserver Cluster -lif _LIF-name_ -source-node _node3_ -destination-node _node3_ -destination-port _port-name_`
 
 .. Modify the home port of the cluster LIFs:
 +
-`network interface modify -vserver Cluster -lif <LIF-name> –home-port <port-name>`
+`network interface modify -vserver Cluster -lif _LIF-name_ –home-port _port-name_`
 
 .. If the cluster ports are not in the Cluster broadcast-domain, add them:
 +
-`network port broadcast-domain add-ports -ipspace Cluster -broadcast-domain Cluster -ports <node:port>`
+`network port broadcast-domain add-ports -ipspace Cluster -broadcast-domain Cluster -ports _node:port_`
 
 .. Remove the old ports from the Cluster broadcast domain:
 +
@@ -131,17 +131,17 @@ network port broadcast-domain remove-ports -ipspace Cluster -broadcast-domain Cl
 
 .. Verify that node3 has rejoined quorum:
 +
-`cluster show -node <node3> -fields health`
+`cluster show -node _node3_ -fields health`
 
 . [[man_map_1_step5]]Adjust the broadcast domains hosting your cluster LIFs and node-management and/or cluster-management LIFs. Confirm that each broadcast domain contains the correct ports. A port cannot be moved between broadcast domains if it is hosting or is home to a LIF, so you might need to migrate and modify the LIFs as follows:
 +
 .. Display the home port of a LIF:
 +
-`network interface show -fields <home-node,home-port>`
+`network interface show -fields _home-node,home-port_`
 
 .. Display the broadcast domain containing this port:
 +
-`network port broadcast-domain show -ports <node_name:port_name>`
+`network port broadcast-domain show -ports _node_name:port_name_`
 
 .. Add or remove ports from broadcast domains:
 +
@@ -151,7 +151,7 @@ network port broadcast-domain remove-ports -ipspace Cluster -broadcast-domain Cl
 
 .. Modify a LIF’s home port:
 +
-`network interface modify -vserver <Vserver-name> -lif <LIF-name> –home-port <port-name>`
+`network interface modify -vserver _Vserver-name_ -lif _LIF-name_ –home-port _port-name_`
 
 . [[man_map_1_step6]]Adjust the intercluster broadcast domains and migrate the intercluster LIFs, if necessary, using the same commands shown in <<man_map_1_step5,Step 5>>.
 
@@ -165,7 +165,7 @@ network port broadcast-domain remove-ports -ipspace Cluster -broadcast-domain Cl
 
 .. Delete the ports:
 +
-`network port delete -node <node-name> -port <port-name>`
+`network port delete -node _node-name_ -port _port-name_`
 
 .. Return to the admin level:
 +
@@ -173,7 +173,7 @@ network port broadcast-domain remove-ports -ipspace Cluster -broadcast-domain Cl
 
 . [[step9]]Adjust all the LIF failover groups:
 +
-`network interface modify -failover-group <failover-group> -failover-policy <failover-policy>`
+`network interface modify -failover-group _failover-group_ -failover-policy _failover-policy_`
 +
 The following example sets the failover policy to "broadcast-domain-wide" and uses the ports in failover group "fg1" as failover targets for LIF "data1" on "node3":
 +
@@ -208,9 +208,10 @@ Cluster          NodeB_clus2:7700               TCP/ctlopcp
 
 . If necessary, for each cluster LIF that is not listening on port 7700, set the administrative status of the LIF to `down` and then `up`:
 +
-`::> net int modify -vserver Cluster -lif <cluster-lif> -status-admin down; net int modify -vserver Cluster -lif <cluster-lif> -status-admin up`
+`::> net int modify -vserver Cluster -lif _cluster-lif_ -status-admin down; net int modify -vserver Cluster -lif _cluster-lif_ -status-admin up`
 +
 Repeat Step 11 to verify that the cluster LIF is now listening on port 7700.
 // 2021-11-03, BURT 1429264
 // 24 FEB 2021:  formatted from CMS
 // Clean-up, 2022-03-09
+// 2022-05-17, BURT 1476241

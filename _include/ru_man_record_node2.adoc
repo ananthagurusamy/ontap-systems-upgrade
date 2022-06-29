@@ -4,7 +4,7 @@ Before you can shut down and retire node2, you must record information about its
 
 . Find the cluster network, node-management, intercluster, and cluster-management ports on node2:
 +
-`network interface show -curr-node <node_name> -role cluster,intercluster,nodemgmt,cluster-mgmt`
+`network interface show -curr-node _node_name_ -role cluster,intercluster,nodemgmt,cluster-mgmt` 
 +
 The system displays the LIFs for that node and other nodes in the cluster, as shown in the following example:
 +
@@ -30,9 +30,9 @@ The output information is required to map the new controller ports to the old co
 
 . Determine physical ports on node2:
 +
-`network port show -node <node_name> -type physical` +
+`network port show -node _node_name_ -type physical` +
 +
-`node_name` is the node which is being migrated.
+`_node_name_` is the node which is being migrated.
 +
 The system displays the physical ports on node2, as shown in the following example:
 +
@@ -114,3 +114,4 @@ cluster::> system node show -instance -node node2
 . [[man_record_2_step10]]Record the NVRAM System ID to use in the section link:install_boot_node4.html[Install and boot node4].
 
 // Clean-up, 2022-03-09
+// 1476241, 2022-05-13

@@ -98,13 +98,13 @@ You should already be in Maintenance mode.
 
 . [[man_check_4_Step7]]If the adapter is in initiator mode, and if the UTA/UTA2 port is online, take the UTA/UTA2 port offline:
 +
-`storage disable adapter <adapter_name>`
+`storage disable adapter _adapter_name_`
 +
 Adapters in target mode are automatically offline in Maintenance mode.
 
 . [[man_check_4_Step8]]If the current configuration does not match the desired use, enter the following command to change the configuration as needed:
 +
-`ucadmin modify -m fc|cna -t initiator|target <adapter_name>`
+`ucadmin modify -m fc|cna -t initiator|target _adapter_name_`
 +
 * `-m` is the personality mode: FC or 10GbE UTA.
 * `-t` is the FC4 type: target or initiator.
@@ -186,9 +186,9 @@ f-a    2b      fc      target    cna      -          online
 |===
 |If the system... |Then...
 
-|Has storage disks |`network fcp adapter modify -node <node_name> -adapter <adapter_name> -state up`
+|Has storage disks |`network fcp adapter modify -node _node_name_ -adapter _adapter_name_ -state up`
 |Is a V-Series system or has FlexArray Virtualization Software and is connected to storage arrays
-|`fcp config <adapter_name> up`
+|`fcp config _adapter_name_ up`
 |===
 
 . [[man_check_4_Step13]]Cable the port.

@@ -36,7 +36,7 @@ This procedure includes steps that are performed on the new controller module. Y
 +
 .. Add the key management server:
 +
-`security key-manager -add <key_management_server_ip_address>`
+`security key-manager -add _key_management_server_ip_address_`
 
 .. Repeat the previous step for each listed key management server.
 +
@@ -51,7 +51,7 @@ You must install the same key management servers that are installed on the exist
 +
 .. Launch the key management server setup wizard on the new node:
 +
-`security key-manager setup -node <new_controller_name>`
+`security key-manager setup -node _new_controller_name_`
 
 .. Complete the steps in the wizard to configure key management servers.
 
@@ -69,10 +69,12 @@ This command needs the Onboard Key Manager (OKM) passphrase.
 |===
 |For this ONTAP version… |Use this command...
 |ONTAP 9.6 or 9.7 |`security key-manager onboard sync`
-|ONTAP 9.5 |`security key-manager setup -node <node_name>`
+|ONTAP 9.5 |`security key-manager setup -node _node_name_`
 
 |===
 
 .After you finish
 
 Check if any volumes were taken offline because authentication keys were not available or External Key Management servers could not be reached. Bring those volumes back online using the `volume online` command.
+
+// BURT 1476251, 2022-05-16

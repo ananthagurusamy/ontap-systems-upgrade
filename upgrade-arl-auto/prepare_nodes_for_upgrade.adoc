@@ -19,7 +19,7 @@ You must perform the following steps to prepare the nodes for upgrade.
 
 . Begin the controller replacement process by entering the following command in the ONTAP command line:
 +
-`system controller replace start -nodes <node_names>`
+`system controller replace start -nodes _node_names_`
 +
 NOTE: This command can only be executed at the advanced privilege level:
 `set -privilege advanced`
@@ -108,19 +108,19 @@ If node affinity jobs are running, the check fails.
 You must run and save the output of the following commands individually:
 +
 * `vserver services name-service dns show`
-* `network interface show -curr-node <nodename> -role cluster,intercluster,node-mgmt,clustermgmt, data`
-* `network port show -node <nodename> -type physical`
+* `network interface show -curr-node _nodename_ -role cluster,intercluster,node-mgmt,clustermgmt, data`
+* `network port show -node _nodename_ -type physical`
 * `service-processor show -node * -instance`
-* `network fcp adapter show -node <node_name>`
+* `network fcp adapter show -node _node_name_`
 * `network port ifgrp show`
 * `network port vlan show`
-* `system node show -instance -node <nodename>`
-* `run -node <node_name> sysconfig`
-* `storage aggregate show -node <nodename>`
-* `volume show -node <node_name>`
+* `system node show -instance -node _nodename_`
+* `run -node _node_name_ sysconfig`
+* `storage aggregate show -node _nodename_`
+* `volume show -node _node_name_`
 * `network interface failover-groups show`
-* `storage array config show -switch <switch_name>`
-* `system license show -owner <node_name>`
+* `storage array config show -switch _switch_name_`
+* `system license show -owner _node_name_`
 * `storage encryption disk show`
 
 NOTE: If NetApp Volume Encryption using Onboard Key Manager is in use, keep the key manager passphrase ready to complete the key manager resync later in the procedure.
@@ -133,3 +133,4 @@ include::../_include/ru_auto_license.adoc[]
 // page 16-19 of pdf
 
 // Clean-up, 2022-03-09
+// 2022-05-16, BURT 1476241
