@@ -137,7 +137,7 @@ Remove member ports from interface group ports:
 +
 Create VLAN ports:
 +
-`vlan create -node _node_name_ -vlan-name_vlan_port_`
+`vlan create -node _node_name_ -vlan-name _vlan_port_`
 +
 NOTE: Depending on the complexity of the networking configuration of the system being upgraded, you might be required to repeat Substeps (a) to (g) until all ports are placed correctly where needed.
 
