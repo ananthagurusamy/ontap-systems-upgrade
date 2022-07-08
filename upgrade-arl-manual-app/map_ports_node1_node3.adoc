@@ -146,7 +146,7 @@ NOTE: Depending on the complexity of the networking configuration of the system 
 
 .. Display the displaced VLANs:
 +
-`displaced-vlans show`
+`cluster controller-replacement network displaced-vlans show`
 
 .. Restore the displaced VLANs to the desired destination port:
 +
@@ -154,7 +154,7 @@ NOTE: Depending on the complexity of the networking configuration of the system 
 
 .. Verify that all displaced VLANs have been restored:
 +
-`displaced-vlans show`
+`cluster controller-replacement network displaced-vlans show`
 
 .. VLANs are automatically placed into the appropriate broadcast domains about a minute after they are created. Verify that the restored VLANs have been placed into the appropriate broadcast domains:
 +
