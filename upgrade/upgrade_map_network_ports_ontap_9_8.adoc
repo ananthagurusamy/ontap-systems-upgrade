@@ -121,13 +121,13 @@ NOTE: Depending on the complexity of the networking configuration of the system 
 . If there are no VLANs configured on the system, go to <<map_98_7,Step 7>>. If there are VLANs configured, restore displaced VLANs that were previously configured on ports that no longer exist or were configured on ports that were moved to another broadcast domain.
 .. Display the displaced VLANs:
 +
-`displaced-vlans show`
+`cluster controller-replacement network displaced-vlans show`
 .. Restore the displaced VLANs to the desired destination port:
 +
 `displaced-vlans restore -node _node_name_ -port _port_name_ -destination-port _destination_port_`
 .. Verify that all displaced VLANs have been restored:
 +
-`displaced-vlans show`
+`cluster controller-replacement network displaced-vlans show`
 .. VLANs are automatically placed into the appropriate broadcast domains about a minute after they are created. Verify that the restored VLANs have been placed into the appropriate broadcast domains:
 +
 `network port reachability show`
