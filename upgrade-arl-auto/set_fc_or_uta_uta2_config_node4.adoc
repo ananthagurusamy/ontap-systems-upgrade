@@ -169,7 +169,7 @@ The following procedure sets node4 to boot from the root aggregate of node2:
 
 .. Prevent the node4 from booting from its original root aggregate:
 +
-`aggr offline_<root_aggr_on_node4_`
+`aggr offline _root_aggr_on_node4_`
 
 .. Set the node2 root aggregate as the new root aggregate for node4:
 +
