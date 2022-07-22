@@ -75,15 +75,15 @@ a|
 WARNING: Management or intercluster LIFs that are configured on affected network ports on the original system might lead to an upgrade failure by preventing the HA configuration from using the ports when booting onto the replacement system.
 +
 --
-.. Identify the network ports on the original system that will be used as high availability (HA) ports on the replacement system.
+.. Identify the network ports on the original system that will be used as high availability (HA) ports on the replacement system. You can get this information from the https://hwu.netapp.com[NetApp Hardware Universe^]
 .. Identify the management or intercluster LIFs configured on the affected network ports:
 +
-`network interface show -home-port <port-name>`
-.. Assign the affected LIFs to a network port that will not be used a HA port on the replacement system:
+`network interface show -home-port _port-name_`
+..  Reassign only the affected management or intercluster LIFs to network ports that are not being used as a HA ports on the replacement system:
 +
-`network interface modify -vserver <vserver-name> -lif <lif-name> -home-port <new-port-name>`
+`network interface modify -vserver _vserver-name_ -lif _lif-name_ -home-port <new-port-name>`
 +
-`network interface revert -vserver <vserver-name> -lif <lif-name>`
+`network interface revert -vserver <vserver-name> -lif _lif-name_`
 +
 In the following example, the management and intercluster LIFs on network ports "e0a" and "e0b" are reassigned to network ports "e1a" and "e1b". Your nodes might be using different network ports because they vary by system.
 +
