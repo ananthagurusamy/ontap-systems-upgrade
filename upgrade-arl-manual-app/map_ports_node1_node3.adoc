@@ -160,7 +160,7 @@ NOTE: Depending on the complexity of the networking configuration of the system 
 +
 `network port reachability show`
 
-. [[man_map_1_step5]]Starting with ONTAP 9.8, ONTAP will automatically modify the home ports of LIFs if the ports are moved between broadcast domains during the network port reachability repair procedure. If a LIF’s home port was moved to another node, or is unassigned, that LIF will be presented as a displaced LIF. Restore the home ports of displaced LIFs whose home ports either no longer exist or were relocated to another node.
+. [[man_map_1_step5]]Beginning with ONTAP 9.8, ONTAP will automatically modify the home ports of LIFs if the ports are moved between broadcast domains during the network port reachability repair procedure. If a LIF’s home port was moved to another node, or is unassigned, that LIF will be presented as a displaced LIF. Restore the home ports of displaced LIFs whose home ports either no longer exist or were relocated to another node.
 
 .. Display the LIFs whose home ports might have moved to another node or no longer exist:
 +

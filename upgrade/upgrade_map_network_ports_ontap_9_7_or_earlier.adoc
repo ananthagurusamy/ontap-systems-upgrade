@@ -12,7 +12,7 @@ summary: To enable node3 and node4 to communicate with each other in the cluster
 To enable node3 and node4 to communicate with each other in the cluster and with the network after the upgrade, you must confirm that the physical ports are correctly configured with the settings for the intended use, such as cluster, data, and so on.
 
 .Before you begin
-These steps apply to systems running ONTAP 9.7 or earlier. If you are running ONTAP 9.8, you must use the procedure in xref:upgrade-map-network-ports-ontap-9-8.adoc[Map network ports using ONTAP 9.8].
+These steps apply to systems running ONTAP 9.7 or earlier. If you are running ONTAP 9.8 or later, you must use the procedure in xref:upgrade-map-network-ports-ontap-9-8.adoc[Map network ports using ONTAP 9.8 or later].
 
 .About this task
 You must perform these steps on node3 and node4.
@@ -20,7 +20,7 @@ You must perform these steps on node3 and node4.
 NOTE: The following command examples refer to "node1" because at this stage in the procedure the replacement nodes "node3" and "node4" are actually named "node1" and "node2".
 
 .Steps
-. If your system is running ONTAP 9.8, *STOP*. You must use the procedure in xref:upgrade-map-network-ports-ontap-9-8.adoc[Map network ports using ONTAP 9.8].
+. If your system is running ONTAP 9.8 or later, *STOP*. You must use the procedure in xref:upgrade-map-network-ports-ontap-9-8.adoc[Map network ports using ONTAP 9.8 or later].
 . Locate the port and LIF configuration information for node1 and node2 that you recorded in _Prepare for upgrade when moving storage_, link:upgrade-prepare-when-moving-storage.html#prepare_move_store_3[Step 3].
 . Locate the information for ports, broadcast domains, and IPspaces that you recorded in  _Prepare for upgrade when moving storage_, link:upgrade-prepare-when-moving-storage.html#prepare_move_store_3[Step 3].
 +
