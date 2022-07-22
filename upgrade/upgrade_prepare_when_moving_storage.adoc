@@ -76,7 +76,7 @@ a|
 WARNING: Management or intercluster LIFs that are configured on affected network ports on the original system might lead to an upgrade failure by preventing the HA configuration from using the ports when booting onto the replacement system.
 +
 --
-.. Identify the network ports on the original system that will be used as high availability (HA) ports on the replacement system. You can get this information from the https://hwu.netapp.com[NetApp Hardware Universe^].
+.. Identify the network ports on the original system that are being used as high availability (HA) ports on the replacement system. You can get this information from the https://hwu.netapp.com[NetApp Hardware Universe^].
 .. Identify the management or intercluster LIFs configured on the affected network ports:
 +
 `network interface show -home-port _port-name_`
