@@ -82,9 +82,9 @@ WARNING: Management or intercluster LIFs that are configured on affected network
 `network interface show -home-port _port-name_`
 ..  Reassign only the affected management or intercluster LIFs to network ports that are not being used as HA ports on the replacement system:
 +
-`network interface modify -vserver _vserver-name_ -lif _lif-name_ -home-port _new-port-name_`
+`network interface modify -vserver _vserver-name_ -lif _LIF-name_ -home-port _new-port-name_`
 +
-`network interface revert -vserver <vserver-name> -lif _lif-name_`
+`network interface revert -vserver _vserver-name_ -lif _LIF-name_`
 +
 In the following example, the management and intercluster LIFs on network ports "e0a" and "e0b" are reassigned to network ports "e1a" and "e1b". Your nodes might be using different network ports because they vary by system.
 +
