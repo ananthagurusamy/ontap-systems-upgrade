@@ -71,16 +71,16 @@ a|
 
 . Obtain information about the default cluster ports, data ports, and node management ports for each new node that you are upgrading to: https://hwu.netapp.com[NetApp Hardware Universe^]
 
-. [[assign_lifs]]If you are replacing an ONTAP node with a different model, you must reassign the management or intercluster LIFs configured on the network ports on the original system that are being used as high availability (HA) ports on the replacement system.
+. [[assign_lifs]]Certain systems, for example, FAS8300, AFF A400, or FAS8700 systems, use ports "e0a" and "e0b" as HA interconnect ports. If you are upgrading from a system, such as a FAS8200 or an AFF A300, to a system that uses ports "e0a" and "e0b" as HA interconnect ports, you must reassign the management and intercluster LIFs that are using these ports on the original system to alternative ports on the replacement system.
 +
-WARNING: Management or intercluster LIFs that are configured on affected network ports on the original system might lead to an upgrade failure by preventing the HA configuration from using the ports when booting onto the replacement system.
+WARNING: Management or intercluster LIFs that are configured on ports "e0a" and "e0b" on the original system might lead to an upgrade failure by preventing the HA configuration from using these ports when booting onto the replacement system.
 +
 --
-.. Identify the network ports on the original system that are being used as high availability (HA) ports on the replacement system. You can get this information from the https://hwu.netapp.com[NetApp Hardware Universe^].
-.. Identify the management or intercluster LIFs configured on the affected network ports:
+.. Verify if your replacement system uses ports "e0a" and "e0b" as high availability (HA) ports: https://hwu.netapp.com[NetApp Hardware Universe^]
+.. If required, identify the management or intercluster LIFs configured on the affected network ports:
 +
 `network interface show -home-port _port_name_`
-..  Reassign only the affected management or intercluster LIFs to network ports that are not being used as HA ports on the replacement system:
+.. If required, reassign only the affected management or intercluster LIFs to network ports that are not being used as HA ports on the replacement system:
 +
 `network interface modify -vserver _vserver_name_ -lif _LIF_name_ -home-port _new_port_name_`
 +
