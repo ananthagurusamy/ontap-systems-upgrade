@@ -12,7 +12,9 @@ summary: 'You must restore configuration information from the root volume to the
 [.lead]
 You must restore configuration information from the root volume to the boot devices.
 
-NOTE: If you are performing an in-place controller upgrade that replaces an ONTAP node with a different model, before restoring the root volume configuration information, verify that you have xref:upgrade-prepare-when-moving-storage.html#assign_lifs[reassigned the management or intercluster LIFs] configured on the network ports on the original system that are being used as high availability ports on the replacement system.
+NOTE: If you are performing an in-place controller upgrade to a system that uses ports "e0a" and "e0b" as high availability (HA) interconnect ports, for example, a FAS8300, an AFF A400, or a FAS8700, verify that you have xref:upgrade-prepare-when-moving-storage.html#assign_lifs[reassigned any management or intercluster LIFs] configured on ports "e0a" and "e0b" on the original system before restoring the root volume configuration information.
+
+Certain systems, for example, FAS8300, AFF A400, or FAS8700 systems, use ports "e0a" and "e0b" as high availability (HA) interconnect ports. If you are upgrading from a system, such as a FAS8200 or an AFF A300, to a system that uses ports "e0a" and "e0b" as HA interconnect ports, you must reassign the management and intercluster LIFs that are configured on these ports on the original system to alternative ports on the replacement system.
 // 20 June 2022, GH issue #38
 
 .About this task
