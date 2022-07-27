@@ -73,7 +73,7 @@ a|
 
 . [[assign_lifs]]Certain systems, for example, FAS8300, AFF A400, or FAS8700 systems, use ports "e0a" and "e0b" as high availability (HA) interconnect ports. If you are upgrading from a system, such as a FAS8200 or an AFF A300, to a system that uses ports "e0a" and "e0b" as HA interconnect ports, you must reassign the management and intercluster LIFs that are configured on these ports on the original system to alternative ports on the replacement system.
 +
-WARNING: Management or intercluster LIFs that are configured on ports "e0a" and "e0b", when these ports being used as HA interconnect ports on the replacement system, might lead to an upgrade failure by preventing the HA configuration from using ports "e0a" and "e0b" to boot onto the replacement system.
+WARNING: When ports "e0a" and "e0b" are being used as HA interconnect ports on the replacement system, any management or intercluster LIFs that are configured on these ports might lead to an upgrade failure by preventing the HA configuration from using ports "e0a" and "e0b" to boot onto the replacement system.
 +
 --
 .. Verify if your replacement system uses ports "e0a" and "e0b" as HA ports: https://hwu.netapp.com[NetApp Hardware Universe^]
