@@ -16,7 +16,7 @@ summary: Boot node2 with the AFF A900 controller module and NVRAM module.
 Node2 with the AFF A900 or FAS9500 controller and NVRAM modules is now ready for upgrade. An AFF A700 to AFF A900 or FAS9000 to FAS9500 upgrade by swapping the controller and NVRAM modules involves moving only the console and management connections. This section provides the steps required to boot node2 with the AFF A900 or FAS9500 controller and NVRAM modules.
 
 .Steps
-[[aff_boot_node2_step1]]
+
 .	If NetApp Storage Encryption (NSE) is in use on this configuration, the `setenv bootarg.storageencryption.support` command must be set to `true`, and the `kmip.init.maxwait` variable must be set to `off` to avoid a boot loop after the node2 configuration is loaded:
 +
 `setenv bootarg.storageencryption.support true`
@@ -27,7 +27,7 @@ Node2 with the AFF A900 or FAS9500 controller and NVRAM modules is now ready for
 `boot_ontap menu`
 .	The node stops at the boot menu. Enter "22/7" and select the hidden option `boot_after_controller_replacement`.
 +
-NOTE: If the system reports `diskown.errorDuringIO` error messages, reset `setenv bootarg.storageencryption.support` in <<aff_boot_node2_step1,Step 1>> to `true` and run the `boot_ontap` command.
+NOTE: If the system reports `diskown.errorDuringIO` error messages, reset `setenv bootarg.storageencryption.support` to `true` and run the `boot_ontap` command.
 +
 To reassign the AFF A700 node1 disks to AFF A900 node1, at the prompt, enter the actual node name of node2. Use the following example as a reference:
 +
