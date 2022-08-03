@@ -40,9 +40,6 @@ The output of the `health` field should be `true`.
 .	Resume the controller replacement operation:
 +
 `system controller replace resume`
-+
-NOTE: During an AFF A700 to AFF A900 upgrade, if the system identifies the new controller as FAS9500, you must set `bootarg.init.flash_optimized` to `true` and save the new setting by using the `saveenv` command at the Loader prompt.
-// BURT-1481586 30-May-2022
 
 .	The controller replacement operation pauses for intervention with the following message:
 +
