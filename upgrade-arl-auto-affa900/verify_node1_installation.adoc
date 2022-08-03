@@ -13,10 +13,10 @@ summary: Verify the node1 installation with the AFF A900 controller module and N
 :imagesdir: ./media/
 
 [.lead]
-You must verify the node1 installation with the AFF A900 controller module and NVRAM module. Because there is no change to physical ports, you are not required to map the physical ports from the AFF A700 node1 to the AFF A900 node1.
+You must verify the node1 installation with the AFF A900 or FAS9500 controller and NVRAM modules. Because there is no change to physical ports, you are not required to map the physical ports from the old node1 to the replacement node1.
 
 .About this task
-After you boot node1 with the AFF A900 controller module, you must verify that it is installed correctly. You must wait for node1 to join quorum and then resume the controller replacement operation.
+After you boot node1 with the AFF A900 or FAS9500 controller module, you must verify that it is installed correctly. You must wait for node1 to join quorum and then resume the controller replacement operation.
 
 At this point in the procedure, the controller upgrade operation should have paused as node1 attempts to join quorum automatically.
 
@@ -120,11 +120,11 @@ Node1
 +
 In the preceding example, node1 booted after the controller replacement. Some ports do not have reachability because there is no physical connectivity. You must repair any ports with a reachability status other than `ok`.
 +
-NOTE:	During an AFF A700 to an AFF A900 controller upgrade, the network ports and their connectivity should not change. All ports should reside in the correct broadcast domains and the network port reachability should not change. However, before moving LIFs from node2 back to node1, you must verify the reachability and health status of the network ports.
+NOTE:	During an AFF A700 to AFF A900 or a FAS9000 to FAS9500 controller upgrade, the network ports and their connectivity should not change. All ports should reside in the correct broadcast domains and the network port reachability should not change. However, before moving LIFs from node2 back to node1, you must verify the reachability and health status of the network ports.
 
 .	[[restore_node1_step4]]Repair the reachability for each of the ports on node1 with a reachability status other than `ok` by using the following command, in the following order:
 +
-`network port reachability repair -node <node_name>  -port <port_name>`
+`network port reachability repair -node _node_name_  -port _port_name_`
 +
 --
 ..	Physical ports
@@ -168,8 +168,11 @@ When all ports are correctly configured and added to the correct broadcast domai
 `displaced-interface show`
 ..	Restore LIF home nodes and home ports:
 +
-`displaced-interface restore-home-node -node <node_name> -vserver <vserver_name> -lif-name <LIF_name>`
+`displaced-interface restore-home-node -node _node_name_ -vserver _vserver_name_ -lif-name _LIF_name_`
 
 .	Verify that all LIFs have a home port and are administratively up:
 +
 `network interface show -fields home-port,status-admin`
+
+// BURT 1476251, 2022-05-16
+//BURT 1452254, 2022-04-27

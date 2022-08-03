@@ -14,7 +14,7 @@ NOTE: *Important*: If your system has storage disks, enter the commands in this 
 
 .Steps
 
-. [[step1]]Take one of the following actions:
+. Take one of the following actions:
 +
 [cols="35,65"]
 |===
@@ -71,16 +71,16 @@ The system displays information about all FC and converged network adapters on t
 a|Modify the FC ports on node3 as needed by entering one of the following commands:
 
 * To program target ports:
-`system node hardware unified-connect modify -type \| -t target -adapter <port_name>`
+`system node hardware unified-connect modify -type \| -t target -adapter _port_name_`
 
 * To program initiator ports:
-`system node hardware unified-connect modify -type \| -t initiator -adapter <port_name>`
+`system node hardware unified-connect modify -type \| -t initiator -adapter _port_name_`
 
 `-t` is the FC4 type: target or initiator.
 |Is a V-Series system or has FlexArray Virtualization Software and is connected to storage arrays
 |Modify the FC ports on node3 as needed by entering the following command:
 
-`ucadmin modify -m fc -t initiator -f <adapter_port_name>`
+`ucadmin modify -m fc -t initiator -f _adapter_port_name_`
 
 `-t` is the FC4 type, target or initiator.
 
@@ -139,3 +139,4 @@ a|* If node3 has a card or onboard ports, go to <<Check and configure UTA/UTA2 p
 * If node3 does not have a card or onboard ports, skip <<Check and configure UTA/UTA2 ports on node3>>, and return to _Install and boot node3_ and resume at link:install_boot_node3.html#step7[Step 7].
 |===
 //22 FEB 2021:  Formatted from CMS
+// BURT 1478241, 2022-05-13

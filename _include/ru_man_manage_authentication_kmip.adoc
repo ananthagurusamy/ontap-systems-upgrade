@@ -4,11 +4,11 @@ With ONTAP 9.5 and later, you can use Key Management Interoperability Protocol (
 
 . Add a new controller:
 +
-`security key-manager setup -node <new_controller_name>`
+`security key-manager setup -node _new_controller_name_`
 
 . Add the key manager:
 +
-`security key-manager -add <key_management_server_ip_address>`
+`security key-manager -add _key_management_server_ip_address_`
 
 . Verify that the key management servers are configured and available to all nodes in the cluster:
 +
@@ -16,7 +16,7 @@ With ONTAP 9.5 and later, you can use Key Management Interoperability Protocol (
 
 . Restore the authentication keys from all linked key management servers to the new node:
 +
-`security key-manager restore -node <new_controller_name>`
+`security key-manager restore -node _new_controller_name_`
 
 . Rekey all self-encrypting disks with the new authentication key:
 +
@@ -26,3 +26,4 @@ With ONTAP 9.5 and later, you can use Key Management Interoperability Protocol (
 +
 `storage encryption disk* modify -disk * [-fips-key-id nonMSID AK]`
 // 5 MAR 2021:  formatted from CMS
+// BURT 1478241, 2022-05-13

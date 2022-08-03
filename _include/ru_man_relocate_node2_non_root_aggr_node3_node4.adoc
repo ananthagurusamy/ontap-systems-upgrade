@@ -4,7 +4,7 @@ Having relocated node2's non-root aggregates to node3, you now must relocate the
 
 . [[man_relocate_3_4_Step1]]Enter the following command on either controller, and examine the output to identify which non-root aggregates to relocate:
 +
-`storage aggregate show -owner-name <node3> -home-id <node2_system_id>`
+`storage aggregate show -owner-name _node3_ -home-id _node2_system_id_`
 
 . Relocate the aggregates by completing the following substeps:
 
@@ -13,7 +13,7 @@ Having relocated node2's non-root aggregates to node3, you now must relocate the
 `set -privilege advanced`
 .. Enter the following command:
 +
-`storage aggregate relocation start -node <node3> -destination <node4> -aggregate-list <aggr_name1, aggr_name2...> -ndo-controller-upgrade true`
+`storage aggregate relocation start -node _node3_ -destination _node4_ -aggregate-list _aggr_name1, aggr_name2..._ -ndo-controller-upgrade true`
 +
 The aggregate list is the list of aggregates owned by node4 that you obtained in <<man_relocate_3_4_Step1,Step 1>>.
 .. When prompted, enter `y`.
@@ -25,7 +25,7 @@ Relocation occurs in the background. It could take anywhere from a few seconds t
 
 . [[step3]]Check the relocation status:
 +
-`storage aggregate relocation show -node <node3>`
+`storage aggregate relocation show -node _node3_`
 +
 The output will display `Done` for an aggregate after it has been relocated.
 +
@@ -46,7 +46,7 @@ a|
 `set -privilege advanced`
 .. Relocate any failed or vetoed aggregates:
 +
-`storage aggregate relocation start -node <node3> destination <node4> -aggregate-list <aggr_name1, aggr_name2...> ndo-controller-upgrade true`
+`storage aggregate relocation start -node _node3_ destination _node4_ -aggregate-list _aggr_name1, aggr_name2..._ ndo-controller-upgrade true`
 +
 The aggregate list is the list of failed or vetoed aggregates.
 .. When prompted, enter `y`.
@@ -68,24 +68,25 @@ For more information about storage aggregate relocation commands refer to link:o
 
 . [[man_relocate_3_4_Step5]]Verify that all node2 non-root aggregates are online and their state on node4:
 +
-`storage aggregate show -node <node4> -state offline -root false`
+`storage aggregate show -node _node4_ -state offline -root false`
 +
 The node2 aggregates were listed in the output of the command in <<man_relocate_3_4_Step1,Step 1>>.
 
 . If any aggregate has gone offline or become foreign, bring it online by using the following command for each aggregate:
 +
-`storage aggregate online -aggregate <aggr_name>`
+`storage aggregate online -aggregate _aggr_name_`
 
 . Verify that all the volumes in node2 aggregates are online on node4:
 +
-`volume show -node <node4> -state offline`
+`volume show -node _node4_ -state offline`
 
 . If any volumes are offline on node4, bring them online:
 +
-`volume online -vserver <vserver-name> -volume <volume_name>`
+`volume online -vserver _vserver-name_ -volume _volume_name_`
 
 . Send a post-upgrade AutoSupport message to NetApp for node4:
 +
-`system node autosupport invoke -node <node4> -type all -message "<node2> successfully upgraded from <platform_old> to <platform_new>"`
+`system node autosupport invoke -node _node4_ -type all -message "_node2_ successfully upgraded from _platform_old_ to _platform_new_"`
 
 // Clean-up, 2022-03-09
+// 1476241, 2022-05-13

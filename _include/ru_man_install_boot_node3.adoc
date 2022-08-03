@@ -171,17 +171,17 @@ NOTE: You must use the management port and IP as the netboot connection. Do not 
 |Not running
 |Manually configure the connection by entering the following command at the boot environment prompt:
 
-`ifconfig e0M -addr=<filer_addr> -mask=<netmask> -gw=<gateway> -dns=<dns_addr> domain=<dns_domain>`
+`ifconfig e0M -addr=_filer_addr_ -mask=_netmask_ -gw=_gateway_ -dns=_dns_addr_ -domain=_dns_domain_`
 
-`<filer_addr>` is the IP address of the storage system.
+`_filer_addr_` is the IP address of the storage system.
 
-`<netmask>` is the network mask of the storage system.
+`_netmask_` is the network mask of the storage system.
 
-`<gateway>` is the gateway for the storage system.
+`_gateway_` is the gateway for the storage system.
 
-`<dns_addr>` is the IP address of a name server on your network.
+`_dns_addr_` is the IP address of a name server on your network.
 
-`<dns_domain>` is the Domain Name Service (DNS) domain name. If you use this optional parameter, you do not need a fully qualified domain name in the netboot server URL; you need only the server's host name.
+`_dns_domain_` is the Domain Name Service (DNS) domain name. If you use this optional parameter, you do not need a fully qualified domain name in the netboot server URL; you need only the server's host name.
 
 *Note*: Other parameters might be necessary for your interface. Enter `help ifconfig` at the firmware prompt for details.
 |===
@@ -273,16 +273,16 @@ Enter the appropriate form of the `disk reassign` command based on whether your 
 |If disk type is... |Then run the command...
 
 |With shared disks
-|`disk reassign -s <node1_sysid> -d <node3_sysid> -p <node2_sysid>`
+|`disk reassign -s _node1_sysid_ -d _node3_sysid_ -p _node2_sysid_`
 |Without shared disks
-|`disk reassign -s <node1_sysid> -d <node3_sysid>`
+|`disk reassign -s _node1_sysid_ -d _node3_sysid_`
 |===
 +
-For the `<node1_sysid>` value, use the information captured in link:record_node1_information.html[Record node1 information]. To obtain the value for `<node3_sysid>`, use the `sysconfig` command.
+For the `_node1_sysid_` value, use the information captured in link:record_node1_information.html[Record node1 information]. To obtain the value for `_node3_sysid_`, use the `sysconfig` command.
 +
 NOTE: The `-p` option is only required in maintenance mode when shared disks are present.
 +
-The `disk reassign` command reassigns only those disks for which `<node1_sysid>` is the current owner.
+The `disk reassign` command reassigns only those disks for which `_node1_sysid_` is the current owner.
 +
 
 The system displays the following message:
@@ -330,14 +330,14 @@ The following procedure sets node3 to boot from the root aggregate of node1:
 
 .. Bring the node1 aggregate online, if necessary:
 +
-`aggr_online <root_aggr_from_node1>`
+`aggr_online _root_aggr_from_node1_`
 
 .. Prevent the node3 from booting from its original root aggregate:
-`aggr offline <root_aggr_on_node3>`
+`aggr offline _root_aggr_on_node3_`
 
 .. Set the node1 root aggregate as the new root aggregate for node3:
 +
-`aggr options <aggr_from_node1> root`
+`aggr options _aggr_from_node1_ root`
 
 .. Verify that the root aggregate of node3 is offline and the root aggregate for the disks brought over from node1 is online and set to root:
 +
@@ -416,7 +416,7 @@ The system stops at the boot environment prompt.
 
 . [[man_install3_step39]]If necessary, set the date on node3:
 +
-`set date <mm/dd/yyyy>`
+`set date _mm/dd/yyyy_`
 
 . [[man_install3_step40]]On node3, check the time at the boot environment prompt:
 +
@@ -424,7 +424,7 @@ The system stops at the boot environment prompt.
 
 . [[man_install3_step41]]If necessary, set the time on node3:
 +
-`set time <hh:mm:ss>`
+`set time _hh:mm:ss_`
 
 . [[man_install3_step42]]Verify the partner system ID is set correctly as noted in <<man_install3_step28,Step 28>> under -p switch:
 +
@@ -432,7 +432,7 @@ The system stops at the boot environment prompt.
 
 . [[man_install3_step43]]If necessary, set the partner system ID on node3:
 +
-`setenv partner-sysid <node2_sysid>`
+`setenv partner-sysid _node2_sysid_`
 +
 Save the settings:
 +
@@ -468,3 +468,4 @@ The node might go through one round of reboot before booting normally.
 . [[man_install3_step48]]Log in to node3.
 // 22 FEB 2021: Formatted from CMS
 // Clean-up, 2022-03-09
+// BURT 1478241, 2022-05-13

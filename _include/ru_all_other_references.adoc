@@ -24,9 +24,9 @@ Content specific to this upgrade are listed in the table below.
 |Describes how to install and manage high-availability clustered configurations, including storage failover and takeover/giveback.
 |link:https://docs.netapp.com/us-en/ontap/volumes/index.html[Logical storage management with the CLI^]
 |Describes how to efficiently manage your logical storage resources, using volumes, FlexClone volumes, files, and LUNs, FlexCache volumes, deduplication, compression, qtrees, and quotas.
-|link:https://docs.netapp.com/us-en/ontap-metrocluster/disaster-recovery/index.html[MetroCluster Management and Disaster Recovery^]
+|link:https://docs.netapp.com/us-en/ontap-metrocluster/disaster-recovery/concept_dr_workflow.html[MetroCluster Management and Disaster Recovery^]
 |Describes how to perform MetroCluster switchover and switchback operations, both in planned maintenance operations, or in the event of a disaster.
-|link:https://docs.netapp.com/us-en/ontap-metrocluster/upgrade/index.html[MetroCluster Upgrade and Expansion^]
+|link:https://docs.netapp.com/us-en/ontap-metrocluster/upgrade/concept_choosing_an_upgrade_method_mcc.html[MetroCluster Upgrade and Expansion^]
 |Provides procedures for upgrading controller and storage models in the MetroCluster configuration, transitioning from a MetroCluster FC to a MetroCluster IP configuration, and expanding the MetroCluster configuration by adding additional nodes.
 |link:https://docs.netapp.com/us-en/ontap/network-management/index.html[Network Management^]
 |Describes how to configure and manage physical and virtual network ports (VLANs and interface groups), LIFs, routing, and host-resolution services in clusters; optimize network traffic by load balancing; and monitor the cluster by using SNMP.
@@ -60,8 +60,8 @@ Content specific to this upgrade are listed in the table below.
 |Describes how to quickly upgrade controller hardware in a cluster by moving storage or volumes. Also describes how to convert a supported model to a disk shelf.
 |link:https://docs.netapp.com/us-en/ontap/upgrade/index.html[Upgrade ONTAP^]
 |Contains instructions for downloading and upgrading ONTAP.
-|link:https://docs.netapp.com/us-en/ontap-systems-upgrade/upgrade-arl-auto-affa900/index.html[Use "system controller replace" commands to upgrade AFF A700 to AFF A900 running ONTAP 9.10.1 or later^]
-|Describes the aggregate relocation procedures needed to non-disruptively upgrade an AFF A700 to an AFF A900 running ONTAP 9.10.1 or later by using "system controller replace" commands.
+|link:https://docs.netapp.com/us-en/ontap-systems-upgrade/upgrade-arl-auto-affa900/index.html[Use "system controller replace" commands to upgrade AFF A700 to AFF A900 or FAS9000 to FAS9500 running ONTAP 9.10.1 or later^]
+|Describes the aggregate relocation procedures needed to non-disruptively upgrade an AFF A700 to an AFF A900 system or a FAS9000 to a FAS9500 system running ONTAP 9.10.1 or later by using "system controller replace" commands.
 |link:https://docs.netapp.com/us-en/ontap-systems-upgrade/upgrade-arl-auto-app/index.html[Use "system controller replace" commands to upgrade controller hardware running ONTAP 9.8 or later^]
 |Describes the aggregate relocation procedures needed to non-disruptively upgrade controllers running ONTAP 9.8 by using "system controller replace" commands.
 |link:https://docs.netapp.com/us-en/ontap-systems-upgrade/upgrade-arl-manual-app/index.html[Use aggregate relocation to manually upgrade controller hardware running ONTAP 9.8 or later^]

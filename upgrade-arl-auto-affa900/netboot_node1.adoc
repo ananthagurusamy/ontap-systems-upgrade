@@ -13,9 +13,9 @@ summary: After swapping the corresponding AFF A900 node1 controller module and N
 :imagesdir: ./media/
 
 [.lead]
-After swapping the corresponding AFF A900 node1 controller module and NVRAM module, you must netboot node1. The term netboot means that you are booting from an ONTAP image stored on a remote server. When preparing for netboot, you must add a copy of the ONTAP 9 boot image onto a web server that the system can access.
+After swapping the corresponding AFF A900 or FAS9500 node1 controller and NVRAM modules, you must netboot node1. The term netboot means that you are booting from an ONTAP image stored on a remote server. When preparing for netboot, you must add a copy of the ONTAP 9 boot image onto a web server that the system can access.
 
-It is not possible to check the version of ONTAP installed on the boot media of an AFF A900 controller module unless it is installed in a chassis and powered ON. The ONTAP version on the AFF A900 boot media must be same as the ONTAP version running on the AFF A700 system that is being upgraded and both the primary and backup boot images must match. You can configure the images by performing a netboot followed by the `wipeconfig` command from the boot menu. If the controller module was previously used in another cluster, the `wipeconfig` command clears any residual configuration on the boot media.
+It is not possible to check the version of ONTAP installed on the boot media of an AFF A900 or FAS9500 controller module unless it is installed in a chassis and powered ON. The ONTAP version on the AFF A900 or FAS9500 boot media must be same as the ONTAP version running on the AFF A700 or FAS9000 system that you are upgrading and both the primary and backup boot images must match. You can configure the images by performing a netboot followed by the `wipeconfig` command from the boot menu. If the controller module was previously used in another cluster, the `wipeconfig` command clears any residual configuration on the boot media.
 
 NOTE:	You can also use the USB boot option to perform the netboot. See the link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/How_to_use_the_boot_recovery_LOADER_command_for_installing_ONTAP_for_initial_setup_of_a_system[NetApp KB Article: How to use the boot_recovery LOADER command for installing ONTAP for initial setup of a system^].
 
@@ -45,12 +45,12 @@ NOTE:	You must use the management port and IP as the netboot connection. Do not 
 `ifconfig e0M -auto`
 |Not running
 a|Manually configure the connection by using the following command at the boot environment prompt:
-`ifconfig e0M -addr=<filer_addr> -mask=<netmask> -gw=<gateway> - dns=<dns_addr> domain=<dns_domain>`
-`<filer_addr>` is the IP address of the storage system.
-`<netmask>` is the network mask of the storage system.
-`<gateway>` is the gateway for the storage system.
-`<dns_addr>` is the IP address of a name server on your network. This parameter is optional.
-`<dns_domain>` is the Domain Name Service (DNS) domain name. This parameter is optional.
+`ifconfig e0M -addr=_filer_addr_ -mask=_netmask_ -gw=_gateway_ -dns=_dns_addr_ -domain=_dns_domain_`
+`_filer_addr_` is the IP address of the storage system.
+`_netmask_` is the network mask of the storage system.
+`_gateway_` is the gateway for the storage system.
+`_dns_addr_` is the IP address of a name server on your network. This parameter is optional.
+`_dns_domain_` is the Domain Name Service (DNS) domain name. This parameter is optional.
 
 NOTE:	Other parameters might be necessary for your interface. Enter `help ifconfig` at the firmware prompt for details.
 |===
@@ -61,7 +61,7 @@ NOTE:	Other parameters might be necessary for your interface. Enter `help ifconf
 +
 NOTE:	Do not interrupt the boot.
 
-.	Wait for the node1 now running on the AFF A900 controller module to boot and display the boot menu options as shown below:
+.	Wait for the node1 now running on the AFF A900 or FAS9500 controller module to boot and display the boot menu options as shown below:
 +
 ----
 Please choose one of the following:
@@ -155,7 +155,7 @@ Node1 should stop at the LOADER prompt.
 `show date`
 .	If necessary, set the date on node1:
 +
-`set date <mm/dd/yyyy>`
+`set date _mm/dd/yyyy_`
 +
 NOTE: Set the corresponding UTC date on node1.
 
@@ -165,15 +165,15 @@ NOTE: Set the corresponding UTC date on node1.
 
 .	If necessary, set the time on node1:
 +
-`set time <hh:mm:ss>`
+`set time _hh:mm:ss_`
 +
 NOTE: Set the corresponding UTC time on node1.
 
 .	Set the partner system ID on node1:
 +
-`setenv partner-sysid <node2_sysid>`
+`setenv partner-sysid _node2_sysid_`
 +
-You can obtain the node2 system ID from the `node show -node <node2>` command output on node2.
+You can obtain the node2 system ID from the `node show -node _node2_` command output on node2.
 +
 ..	Save the settings:
 +
@@ -183,3 +183,6 @@ You can obtain the node2 system ID from the `node show -node <node2>` command ou
 `printenv partner-sysid`
 +
 For node1, the `partner-sysid` must be that of node2.
+
+//BURT 1452254, 2022-04-27
+// BURT 1476251, 2022-05-16

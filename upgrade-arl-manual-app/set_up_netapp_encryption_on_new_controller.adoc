@@ -28,7 +28,7 @@ This procedure includes steps that are performed on the new controller module. Y
 . Add the key management servers listed in the previous step to the key management server list in the new controller:
 .. Add the key management server by using the following command:
 +
-`security key-manager -add <key_management_server_ip_address>`
+`security key-manager -add _key_management_server_ip_address_`
 
 .. Repeat the previous step for each listed key management server. You can link up to four key management servers.
 .. Verify the that the key management servers were added successfully by using the following command:
@@ -41,7 +41,7 @@ You must install the same key management servers that are installed on the exist
 
 .. Launch the key management server setup wizard on the new node by using the following command:
 +
-`security key-manager setup -node <new_controller_name>`
+`security key-manager setup -node _new_controller_name_`
 
 .. Complete the steps in the wizard to configure key management servers.
 . Restore authentication keys from all linked key management servers to the new node:
@@ -63,3 +63,4 @@ Check if any volumes were taken offline because authentication keys were not ava
 
 `volume online`
 // 26 FEB 2021:  Formatted from CMS
+// 2022-05-17, BURT 1476241

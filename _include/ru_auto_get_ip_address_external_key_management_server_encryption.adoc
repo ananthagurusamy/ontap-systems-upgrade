@@ -12,7 +12,7 @@ After upgrading, you must immediately configure Storage Encryption and establish
 // BURT 1450483 11-Feb-2022
 . Add the IP address for each key management server:
 +
-`security key-manager external add-servers -key-servers <key_management_server_ip_address>`
+`security key-manager external add-servers -key-servers _key_management_server_ip_address_`
 // BURT 1450483 11-Feb-2022
 . Verify that the same key management servers are configured and available on all nodes in the cluster:
 +
@@ -25,4 +25,4 @@ After upgrading, you must immediately configure Storage Encryption and establish
 . Make a note of the new authentication key ID.
 . Rekey all self-encrypting drives with the new authentication key:
 +
-`storage encryption disk modify -disk * -data-key-id <authentication_key_id>`
+`storage encryption disk modify -disk * -data-key-id _authentication_key_id_`

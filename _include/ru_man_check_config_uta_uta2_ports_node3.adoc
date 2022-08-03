@@ -40,7 +40,7 @@ NOTE: *Attention*: If your system has storage disks, you must enter the commands
 
 .Steps
 
-. [[step1]]Check how the ports are currently configured entering on of the following commands on node3:
+. Check how the ports are currently configured entering on of the following commands on node3:
 +
 [cols="35,65"]
 |===
@@ -135,13 +135,13 @@ You should already be in maintenance mode.
 
 . [[man_check_3_step7]]If the adapter is in initiator mode, and if the UTA/UTA2 port is online, take the UTA/UTA2 port offline:
 +
-`storage disable adapter <adapter_name>`
+`storage disable adapter _adapter_name_`
 +
 Adapters in target mode are automatically offline in maintenance mode.
 
 . [[man_check_3_step8]]If the current configuration does not match the desired use, change the configuration as needed:
 +
-`ucadmin modify -m fc|cna -t initiator|target <adapter_name>`
+`ucadmin modify -m fc|cna -t initiator|target _adapter_name_`
 +
 * `-m` is the personality mode, `fc` or `cna`.
 * `-t` is the FC4 type, `target` or `initiator`.
@@ -222,9 +222,9 @@ Adapter  Mode     Type       Mode     Type       Status
 |If the system... |Then...
 
 |Has storage disks
-|`network fcp adapter modify -node <node_name> -adapter <adapter_name> -state up`
+|`network fcp adapter modify -node _node_name_ -adapter _adapter_name_ -state up`
 |Is a V-Series system or has FlexArray Virtualization Software and is connected to storage arrays
-|`fcp config <adapter_name> up`
+|`fcp config _adapter_name_ up`
 |===
 
 . [[man_check_3_step13]]Cable the port.
