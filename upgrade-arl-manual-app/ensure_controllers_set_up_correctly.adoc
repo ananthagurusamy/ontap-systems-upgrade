@@ -14,5 +14,12 @@ summary: "Enable the HA pair, verify node3 and node4 storage access, and confirm
 
 [.lead]
 include::../_include/ru_man_ensure_controllers_set_up_correctly.adoc[]
+
+[start=14]
+. If you want to set up a switchless cluster on the new nodes, go to link:other_references.html[References] to link to the _Network Support Site_ and follow the instructions in _Transitioning to a two-node switchless cluster_.
+
+.After you finish
+
+If Storage Encryption is enabled on node3 and node4, complete the steps in link:set_up_storage_encryption_new_controller.html[Set up Storage Encryption on the new controller module]. Otherwise, complete the steps in link:decommission_old_system.html[Decommission the old system].
 // 25 Feb 2021:  formatted from CMS
 // Clean-up, 2022-03-09
