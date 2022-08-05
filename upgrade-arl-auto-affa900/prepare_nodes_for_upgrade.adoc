@@ -97,7 +97,7 @@ If node affinity jobs are running, the check fails.
 
 . Run the below set of commands as directed by the controller replacement procedure on the system console.
 +
-You must run and save the output of the following commands individually:
+From the serial console port connected to each node, run and save the output of the following commands individually:
 +
 * `vserver services name-service dns show`
 * `network interface show -curr-node _nodename_ -role cluster,intercluster,node-mgmt,cluster-mgmt,data`
