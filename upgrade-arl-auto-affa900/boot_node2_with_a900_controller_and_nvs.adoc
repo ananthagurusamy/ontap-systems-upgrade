@@ -44,7 +44,7 @@ If `[localhost:disk.encryptNoSupport:ALERT]: Detected FIPS-certified encrypting 
 +
 You can use the following example as a reference:
 +
-.Expand the console output
+.Expand the console output example
 [%collapsible]
 ====
 ----
@@ -173,8 +173,6 @@ Login:
 +
 [NOTE]
 ====
-In the preceding console output example, ONTAP will prompt you for the partner node name if the system uses ADP disks.
-
 The system IDs shown in the preceding example are example IDs. The actual system IDs of the nodes that you are upgrading will be different.
 
 Between entering node names at the prompt and the login prompt, the node reboots a few times to restore the environment variables, update firmware on the cards in the system, and for other ONTAP updates.
