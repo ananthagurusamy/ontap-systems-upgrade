@@ -17,7 +17,7 @@ Node1 with the AFF A900 or FAS9500 controller and NVRAM modules is now ready for
 
 .Steps
 
-.	If NetApp Storage Encryption (NSE) is in use on this configuration, the `setenv bootarg.storageencryption.support` command must be set to `true`, and the `kmip.init.maxwait` variable must be set to `off` to avoid a boot loop after the node1 configuration is loaded:
+.	[[A900_boot_node1]]If NetApp Storage Encryption (NSE) is in use on this configuration, the `setenv bootarg.storageencryption.support` command must be set to `true`, and the `kmip.init.maxwait` variable must be set to `off` to avoid a boot loop after the node1 configuration is loaded:
 +
 `setenv bootarg.storageencryption.support true`
 +
@@ -25,13 +25,30 @@ Node1 with the AFF A900 or FAS9500 controller and NVRAM modules is now ready for
 .	Boot the node into `boot_menu`:
 +
 `boot_ontap menu`
-.	The node stops at the boot menu. Enter "22/7" and select the hidden option `boot_after_controller_replacement`.
+.	Reassign the AFF A700 node1 disks to the AFF A900 node1 by entering "22/7" and selecting the hidden option `boot_after_controller_replacement` when the node stops at the boot menu.
 +
-NOTE: If the system reports `diskown.errorDuringIO` error messages, reset `setenv bootarg.storageencryption.support` to `true` and run the `boot_ontap` command.
+After a short delay, you are prompted to enter the name of the node that is being replaced. If there are shared disks (also called Advanced Disk Partitioning (ADP) or partitioned disks), you are prompted to enter the node name of the HA partner.
++
+These prompts might get buried in the console messages. If you do not enter a node name or enter an incorrect name, you are prompted to enter the name again.
++
+[NOTE]
+====
+If `[localhost:disk.encryptNoSupport:ALERT]: Detected FIPS-certified encrypting drive` and, or, `[localhost:diskown.errorDuringIO:error]: error 3 (disk failed) on disk` errors occur, perform the following steps:
+
+. Halt the node at the LOADER prompt.
+. Check and reset the storage encryption bootargs mentioned in <<A900_boot_node1,Step 1>>.
+. At the loader prompt, boot up:
++
+`boot_ontap`
+====
 // BURT-1481586 30-May-2022
 +
-To reassign the AFF A700 node1 disks to AFF A900 node1, at the prompt, enter the actual node name of node1. Use the following example as a reference:
+You can use the following example as a reference:
 +
++
+.Expand the console output
+[%collapsible]
+====
 ----
 LOADER-A> boot_ontap menu
 .
@@ -154,10 +171,11 @@ Override system ID? {y|n} y
 .
 Login:
 ----
+===
 +
 [NOTE]
 ====
-In the preceding console output example, ONTAP will prompt you for the partner node name if the system uses Advanced Disk Partitioning (ADP) disks.
+In the preceding console output example, ONTAP will prompt you for the partner node name if the system uses Advanced Disk ADP disks.
 
 The system IDs shown in the preceding example are example IDs. The actual system IDs of the nodes that you are upgrading will be different.
 
