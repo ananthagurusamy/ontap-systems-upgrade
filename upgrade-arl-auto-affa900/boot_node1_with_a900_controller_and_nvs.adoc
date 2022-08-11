@@ -22,10 +22,10 @@ Node1 with the AFF A900 or FAS9500 controller and NVRAM modules is now ready for
 `setenv bootarg.storageencryption.support true`
 +
 `setenv kmip.init.maxwait off`
-.	Boot the node into `boot_menu`:
+.	Boot the node into boot menu:
 +
 `boot_ontap menu`
-.	Reassign the AFF A700 node1 disks to the AFF A900 node1 by entering "22/7" and selecting the hidden option `boot_after_controller_replacement` when the node stops at the boot menu.
+.	Reassign the AFF A700 node1 disks to AFF A900 node1 by entering "22/7" and selecting the hidden option `boot_after_controller_replacement` when the node stops at the boot menu.
 +
 After a short delay, you are prompted to enter the name of the node that is being replaced. If there are shared disks (also called Advanced Disk Partitioning (ADP) or partitioned disks), you are prompted to enter the node name of the HA partner.
 +
