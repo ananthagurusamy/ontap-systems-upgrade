@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
-permalink: upgrade-arl-auto-app/get_ip_address_of_external_kms_for_storage_encryption.html
+permalink: upgrade-arl-auto-app/manage_storage_encryption_using_okm.html
 keywords: ip, address, external, key, management, server, storage, encryption, upgrading, authentication
 summary: "Configure and manage Storage Encryption, manage authentication keys, and quiesce the SnapMirror relationships when upgrading controllers running ONTAP 9.8 or later by using `system controller replace` command."
 ---
 
-= Get an IP address of an external key management server for storage encryption
+= Manage storage encryption using Onboard Key Manager
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -19,11 +19,7 @@ summary: "Configure and manage Storage Encryption, manage authentication keys, a
 //
 
 [.lead]
-include::../_include/ru_auto_get_ip_address_external_key_management_server_encryption.adoc[]
+include::../_include/ru_auto_manage_storage_encryption_okm.adoc[]
 
-== Manage authentication using KMIP servers
-With ONTAP 9.8 or later, you can use Key Management Interoperability Protocol (KMIP) servers to manage authentication keys.
-
-include::../_include/ru_auto_manage_authentication_kmip_servers.adoc[]
-
+include::../_include/ru_auto_quiesce_snapmirror_relationships.adoc[]
 // BURT-1476241 2022-August-12

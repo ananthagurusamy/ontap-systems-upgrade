@@ -3,4 +3,5 @@ During Stage 1, you must prepare the nodes for the upgrade and run a series of p
 .Steps
 
 . link:prepare_nodes_for_upgrade.html[Prepare the nodes for upgrade]
-. link:get_ip_address_of_external_kms_for_storage_encryption.html[Get an IP address of an external key management server for storage encryption]
+. link:manage_storage_encryption_using_okm.html[Manage storage encryption using Onboard Key Manager]
+// BURT-1476241 2022-August-12

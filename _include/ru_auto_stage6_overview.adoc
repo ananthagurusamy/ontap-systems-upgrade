@@ -2,6 +2,8 @@ During stage 6, ensure that the new nodes are set up correctly. If one of the ne
 
 .Steps
 
+. link:get_ip_address_of_external_kms_for_storage_encryption.html[Get an IP address of an external key management server for storage encryption]
+// BURT-1476241 2022-August-12
 . link:ensure_new_controllers_are_set_up_correctly.html[Ensure that the new controllers are set up correctly]
 . link:set_up_storage_encryption_new_module.html[Set up Storage Encryption on the new controller module]
 . link:set_up_netapp_volume_encryption_new_module.html[Set up NetApp Encryption on the new controller module]
