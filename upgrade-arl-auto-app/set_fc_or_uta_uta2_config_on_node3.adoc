@@ -62,6 +62,9 @@ include::../_include/ru_auto_check_config_uta_uta2_ports_node3_steps_13_14.adoc[
 [start=15]
 . [[auto9597_check_node3_step15]]On node3, go to the boot menu and using 22/7 and select the hidden option `boot_after_controller_replacement`. At the prompt, enter node1 to reassign the disks of node1 to node3, as per the following example.
 +
+.Expand the console output example
+[%collapsible]
+====
 ....
 LOADER-A> boot_ontap menu
 .
@@ -157,6 +160,7 @@ Override system ID? {y|n} y
 .
 Login:
 ....
+====
 +
 NOTE: In the above console output example, ONTAP will prompt you for the partner node name if the system uses Advanced Disk Partitioning (ADP) disks.
 
