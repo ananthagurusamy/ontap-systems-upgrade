@@ -13,6 +13,7 @@ This procedure includes steps that are performed on the new controller module. Y
 +
 `security key-manager onboard sync`
 --
+
 .External key management
 --
 .Steps
@@ -45,6 +46,7 @@ You must install the same key management servers that are installed on the exist
 +
 This command needs the OKM passphrase
 --
+====
 
 .After you finish
 

@@ -19,7 +19,7 @@ summary: "Stage 3 process sequence for an ARL upgrade using `system controller r
 //
 
 [.lead]
-During Stage 3, you install and boot node3, check that the cluster and node-management ports from node1 come online on node3, and verify the node3 installation. Non-SAN data LIFs and non-root aggregates belonging to node1 are moved from node2 to node3.
+During Stage 3, you install and boot node3, check that the cluster and node-management ports from node1 come online on node3, verify the node3 installation, and restore key-manager configuration. You also relocate node1 non-SAN data LIFs and non-root aggregates from node2 to node3.
 
 .Steps
 
