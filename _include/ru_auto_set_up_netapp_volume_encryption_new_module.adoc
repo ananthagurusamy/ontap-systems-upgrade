@@ -4,8 +4,7 @@ If the replaced controller or high availability (HA) partner of the new controll
 
 This procedure includes steps that are performed on the new controller module. You must enter the command on the correct node.
 
-
-role=”tabbed-block”]
+[role=”tabbed-block”]
 ====
 .Onboard key manager
 --
