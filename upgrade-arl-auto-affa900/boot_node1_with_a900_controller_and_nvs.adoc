@@ -171,7 +171,7 @@ Override system ID? {y|n} y
 Login:
 ----
 ====
-
++
 [NOTE]
 ====
 The system IDs shown in the preceding example are example IDs. The actual system IDs of the nodes that you are upgrading will be different.
