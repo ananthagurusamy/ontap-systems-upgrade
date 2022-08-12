@@ -1,6 +1,6 @@
 ---
 settings:
-  name: AFF and FAS Controller Upgrade
+  name: Upgrade controllers
   internal:
     pdf_enabled: true
   prod:
@@ -58,3 +58,6 @@ homepage:
         - title: NetApp Community
           url: https://community.netapp.com/t5/ONTAP-and-FAS/ct-p/fas-ontap-oncommand-and-related-plug-ins
 
+product-family:
+  name: AFF and FAS Systems
+  repo: ontap-systems-family
