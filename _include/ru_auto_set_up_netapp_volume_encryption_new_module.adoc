@@ -4,8 +4,18 @@ If the replaced controller or high availability (HA) partner of the new controll
 
 This procedure includes steps that are performed on the new controller module. You must enter the command on the correct node.
 
-.Steps
 
+role=”tabbed-block”]
+====
+.Onboard key manager
+--
+.Steps
+. Restore authentication keys from all linked key management servers to the new node:
+`security key-manager onboard sync`
+--
+.External key management
+--
+.Steps
 . Verify that the key management servers are still available, their status, and their authentication key information:
 +
 `security key-manager key query -node node`
@@ -31,17 +41,10 @@ You must install the same key management servers that are installed on the exist
 .. Complete the steps in the wizard to configure key management servers.
 . Restore authentication keys from all linked key management servers to the new node:
 +
-[cols=2*,options="header",cols="30,70"]
-|===
-|For... |Use this command...
-
-|External key management (EKM)
-|`security key-manager external restore`
-
+`security key-manager external restore`
++
 This command needs the OKM passphrase
-|Onboard Key Manager
-|`security key-manager onboard sync`
-|===
+--
 
 .After you finish
 
