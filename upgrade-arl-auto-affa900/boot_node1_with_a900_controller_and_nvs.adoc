@@ -22,7 +22,7 @@ Node1 with the AFF A900 or FAS9500 controller and NVRAM modules is now ready for
 `setenv bootarg.storageencryption.support true`
 +
 `setenv kmip.init.maxwait off`
-.	Boot the node into boot menu:
+.	Boot the node into the boot menu:
 +
 `boot_ontap menu`
 .	Reassign the AFF A700 node1 disks to AFF A900 node1 by entering "22/7" and selecting the hidden option `boot_after_controller_replacement` when the node stops at the boot menu.
