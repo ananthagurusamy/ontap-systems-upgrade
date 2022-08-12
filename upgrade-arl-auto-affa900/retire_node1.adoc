@@ -22,6 +22,7 @@ To retire node1, resume the automated operation to disable the HA pair with node
 `system controller replace resume`
 
 .	Verify that node1 has been halted:
+
 +
 `system controller replace show-details`
 +
