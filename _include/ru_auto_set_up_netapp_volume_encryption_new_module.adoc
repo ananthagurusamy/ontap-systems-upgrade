@@ -8,7 +8,8 @@ This procedure includes steps that are performed on the new controller module. Y
 ====
 .Onboard key manager
 --
-.Steps
+*Steps*
+
 . Restore authentication keys from all linked key management servers to the new node:
 +
 `security key-manager onboard sync`
@@ -16,7 +17,8 @@ This procedure includes steps that are performed on the new controller module. Y
 
 .External key management
 --
-.Steps
+*Steps*
+
 . Verify that the key management servers are still available, their status, and their authentication key information:
 +
 `security key-manager key query -node node`
@@ -49,5 +51,4 @@ This command needs the OKM passphrase
 ====
 
 .After you finish
-
 Check if any volumes were taken offline because authentication keys were not available or EKM servers could not be reached. Bring those volumes back online by using the `volume online` command.
