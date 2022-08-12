@@ -10,6 +10,7 @@ This procedure includes steps that are performed on the new controller module. Y
 --
 .Steps
 . Restore authentication keys from all linked key management servers to the new node:
++
 `security key-manager onboard sync`
 --
 .External key management
