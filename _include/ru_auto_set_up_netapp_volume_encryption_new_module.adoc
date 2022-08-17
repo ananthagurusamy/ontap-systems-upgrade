@@ -6,18 +6,18 @@ This procedure includes steps that are performed on the new controller module. Y
 
 [role="tabbed-block"]
 ====
-.Onboard key manager
+.Onboard Key Manager
 --
-*Steps*
+*If you are using Onboard Key Manager, perform the following procedure:*
 
 . Restore authentication keys from all linked key management servers to the new node:
 +
 `security key-manager onboard sync`
 --
 
-.External key management
+.External Key Management 
 --
-*Steps*
+*If you are using External Key Management, perform the following procedure:*
 
 . Verify that the key management servers are still available, their status, and their authentication key information:
 +
