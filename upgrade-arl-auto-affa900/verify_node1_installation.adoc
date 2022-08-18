@@ -40,6 +40,7 @@ The output of the `health` field should be `true`.
 .	Resume the controller replacement operation:
 +
 `system controller replace resume`
+
 .	The controller replacement operation pauses for intervention with the following message:
 +
 ----
