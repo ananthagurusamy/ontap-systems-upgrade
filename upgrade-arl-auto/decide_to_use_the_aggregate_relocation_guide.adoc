@@ -25,7 +25,7 @@ Use this content under the following circumstances:
 
 * If you are upgrading a MetroCluster configuration, it is a 4-node or higher FC configuration, and all nodes are running ONTAP 9.6 or 9.7.
 
-NOTE: You can use NetApp Storage Encryption (NSE) and NetApp Volume Encryption (NVE) with this procedure.
+NOTE: You can use NetApp Storage Encryption (NSE), NetApp Volume Encryption (NVE) and NetApp Aggregate Encryption (NAE) with this procedure.
 
 [[sys_commands_95_97_supported_systems]] The following tables shows the supported model matrix for the controller upgrade.
 

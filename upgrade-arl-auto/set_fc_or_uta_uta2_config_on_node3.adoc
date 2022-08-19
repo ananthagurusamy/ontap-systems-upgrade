@@ -60,7 +60,7 @@ include::../_include/ru_auto_check_config_uta_uta2_ports_node3_steps_13_14.adoc[
 .. At the prompt, enter node1 to reassign the disks of node1 to node3.
 +
 NOTE: You must carefully watch the serial output to avoid missing the “Controller Replacement: Provide message name of the node you would like to replace” prompt. When you do not enter the node name, the system takes a `NULL` value which requires you to enter sysids later in the process.
-+
+
 
 .. Beginning with ONTAP 9.9.1P8, when prompted, enter node2 as the name of the “ha-partner”.
 +

@@ -143,7 +143,7 @@ All physical network ports, VLAN ports and interface group ports on the node are
 
 . List the broadcast domains on the cluster:
 +
-`broadcast-domain show`
+`network port broadcast-domain show`
 
 . List the network port reachability of all ports on node4:
 +
