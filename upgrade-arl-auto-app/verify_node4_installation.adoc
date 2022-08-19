@@ -284,7 +284,7 @@ Wait about one minute for newly restored VLANs to be placed into their appropria
 
 . Delete any empty broadcast domains after all port repairs have been completed:
 +
-`broadcast-domain delete -broadcast-domain _broadcast_domain_name_`
+`network port broadcast-domain delete -broadcast-domain _broadcast_domain_name_`
 
 . Verify port reachability:
 +
