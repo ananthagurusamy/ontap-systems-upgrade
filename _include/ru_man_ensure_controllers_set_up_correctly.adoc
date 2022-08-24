@@ -105,21 +105,8 @@ You can compare the output with the output that you captured in link:prepare_nod
 `system service-processor network modify -node _node_name_`
 +
 Go to link:other_references.html[References] to link to the _System Administration Reference_ for information about the SPs and the _ONTAP 9 Commands: Manual Page Reference_ for detailed information about the `system service- processor network modify` command.
-. Take the following actions on one of the new nodes:
-.. Enter advanced privilege level by entering the following command:
-+
-`set -privilege advanced`
-.. Enter the following command:
-+
-`storage failover modify -node _node-name_ -cifs-ndo-duration default|medium|low`
-+
-* Enter `medium` if the system will have workloads in which 50 percent to 75 percent of the operations will be 4 KB or smaller.
-* Enter `low` if the system will have workloads in which 75 percent to 100 percent of the operations will be 4 KB or smaller.
-.. Return to the admin level by entering the following command:
-+
-`set -privilege admin`
-.. Reboot the system to confirm that the changes take effect.
 
+// BURT-1489176 24-Aug-2022: removed step 15
 . If you want to set up a switchless cluster on the new nodes, go to link:other_references.html[References] to link to the _Network Support Site_ and follow the instructions in _Transitioning to a two-node switchless cluster_.
 
 .After you finish
