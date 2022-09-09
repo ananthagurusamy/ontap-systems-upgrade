@@ -294,6 +294,5 @@ For detailed information about the `network interface revert` command, refer to 
 If any of the disks have failed, remove them, following instructions in the _Disk and aggregate management with the CLI_. (Refer to link:other_references.html[References] to link to _Disk and aggregate management with the CLI_.)
 
 . Collect information about node1 and node2 by completing the following substeps and recording the output of each command:
-
 // Clean-up, 2022-03-09
 // 1476241, 2022-05-13

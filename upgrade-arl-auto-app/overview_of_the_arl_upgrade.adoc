@@ -34,7 +34,7 @@ Aggregate ownership at the end of Stage 1:
 * Node2 is the home owner and current owner of the node2 aggregates.
 
 | link:stage_2_index.html[Stage 2. Relocate and retire node1]
-a| During Stage 2, you relocate the node1 aggregates and non-SAN LIFs to node2, record node1 information, and then retire node1. You can also choose to prepare to netboot node3 and node4 later in the procedure.
+a| During Stage 2, you relocate node1 non-root aggregates and non-SAN LIFs to node2, record node1 information, and then retire node1. You can also prepare to netboot node3 and node4 later in the procedure.
 
 Aggregate ownership at the end of Stage 2:
 
@@ -67,6 +67,6 @@ Aggregate ownership at the end of Stage 5:
 * Node4 is the home owner and current owner of aggregates that originally belonged to node2.
 
 | link:stage_6_index.html[Stage 6. Complete the upgrade]
-a| During stage 6, you confirm that the new nodes are set up correctly. If one of the new nodes has a unified target adapter, you must restore any port configurations and might need to change the personality of the adapter. You also set up Storage Encryption or NetApp Volume Encryption if the new nodes are encryption-enabled. You should also decommission the old nodes.
+a| During Stage 6, you confirm that the new nodes are set up correctly and set up Storage Encryption or NetApp Volume Encryption if the new nodes are encryption-enabled. You should also decommission the old nodes resume SnapMirror operations.
 
 // Clean-up, 2022-03-10
