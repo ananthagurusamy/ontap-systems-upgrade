@@ -10,7 +10,7 @@ You must have the values of the FC port settings from node2 that you saved in th
 
 You can skip this section if your system does not have FC configurations. If your system has onboard UTA/UTA2 ports or a UTA/UTA2 adapter, you configure them in <<Check and configure UTA/UTA2 ports on node4>>.
 
-*Important*: If your system has storage disks, you must enter the commands in this section at the cluster prompt. If you have a V-Series system or a system with FlexArray Virtualization Software connected to storage arrays, you enter commands in this section in Maintenance mode.
+IMPORTANT: If your system has storage disks, you must enter the commands in this section at the cluster prompt. If you have a V-Series system or a system with FlexArray Virtualization Software connected to storage arrays, you enter commands in this section in Maintenance mode.
 
 .Steps
 
@@ -62,13 +62,13 @@ a|Modify the FC ports on node4 as needed:
 `-type` is the FC4 type, target or initiator.
 
 |Is a V-Series system or has FlexArray Virtualization Software and is connected to storage arrays
-|Modify the FC ports on node4 as needed:
+a|Modify the FC ports on node4 as needed:
 
 `ucadmin modify -m fc -t initiator -f _adapter_port_name_`
 
 `-t` is the FC4 type, target or initiator.
 
-*Note*: The FC ports need to be programmed as initiators.
+NOTE: The FC ports need to be programmed as initiators.
 |===
 
 . Take one of the following actions:
