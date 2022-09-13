@@ -17,8 +17,7 @@ The node with the new controller boots and attempts to join the cluster automati
 
 .About this task
 
-You can use these instructions for any relevant node. Node3 is used throughout the following
-sample.
+You can use these instructions for any relevant node. Node3 is used throughout the following sample.
 
 .Steps
 

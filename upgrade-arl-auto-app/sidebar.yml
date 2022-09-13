@@ -88,7 +88,7 @@ entries:
       - title: "Get an IP address of an external key management server for storage encryption"
         url: /upgrade-arl-auto-app/get_ip_address_of_external_kms_for_storage_encryption.html
       # BURT-1476241 2022-August-12
-      - title: "Ensure that the new controllers are set up correctly"
+      - title: "Confirm that the new controllers are set up correctly"
         url: /upgrade-arl-auto-app/ensure_new_controllers_are_set_up_correctly.html
       - title: "Set up Storage Encryption on the new controller module"
         url: /upgrade-arl-auto-app/set_up_storage_encryption_new_module.html
