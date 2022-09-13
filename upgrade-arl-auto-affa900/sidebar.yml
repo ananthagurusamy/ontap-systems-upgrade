@@ -68,8 +68,6 @@ entries:
   entries:
    - title: Overview
      url: /upgrade-arl-auto-affa900/stage_6_index.html
-   - title: Get an IP address of an external key management server for storage encryption
-     url: /upgrade-arl-auto-affa900/get_ip_address_of_external_kms_for_storage_encryption.html
    - title: Boot node2 with the AFF A900 or FAS9500 controller and NVRAM modules
      url: /upgrade-arl-auto-affa900/boot_node2_with_a900_controller_and_nvs.html
    - title: Verify the node2 installation
@@ -82,6 +80,8 @@ entries:
   entries:
   - title: Overview
     url: /upgrade-arl-auto-affa900/stage_7_index.html
+  - title: Get an IP address of an external key management server for storage encryption
+    url: /upgrade-arl-auto-affa900/get_ip_address_of_external_kms_for_storage_encryption.html
   - title: Confirm that the new controllers are set up correctly
     url: /upgrade-arl-auto-affa900/ensure_new_controllers_are_set_up_correctly.html
   - title: Set up Storage Encryption on the new controller module
