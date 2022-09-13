@@ -55,7 +55,7 @@ NOTE: The following systems have internal storage: FAS2520, FAS2552, FAS2554, FA
 * If you have a system with internal storage, the recommended upgrade method is upgrading by moving volumes.
 * If you have a system with internal storage, you can convert the system to a drive shelf and attach it to a new node in the same cluster. FAS2520 controllers cannot be converted to a drive shelf.
 +
-Converting a FAS2240 or FAS255x system to a drive shelf is an optional task in the workflow for upgrading by moving storage.
+Converting a FAS255x system to a drive shelf is an optional task in the workflow for upgrading by moving storage.
 
 * If you have a system with internal storage or a system with volumes or aggregates on internal SATA drives or SSDs, you can upgrade by transferring the internal storage to a drive shelf that is attached to the new node in the same cluster.
 +
