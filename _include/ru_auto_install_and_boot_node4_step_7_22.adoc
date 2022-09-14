@@ -94,9 +94,9 @@ Interrupt the autoboot by pressing Ctrl-C at the boot environment prompt.
 +
 `set time _hh:mm:ss_`
 
-. If you performed a set-default, you must set the partner system ID on node4:
+. If necessary, set the partner system ID on node4:
 +
-`setenv partner-sysid _node2_sysid_`
+`setenv partner-sysid _node3_sysid_`
 +
 Save the settings:
 +
