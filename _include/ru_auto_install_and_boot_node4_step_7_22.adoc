@@ -20,7 +20,7 @@ This menu option downloads and installs the new ONTAP image to the boot device.
 +
 NOTE: Disregard the following message: `This procedure is not supported for Non-Disruptive Upgrade on an HA pair`
 The note applies to nondisruptive upgrades of ONTAP, and not upgrades of controllers.
-Always use netboot to update the new node to the desired image. If you use another method to install the image on the new controller, the wrong image might install. This issue applies to all ONTAP releases.
+Always use netboot to update the new node to the desired image. If you use another method to install the image on the new controller, the wrong image might install. This issue applies to all ONTAP releases. The netboot procedure combined with option `(7) Install new software` wipes the boot media and places the same version of ONTAP on both image partitions.
 
 . If you are prompted to continue the procedure, enter `y`, and when prompted for the package, enter the URL:
 +
@@ -96,9 +96,9 @@ Interrupt the autoboot by pressing Ctrl-C at the boot environment prompt.
 
 . If necessary, set the partner system ID on node4:
 +
-`setenv partner-sysid _node2_sysid_`
-
-.. Save the settings:
+`setenv partner-sysid _node3_sysid_`
++
+Save the settings:
 +
 `saveenv`
 
