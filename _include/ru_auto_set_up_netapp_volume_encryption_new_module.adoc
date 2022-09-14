@@ -8,8 +8,9 @@ This procedure includes steps that are performed on the new controller module. Y
 ====
 .Onboard Key Manager
 --
-*If you are using Onboard Key Manager, perform the following step:*
+*Configure NVE using Onboard Key Manager*
 
+.Steps
 . Restore authentication keys from all linked key management servers to the new node:
 +
 `security key-manager onboard sync`
@@ -17,8 +18,9 @@ This procedure includes steps that are performed on the new controller module. Y
 
 .External Key Management
 --
-*If you are using External Key Management, perform the following procedure:*
+*Configure NVE using External Key Management*
 
+.Steps
 . Verify that the key management servers are still available, their status, and their authentication key information:
 +
 `security key-manager key query -node node`

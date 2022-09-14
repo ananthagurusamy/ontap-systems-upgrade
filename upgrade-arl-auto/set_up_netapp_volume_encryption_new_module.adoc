@@ -14,7 +14,7 @@ summary: "If required, configure the new controller module for NVE when upgradin
 
 [.lead]
 // bottom half of page 71, top half of 72 in the PDF.
-If the replaced controller or the HA partner of the new controller uses NetApp Volume Encryption, you must configure the new controller module for NetApp Volume Encryption.
+If the replaced controller or the HA partner of the new controller uses NetApp Volume Encryption (NVE), you must configure the new controller module for NetApp Volume Encryption.
 
 .About this task
 
@@ -24,7 +24,7 @@ This procedure includes steps that are performed on the new controller module. Y
 ====
 .ONTAP 9.6 and 9.7
 --
-*If your controllers are running ONTAP 9.6 or 9.7, perform the following procedure:*
+*Configure NVE on controllers running ONTAP 9.6 or 9.7*
 
 .Steps
 . Verify that the key management servers are still available, their status, and their authentication key information:
@@ -70,7 +70,7 @@ This command needs the Onboard Key Manager (OKM) passphrase.
 .ONTAP 9.5
 --
 
-*If your controllers are running ONTAP 9.5, perform the following procedure:*
+*Configure NVE on controllers running  ONTAP 9.5*
 
 .Steps
 . Verify that the key management servers are still available, their status, and their authentication key information:

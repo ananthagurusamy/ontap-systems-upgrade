@@ -97,14 +97,12 @@ Interrupt the autoboot by pressing Ctrl-C at the boot environment prompt.
 . If necessary, set the partner system ID on node4:
 +
 `setenv partner-sysid _node2_sysid_`
-+
-NOTE: For node4, the partner system ID must be that of node3: `node_2_sysid`
 
 .. Save the settings:
 +
 `saveenv`
 
-. [[auto_install4_step21]]On the new node, in boot loader, the `partner-sysid` parameter must be set. Verify the `partner-sysid` for node3:
+. [[auto_install4_step21]]On the new node, in boot loader, the `partner-sysid` parameter must be set. For node4, `partner-sysid` must be that of node3. Verify the `partner-sysid` for node3:
 +
 `printenv partner-sysid`
 
