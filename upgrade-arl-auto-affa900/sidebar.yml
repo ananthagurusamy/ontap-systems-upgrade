@@ -16,14 +16,18 @@ entries:
 - title: "Stage 1. Prepare for upgrade"
   pdf-filename: "Stage 1. Prepare for upgrade (upgrade to AFF A900 or FAS9500)"
   entries:
+    - title: Overview
+      url: /upgrade-arl-auto-affa900/stage_1_index.html
     - title: Verify the upgrade hardware
       url: /upgrade-arl-auto-affa900/verify_upgrade_hardware.html
     - title: Prepare the nodes for upgrade
       url: /upgrade-arl-auto-affa900/prepare_nodes_for_upgrade.html
-    - title: Get an IP address of an external key management server for storage encryption
-      url: /upgrade-arl-auto-affa900/get_ip_address_of_external_kms_for_storage_encryption.html
+    - title: Manage storage encryption using Onboard Key Manager
+      url: /upgrade-arl-auto-affa900/manage_storage_encryption_using_okm.html
 - title: "Stage 2. Relocate resources and retire the AFF A700 or FAS9000 node1"
   entries:
+    - title: Overview
+      url: /upgrade-arl-auto-affa900/stage_2_index.html
     - title: Relocate non-root aggregates and NAS data LIFs owned by node1 to node2
       url: /upgrade-arl-auto-affa900/relocate_non_root_aggr_and_nas_data_lifs_node1_node2.html
     - title: Relocate failed or vetoed aggregates
@@ -34,7 +38,9 @@ entries:
       url: /upgrade-arl-auto-affa900/netboot_node1.html
 - title: "Stage 3. Boot node1 with the AFF A900 or FAS9500 controller and NVRAM modules"
   entries:
-    - title: Boot node1 with the AFF A900 controller and NVRAM modules
+    - title: Overview
+      url: /upgrade-arl-auto-affa900/stage_3_index.html
+    - title: Boot node1 with the AFF A900 or FAS9500 controller and NVRAM modules
       url: /upgrade-arl-auto-affa900/boot_node1_with_a900_controller_and_nvs.html
     - title: Verify the node1 installation
       url: /upgrade-arl-auto-affa900/verify_node1_installation.html
@@ -44,18 +50,24 @@ entries:
       url: /upgrade-arl-auto-affa900/move_non_root_aggr_nas_lifs_node1_from_node2_to_upgraded_node1.html
 - title: "Stage 4. Relocate resources from node2 and retire node2"
   entries:
+    - title: Overview
+      url: /upgrade-arl-auto-affa900/stage_4_index.html
     - title: Relocate non-root aggregates and NAS data LIFs from node2 to node1
       url: /upgrade-arl-auto-affa900/relocate_non_root_aggr_nas_lifs_from_node2_to_node1.html
     - title: Retire node2
       url: /upgrade-arl-auto-affa900/retire_node2.html
 - title: "Stage 5. Install the AFF A900 or FAS9500 NVRAM and controller modules on node2"
   entries:
+   - title: Overview
+     url: /upgrade-arl-auto-affa900/stage_5_index.html
    - title: Install AFF A900 or FAS9500 NVRAM and controller modules on node2
      url: /upgrade-arl-auto-affa900/install_a900_nvs_and_controller_on_node2.html
    - title: Netboot node2
      url: /upgrade-arl-auto-affa900/netboot_node2.html
 - title: "Stage 6. Boot node2 with the AFF A900 or FAS9500 controller and NVRAM modules"
   entries:
+   - title: Overview
+     url: /upgrade-arl-auto-affa900/stage_6_index.html
    - title: Boot node2 with the AFF A900 or FAS9500 controller and NVRAM modules
      url: /upgrade-arl-auto-affa900/boot_node2_with_a900_controller_and_nvs.html
    - title: Verify the node2 installation
@@ -66,7 +78,11 @@ entries:
      url: /upgrade-arl-auto-affa900/move_non_root_aggr_and_nas_data_lifs_back_to_node2.html
 - title: "Stage 7. Complete the upgrade"
   entries:
-  - title: Ensure that the new controllers are set up correctly
+  - title: Overview
+    url: /upgrade-arl-auto-affa900/stage_7_index.html
+  - title: Get an IP address of an external key management server for storage encryption
+    url: /upgrade-arl-auto-affa900/get_ip_address_of_external_kms_for_storage_encryption.html
+  - title: Confirm that the new controllers are set up correctly
     url: /upgrade-arl-auto-affa900/ensure_new_controllers_are_set_up_correctly.html
   - title: Set up Storage Encryption on the new controller module
     url: /upgrade-arl-auto-affa900/set_up_storage_encryption_new_module.html
