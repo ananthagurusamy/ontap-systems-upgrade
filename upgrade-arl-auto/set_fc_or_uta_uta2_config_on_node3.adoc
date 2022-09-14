@@ -57,6 +57,9 @@ include::../_include/ru_auto_check_config_uta_uta2_ports_node3_steps_13_14.adoc[
 [start=15]
 . [[auto9597_check_node3_step15]]On node3, go to the boot menu and using 22/7 and select the hidden option `boot_after_controller_replacement`. At the prompt, enter node1 to reassign the disks of node1 to node3, as per the following example.
 +
+.Expand the console output example
+[%collapsible]
+====
 ----
 LOADER-A> boot_ontap menu
 ...
@@ -133,6 +136,7 @@ Override system ID? {y|n} y
 Login:
 ...
 ----
+====
 
 . If the system goes into a reboot loop with the message `no disks found`, this is because it has reset the ports back to the target mode and therefore is unable to see any disks.  Continue with <<auto_check3_step17,Step 17>> to <<auto_check3_step22,Step 22>> to resolve this.
 
