@@ -132,7 +132,7 @@ From the serial port connected to each node, run and save the output of the foll
 * `system node show -instance -node _local_`
 * `run -node _local_ sysconfig`
 * `storage aggregate show -node _local_`
-* `volume show -node _node_name_`
+* `volume show -node _local_`
 * `storage array config show -switch _switch_name_`
 * `system license show -owner _local_`
 * `storage encryption disk show`
