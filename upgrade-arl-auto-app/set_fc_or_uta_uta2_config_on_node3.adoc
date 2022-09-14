@@ -60,15 +60,7 @@ include::../_include/ru_auto_check_config_uta_uta2_ports_node3_intro_step_11.ado
 include::../_include/ru_auto_check_config_uta_uta2_ports_node3_steps_13_14.adoc[]
 
 [start=15]
-. [[auto9597_check_node3_step15]]On node3, go to the boot menu and using 22/7 and select the hidden option `boot_after_controller_replacement`.
-
-.. At the prompt, enter node1 to reassign the disks of node1 to node3.
-+
-NOTE: You must carefully watch the serial output to avoid missing the `Controller Replacement: Provide message name of the node you would like to replace` prompt. When you do not enter the node name, the system takes a `NULL` value which requires you to enter sysids later in the process.
-
-.. Beginning with ONTAP 9.9.1 P8, when prompted, enter node2 as the name of the “ha-partner”.
-+
-In the following example, the node1 disks are reassigned to node3:
+. [[auto9597_check_node3_step15]]On node3, go to the boot menu and using 22/7 and select the hidden option `boot_after_controller_replacement`. At the prompt, enter node1 to reassign the disks of node1 to node3, as per the following example.
 +
 .Expand the console output example
 [%collapsible]

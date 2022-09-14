@@ -69,17 +69,8 @@ include::../_include/ru_auto_check_config_uta_uta2_ports_node4_intro_step_11.ado
 +
 If you are upgrading to an A800, go to <<auto_check_4_step23,Step 23>>
 
-. [[auto_check_4_step15]]On node4, go to the boot menu and using 22/7 and select the hidden option `boot_after_controller_replacement`.
-
-.. At the prompt, enter node2 to reassign the disks of node2 to node4.
+. [[auto_check_4_step15]]On node4, go to the boot menu and using 22/7 and select the hidden option `boot_after_controller_replacement`. At the prompt, enter node2 to reassign the disks of node2 to node4, as per the following example.
 +
-NOTE: You must carefully watch the serial output to avoid missing the `Controller Replacement: Provide name of the node you would like to replace` prompt. When you do not enter the node name, the system takes a `NULL` value which requires you to enter sysids later in the process.
-
-.. Beginning with ONTAP 9.9.1P8, when prompted, enter node1 as the name of the “ha-partner”.
-+
-In the following example, the node2 disks are reassigned to node4:
-
-
 .Expand the console output example
 [%collapsible]
 ====
