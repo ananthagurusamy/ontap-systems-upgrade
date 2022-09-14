@@ -63,7 +63,7 @@ Aggregate ownership at the end of Stage 5:
 a| During Stage 6, you boot node2 with upgraded controller and NVRAM modules and verify the upgraded node2 installation. If you are using NVE, you restore key-manager configuration. You also relocate node1 non-root aggregates and NAS data LIFs from node1 to the upgraded node2 and verify that the SAN LIFs exist on node2.
 
 | link:stage_7_index.html[Stage 7: Complete the upgrade]
-a| During Stage 7, you confirm that the new nodes are set up correctly, and if the new nodes are encryption-enabled, configure and set up Storage Encryption or NetApp Volume Encryption . You should also decommission the old nodes and resume the SnapMirror operations.
+a| During Stage 7, you confirm that the new nodes are set up correctly and, if the new nodes are encryption-enabled, you configure and set up Storage Encryption or NVE You should also decommission the old nodes and resume the SnapMirror operations.
 |===
 
 //BURT 1452254, 2022-04-26
