@@ -1,4 +1,4 @@
-During Stage 6, you confirm that the new nodes are set up correctly and set up Storage Encryption or NetApp Volume Encryption if the new nodes are encryption-enabled. You should also decommission the old nodes resume SnapMirror operations.
+During Stage 6, you confirm that the new nodes are set up correctly and if the new nodes are encryption-enabled, configure and set up Storage Encryption or NVE. You should also decommission the old nodes and resume the SnapMirror operations.
 
 . link:get_address_key_management_server_encryption.html[Get an IP address of an external key management server for storage encryption]
 . link:manage_authentication_kmip.html[Manage authentication using KMIP servers]
