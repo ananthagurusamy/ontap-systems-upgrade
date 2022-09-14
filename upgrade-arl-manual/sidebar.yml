@@ -119,7 +119,7 @@ entries:
     entries:
       - title: Overview
         url: /upgrade-arl-manual/stage_6_index.html
-      - title: "Ensure that the new controllers are set up correctly"
+      - title: "Confirm that the new controllers are set up correctly"
         url: /upgrade-arl-manual/ensure_controllers_set_up_correctly.html
       - title: "Set up Storage Encryption on the new controller module"
         url: /upgrade-arl-manual/set_up_storage_encryption_new_controller.html

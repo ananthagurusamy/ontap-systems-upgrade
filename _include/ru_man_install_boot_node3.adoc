@@ -6,8 +6,12 @@ You must netboot node3 if it does not have the same version of ONTAP 9 that is i
 
 However, you do not need to netboot node3 if it has the same or a later version of ONTAP 9 that is installed on node1.
 
-NOTE: *Important*: If you are upgrading a V-Series system connected to storage arrays or a system with FlexArray Virtualization software that is connected to storage arrays, you need to complete <<man_install3_step1, Step 1>> through <<man_install3_step5,Step 5>>, leave this section at <<man_install3_step6,Step 6>> and follow instructions in link:set_fc_uta_uta2_config_node3.html#configure-fc-ports-on-node3[Configure FC ports on node3] and link:set_fc_uta_uta2_config_node3.html#check-and-configure-UTAUTA2-ports-on-node3[Check and configure UTA/UTA2 ports on node3] as needed, entering commands in maintenance mode. You must then return to this section and resume with <<man_install3_step7,Step 7>>.
+[IMPORTANT]
+====
+If you are upgrading a V-Series system connected to storage arrays or a system with FlexArray Virtualization software that is connected to storage arrays, you need to complete <<man_install3_step1, Step 1>> through <<man_install3_step5,Step 5>>, leave this section at <<man_install3_step6,Step 6>> and follow instructions in link:set_fc_uta_uta2_config_node3.html#configure-fc-ports-on-node3[Configure FC ports on node3] and link:set_fc_uta_uta2_config_node3.html#check-and-configure-UTAUTA2-ports-on-node3[Check and configure UTA/UTA2 ports on node3] as needed, entering commands in maintenance mode. You must then return to this section and resume with <<man_install3_step7,Step 7>>.
+
 However, if you are upgrading a system with storage disks, you need to complete this entire section and then go to link:set_fc_uta_uta2_config_node3.html#configure-fc-ports-on-node3[Configure FC ports on node3] and link:set_fc_uta_uta2_config_node3.html#check-and-configure-UTAUTA2-ports-on-node3[Check and configure UTA/UTA2 ports on node3], entering commands at the cluster prompt.
+====
 
 .Steps
 
@@ -70,7 +74,7 @@ a|.. Go to link:set_fc_uta_uta2_config_node3.html[Set the FC or UTA/UTA2 configu
 
 .. Return to this section and complete the remaining steps, beginning with <<man_install3_step7,Step 7>>.
 
-*Important*: You must reconfigure FC onboard ports, CNA onboard ports, and CNA cards before you boot ONTAP on the V-Series or system with FlexArray Virtualization software.
+IMPORTANT: You must reconfigure FC onboard ports, CNA onboard ports, and CNA cards before you boot ONTAP on the V-Series or system with FlexArray Virtualization software.
 |===
 
 . [[man_install3_step7]]Add the FC initiator ports of the new node to the switch zones.
@@ -116,7 +120,7 @@ a|.. Switch the console cable from node3 to node4.
 +
 The power should already be on if both controllers are in the same chassis.
 +
-*Note*: Leave node4 at the boot environment prompt; you will return to node4 in link:install_boot_node4.html[Install and boot node4].
+NOTE: Leave node4 at the boot environment prompt; you will return to node4 in link:install_boot_node4.html[Install and boot node4].
 
 .. If you see the warning message displayed in <<man_install3_step4,Step 4>>, follow the instructions in <<man_install3_step5,Step 5>>
 
@@ -159,31 +163,24 @@ running ONTAP running in 7-Mode.
 . [[man_install3_step20]]Configure the netboot connection by choosing one of the following actions.
 +
 NOTE: You must use the management port and IP as the netboot connection. Do not use a data LIF IP or else a data outage might occur while the upgrade is being performed.
-+
-[cols="35,65"]
+
+[cols=2*,options="header",cols="35,65"]
 |===
 |If Dynamic Host Configuration Protocol (DHCP) is... |Then...
-
 |Running
 |Configure the connection automatically by entering the following command at the boot environment prompt:
-
 `ifconfig e0M -auto`
 |Not running
-|Manually configure the connection by entering the following command at the boot environment prompt:
-
+a|Manually configure the connection by entering the following command at the boot environment prompt:
 `ifconfig e0M -addr=_filer_addr_ -mask=_netmask_ -gw=_gateway_ -dns=_dns_addr_ -domain=_dns_domain_`
 
-`_filer_addr_` is the IP address of the storage system.
-
-`_netmask_` is the network mask of the storage system.
-
-`_gateway_` is the gateway for the storage system.
-
-`_dns_addr_` is the IP address of a name server on your network.
-
+`_filer_addr_` is the IP address of the storage system. (Mandatory)
+`_netmask_` is the network mask of the storage system. (Mandatory)
+`_gateway_` is the gateway for the storage system. (Mandatory)
+`_dns_addr_` is the IP address of a name server on your network. (Mandatory)
 `_dns_domain_` is the Domain Name Service (DNS) domain name. If you use this optional parameter, you do not need a fully qualified domain name in the netboot server URL; you need only the server's host name.
 
-*Note*: Other parameters might be necessary for your interface. Enter `help ifconfig` at the firmware prompt for details.
+NOTE: Other parameters might be necessary for your interface. Enter `help ifconfig` at the firmware prompt for details.
 |===
 
 . [[man_install3_step21]]Perform netboot on node3:

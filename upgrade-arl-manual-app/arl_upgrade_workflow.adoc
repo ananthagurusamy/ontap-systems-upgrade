@@ -36,15 +36,7 @@ The following table describes the high-level tasks you perform during each stage
 | Stage | Steps
 
 | link:stage_1_index.html[Stage 1: Prepare for upgrade]
-a| . Determine whether the controller has aggregates on internal disk drives.
-+
-This step is required only if you are upgrading from a controller with internal disk drive.
-. Prepare the nodes for upgrade.
-. Rekey disks for Storage Encryption.
-+
-This task is required only if you are upgrading from a system with self-encrypting drives.
-. Verify the SnapMirror relationship state on the cluster and quiesce all relationships between the clusters.
-. Prepare for netboot.
+a| During Stage 1, if required, you confirm that internal disk drives do not contain root aggregates or data aggregates, prepare the nodes for the upgrade, and run a series of prechecks. You might also need to rekey disks for Storage Encryption and prepare to netboot the new controllers.
 
 Aggregate ownership at the end of Stage 1:
 
@@ -52,11 +44,7 @@ Aggregate ownership at the end of Stage 1:
 * Node2 is the home owner and current owner of the node2 aggregates.
 
 | link:stage_2_index.html[Stage 2: Retire node1]
-a| . Relocate non-root aggregates from node1 to node2.
-. Move non-SAN data LIFSs owned by node1 to node2.
-. Record node1 information.
-. Relocate failed or vetoed aggregates.
-. Retire node1.
+a| During Stage 2, you relocate non-root aggregates from node1 to node2 and move non-SAN data LIFs owned by node1 to node2, including failed or vetoed aggregates. You also record node1 information for use later in the procedure and retire node1.
 
 Aggregate ownership at the end of Stage 2:
 
@@ -65,12 +53,7 @@ Aggregate ownership at the end of Stage 2:
 * Node2 is the home owner and current owner of node2 aggregates.
 
 | link:stage_3_index.html[Stage 3: Install and boot node3]
-a| . Install and boot node3.
-. Set the UTA/UTA2 configuration on node3.
-. Map ports from node1 to node3.
-. Move non-SAN data LIFs owned by node1 from node2 to node3 and verify SNA LIFs on node3.
-. Relocate non-root aggregates from node2 to node3.
-. Move non-SAN data LIFs owned by node2 to node3.
+a| During Stage 3, you install and boot node3, map the cluster and node-management ports from node1 to node3, and move data LIFs and SAN LIFs belonging to node1 from node2 to node3. You also relocate all aggregates from node2 to node3, and move the data LIFs and SAN LIFs owned by node2 to node3.
 
 Aggregate ownership at the end of Stage 3:
 
@@ -79,17 +62,11 @@ Aggregate ownership at the end of Stage 3:
 * Node2 is the home owner and current owner of aggregates belonging to node2 but not the home owner.
 
 | link:stage_4_index.html[Stage 4: Retire node2]
-a| . Record node2 information.
-. Retire node2.
-
+a| During Stage 4, you record node2 information for use later in the procedure and then retire node2.
 No changes occur in aggregate ownership.
 
 | link:stage_5_index.html[Stage 5: Install and boot node4]
-a| . Install and boot node4.
-. Set the UTA/UTA2 configuration on node4.
-. Map ports from node2 to node4.
-. Move non-SAN data LIFs owned by node2 from node3 to node4 and verify SNA LIFs on node4.
-. Relocate node2's non-root aggregates from node3 to node4.
+a| During Stage 5, you install and boot node4, map the cluster and node-management ports from node2 to node4, and move data LIFs and SAN LIFs belonging to node2 from node3 to node4. You also relocate node2 aggregates from node3 to node4 and move the data LIFs and SAN LIFs owned by node2 to node3.
 
 Aggregate ownership at the end of Stage 5:
 
@@ -97,14 +74,9 @@ Aggregate ownership at the end of Stage 5:
 * Node4 is the home owner and current owner of aggregates that originally belonged to node2.
 
 | link:stage_6_index.html[Stage 6: Complete the upgrade]
-a| . Confirm the new controllers are set up correctly.
-. Set up Storage Encryption on the new nodes.
+a| During Stage 6, you confirm that the new nodes are set up correctly and set up Storage Encryption or NetApp Volume Encryption if the new nodes are encryption-enabled. You should also decommission the old nodes resume SnapMirror operations.
 +
-This task is required only if you are upgrading to a system with self-encrypting drives.
-. Decommission the old system.
-. Resume NetApp SnapMirror relationships.
-+
-*Note:* The storage virtual machine (SVM) disaster recovery updates will not be interrupted as per the schedules assigned.
+NOTE: The storage virtual machine (SVM) disaster recovery updates will not be interrupted as per the schedules assigned.
 
 No changes occur in aggregate ownership.
 |===

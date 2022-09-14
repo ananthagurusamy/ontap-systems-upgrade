@@ -64,6 +64,9 @@ If you are upgrading to an A800, go to <<auto_check_4_step23,Step 23>>.
 
 . [[auto_check_4_step15]]On node4, go to the boot menu, and using 22/7, select the hidden option `boot_after_controller_replacement`. At the prompt, enter node2 to reassign the disks of node2 to node4, as per the following example.
 +
+.Expand the console output example
+[%collapsible]
+====
 ----
 LOADER-A> boot_ontap menu ...
 *******************************
@@ -138,13 +141,14 @@ WARNING: System ID mismatch. This usually occurs when replacing a boot device or
 Override system ID? {y|n} y
 Login: ...
 ----
+====
 
 . If the system goes into a reboot loop with the message `no disks found`, this is because it has reset the ports back to the target mode and therefore is unable to see any disks. Continue with <<auto_check_4_step17,Step 17>> through <<auto_check_4_step22,Step 22>> to resolve this.
 
 include::../_include/ru_auto_check_config_uta_uta2_ports_node4_step_17_22.adoc[]
 
 [start=23]
-. [[auto_check_4_step23]]If you are upgrading from a system with external disks to a system that supports internal and external disks (AFF A800 systems, for example), set the node2 aggregate as the root aggregate to ensure node4 boots from the root aggregate of node2. To set the root aggregate, go to the boot menu and select option `5` to enter maintenance mode.
+. [[auto_check_4_step23]]If you are upgrading from a system with external disks to a system that supports internal and external disks (AFF A800 systems, for example), set the node2 aggregate as the root aggregate to confirm that node4 boots from the root aggregate of node2. To set the root aggregate, go to the boot menu and select option `5` to enter maintenance mode.
 +
 WARNING: *You must perform the following substeps in the exact order shown; failure to do so might cause an outage or even data loss.*
 

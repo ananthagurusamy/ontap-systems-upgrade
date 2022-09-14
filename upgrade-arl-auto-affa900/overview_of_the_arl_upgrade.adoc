@@ -19,76 +19,51 @@ include::../_include/ru_auto_overview_arl_workflow_top.adoc[]
 |===
 | Stage | Steps
 
-| link:verify_upgrade_hardware.html[Stage 1: Prepare for upgrade]
-a| . Verify the upgrade hardware
-. Run prechecks to verify that you can perform the operation
-. Correct aggregate ownership if a precheck fails
-. Enter the cluster-base license keys
-. Get an IP address for storage encryption
-. Manage authentication by using a Key Management Operability Protocol (KMIP) server
-. Manage storage encryption by using an onboard key manager (OKM)
-. Quiesce the SnapMirror relationships (optional)
+| link:stage_1_index.html[Stage 1: Prepare for upgrade]
+a| During Stage 2, you relocate node1 non-root aggregates and NAS data LIFs to node2. This process is largely automated; the operation pauses to enable you to check its status. You must manually resume the operation. If required, you relocate failed or vetoed aggregates. You record node1 information for use later in the procedure before swapping the corresponding node1 controller and NVRAM modules, retiring node1, and netbooting the upgraded node1.
 
 Aggregate ownership at the end of Stage 1:
 
 * Node1 is the home owner and current owner of the node1 aggregates
 * Node2 is the home owner and current owner of the node2 aggregates
 
-| link:relocate_non_root_aggr_and_nas_data_lifs_node1_node2.html[Stage 2: Relocate resources from node1 and retire AFF A700 or FAS9000 node1]
-a| .	Relocate non-root aggregates and NAS data LIFs owned by node1 to node2
-. Relocate failed or vetoed aggregates
-. Retire node1
-.	Remove the AFF A700 or FAS9000 controller and NVRAM modules
-.	Install the AFF A900 or FAS9500 NVRAM and controller modules on node1
-.	Netboot node1
+| link:stage_2_index.html[Stage 2: Relocate resources from node1 and retire AFF A700 or FAS9000 node1]
+a| During Stage 2, you relocate node1 non-root aggregates and NAS data LIFs to node2. This process is largely automated; the operation pauses to enable you to check its status. You must manually resume the operation. If required, you relocate failed or vetoed aggregates. You record node1 information for use later in the procedure before retiring node1. You can also prepare to netboot node1 later in the procedure.
 
 Aggregate ownership at the end of Stage 2:
 
 * Node2 is the current owner of node1 aggregates
 * Node2 is the home owner and current owner of node2 aggregates
 
-| link:boot_node1_with_a900_controller_and_nvs.html[Stage 3: Boot node1 with the AFF A900 or FAS9500 controller and NVRAM modules]
-a| . Boot node1 with the AFF A900 or FAS9500 controller and NVRAM modules
-.	Verify that node1 is successfully installed
-.	Restore node1 network configuration
-.	Restore key-manager configuration on the upgraded node1
-.	Move non-root aggregates and NAS data LIFs owned by node1 from node2 to the upgraded node1
+| link:stage_3_index.html[Stage 3: Boot node1 with the AFF A900 or FAS9500 controller and NVRAM modules]
+a| During Stage 3, you boot node1 with upgraded controller and NVRAM modules and verify the upgraded node1 installation. If you are using NetApp Volume Encryption (NVE), you restore key-manager configuration. You also relocate node1 non-root aggregates and NAS data LIFs from node2 to the upgraded node1 and verify that the SAN LIFs exist on node1.
 
 Aggregate ownership at the end of Stage 3:
 
 * Upgraded AFF A900 or FAS9500 node1 is the home owner and current owner of node1 aggregates
 * Node2 is the home owner and current owner of node2 aggregates
 
-| link:relocate_non_root_aggr_nas_lifs_from_node2_to_node1.html[Stage 4: Relocate resources from node2 and retire node2]
-a| .	Relocate non-root aggregates and NAS data LIFs from node2 to node1
-.	Retire node2
+| link:stage_4_index.html[Stage 4: Relocate resources from node2 and retire node2]
+a| During Stage 4, you relocate non-root aggregates and NAS data LIFs from node2 to the upgraded node1 and retire node2.
 
 Aggregate ownership at the end of Stage 4:
 
 *	Upgraded node1 is the home owner and current owner of aggregates that originally belonged to node1
 *	Upgraded node1 is the current owner of node2 aggregates
 
-| link:install_a900_nvs_and_controller_on_node2.html[Stage 5: Install the AFF A900 or FAS9500 NVRAM and controller modules on node2]
-a| .	Install the AFF A900 or FAS9500 NVRAM and controller modules on node2
-.	Netboot node2
+| link:stage_5_index.html[Stage 5: Install the AFF A900 or FAS9500 NVRAM and controller modules on node2]
+a| During Stage 5, you install the new NVRAM and controller modules that you received for the upgraded node2 and then netboot node2.
 
 Aggregate ownership at the end of Stage 5:
 
 *	Upgraded node1 is the home owner and current owner of the aggregates that originally belonged to node1.
 *	Upgraded node2 is the home owner and current owner of aggregates that originally belonged to node2.
 
-| link:boot_node2_with_a900_controller_and_nvs.html[Stage 6: Boot node2 with the AFF A900 or FAS9500 controller and NVRAM modules]
-a| .	Boot node2 with the AFF A900 or FAS9500 controller and NVRAM modules
-.	Verify that node2 is correctly installed
-.	Restore node2 network configuration
-.	Move non-root aggregates and NAS data LIFs back to node2
+| link:stage_6_index.html[Stage 6: Boot node2 with the AFF A900 or FAS9500 controller and NVRAM modules]
+a| During Stage 6, you boot node2 with upgraded controller and NVRAM modules and verify the upgraded node2 installation. If you are using NVE, you restore key-manager configuration. You also relocate node1 non-root aggregates and NAS data LIFs from node1 to the upgraded node2 and verify that the SAN LIFs exist on node2.
 
-| link:ensure_new_controllers_are_set_up_correctly.html[Stage 7: Complete the upgrade]
-a| . Verify that the new controllers are set up correctly
-. Set up Storage Encryption on the new controller module
-. Set up NetApp Volume Encryption on the new controller module.
-. Decommission the old system.
-. Resume NetApp SnapMirror operations
+| link:stage_7_index.html[Stage 7: Complete the upgrade]
+a| During Stage 7, you confirm that the new nodes are set up correctly, and if the new nodes are encryption-enabled, configure and set up Storage Encryption or NetApp Volume Encryption . You should also decommission the old nodes and resume the SnapMirror operations.
 |===
 
 //BURT 1452254, 2022-04-26

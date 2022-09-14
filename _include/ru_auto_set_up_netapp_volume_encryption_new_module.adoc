@@ -4,8 +4,23 @@ If the replaced controller or high availability (HA) partner of the new controll
 
 This procedure includes steps that are performed on the new controller module. You must enter the command on the correct node.
 
-.Steps
+[role="tabbed-block"]
+====
+.Onboard Key Manager
+--
+*Configure NVE using Onboard Key Manager*
 
+.Steps
+. Restore authentication keys from all linked key management servers to the new node:
++
+`security key-manager onboard sync`
+--
+
+.External Key Management
+--
+*Configure NVE using External Key Management*
+
+.Steps
 . Verify that the key management servers are still available, their status, and their authentication key information:
 +
 `security key-manager key query -node node`
@@ -31,18 +46,11 @@ You must install the same key management servers that are installed on the exist
 .. Complete the steps in the wizard to configure key management servers.
 . Restore authentication keys from all linked key management servers to the new node:
 +
-[cols=2*,options="header",cols="30,70"]
-|===
-|For... |Use this command...
-
-|External key management (EKM)
-|`security key-manager external restore`
-
+`security key-manager external restore`
++
 This command needs the OKM passphrase
-|Onboard Key Manager
-|`security key-manager onboard sync`
-|===
+--
+====
 
 .After you finish
-
 Check if any volumes were taken offline because authentication keys were not available or EKM servers could not be reached. Bring those volumes back online by using the `volume online` command.

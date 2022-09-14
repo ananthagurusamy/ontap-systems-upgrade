@@ -121,26 +121,26 @@ NOTE: If you have a system with more than two cluster ports per node, such as an
 
 . Run the below set of commands as directed by the controller replacement procedure on the system console.
 +
-You must run and save the output of the following commands individually:
+From the serial port connected to each node, run and save the output of the following commands individually:
 +
 * `vserver services name-service dns show`
-* `network interface show -curr-node _nodename_ -role _cluster,intercluster,node-mgmt,cluster-mgmt,data_`
-* `network port show -node _node_name_ -type physical`
-* `service-processor show -node * -instance`
-* `network fcp adapter show -node _node_name_`
+* `network interface show -curr-node _local_ -role _cluster,intercluster,node-mgmt,cluster-mgmt,data_`
+* `network port show -node _local_ -type physical`
+* `service-processor show local -instance`
+* `network fcp adapter show -node _local_`
 * `network port ifgrp show`
-* `system node show -instance -node _node_name_`
-* `run -node _node_name_ sysconfig`
-* `storage aggregate show -node _node_name_`
+* `system node show -instance -node _local_`
+* `run -node _local_ sysconfig`
+* `storage aggregate show -node _local_`
 * `volume show -node _node_name_`
 * `storage array config show -switch _switch_name_`
-* `system license show -owner _node_name_`
+* `system license show -owner _local_`
 * `storage encryption disk show`
 * `security key-manager onboard show-backup`
 // BURT 1450483 11-Feb-2022
 * `security key-manager external show`
 * `security key-manager external show-status`
-* `reachability show -detail`
+* `network port reachability show -detail`
 
 NOTE: If NetApp Volume Encryption using Onboard Key Manager (OKM) is in use, keep the key manager passphrase ready to complete the key manager resync later in the procedure.
 
