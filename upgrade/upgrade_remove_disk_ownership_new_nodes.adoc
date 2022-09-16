@@ -24,7 +24,7 @@ For example, if you are upgrading your system from A200 to A220 by only swapping
 +
 Contact NetApp technical support if you have questions on removing disk ownership during a controller upgrade.
 +
-The following is a list of systems that have internal storage: FAS2220, FAS2240-2, FAS2240-4, FAS2520, FAS2552, FAS2554, FAS2620, FAS2650, FAS2720, FAS2750, AFF A200, AFF A220, AFF A700s, AFF A800, AFF A250.
+The following is a list of systems that have internal storage: FAS2520, FAS2552, FAS2554, FAS2620, FAS2650, FAS2720, FAS2750, AFF A200, AFF A220, AFF A700s, AFF A800, AFF A250.
 +
 If your system is not listed above, see the https://hwu.netapp.com[NetApp Hardware Universe^] to check if it has internal drives.
 ====
@@ -87,3 +87,5 @@ All listed disks should be unassigned.
 . Exit maintenance mode:
 +
 `halt`
+
+// BURT 1493415, 2022-09-02
