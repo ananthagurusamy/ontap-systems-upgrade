@@ -104,11 +104,11 @@ You can compare the output with the output that you captured in the link:prepare
 `system service-processor network modify -node _node_name_`
 +
 Refer to link:other_references.html[References] to link to the _System Administration Reference_ for information about the SPs and the _ONTAP 9 Commands: Manual Page Reference_ for detailed information about the system `service-processor network modify` command.
-//BURT-1489176 24-Aug-2022: removed the -cifs- ndo-duration command
+// 2022 SEP 22, BURT-1481976
 . If you want to set up a switchless cluster on the new nodes, refer to link:other_references.html[References] to link to the _NetApp Support Site_ and follow the instructions in _Transitioning to a two-node switchless cluster_.
 
 .After you finish
 
 If Storage Encryption is enabled on node1 and node2, complete the section link:set_up_storage_encryption_new_module.html[Set up Storage Encryption on the new controller module]. Otherwise, complete the section link:decommission_old_system.html[Decommission the old system].
 
-// BURT 1476251, 2022-05-16
+// 2022-MAY-16, BURT 1476251 
