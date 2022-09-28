@@ -235,6 +235,8 @@ DISK         OWNER                       POOL   SERIAL NUMBER   HOME
 
 . Reassign node2's spares, disks belonging to the root, and any non-root aggregates that were not relocated to node3 earlier in section link:relocate_non_root_aggr_node2_node3.html[Relocate non-root aggregates from node2 to node3]:
 +
+NOTE: If you have hybrid aggregates on your system, you have shared disks. You must use the correct disk reassign command from the above table.
++
 [cols=2*,options="header",cols="35,65"]
 |===
 |Disk type... |Run the command...

@@ -268,6 +268,8 @@ NOTE: You might see the message `disk show: No disks match option -a.` after ent
 +
 Enter the appropriate form of the `disk reassign` command based on whether your system has shared disks:
 +
+NOTE: If you have hybrid aggregates on your system, you have shared disks. You must use the correct disk reassign command from the following table.
++
 [cols="35,65"]
 |===
 |If disk type is... |Then run the command...
@@ -469,3 +471,4 @@ The node might go through one round of reboot before booting normally.
 // 22 FEB 2021: Formatted from CMS
 // Clean-up, 2022-03-09
 // BURT 1478241, 2022-05-13
+// BURT 1501272, 28 Sep 2022
