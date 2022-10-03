@@ -1,4 +1,4 @@
-If the replaced controller or high availability (HA) partner of the new controller uses NetApp Volume Encryption (NVE), you must configure the new controller module for NVE.
+If the replaced controller or high availability (HA) partner of the new controller uses NetApp Volume Encryption (NVE) or NetApp Aggregate Encyrption (NAE), you must configure the new controller module for NVE or NAE.
 
 .About this task
 
@@ -8,7 +8,7 @@ This procedure includes steps that are performed on the new controller module. Y
 ====
 .Onboard Key Manager
 --
-*Configure NVE using Onboard Key Manager*
+*Configure NVE or NAE using Onboard Key Manager*
 
 .Steps
 . Restore authentication keys from all linked key management servers to the new node:
@@ -18,7 +18,7 @@ This procedure includes steps that are performed on the new controller module. Y
 
 .External Key Management
 --
-*Configure NVE using External Key Management*
+*Configure NVE or NAE using External Key Management*
 
 .Steps
 . Verify that the key management servers are still available, their status, and their authentication key information:
@@ -54,3 +54,5 @@ This command needs the OKM passphrase
 
 .After you finish
 Check if any volumes were taken offline because authentication keys were not available or EKM servers could not be reached. Bring those volumes back online by using the `volume online` command.
+
+// 2022-Oct-03, BURT 1476241
