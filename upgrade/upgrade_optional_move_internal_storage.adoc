@@ -2,14 +2,14 @@
 permalink: upgrade/upgrade-optional-move-internal-storage.html
 sidebar: sidebar
 keywords: node, support, model, internal, sata, drive, ssd, moving, move, upgrading, upgrade, convert, move internal storage or convert the system to a drive shelf
-summary: If your original node is one of the supported models, you can move its internal SATA drives, SSDs, or SAS drives to a drive shelf that is attached to the new nodes during the process of upgrading by moving storage. You can also convert the system to a drive shelf and attach it to the new nodes.
+summary: If your original node is one of the supported models, you have the option to move its internal SATA drives, SSDs, or SAS drives to a drive shelf that is attached to the new nodes during the process of upgrading by moving storage. You can also convert the system to a drive shelf and attach it to the new nodes.
 ---
-= Optional: Move internal storage or convert the system to a drive shelf
+= Overview
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-If your original node is one of the supported models, you can move its internal SATA drives, SSDs, or SAS drives to a drive shelf that is attached to the new nodes during the process of upgrading by moving storage. You can also convert the system to a drive shelf and attach it to the new nodes.
+If your original node is one of the supported models, you have the option to move its internal SATA drives, SSDs, or SAS drives to a drive shelf that is attached to the new nodes during the process of upgrading by moving storage. You can also convert the system to a drive shelf and attach it to the new nodes.
 
 .About this task
 You can move drives or drive shelves only within the same cluster.
