@@ -4,12 +4,12 @@ sidebar: sidebar
 keywords: upgrade
 summary: 'If you are upgrading by moving storage, you prepare the original nodes and set up the new nodes. Some platform models support transferring internal storage to the new nodes. You reassign disks and restore root volume configuration to the new nodes and configure network ports. Upgrading by moving storage is a disruptive procedure.'
 ---
-= Upgrade controller hardware by moving storage
+= Workflow
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-If you are upgrading by moving storage, you prepare the original nodes and set up the new nodes. Some platform models support transferring internal storage to the new nodes. You reassign disks and restore root volume configuration to the new nodes and configure network ports. Upgrading by moving storage is a disruptive procedure.
+If you are upgrading controller hardware by moving storage, you prepare the original nodes and set up the new nodes. Some platform models support transferring internal storage to the new nodes. You reassign disks and restore root volume configuration to the new nodes and configure network ports. Upgrading by moving storage is a disruptive procedure.
 
 image::../upgrade/media/workflow_for_upgrading_by_moving_storage.png[Workflow for upgrading controller hardware by moving storage]
 
