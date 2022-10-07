@@ -5,7 +5,7 @@ keywords:  aggregate, relocation, moving, manual, upgrade, relocate, hardware
 summary: Use aggregate relocation to upgrade controller hardware
 ---
 
-= Use aggregate relocation to upgrade controller hardware
+= Overview
 :hardbreaks:
 :nofooter:
 :icons: font

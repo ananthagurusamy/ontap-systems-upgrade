@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: complete, upgrade, ontap, complete the upgrade in ontap 9.8
 summary: Use these steps to complete the upgrade in ONTAP 9.8 or later.
 ---
-= Complete the upgrade in ONTAP 9.8 or later
+= Overview
 :icons: font
 :imagesdir: ../media/
 
