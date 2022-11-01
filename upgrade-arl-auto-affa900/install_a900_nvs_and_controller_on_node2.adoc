@@ -15,7 +15,11 @@ summary: "Installation instructions for an AFF A900 NVRAM module and controller 
 [.lead]
 Install the AFF A900 or FAS9500 NVRAM and controller modules that you received for the upgrade on node2. Node2 is controller B located on the right side of the chassis when looking at the controllers from the rear of the system.
 
-NOTE: Move all blank filler modules in slots 6-1 and 6-2 from the old NVRAM module to the new NVRAM module.
+You must note the following when performing the installation:
+
+* Move all blank filler modules in slots 6-1 and 6-2 from the old NVRAM module to the new NVRAM module.
+* Do NOT move the coredump device from the AFF A700 NVRAM module to the AFF A900 NVRAM module.
+* Move all flash cache modules installed in the FAS9000 NVRAM module to the FAS9500 NVRAM module.
 
 .Before you begin
 If you are not already grounded, correctly ground yourself.
