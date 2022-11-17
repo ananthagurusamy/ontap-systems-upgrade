@@ -85,17 +85,21 @@ NOTE: If your controller upgrade model combination is not in the above table, co
 
 h|System h|ONTAP version h|System h|ONTAP version
 |AFF A320 |9.9.1 or later |AFF A400 |9.9.1 or later
-|AFF8060 |9.8P13 or later patches |AFF A900 |9.10.1 or later
-|AFF8080 |9.8P10 or later patches |AFF A900 |9.10.1 or later
+|AFF8060 |9.8P13 or later patches |AFF A900 |9.10.1 to 9.12.1
+|AFF8080 |9.8P10 or later patches |AFF A900 |9.10.1 to 9.12.1
 |FAS8060 |9.8P13 or later patches |FAS9500 |9.10.1P3 or later
 |FAS8080 |9.8P12 or later patches |FAS9500 |9.10.1P3 or later
 |===
-// BURT 1379899 30-Aug-2021
-//BURT 1455646 5-May-2022
-// BURT 1480916 27-May-2022
+
+NOTE: You are not required to have the same ONTAP version on the old controller and replacement controller for the upgrade combinations shown in the preceding table. For these upgrade combinations, the ONTAP software upgrade is performed with the controller upgrade and you cannot back out of the upgrade after you start the procedure. When upgrading, you must load the replacement controller with a supported ONTAP version and patch level for your upgrade scenario.
 
 include::../_include/ru_auto_decide_use_arl_guide_end.adoc[]
 
-// 2021-04-14 Burt 1367155
-// 2021-04-16 Burt 1379899
+// BURT 1514374 17-Nov-2022
+// BURT 1501196 17-Nov-2022
+// BURT 1480916 27-May-2022
+// BURT 1455646 5-May-2022
+// BURT 1379899 30-Aug-2021
+// Burt 1379899 16-Apr-2021
+// Burt 1367155 14-Apr-2021 
 // Clean-up, 2022-03-09
