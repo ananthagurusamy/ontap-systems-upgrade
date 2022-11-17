@@ -94,11 +94,11 @@ Interrupt the autoboot by pressing Ctrl-C at the boot environment prompt.
 +
 `set time _hh:mm:ss_`
 
-. Set the `partner-sysid` parameter on node4. For node4, `partner-sysid` must be that of node3.
-+
-In boot loader, set the partner system ID on node4:
+. In boot loader, set the partner system ID on node4:
 +
 `setenv partner-sysid _node3_sysid_`
++
+For node4, `partner-sysid` must be that of node3.
 +
 Save the settings:
 +
