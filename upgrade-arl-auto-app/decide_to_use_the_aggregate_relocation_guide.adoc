@@ -78,7 +78,7 @@ NOTE: If your controller upgrade model combination is not in the above table, co
 
 ^3^For FAS8020, FAS8040, AFF8020, and AFF8040 system upgrades to the target replacement controllers listed in the table above, the replacement controllers must be running same ONTAP version as the old controller. Note that FAS8020, FAS8040, AFF8020, and AFF8040 systems do not support ONTAP versions later than ONTAP 9.8.
 
-^4^Verify the supported ONTAP versions for your controller upgrade.
+^4^The following table shows the minimum ONTAP versions for specific supported controller upgrade combinations.
 [cols=4*,cols="20,30,20,30"]
 |===
 2+h|Old controller 2+h|Replacement controller
@@ -91,7 +91,15 @@ h|System h|ONTAP version h|System h|ONTAP version
 |FAS8080 |9.8P12 or later patches |FAS9500 |9.10.1P3 or later
 |===
 
-NOTE: You are not required to have the same ONTAP version on the old controller and replacement controller for the upgrade combinations shown in the preceding table. For these upgrade combinations, the ONTAP software upgrade is performed with the controller upgrade and you cannot back out of the upgrade after you start the procedure. When upgrading, you must load the replacement controller with a supported ONTAP version and patch level for your upgrade scenario.
+[NOTE]
+====
+It is not required to use the same ONTAP version on the existing and replacement controllers for the upgrade combinations shown in the preceding table. For these upgrade combinations, the ONTAP software upgrade is performed with the controller upgrade. 
+
+It is not possible to back out or cancel the controller upgrade after you start the procedure and upgrade the first node. 
+
+When upgrading, you must install the replacement controller with a supported ONTAP version and patch level for your upgrade scenario as shown in the preceding table.
+====
+
 
 include::../_include/ru_auto_decide_use_arl_guide_end.adoc[]
 
