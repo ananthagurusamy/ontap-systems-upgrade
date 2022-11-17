@@ -16,7 +16,7 @@ summary: "Decide whether to use the manual ARL procedure to upgrade storage cont
 include::../_include/ru_man_decide_chunk_a.adoc[]
 * You have a system that uses Fabric MetroCluster 4-node and 8-node configurations running ONTAP 9.8 or later.
 
-* You have a hybrid aggregates on your system. 
+* You have hybrid aggregates on your system. 
 
 include::../_include/ru_man_decide_chunk_b.adoc[]
 

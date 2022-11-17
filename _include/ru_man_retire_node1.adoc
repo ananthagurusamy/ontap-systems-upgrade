@@ -38,7 +38,7 @@ a|.. Disable cluster high availability by entering the following command on eith
 `storage failover modify -node _node1_ -enabled false`
 |===
 +
-WARNING: It is mandatory to disable storage failover. Controller upgrade failure, disruption to data access, and data loss can occur if you do not disable storage failover. 
+WARNING: If you do not disable storage failover, a controller upgrade failure can occur which can disrupt data access and lead to data loss.
 
 . Verify that storage failover was disabled:
 +
