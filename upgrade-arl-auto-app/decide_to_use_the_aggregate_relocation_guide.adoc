@@ -95,11 +95,10 @@ h|System h|ONTAP version h|System h|ONTAP version
 ====
 It is not required to use the same ONTAP version on the existing and replacement controllers for the upgrade combinations shown in the preceding table. For these upgrade combinations, the ONTAP software upgrade is performed with the controller upgrade. 
 
-It is not possible to back out or cancel the controller upgrade after you start the procedure and upgrade the first node. 
+When upgrading, you must install the replacement controller with a supported ONTAP version and patch level for your upgrade scenario as shown in the preceding table. 
 
-When upgrading, you must install the replacement controller with a supported ONTAP version and patch level for your upgrade scenario as shown in the preceding table.
+It is not possible to cancel or back out of a controller upgrade after you start the procedure and upgrade the first node. 
 ====
-
 
 include::../_include/ru_auto_decide_use_arl_guide_end.adoc[]
 
