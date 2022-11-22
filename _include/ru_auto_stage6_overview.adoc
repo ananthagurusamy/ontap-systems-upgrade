@@ -6,7 +6,7 @@ During Stage 6, you confirm that the new nodes are set up correctly and, if the 
 // BURT-1476241 2022-August-12
 . link:ensure_new_controllers_are_set_up_correctly.html[Confirm that the new controllers are set up correctly]
 . link:set_up_storage_encryption_new_module.html[Set up Storage Encryption on the new controller module]
-. link:set_up_netapp_volume_encryption_new_module.html[Set up NetApp Encryption on the new controller module]
+. link:set_up_netapp_volume_encryption_new_module.html[Set up NetApp Volume or Aggregate Encryption on the new controller module]
 . link:decommission_old_system.html[Decommission the old system]
 . link:resume_snapmirror_operations.html[Resume SnapMirror operations]
 

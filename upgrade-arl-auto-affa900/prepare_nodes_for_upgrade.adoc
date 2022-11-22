@@ -131,4 +131,4 @@ Refer to link:other_references.html[References] to link to the _NetApp Support S
 
 For detailed information about licensing, refer to link:other_references.html[References] to link to the _System Administration Reference_.
 
-// BURT 1476251, 2022-05-16
+// BURT 1476251, 16 MAY 2022

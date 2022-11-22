@@ -2,10 +2,10 @@
 sidebar: sidebar
 permalink: upgrade-arl-manual-app/set_up_netapp_encryption_on_new_controller.html
 keywords: set up, netapp volume encryption, encryption, controller, module
-summary: "If required, configure the new controller module for NVE during a manual ARL upgrade on controllers running ONTAP 9.8 or later."
+summary: "If required, configure the new controller module for NVE or NAE during a manual ARL upgrade on controllers running ONTAP 9.8 or later."
 ---
 
-= Set up NetApp Volume Encryption or NetApp Aggregate Encryption on the new controller module
+= Set up NetApp Volume or Aggregte Encryption on the new controller module
 :hardbreaks:
 :nofooter:
 :icons: font

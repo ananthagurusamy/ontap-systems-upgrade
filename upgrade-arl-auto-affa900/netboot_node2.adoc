@@ -46,11 +46,11 @@ NOTE:	You must use the management port and IP as the netboot connection. Do not 
 |Not running
 a|Manually configure the connection by using the following command at the boot environment prompt:
 `ifconfig e0M -addr=_filer_addr_ -mask=_netmask_ -gw=_gateway_ -dns=_dns_addr_ -domain=_dns_domain_`
-`_filer_addr_` is the IP address of the storage system.
-`_netmask_` is the network mask of the storage system.
-`_gateway_` is the gateway for the storage system.
-`_dns_addr_` is the IP address of a name server on your network. This parameter is optional.
-`_dns_domain_` is the Domain Name Service (DNS) domain name. This parameter is optional.
+`_filer_addr_` is the IP address of the storage system. (Mandatory)
+`_netmask_` is the network mask of the storage system. (Mandatory)
+`_gateway_` is the gateway for the storage system. (Mandatory)
+`_dns_addr_` is the IP address of a name server on your network. (Optional)
+`_dns_domain_` is the Domain Name Service (DNS) domain name. (Optional)
 
 NOTE:	Other parameters might be necessary for your interface. Enter `help ifconfig` at the firmware prompt for details.
 |===

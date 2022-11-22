@@ -99,7 +99,7 @@ entries:
         url: /upgrade-arl-manual-app/ensure_controllers_set_up_correctly.html
       - title: "Set up Storage Encryption on the new controller module"
         url: /upgrade-arl-manual-app/set_up_storage_encryption_new_controller.html
-      - title: "Set up NetApp Volume Encryption on the new controller module"
+      - title: "Set up NetApp Volume or Aggregate Encryption on the new controller module"
         url: /upgrade-arl-manual-app/set_up_netapp_encryption_on_new_controller.html
       - title: "Decommission the old system"
         url: /upgrade-arl-manual-app/decommission_old_system.html
