@@ -117,7 +117,7 @@ From the serial port connected to each node, run and save the output of the foll
 * `security key-manager external show-status`
 * `network port reachability show -detail`
 
-NOTE: If NetApp Volume Encryption using Onboard Key Manager is in use, keep the key-manager passphrase ready to complete the key manager resync later in the procedure.
+NOTE: If NetApp Volume Encryption or NetApp Aggregate Encryption using Onboard Key Manager is in use, keep the key-manager passphrase ready to complete the key manager resync later in the procedure.
 
 include::../_include/ru_auto_correct_aggregate_ownership.adoc[]
 
@@ -131,4 +131,4 @@ Refer to link:other_references.html[References] to link to the _NetApp Support S
 
 For detailed information about licensing, refer to link:other_references.html[References] to link to the _System Administration Reference_.
 
-// BURT 1476251, 2022-05-16
+// BURT 1476251, 16 MAY 2022

@@ -123,14 +123,13 @@ From the serial port connected to each node, run and save the output of the foll
 * `system license show -owner _local_`
 * `storage encryption disk show`
 
-NOTE: If NetApp Volume Encryption using Onboard Key Manager is in use, keep the key manager passphrase ready to complete the key manager resync later in the procedure.
+NOTE: If NetApp Volume Encryption or NetApp Aggregate Encryption using Onboard Key Manager is in use, keep the key manager passphrase ready to complete the key manager resync later in the procedure.
 
 
 include::../_include/ru_auto_correct_aggregate_ownership.adoc[]
 
 include::../_include/ru_auto_license.adoc[]
 
-// page 16-19 of pdf
-
+// BURT 1476241, 16 MAY 2022 
 // Clean-up, 2022-03-09
-// 2022-05-16, BURT 1476241
+

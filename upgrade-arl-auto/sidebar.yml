@@ -96,7 +96,7 @@ entries:
     url: /upgrade-arl-auto/ensure_new_controllers_are_set_up_correctly.html
   - title: Set up Storage Encryption on the new controller module
     url: /upgrade-arl-auto/set_up_storage_encryption_new_module.html
-  - title: Set up NetApp Volume Encryption on the new controller module
+  - title: Set up NetApp Volume or Aggregate Encryption on the new controller module
     url: /upgrade-arl-auto/set_up_netapp_volume_encryption_new_module.html
   - title: Decommission the old system
     url: /upgrade-arl-auto/decommission_old_system.html
