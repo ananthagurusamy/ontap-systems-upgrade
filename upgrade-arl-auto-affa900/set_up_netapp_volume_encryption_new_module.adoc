@@ -5,7 +5,7 @@ keywords: set up, netapp volume encryption, controller, module, nve, node
 summary: If required, configure the new controller module for NVE during an AFF A700 to AFF A900 upgrade."
 ---
 
-= Set up NetApp Volume Encryption on the new controller module
+= Set up NetApp Volume Encryption or NetApp Aggregate Encryption on the new controller module
 :hardbreaks:
 :nofooter:
 :icons: font

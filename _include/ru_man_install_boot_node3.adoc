@@ -212,7 +212,7 @@ This procedure is not supported for Non-Disruptive Upgrade on an HA pair.
 +
 The note applies to nondisruptive upgrades of ONTAP, and not upgrades of controllers.
 +
-NOTE: Always use netboot to update the new node to the desired image. If you use another method to install the image on the new controller, the wrong image might install. This issue applies to all releases of ONTAP.
+NOTE: Always use netboot to update the new node to the desired image. If you use another method to install the image on the new controller, the wrong image might install. This issue applies to all releases of ONTAP. The netboot procedure combined with option `(7) Install new software` wipes the boot media and places the same version of ONTAP on both image partitions.
 
 . [[man_install3_step23]]If you are prompted to continue the procedure, enter `y`, and when prompted for the package, enter the following URL:
 +
