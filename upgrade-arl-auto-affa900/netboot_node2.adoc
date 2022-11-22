@@ -161,21 +161,19 @@ NOTE: Set the corresponding UTC date on node2.
 +
 NOTE: Set the corresponding UTC time on node2.
 
-.	If necessary, set the partner system ID on node2:
-+
-NOTE: This is the system ID of the node1 that you are upgrading to an AFF A900.
+.	Set the partner system ID on node2:
 +
 `setenv partner-sysid _node1_sysid_`
++
+For node2, the `partner-sysid` must be that of the node1 that you are upgrading to an AFF A900 or FAS9500.
 
 ..	Save the settings:
 +
 `saveenv`
 
-.	On node2, at the LOADER prompt, verify the `partner-sysid` for node1:
+.	On node2, at the LOADER prompt, verify the `partner-sysid` for node2:
 +
 `printenv partner-sysid`
-+
-For node2, the `partner-sysid` must be that of node1.
 
 // BURT 1476251, 2022-05-16
 //BURT 1452254, 2022-04-27

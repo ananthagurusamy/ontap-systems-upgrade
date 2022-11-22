@@ -1,4 +1,4 @@
-If the replaced controller or high availability (HA) partner of the new controller uses NetApp Volume Encryption (NVE) or NetApp Aggregate Encryption (NAE), you must configure the new controller module for NVE or NAE.
+If the replaced controller or high availability (HA) partner of the new controller uses NetApp Volume Encryption (NVE) or NetApp Aggregate Encyrption (NAE), you must configure the new controller module for NVE or NAE.
 
 .About this task
 
@@ -54,3 +54,5 @@ This command needs the OKM passphrase
 
 .After you finish
 Check if any volumes were taken offline because authentication keys were not available or EKM servers could not be reached. Bring those volumes back online by using the `volume online` command.
+
+// 2022-Oct-03, BURT 1476241

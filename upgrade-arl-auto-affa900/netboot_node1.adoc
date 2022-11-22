@@ -173,7 +173,7 @@ NOTE: Set the corresponding UTC time on node1.
 +
 `setenv partner-sysid _node2_sysid_`
 +
-You can obtain the node2 system ID from the `node show -node _node2_` command output on node2.
+For node1, the `partner-sysid` must be that of node2. You can obtain the node2 system ID from the `node show -node _node2_` command output on node2.
 +
 ..	Save the settings:
 +
@@ -181,8 +181,8 @@ You can obtain the node2 system ID from the `node show -node _node2_` command ou
 .	On node1, at the LOADER prompt, verify the `partner-sysid` for node1:
 +
 `printenv partner-sysid`
-+
-For node1, the `partner-sysid` must be that of node2.
+
+
 
 //BURT 1452254, 2022-04-27
 // BURT 1476251, 2022-05-16

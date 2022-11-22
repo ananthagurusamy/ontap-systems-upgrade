@@ -24,3 +24,4 @@ If you are using NetApp Aggregate Encryption (NAE) or NetApp Volume Encryption (
 
 include::../_include/ru_auto_restore_key_manager_config_ontap_98.adoc[]
 // 11 DEC 2020, thomi, checked
+// BURT 1476241, 28 Sept 2022
