@@ -42,10 +42,10 @@ entries:
         url: /upgrade-arl-manual/determine_aggregates_on_internal_drives.html
       - title: "Prepare the nodes for upgrade"
         url: /upgrade-arl-manual/prepare_nodes_for_upgrade.html
-      - title: "Get an IP address of an external key management server for storage encryption"
-        url: /upgrade-arl-manual/get_address_key_management_server_encryption.html
-      - title: "Manage authentication using KMIP servers"
-        url: /upgrade-arl-manual/manage_authentication_kmip.html
+    # - title: "Get an IP address of an external key management server for storage encryption"
+     #  url: /upgrade-arl-manual/get_address_key_management_server_encryption.html
+    # - title: "Manage authentication using KMIP servers"
+     #  url: /upgrade-arl-manual/manage_authentication_kmip.html
       - title: "Manage authentication using an onboard key manager"
         url: /upgrade-arl-manual/manage_authentication_okm.html
       - title: "Quiesce the SnapMirror relationships"
@@ -119,6 +119,10 @@ entries:
     entries:
       - title: Overview
         url: /upgrade-arl-manual/stage_6_index.html
+      - title: "Get an IP address of an external key management server for storage encryption"
+        url: /upgrade-arl-manual/get_address_key_management_server_encryption.html
+      - title: "Manage authentication using KMIP servers"
+        url: /upgrade-arl-manual/manage_authentication_kmip.html
       - title: "Confirm that the new controllers are set up correctly"
         url: /upgrade-arl-manual/ensure_controllers_set_up_correctly.html
       - title: "Set up Storage Encryption on the new controller module"
