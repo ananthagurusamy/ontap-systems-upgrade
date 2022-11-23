@@ -25,4 +25,3 @@ During Stage 7, you confirm that the new nodes are set up correctly and, if the 
 . link:decommission_old_system.html[Decommission the old system]
 . link:resume_snapmirror_operations.html[Resume SnapMirror operations]
 //BURT-1476241 13-Sep-2022
-g
