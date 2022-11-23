@@ -163,7 +163,7 @@ running ONTAP running in 7-Mode.
 . [[man_install3_step20]]Configure the netboot connection by choosing one of the following actions.
 +
 NOTE: You must use the management port and IP as the netboot connection. Do not use a data LIF IP or else a data outage might occur while the upgrade is being performed.
-
++
 [cols=2*,options="header",cols="35,65"]
 |===
 |If Dynamic Host Configuration Protocol (DHCP) is... |Then...
