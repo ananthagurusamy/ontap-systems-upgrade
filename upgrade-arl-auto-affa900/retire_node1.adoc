@@ -102,7 +102,7 @@ You must note the following when performing the installation:
 If you are not already grounded, correctly ground yourself.
 
 === Install the AFF A900 or FAS9500 NVRAM module
-Use the following procedure to install the AFF A900 or FAS9500 NVRAM module in slot 6 of node1
+Use the following procedure to install the AFF A900 or FAS9500 NVRAM module in slot 6 of node1.
 
 .Steps
 .	Align the NVRAM module with the edges of the chassis opening in slot 6.
@@ -161,5 +161,5 @@ image::../media/black_circle_two.png[Number two]
 +
 `saveenv`
 
-//BURT 1506458, 2022-OCT-24
-//BURT 1452254, 2022-APR-27
+// 2022-OCT-24, BURT 1506458
+// 2022-APR-27, BURT 1452254
