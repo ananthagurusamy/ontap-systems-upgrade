@@ -142,7 +142,25 @@ You must run and save the output of the following commands individually:
 * `security key-manager external show-status`
 * `reachability show -detail`
 
++
 NOTE: If NetApp Volume Encryption using Onboard Key Manager (OKM) is in use, keep the key manager passphrase ready to complete the key manager resync later in the procedure.
+
+. If your system uses self-encrypting drives, determine the type of self-encrypting drives that are in use on the HA pair that you are upgrading. ONTAP software supports two types of self-encrypting drives:
++
+--
+* FIPS-certified NetApp Storage Encryption (NSE) SAS or NVMe drives
+* Non-FIPS self-encrypting NVMe drives (SED)
+
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Systems/FAS_Systems/How_to_tell_I_have_FIPS_drives_installed[NetApp KB Article: How to tell I have FIPS drives installed^]
+
+[NOTE]
+====
+* You cannot mix FIPS drives with other types of drives on the same node or HA pair.
+* You can mix SEDs with non-encrypting drives on the same node or HA pair.
+====
+
+https://docs.netapp.com/us-en/ontap/encryption-at-rest/support-storage-encryption-concept.html#supported-self-encrypting-drive-types[Learn more about supported self-encrypting drives^]. 
+--
 
 include::../_include/ru_auto_correct_aggregate_ownership.adoc[]
 

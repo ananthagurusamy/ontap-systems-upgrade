@@ -17,11 +17,36 @@ Node2 with the AFF A900 or FAS9500 controller and NVRAM modules is now ready for
 
 .Steps
 
-.	[[A900_boot_node2]]If NetApp Storage Encryption (NSE) is in use on this configuration, the `setenv bootarg.storageencryption.support` command must be set to `true`, and the `kmip.init.maxwait` variable must be set to `off` to avoid a boot loop after the node2 configuration is loaded:
+.	[[boot_node2_step1]]Set the `bootarg.storageencryption.support` and `kmip.init.maxwait` variables to avoid a boot loop after the node2 configuration is loaded.
 +
-`setenv bootarg.storageencryption.support true`
+If you have not already done so earlier in the procedure, determine the type of self-encrypting drives that are in use:
 +
-`setenv kmip.init.maxwait off`
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Systems/FAS_Systems/How_to_tell_I_have_FIPS_drives_installed[NetApp KB Article: How to tell I have FIPS drives installed^]
++
+[cols="35,65"]
+|===
+|If the following drives are in use…	|Then…
+
+|NetApp Storage Encryption (NSE) drives that conform to FIPS 140-2 Level 2 self-encryption requirements
+a|* `setenv bootarg.storageencryption.support *true*`
+
+* `setenv kmip.init.maxwait off`
+
+|NetApp non-FIPS SEDs
+a|* `setenv bootarg.storageencryption.support *false*`
+
+* `setenv kmip.init.maxwait off`
+|===
++
+[NOTE]
+====
+* You cannot mix FIPS drives with other types of drives on the same node or HA pair.
+* You can mix SEDs with non-encrypting drives on the same node or HA pair.
+* If a power outage occurs after you set the `kmip.init.maxwait` variable to `off`, contact technical support for assistance to avoid potential data loss.
+
+* As soon as the controller upgrade completes on the HA pair, you must unset the `kmip.init.maxwait` variable. See link:ensure_new_controllers_are_set_up_correctly.html[Confirm that the new controllers are set up correctly].
+====
+
 .	Boot the node into the boot menu:
 +
 `boot_ontap menu`
