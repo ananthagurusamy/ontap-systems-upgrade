@@ -90,8 +90,11 @@ image::../media/black_circle_two.png[Number two]
 |===
 
 == Install the AFF A900 or FAS9500 NVRAM and controller modules on node1
-You must install the AFF A900 or FAS9500 NVRAM and controller modules that you received for the upgrade on node1.
+Install the AFF A900 or FAS9500 NVRAM and controller modules that you received for the upgrade on node1.
 
+You must note the following when performing the installation:
+
+* Move all blank filler modules in slots 6-1 and 6-2 from the old NVRAM module to the new NVRAM module.
 * Do NOT move the coredump device from the AFF A700 NVRAM module to the AFF A900 NVRAM module.
 * Move all flash cache modules installed in the FAS9000 NVRAM module to the FAS9500 NVRAM module.
 
@@ -158,4 +161,5 @@ image::../media/black_circle_two.png[Number two]
 +
 `saveenv`
 
-//BURT 1452254, 2022-04-27
+// 2022-OCT-24, BURT 1506458
+// 2022-APR-27, BURT 1452254
