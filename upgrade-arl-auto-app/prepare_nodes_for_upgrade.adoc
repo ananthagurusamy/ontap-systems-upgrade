@@ -166,6 +166,7 @@ include::../_include/ru_auto_correct_aggregate_ownership.adoc[]
 
 include::../_include/ru_auto_license.adoc[]
 
-// Clean-up, 2022-03-09
-// BURT  1462831, 2022-03-28
-// 2022-05-17, BURT 1476241
+// 2022 DEC 1, ontap-systems-upgrade-37
+// 2022 MAY 17, BURT 1476241
+// 2022 MAR 28, BURT 1462831 
+// 2022 MAR 09, Clean-up

@@ -98,4 +98,5 @@ You can compare the output with the output that you captured in the section link
 +
 `set diag; systemshell -node _node_name_ -command sudo kenv -u -p kmip.init.maxwait`
 
-// BURT 1476241 2022-05-13
+// 2022 DEC 1, ontap-systems-upgrade-37
+// 2022 MAY 13, BURT 1476241

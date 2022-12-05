@@ -112,4 +112,5 @@ Refer to link:other_references.html[References] to link to the _System Administr
 
 If Storage Encryption is enabled on node1 and node2, complete the section link:set_up_storage_encryption_new_module.html[Set up Storage Encryption on the new controller module]. Otherwise, complete the section link:decommission_old_system.html[Decommission the old system].
 
-// 2022-MAY-16, BURT 1476251 
+// 2022 DEC 1, ontap-systems-upgrade-37
+// 2022 MAY 16, BURT 1476251 
