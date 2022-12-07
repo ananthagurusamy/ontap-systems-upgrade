@@ -176,4 +176,4 @@ You can decommission node1 after the upgrade is completed. See link:decommission
 
 // Clean-up, 2022-03-09
 // 1476241, 2022-05-13
-// BURT 1501272, 28 Sep 2022
+// 2022 SEP 28, BURT 1501272 
