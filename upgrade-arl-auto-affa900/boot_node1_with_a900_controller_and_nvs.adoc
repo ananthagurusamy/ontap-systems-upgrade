@@ -19,9 +19,7 @@ Node1 with the AFF A900 or FAS9500 controller and NVRAM modules is now ready for
 
 . Set the `bootarg.storageencryption.support` and `kmip.init.maxwait` variables to avoid a boot loop after the node1 configuration is loaded.
 +
-If you have not already done so earlier in the procedure, determine the type of self-encrypting drives that are in use:
-+
-https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Systems/FAS_Systems/How_to_tell_I_have_FIPS_drives_installed[NetApp KB Article: How to tell I have FIPS drives installed^]
+If you have not already done so earlier in the procedure, see the Knowledge Base article https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Systems/FAS_Systems/How_to_tell_I_have_FIPS_drives_installed[How to tell I have FIPS drives installed^] to determine the type of self-encrypting drives that are in use.
 +
 [cols="35,65"]
 |===
