@@ -94,8 +94,9 @@ Enter `y` to remove all of the packages.
 +
 You can compare the output with the output that you captured in the section link:prepare_nodes_for_upgrade.html[Prepare the nodes for upgrade].
 
-. If NetApp Storage Encryption (NSE) was in use on the configuration and you set the `setenv bootarg.storageencryption.support` command to `true` with the `_kmip.init.maxwait_` variable `off` (in link:install_boot_node4.html#step27[Install and boot node4, Step 27]), you need to reset the variable:
+. If self-encrypting drives are being used in the configuration and you have set the `kmip.init.maxwait` variable to `off` (for example, in link:install_boot_node4.html#step27[Install and boot node4, Step 27]), you must unset the variable:
 +
 `set diag; systemshell -node _node_name_ -command sudo kenv -u -p kmip.init.maxwait`
 
-// BURT 1476241 2022-05-13
+// 2022 DEC 1, ontap-systems-upgrade-37
+// 2022 MAY 13, BURT 1476241
