@@ -20,4 +20,4 @@ include::../_include/ru_man_decide_chunk_a.adoc[]
 
 include::../_include/ru_man_decide_chunk_b.adoc[]
 
-// BURT 1501272, 28 Sep 2022
+// 2022 SEP 28, BURT 1501272 

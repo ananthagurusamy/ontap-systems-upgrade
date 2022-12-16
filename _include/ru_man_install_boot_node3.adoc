@@ -289,7 +289,7 @@ NOTE: You might see the message `disk show: No disks match option -a.` after ent
 +
 Enter the appropriate form of the `disk reassign` command based on whether your system has shared disks:
 +
-NOTE: If you have shared disks and/or hybrid aggregates on your system, you must use the correct `disk reassign` command from the following table.
+NOTE: If you have shared disks, hybrid aggregates, or both on your system, you must use the correct `disk reassign` command from the following table.
 +
 [cols="35,65"]
 |===
