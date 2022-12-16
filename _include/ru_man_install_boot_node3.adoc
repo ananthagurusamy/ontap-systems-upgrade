@@ -129,18 +129,39 @@ The power should already be on if both controllers are in the same chassis.
 +
 `set-defaults`
 
-. [[man_install3_step16]]If NetApp Storage Encryption (NSE) is in use on this configuration, the `setenv bootarg.storageencryption.support` command must be set to `true`, and the `kmip.init.maxwait` variable needs to be set to `off` to avoid a boot loop after the node1 configuration is loaded:
+. [[man_install3_step16]]Set the `bootarg.storageencryption.support` and `kmip.init.maxwait` variables to avoid a boot loop after the node1 configuration is loaded.
 +
-`setenv bootarg.storageencryption.support true`
+If you have not already done so earlier in the procedure, see the Knowledge Base article https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Systems/FAS_Systems/How_to_tell_I_have_FIPS_drives_installed[How to tell I have FIPS drives installed^] to determine the type of self-encrypting drives that are in use.
 +
-`setenv kmip.init.maxwait off`
+[cols="35,65"]
+|===
+|If the following drives are in use…	|Then…
+
+|NetApp Storage Encryption (NSE) drives that conform to FIPS 140-2 Level 2 self-encryption requirements
+a|* `setenv bootarg.storageencryption.support *true*`
+
+* `setenv kmip.init.maxwait off`
+
+|NetApp non-FIPS SEDs
+a|* `setenv bootarg.storageencryption.support *false*`
+
+* `setenv kmip.init.maxwait off`
+|===
++
+[NOTE]
+====
+* You cannot mix FIPS drives with other types of drives on the same node or HA pair.
+* You can mix SEDs with non-encrypting drives on the same node or HA pair.
+* If a power outage occurs after you set the `kmip.init.maxwait` variable to `off`, contact technical support for assistance to avoid potential data loss.
+
+* As soon as the controller upgrade completes on the HA pair, you must unset the `kmip.init.maxwait` variable. See link:ensure_controllers_set_up_correctly.html[Confirm that the new controllers are set up correctly].
+====
 
 . [[man_install3_step17]] If the version of ONTAP installed on node3 is the same or later than the version of ONTAP 9 installed on node1, list and reassign disks to the new node3:
 +
 `boot_ontap`
 +
-WARNING: *Warning*: If this new node has ever been used in any other cluster or HA pair, you must run `wipeconfig` before proceeding. Failure to do so might result in service outages or data loss. Contact technical support if the replacement controller was previously used, especially if the controllers were
-running ONTAP running in 7-Mode.
+WARNING: If this new node has ever been used in any other cluster or HA pair, you must run `wipeconfig` before proceeding. Failure to do so might result in service outages or data loss. Contact technical support if the replacement controller was previously used, especially if the controllers were running ONTAP running in 7-Mode.
 
 . [[man_install3_step18]]Press CTRL-C to display the boot menu.
 
@@ -466,6 +487,10 @@ Override system id (y|n) ? [n] y
 The node might go through one round of reboot before booting normally.
 
 . [[man_install3_step48]]Log in to node3.
-// 22 FEB 2021: Formatted from CMS
-// Clean-up, 2022-03-09
-// BURT 1478241, 2022-05-13
+
+
+// 2022 MAY 13, BURT 1478241
+// 2022 MAR 09, Clean-up
+// 2021 FEB 22, Formatted from CMS
+
+
