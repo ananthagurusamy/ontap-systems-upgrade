@@ -96,7 +96,8 @@ Enter `y` to remove all of the packages.
 `system license show`
 +
 You can compare the output with the output that you captured in the link:prepare_nodes_for_upgrade.html[Prepare the nodes for upgrade] section.
-.	If NetApp Storage Encryption (NSE) was in use on the configuration and you set the `setenv bootarg.storageencryption.support` command to `true` with the `<kmip.init.maxwait>` variable `off` (in _Boot node2 with the AFF A900 or the FAS9500 controller and NVRAM modules_, link:boot_node2_with_a900_controller_and_nvs.html#A900_boot_node2[Step 1]), you must reset the variable:
+
+. If self-encrypting drives are being used in the configuration and you have set the `kmip.init.maxwait` variable to `off` (for example, in _Boot node2 with the AFF A900 or the FAS9500 controller and NVRAM modules_, link:boot_node2_with_a900_controller_and_nvs.html#boot_node2_step1[Step 1]), you must unset the variable:
 +
 `set diag; systemshell -node _node_name_ -command sudo kenv -u -p kmip.init.maxwait`
 .	Configure the SPs by using the following command on both nodes:
@@ -111,4 +112,5 @@ Refer to link:other_references.html[References] to link to the _System Administr
 
 If Storage Encryption is enabled on node1 and node2, complete the section link:set_up_storage_encryption_new_module.html[Set up Storage Encryption on the new controller module]. Otherwise, complete the section link:decommission_old_system.html[Decommission the old system].
 
-// 2022-MAY-16, BURT 1476251 
+// 2022 DEC 1, ontap-systems-upgrade-37
+// 2022 MAY 16, BURT 1476251 

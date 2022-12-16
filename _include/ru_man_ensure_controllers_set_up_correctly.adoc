@@ -66,7 +66,8 @@ If either node3 or node4 owns data LIFs home-owned by other nodes in the cluster
 +
 The license-code parameter accepts a list of 28 upper-case alphabetic character keys. You can add one license at a time, or you can add multiple licenses at once, each license key separated by a comma.
 
-. If NetApp Storage Encryption (NSE) was in use on the configuration and you set the `setenv bootarg.storageencryption.support` command to "true" with the `kmip.init.maxwait` variable "off" (in link:install_boot_node3.html#step16[Step 16] of _Install and boot node3_), you need to reset the variable:
+. If self-encrypting drives are being used in the configuration and you have set the `kmip.init.maxwait` variable to `off` (for example, in link:install_boot_node3.html#step16[Step 16] of _Install and boot node3_), you must unset the variable:
++
 `set diag; systemshell -node _node_name_ -command sudo kenv -u -p kmip.init.maxwait`
 
 . To remove all of the old licenses from the original nodes, enter one of the following commands:
@@ -111,5 +112,7 @@ Go to link:other_references.html[References] to link to the _System Administrati
 .After you finish
 
 If Storage Encryption is enabled on node3 and node4, complete the steps in link:set_up_storage_encryption_new_controller.html[Set up Storage Encryption on the new controller module]. Otherwise, complete the steps in link:decommission_old_system.html[Decommission the old system].
-// Clean-up, 2022-03-09
-// BURT 1478241, 2022-05-13
+
+// 2022 DEC 1, ontap-systems-upgrade-37
+// 2022 MAY 13, BURT 1478241 
+// 2022 MAR 9, Clean-up 
