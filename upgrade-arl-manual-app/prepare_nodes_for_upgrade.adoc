@@ -14,7 +14,7 @@ summary: "Prepare the nodes, collect information, and confirm that all cluster n
 
 [.lead]
 include::../_include/ru_man_prepare_nodes_upgrade_chunk_a.adoc[]
-
++
 [NOTE]
 ====
 * You will use this information later in the procedure.
