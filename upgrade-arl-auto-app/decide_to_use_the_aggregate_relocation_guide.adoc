@@ -78,24 +78,35 @@ NOTE: If your controller upgrade model combination is not in the above table, co
 
 ^3^For FAS8020, FAS8040, AFF8020, and AFF8040 system upgrades to the target replacement controllers listed in the table above, the replacement controllers must be running same ONTAP version as the old controller. Note that FAS8020, FAS8040, AFF8020, and AFF8040 systems do not support ONTAP versions later than ONTAP 9.8.
 
-^4^Verify the supported ONTAP versions for your controller upgrade.
+^4^The following table shows the minimum and later supported ONTAP versions for these controller upgrade combinations. 
 [cols=4*,cols="20,30,20,30"]
 |===
 2+h|Old controller 2+h|Replacement controller
 
 h|System h|ONTAP version h|System h|ONTAP version
 |AFF A320 |9.9.1 or later |AFF A400 |9.9.1 or later
-|AFF8060 |9.8P13 or later patches |AFF A900 |9.10.1 or later
-|AFF8080 |9.8P10 or later patches |AFF A900 |9.10.1 or later
-|FAS8060 |9.8P13 or later patches |FAS9500 |9.10.1P3 or later
-|FAS8080 |9.8P12 or later patches |FAS9500 |9.10.1P3 or later
+|AFF8060 |9.8P13 or later patches |AFF A900 |9.10.1 to 9.12.1
+|AFF8080 |9.8P10 or later patches |AFF A900 |9.10.1 to 9.12.1
+|FAS8060 |9.8P13 or later patches |FAS9500 |9.10.1P3 to 9.12.1
+|FAS8080 |9.8P12 or later patches |FAS9500 |9.10.1P3 to 9.12.1
 |===
-// BURT 1379899 30-Aug-2021
-//BURT 1455646 5-May-2022
-// BURT 1480916 27-May-2022
+
+[NOTE]
+====
+For the upgrade combinations shown in the preceding table:
+
+* It is not required to use the same ONTAP version on the existing and replacement controllers. The ONTAP software upgrade is performed with the controller upgrade.
+* When upgrading, you must install a replacement controller with a supported ONTAP version and patch level. 
+* It is not possible to cancel or back out of a controller upgrade after you start the procedure and upgrade the first node. 
+====
 
 include::../_include/ru_auto_decide_use_arl_guide_end.adoc[]
 
-// 2021-04-14 Burt 1367155
-// 2021-04-16 Burt 1379899
+// BURT 1514374 17-Nov-2022
+// BURT 1501196 17-Nov-2022
+// BURT 1480916 27-May-2022
+// BURT 1455646 5-May-2022
+// BURT 1379899 30-Aug-2021
+// Burt 1379899 16-Apr-2021
+// Burt 1367155 14-Apr-2021 
 // Clean-up, 2022-03-09

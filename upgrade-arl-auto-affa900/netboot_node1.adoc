@@ -17,7 +17,7 @@ After swapping the corresponding AFF A900 or FAS9500 node1 controller and NVRAM 
 
 It is not possible to check the version of ONTAP installed on the boot media of an AFF A900 or FAS9500 controller module unless it is installed in a chassis and powered ON. The ONTAP version on the AFF A900 or FAS9500 boot media must be same as the ONTAP version running on the AFF A700 or FAS9000 system that you are upgrading and both the primary and backup boot images must match. You can configure the images by performing a netboot followed by the `wipeconfig` command from the boot menu. If the controller module was previously used in another cluster, the `wipeconfig` command clears any residual configuration on the boot media.
 
-NOTE:	You can also use the USB boot option to perform the netboot. See the link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/How_to_use_the_boot_recovery_LOADER_command_for_installing_ONTAP_for_initial_setup_of_a_system[NetApp KB Article: How to use the boot_recovery LOADER command for installing ONTAP for initial setup of a system^].
+NOTE: You can also use the USB boot option to perform the netboot. See the Knowledge Base article link:https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/How_to_use_the_boot_recovery_LOADER_command_for_installing_ONTAP_for_initial_setup_of_a_system[How to use the boot_recovery LOADER command for installing ONTAP for initial setup of a system^].
 
 .Before you begin
 * Verify that you can access a HTTP server with the system.

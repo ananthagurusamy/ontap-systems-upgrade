@@ -331,5 +331,22 @@ NOTE: Do not send an AutoSupport message to NetApp for node2 at this point; you 
 +
 The fields `Last Subject Sent:` and `Last Time Sent:` contain the message title of the last message sent and the time the message was sent.
 
-// Clean-up, 2022-03-09
-// 1476241, 2022-05-13
+. If your system uses self-encrypting drives, see the Knowledge Base article https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Systems/FAS_Systems/How_to_tell_I_have_FIPS_drives_installed[How to tell I have FIPS drives installed^] to determine the type of self-encrypting drives that are in use on the HA pair that you are upgrading. ONTAP software supports two types of self-encrypting drives:
++
+--
+* FIPS-certified NetApp Storage Encryption (NSE) SAS or NVMe drives
+* Non-FIPS self-encrypting NVMe drives (SED)
+
+[NOTE]
+====
+* You cannot mix FIPS drives with other types of drives on the same node or HA pair.
+* You can mix SEDs with non-encrypting drives on the same node or HA pair.
+====
+
+https://docs.netapp.com/us-en/ontap/encryption-at-rest/support-storage-encryption-concept.html#supported-self-encrypting-drive-types[Learn more about supported self-encrypting drives^].
+--
+
+// 2022 DEC 1, ontap-systems-upgrade-37
+// 2022 MAY 13, 1476241 
+// 2022 MAR 09, Clean-up 
+
