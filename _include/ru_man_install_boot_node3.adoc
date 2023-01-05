@@ -225,11 +225,9 @@ NOTE: Do not interrupt the boot.
 +
 This menu option downloads and installs the new ONTAP image to the boot device.
 +
-NOTE: Disregard the following message:
+Disregard the following message:
 +
-----
-This procedure is not supported for Non-Disruptive Upgrade on an HA pair.
-----
+`This procedure is not supported for Non-Disruptive Upgrade on an HA pair.`
 +
 The note applies to nondisruptive upgrades of ONTAP, and not upgrades of controllers.
 +

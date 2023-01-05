@@ -204,7 +204,7 @@ This menu option downloads and installs the new Data ONTAP image to the boot dev
 +
 Disregard the following message:
 +
-`"This procedure is not supported for NonDisruptive Upgrade on an HA pair"`
+`This procedure is not supported for Non-Disruptive Upgrade on an HA pair`
 +
 The note applies to nondisruptive upgrades of Data ONTAP, and not upgrades of controllers.
 +
