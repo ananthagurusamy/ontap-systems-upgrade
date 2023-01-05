@@ -53,7 +53,7 @@ Aggregate ownership at the end of Stage 2:
 * Node2 is the home owner and current owner of node2 aggregates.
 
 | link:stage_3_index.html[Stage 3: Install and boot node3]
-a| During Stage 3, you install and boot node3, map the cluster and node-management ports from node1 to node3, verify the node3 installation, and move data LIFs and SAN LIFs belonging to node1 from node2 to node3. You also relocate all aggregates from node2 to node3, and move the data LIFs and SAN LIFs owned by node2 to node3.
+a| During Stage 3, you install and boot node3, map the cluster and node-management ports from node1 to node3, verify the node3 installation, and move data LIFs and SAN LIFs belonging to node1 from node2 to node3. You also relocate all aggregates from node2 to node3 and move the data LIFs and SAN LIFs owned by node2 to node3.
 
 Aggregate ownership at the end of Stage 3:
 
@@ -62,7 +62,7 @@ Aggregate ownership at the end of Stage 3:
 * Node2 is the home owner and current owner of aggregates belonging to node2 but not the home owner.
 
 | link:stage_4_index.html[Stage 4: Retire node2]
-a| During Stage 4, you record node2 information for use later in the procedure and then retire node2.
+a| During Stage 4, you record the necessary node2 information for use later in the procedure and then retire node2.
 
 No changes occur in aggregate ownership.
 
@@ -75,7 +75,7 @@ Aggregate ownership at the end of Stage 5:
 * Node4 is the home owner and current owner of aggregates that originally belonged to node2.
 
 | link:stage_6_index.html[Stage 6: Complete the upgrade]
-a| During Stage 6, you confirm that the new nodes are set up correctly and set up Storage Encryption or NetApp Volume Encryption if the new nodes are encryption-enabled. You should also decommission the old nodes resume SnapMirror operations.
+a| During Stage 6, you confirm that the new nodes are set up correctly and set up Storage Encryption or NetApp Volume Encryption if the new nodes are encryption-enabled. You should also decommission the old nodes and resume SnapMirror operations.
 
 NOTE: The storage virtual machine (SVM) disaster recovery updates will not be interrupted as per the schedules assigned.
 
