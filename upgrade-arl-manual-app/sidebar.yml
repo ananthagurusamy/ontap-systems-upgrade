@@ -95,7 +95,7 @@ entries:
     entries:
       - title: Overview
         url: /upgrade-arl-manual-app/stage_6_index.html
-      - title: "Get an IP address of an external key management server for storage encryption"
+      - title: "Get an IP address of an external key management server for Storage Encryption"
         url: /upgrade-arl-manual-app/get_address_key_management_server_encryption.html
       - title: "Manage authentication using KMIP servers"
         url: /upgrade-arl-manual-app/manage_authentication_kmip.html
