@@ -89,7 +89,7 @@ This menu option downloads and installs the new ONTAP image to the boot device.
 ====
 Disregard the following message: `This procedure is not supported for Non-Disruptive Upgrade on an HA pair`. This note applies to nondisruptive ONTAP software upgrades, and not controller upgrades.
 
-Always use netboot to update the new node to the desired image. If you use another method to install the image on the new controller, the wrong image might install. This issue applies to all ONTAP releases. The netboot procedure combined with option `(7) Install new software` wipes the boot media and places the same version of ONTAP on both image partitions.
+Always use netboot to update the new node to the desired image. If you use another method to install the image on the new controller, the incorrect image might install. This issue applies to all ONTAP releases. The netboot procedure combined with option `(7) Install new software` wipes the boot media and places the same ONTAP version on both image partitions.
 ====
 
 .	If you are prompted to continue the procedure, enter `y`, and when prompted for the package, enter the URL:
