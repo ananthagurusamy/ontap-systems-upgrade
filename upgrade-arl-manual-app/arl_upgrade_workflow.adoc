@@ -36,7 +36,7 @@ The following table describes the high-level tasks you perform during each stage
 | Stage | Steps
 
 | link:stage_1_index.html[Stage 1: Prepare for upgrade]
-a| During Stage 1, if required, you confirm that internal disk drives do not contain root aggregates or data aggregates, prepare the nodes for the upgrade, and run a series of prechecks. You might also need to rekey disks for Storage Encryption and prepare to netboot the new controllers.
+a| During Stage 1, if required, you confirm that internal disk drives do not contain root aggregates or data aggregates, prepare the nodes for the upgrade, and run a series of prechecks. If required, you rekey disks for Storage Encryption and prepare to netboot the new controllers.
 
 Aggregate ownership at the end of Stage 1:
 
@@ -44,7 +44,7 @@ Aggregate ownership at the end of Stage 1:
 * Node2 is the home owner and current owner of the node2 aggregates.
 
 | link:stage_2_index.html[Stage 2: Retire node1]
-a| During Stage 2, you relocate non-root aggregates from node1 to node2 and move non-SAN data LIFs owned by node1 to node2, including failed or vetoed aggregates. You also record node1 information for use later in the procedure and retire node1.
+a| During Stage 2, you relocate non-root aggregates from node1 to node2 and move non-SAN data LIFs owned by node1 to node2, including failed or vetoed aggregates. You also record the necessary node1 information for use later in the procedure and retire node1.
 
 Aggregate ownership at the end of Stage 2:
 
@@ -62,7 +62,7 @@ Aggregate ownership at the end of Stage 3:
 * Node2 is the home owner and current owner of aggregates belonging to node2 but not the home owner.
 
 | link:stage_4_index.html[Stage 4: Retire node2]
-a| During Stage 4, you record node2 information for use later in the procedure and then retire node2.
+a| During Stage 4, you record the necessary node2 information for use later in the procedure and then retire node2.
 No changes occur in aggregate ownership.
 
 | link:stage_5_index.html[Stage 5: Install and boot node4]
