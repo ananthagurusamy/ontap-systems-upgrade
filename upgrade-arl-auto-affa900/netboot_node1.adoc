@@ -87,7 +87,7 @@ This menu option downloads and installs the new ONTAP image to the boot device.
 +
 Disregard the following message: 
 +
-`This procedure is not supported for Non-Disruptive Upgrade on an HA pair`. 
+`This procedure is not supported for Non-Disruptive Upgrade on an HA pair`
 +
 This note applies to nondisruptive ONTAP software upgrades, and not controller upgrades.
 +
