@@ -89,7 +89,7 @@ entries:
   entries:
   - title: Overview
     url: /upgrade-arl-auto/stage_6_index.html
-  - title: Get an IP address of an external key management server for storage encryption
+  - title: Get an IP address of an external key management server for Storage Encryption
     url: /upgrade-arl-auto/get_ip_address_of_external_kms_for_storage_encryption.html
   # BURT-1476241 2022-August-12
   - title: Confirm that the new controllers are set up correctly
