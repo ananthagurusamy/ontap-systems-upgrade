@@ -47,7 +47,7 @@ Aggregate ownership at the end of Stage 3:
 * Node2 is the home owner and current owner of node2 aggregates.
 
 | link:stage_4_index.html[Stage 4. Relocate and retire node2]
-a| During Stage 4, you relocate node2 non-root aggregates and non-SAN data LIFs to node3. You also record node2 information and then retire node2.
+a| During Stage 4, you relocate node2 non-root aggregates and non-SAN data LIFs to node3. You also record the necessary node2 information and then retire node2.
 
 Aggregate ownership at the end of Stage 4:
 
