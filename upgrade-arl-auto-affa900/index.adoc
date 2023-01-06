@@ -19,7 +19,7 @@ This procedure describes how to upgrade the controller hardware using aggregate 
 |===
 |Method |ONTAP version |Supported systems |Description
 
-|Using `system contlroller replace` commands
+|Using `system controller replace` commands
 |9.11.1P6 or 9.10.1P10
 (targeted to February 2023)
 
