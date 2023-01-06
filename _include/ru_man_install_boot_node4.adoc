@@ -92,7 +92,7 @@ a|
 .. Go to the section _Set the FC or UTA/UTA2 configuration on node4_ and complete the sections link:set_fc_uta_uta2_config_node4.html#configure-fc-ports-on-node4[ Configure FC ports on node4] and link:set_fc_uta_uta2_config_node4.html#check-and-configure-utauta2-ports-on-node4[Check and configure UTA/UTA2 ports on node4], as appropriate to your system.
 .. Return to this section and complete the remaining steps, beginning with <<man_install4_Step9,Step 9>>.
 
-*Important*: You must reconfigure FC onboard ports, UTA/UTA2 onboard ports, and UTA/UTA2 cards before you boot Data ONTAP on the V-Series system.
+IMPORTANT: You must reconfigure FC onboard ports, UTA/UTA2 onboard ports, and UTA/UTA2 cards before you boot Data ONTAP on the V-Series system.
 |===
 
 . [[man_install4_Step9]]Add the FC initiator ports of the new node to the switch zones.
@@ -167,27 +167,22 @@ a|* `setenv bootarg.storageencryption.support *false*`
 NOTE: You must use the management port and IP address as the netboot connection. Do not use a data LIF IP address or a data outage might occur while the upgrade is being performed.
 
 +
-[cols=2*,options="header",cols="30,70"]
+[cols=2*,options="header",cols="35,75"]
 |===
 |If Dynamic Host Configuration Protocol (DHCP) is... |Then...
 
-|Running |Configure the connection automatically by entering the following command at the boot environment prompt:
+|Running a|Configure the connection automatically by entering the following command at the boot environment prompt:
 `ifconfig e0M -auto`
-|Not running |Manually configure the connection by entering the following command at the boot environment prompt:
-
+|Not running a|Manually configure the connection by entering the following command at the boot environment prompt:
 `ifconfig e0M -addr=_filer_addr_ mask=_netmask_ -gw=_gateway_ dns=_dns_addr_ domain=_dns_domain_`
 
-`_filer_addr_` is the IP address of the storage system.
-
-`_netmask_` is the network mask of the storage system.
-
-`_gateway_` is the gateway for the storage system.
-
-`_dns_addr_` is the IP address of a name server on your network.
-
+`_filer_addr_` is the IP address of the storage system (mandatory). 
+`_netmask_` is the network mask of the storage system (mandatory).
+`_gateway_` is the gateway for the storage system (mandatory).
+`_dns_addr_` is the IP address of a name server on your network (optional).
 `_dns_domain_` is the Domain Name Service (DNS) domain name. If you use this optional parameter, you do not need a fully qualified domain name in the netboot server URL; you need only the server's host name.
 
-*Note*: Other parameters might be necessary for your interface. Enter `help ifconfig` at the firmware prompt for details.
+NOTE: Other parameters might be necessary for your interface. Enter `help ifconfig` at the firmware prompt for details.
 |===
 
 . Perform netboot on node4:
@@ -209,9 +204,11 @@ This menu option downloads and installs the new Data ONTAP image to the boot dev
 +
 Disregard the following message:
 +
-`"This procedure is not supported for NonDisruptive Upgrade on an HA pair"`
+`This procedure is not supported for Non-Disruptive Upgrade on an HA pair`
 +
 The note applies to nondisruptive upgrades of Data ONTAP, and not upgrades of controllers.
++
+NOTE: Always use netboot to update the new node to the desired image. If you use another method to install the image on the new controller, the incorrect image might install. This issue applies to all releases of ONTAP. The netboot procedure combined with option `(7) Install new software` wipes the boot media and places the same ONTAP version on both image partitions.
 
 . [[man_install4_step23]] If you are prompted to continue the procedure, enter y, and when prompted for the package, enter the URL:
 +

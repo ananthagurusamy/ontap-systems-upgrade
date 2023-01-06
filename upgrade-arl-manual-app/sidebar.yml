@@ -22,10 +22,10 @@ entries:
         url: /upgrade-arl-manual-app/determine_aggregates_on_internal_drives.html
       - title: "Prepare the nodes for upgrade"
         url: /upgrade-arl-manual-app/prepare_nodes_for_upgrade.html
-      - title: "Get an IP address of an external key management server for storage encryption"
-        url: /upgrade-arl-manual-app/get_address_key_management_server_encryption.html
-      - title: "Manage authentication using KMIP servers"
-        url: /upgrade-arl-manual-app/manage_authentication_kmip.html
+    # - title: "Get an IP address of an external key management server for storage encryption"
+    #   url: /upgrade-arl-manual-app/get_address_key_management_server_encryption.html
+    # - title: "Manage authentication using KMIP servers"
+    #   url: /upgrade-arl-manual-app/manage_authentication_kmip.html
       - title: "Manage authentication using an onboard key manager"
         url: /upgrade-arl-manual-app/manage_authentication_okm.html
       - title: "Quiesce the SnapMirror relationships"
@@ -95,11 +95,16 @@ entries:
     entries:
       - title: Overview
         url: /upgrade-arl-manual-app/stage_6_index.html
-      - title: "Ensure that the new controllers are set up correctly"
+      - title: "Get an IP address of an external key management server for Storage Encryption"
+        url: /upgrade-arl-manual-app/get_address_key_management_server_encryption.html
+      - title: "Manage authentication using KMIP servers"
+        url: /upgrade-arl-manual-app/manage_authentication_kmip.html
+      - title: "Manage authentication using an onboard key manager"
+      - title: "Confirm that the new controllers are set up correctly"
         url: /upgrade-arl-manual-app/ensure_controllers_set_up_correctly.html
       - title: "Set up Storage Encryption on the new controller module"
         url: /upgrade-arl-manual-app/set_up_storage_encryption_new_controller.html
-      - title: "Set up NetApp Volume Encryption on the new controller module"
+      - title: "Set up NetApp Volume or Aggregate Encryption on the new controller module"
         url: /upgrade-arl-manual-app/set_up_netapp_encryption_on_new_controller.html
       - title: "Decommission the old system"
         url: /upgrade-arl-manual-app/decommission_old_system.html

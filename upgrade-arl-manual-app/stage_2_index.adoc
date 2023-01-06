@@ -13,6 +13,6 @@ summary: "Stage 2 process sequence for a manual ARL upgrade on controllers runni
 :imagesdir: ./media/
 
 [.lead]
-During Stage 2, you relocate the node1 aggregates and LIFs to node2, record node1 information, and then retire node1.  This process is largely automated; the operation pauses to enable you to check its status. You must manually resume the operation.
+During Stage 2, you relocate non-root aggregates from node1 to node2 and move non-SAN data LIFs owned by node1 to node2, including failed or vetoed aggregates. You also record the necessary node1 information for use later in the procedure and then retire node1.
 
 include::../_include/ru_man_stage2_intro.adoc[]

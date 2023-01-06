@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto-app/verify_node3_installation.html
 keywords: verifying, verify, node, install, installation
-summary: "Verify that node1's physical ports map correctly to node3 and restore network configuration on node3 when upgrading controllers running ONTAP 9.8 or later by using `system controller replace` commands."
+summary: "Verify that the node1 physical ports map correctly to node3 and restore network configuration on node3 when upgrading controllers running ONTAP 9.8 or later by using `system controller replace` commands."
 ---
 
 = Verify the node3 installation
@@ -135,7 +135,7 @@ All physical network ports, VLAN ports and interface group ports on the node are
 
 . [[step2]]List the broadcast domains on the cluster:
 +
-`broadcast-domain show`
+`network port broadcast-domain show`
 
 . [[step3]]List the network port reachability of all ports on node3:
 +
@@ -274,7 +274,7 @@ Wait about one minute for newly restored VLANs to be placed into their appropria
 .. Create new VLAN ports as needed for VLAN ports that are not in the `cluster controller-replacement network displaced-vlans show` output but should be configured on other physical ports.
 . [[step9]]Delete any empty broadcast domains after all port repairs have been completed:
 +
-`broadcast-domain delete -broadcast-domain _broadcast_domain_name_`
+`network port broadcast-domain delete -broadcast-domain _broadcast_domain_name_`
 
 . [[step10]]Verify port reachability:
 +

@@ -30,7 +30,7 @@ Do *NOT* use this procedure under the following circumstances:
 
 For upgrading Fabric MetroCluster or MetroCluster IP configurations, see link:other_references.html[References] to link to the _MetroCluster Upgrade and Expansion_ content.
 
-NOTE: You can use NetApp Storage Encryption (NSE) and NetApp Volume Encryption (NVE) with this procedure.
+NOTE: You can use NetApp Storage Encryption (NSE), NetApp Volume Encryption (NVE), and NetApp Aggregate Encryption (NAE) with this procedure.
 
 If you prefer a different method of upgrading the controller hardware and are willing to do volume moves, refer to link:other_references.html[References] to link to _Upgrade by moving volumes or storage_.
 

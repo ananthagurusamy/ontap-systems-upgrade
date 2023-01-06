@@ -14,6 +14,6 @@ The abort fails if the SnapMirror relationship is not in the `Transferring` stat
 
 . Quiesce all relationships between the cluster:
 +
-`snapmirror quiesce -destination-vserver _vserver-name_`
+`snapmirror quiesce -destination-vserver *`
 // 26 feb 2021:  formatted from CMS
 // 1476241, 2022-05-13

@@ -1,8 +1,10 @@
-During Stage 6, you confirm that the new nodes are set up correctly. If one of the new nodes has a unified target adapter, you must restore any port configurations and might need to change the personality of the adapter. You also must set up Storage Encryption if the new nodes are encryption-enabled. You also must decommission the old nodes.
+During Stage 6, you confirm that the new nodes are set up correctly and, if the new nodes are encryption-enabled, you configure and set up Storage Encryption or NetApp Volume Encryption. You should also decommission the old nodes and resume the SnapMirror operations.
 
-. link:ensure_controllers_set_up_correctly.html[Ensure that the new controllers are set up correctly]
+. link:get_address_key_management_server_encryption.html[Get an IP address of an external key management server for storage encryption]
+. link:manage_authentication_kmip.html[Manage authentication using KMIP servers]
+. link:ensure_controllers_set_up_correctly.html[Confirm that the new controllers are set up correctly]
 . link:set_up_storage_encryption_new_controller.html[Set up Storage Encryption on the new controller module]
-. link:set_up_netapp_encryption_on_new_controller.html[Set up NetApp Encryption on the new controller module]
+. link:set_up_netapp_encryption_on_new_controller.html[Set up NetApp Volume or Aggregate Encryption on the new controller module]
 . link:decommission_old_system.html[Decommission the old system]
 . link:resume_snapmirror_ops.html[Resume SnapMirror operations]
 // 25 Feb 2021: formatted from CMS

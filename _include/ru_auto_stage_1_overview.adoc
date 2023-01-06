@@ -1,6 +1,7 @@
-During Stage 1, you must prepare the nodes for the upgrade and run a series of prechecks. You might need to rekey disks for Storage Encryption. You must also prepare to netboot the new controllers.
+During Stage 1, you run prechecks and, if required, correct aggregate ownership. You must record certain information if you are managing storage encryption by using OKM and you can choose to quiesce the SnapMirror relationships.
 
 .Steps
 
 . link:prepare_nodes_for_upgrade.html[Prepare the nodes for upgrade]
-. link:get_ip_address_of_external_kms_for_storage_encryption.html[Get an IP address of an external key management server for storage encryption]
+. link:manage_storage_encryption_using_okm.html[Manage storage encryption using Onboard Key Manager]
+// BURT-1476241 2022-August-12

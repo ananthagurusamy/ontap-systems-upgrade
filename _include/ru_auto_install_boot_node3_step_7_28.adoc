@@ -19,8 +19,13 @@ NOTE: Do not interrupt the boot.
 +
 This menu option downloads and installs the new ONTAP image to the boot device.
 +
-NOTE: Disregard the following message: `This procedure is not supported for Non-Disruptive Upgrade on an HA pair`. The note applies to nondisruptive upgrades of ONTAP, and not upgrades of controllers.
-Always use netboot to update the new node to the desired image. If you use another method to install the image on the new controller, the wrong image might install. This issue applies to all ONTAP releases.
+Disregard the following message:
++
+`This procedure is not supported for Non-Disruptive Upgrade on an HA pair` 
++
+The note applies to nondisruptive upgrades of ONTAP, and not upgrades of controllers.
++
+NOTE: Always use netboot to update the new node to the desired image. If you use another method to install the image on the new controller, the incorrect image might install. This issue applies to all ONTAP releases. The netboot procedure combined with option `(7) Install new software` wipes the boot media and places the same ONTAP version on both image partitions.
 
 . [[step9]]If you are prompted to continue the procedure, enter `y`, and when prompted for the package, enter the URL:
 +
@@ -89,15 +94,17 @@ Interrupt the autoboot by pressing `Ctrl-C` at the boot environment prompt.
 +
 `set time _hh:mm:ss_`
 
-. [[step20]]If necessary, set the partner system ID on node3:
+. [[step20]]In boot loader, set the partner system ID on node3:
 +
 `setenv partner-sysid _node2_sysid_`
++
+For node3, `partner-sysid` must be that of node2.
 
 .. Save the settings:
 +
 `saveenv`
 
-. [[auto_install3_step21]]On the new node, in boot loader, the `partner-sysid` parameter must be set. For node3, `partner-sysid` must be that of node2. Verify the `partner-sysid` for node3:
+. [[auto_install3_step21]]Verify the `partner-sysid` for node3:
 +
 `printenv partner-sysid`
 
@@ -113,7 +120,7 @@ Interrupt the autoboot by pressing `Ctrl-C` at the boot environment prompt.
 a|.. Go to section link:set_fc_or_uta_uta2_config_on_node3.html[Setting the FC or UTA/UTA2 configuration on node3] and complete the subsections in this section.
 .. Return to this section and complete the remaining steps, beginning with <<auto_install3_step23,Step 23>>.
 
-*Important*: You must reconfigure FC onboard ports, CNA onboard ports, and CNA cards before you boot ONTAP on the V-Series or system with FlexArray Virtualization software.
+IMPORTANT: You must reconfigure FC onboard ports, CNA onboard ports, and CNA cards before you boot ONTAP on the V-Series or system with FlexArray Virtualization software.
 |===
 
 . [[auto_install3_step23]]Add the FC initiator ports of the new node to the switch zones.

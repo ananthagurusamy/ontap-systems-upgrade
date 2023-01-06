@@ -41,7 +41,7 @@ NOTE: You do not need to move, disconnect, or reconnect the I/O cards, data cabl
 
 This procedure uses a method called aggregate relocation (ARL), which takes advantage of the HA configuration to enable you to move ownership of non-root aggregates from one node to another if they share storage within the same cluster.
 
-During the procedure, you upgrade the original controller hardware with the replacement controller hardware, relocating the ownership of non-root aggregates. You migrate aggregates multiple times from node to node to ensure that at least one node is serving data from the aggregates throughout the upgrade procedure. You also migrate data LIFs between nodes in the cluster as you proceed.
+During the procedure, you upgrade the original controller hardware with the replacement controller hardware, relocating the ownership of non-root aggregates. You migrate aggregates multiple times from node to node to confirm that at least one node is serving data from the aggregates throughout the upgrade procedure. You also migrate data LIFs between nodes in the cluster as you proceed.
 
 NOTE: The terms *node1* and *node2*, are used only as a reference to node names in this document. When following the procedure, you must substitute the real names of your nodes.
 

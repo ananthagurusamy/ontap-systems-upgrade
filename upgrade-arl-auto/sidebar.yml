@@ -26,8 +26,8 @@ entries:
       url: /upgrade-arl-auto/stage_1_index.html
     - title: Prepare the nodes for upgrade
       url: /upgrade-arl-auto/prepare_nodes_for_upgrade.html
-    - title: Get an IP address of an external key management server for storage encryption
-      url: /upgrade-arl-auto/get_ip_address_of_external_kms_for_storage_encryption.html
+    - title: Manage Storage Encryption using Onboard Key Manager
+      url: /upgrade-arl-auto/manage_storage_encryption_using_okm.html
 - title: "Stage 2. Relocate and retire node1"
   pdf-filename: "Stage 2. Relocate and retire node1 (upgrade with ‘system controller replace’ in ONTAP 9.5 to 9.7)"
   entries:
@@ -89,11 +89,14 @@ entries:
   entries:
   - title: Overview
     url: /upgrade-arl-auto/stage_6_index.html
-  - title: Ensure that the new controllers are set up correctly
+  - title: Get an IP address of an external key management server for Storage Encryption
+    url: /upgrade-arl-auto/get_ip_address_of_external_kms_for_storage_encryption.html
+  # BURT-1476241 2022-August-12
+  - title: Confirm that the new controllers are set up correctly
     url: /upgrade-arl-auto/ensure_new_controllers_are_set_up_correctly.html
   - title: Set up Storage Encryption on the new controller module
     url: /upgrade-arl-auto/set_up_storage_encryption_new_module.html
-  - title: Set up NetApp Volume Encryption on the new controller module
+  - title: Set up NetApp Volume or Aggregate Encryption on the new controller module
     url: /upgrade-arl-auto/set_up_netapp_volume_encryption_new_module.html
   - title: Decommission the old system
     url: /upgrade-arl-auto/decommission_old_system.html
