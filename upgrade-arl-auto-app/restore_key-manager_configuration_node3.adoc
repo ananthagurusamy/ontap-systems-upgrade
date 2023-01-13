@@ -23,3 +23,5 @@ If you are using NetApp Volume Encryption (NVE) and NetApp Aggregate Encryption 
 
 // 20 June 2022, GitHub issue #30
 include::../_include/ru_auto_restore_key_manager_config_ontap_98.adoc[]
+
+// 12 Jan 2023, ontap-systems-upgrade-issues 13, 35 and 36

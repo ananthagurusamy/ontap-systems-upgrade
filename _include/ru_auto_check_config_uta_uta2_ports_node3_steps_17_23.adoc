@@ -38,8 +38,6 @@ When the cluster nodes you are replacing use root volume encryption, ONTAP softw
 .. Return to the special boot menu:
 `LOADER> boot_ontap menu`
 +
-.. Select *(10) Set Onboard Key Manager recovery secrets*:
-+
 ----
 Please choose one of the following:
 (1) Normal Boot.
@@ -57,6 +55,8 @@ Please choose one of the following:
 Selection (1-11)? 10
 ----
 +
+.. Select *(10) Set Onboard Key Manager recovery secrets*
++
 .. Enter `y` at the following prompt:
 +
 `This option must be used only in disaster recovery procedures. Are you sure? (y or n): y`
@@ -70,7 +70,7 @@ NOTE: You must have obtained the passphrase and backup data in the link:prepare_
 +
 .. After the system boots to the special boot menu again, run option *(1) Normal Boot*
 + 
-NOTE: You might encounter an error at this stage. If an error occurs, repeat the substeps in Step 22 until the system boots normally. 
+NOTE: You might encounter an error at this stage. If an error occurs, repeat the substeps in <<auto_check_4_step22,Step 22>> until the system boots normally. 
 
 . [[auto_check3_step23]]If you are upgrading from a system with external disks to a system that supports internal and external disks (AFF A800 systems, for example), set the node1 aggregate as the root aggregate to confirm that node3 boots from the root aggregate of node1. To set the root aggregate, go to the boot menu and select option `5` to enter maintenance mode.
 +
@@ -124,3 +124,5 @@ The following shows an example of the command output:
                                64-bit
  -----------------------------------------------------------------
 ----
+
+// 12 Jan 2023, ontap-systems-upgrade-issues 13, 35 and 36
