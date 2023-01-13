@@ -4,8 +4,24 @@ Synchronize the encryption configuration to the new nodes by performing the foll
 
 .Steps
 
-. Synchronize the encryption configuration for Onboard Key Manager (OKM) by using the following command at the cluster prompt:
+. Run the following command from node3:
 +
 `security key-manager onboard sync`
 
-. Enter the cluster-wide passphrase for the OKM.
+. Verify that the SVM-KEK key is restored to "true" on node3 before you relocate the data aggregates:
++
+----
+::> security key-manager key query -node node3 -fields restored -key-type SVM-KEK
+----
++
+.Example
++
+----
+::> security key-manager key query -node node3 -fields restored -key-type SVM-KEK
+
+node     vserver   key-server   key-id                                  restored
+-------- --------- -----------  --------------------------------------- --------
+node3    svm1      ""           00000000000000000200000000000a008a81976 true
+                                2190178f9350e071fbb90f00000000000000000                           
+----
+
