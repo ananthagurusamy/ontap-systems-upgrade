@@ -51,4 +51,4 @@ node4    svm1      ""           00000000000000000200000000000a008a81976 true
 
 // 11 DEC 2020, thomi, checked
 // BURT 1476241, 28 Sept 2022
-// 12 Jan 2023, GH issue 35, 36
+// 12 Jan 2023, ontap-systems-upgrade-issues 13, 35 and 36
