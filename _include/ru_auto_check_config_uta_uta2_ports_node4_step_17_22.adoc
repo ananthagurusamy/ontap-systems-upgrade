@@ -39,8 +39,6 @@ When the cluster nodes you are replacing use root volume encryption, ONTAP softw
 .. Return to the special boot menu:
 `LOADER> boot_ontap menu`
 +
-.. Select *(10) Set Onboard Key Manager recovery secrets*:
-+
 ----
 Please choose one of the following:
 (1) Normal Boot.
@@ -57,6 +55,8 @@ Please choose one of the following:
 
 Selection (1-11)? 10
 ----
++
+.. Select *(10) Set Onboard Key Manager recovery secrets*
 +
 .. Enter `y` at the following prompt:
 +
