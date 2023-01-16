@@ -35,7 +35,7 @@ Synchronize the encryption configuration to the new nodes by performing the foll
 .Example
 +
 ----
-::> security key-manager key query -node node2 -fields restored -key-type SVM-KEK
+::> security key-manager key query -node node1 -fields restored -key-type SVM-KEK
 
 node     vserver   key-server   key-id                                  restored
 -------- --------- -----------  --------------------------------------- --------
