@@ -35,17 +35,16 @@ NOTE: You must use the management port and IP as the netboot connection. Do not 
 |Configure the connection automatically by using the following command at the boot environment prompt:
 `ifconfig e0M -auto`
 |Not running
-|Manually configure the connection by using the following command at the boot environment prompt:
-
+a|Manually configure the connection by using the following command at the boot environment prompt:
 `ifconfig e0M -addr=_filer_addr_ -mask=_netmask_ -gw=_gateway_ -dns=_dns_addr_ -domain=_dns_domain_`
 
-`_filer_addr_` is the IP address of the storage system.
-`_netmask_` is the network mask of the storage system.
-`_gateway_` is the gateway for the storage system.
-`_dns_addr_` is the IP address of a name server on your network. This parameter is optional.
-`_dns_domain_` is the Domain Name Service (DNS) domain name. This parameter is optional.
+`_filer_addr_` is the IP address of the storage system (mandatory).
+`_netmask_` is the network mask of the storage system (mandatory).
+`_gateway_` is the gateway for the storage system (mandatory).
+`_dns_addr_` is the IP address of a name server on your network (optional).
+`_dns_domain_` is the Domain Name Service (DNS) domain name (optional).
 
-*Note*: Other parameters might be necessary for your interface. Enter `help ifconfig` at the firmware prompt for details.
+NOTE: Other parameters might be necessary for your interface. Enter `help ifconfig` at the firmware prompt for details.
 |===
 
 include::../_include/ru_auto_install_boot_node3_step_7_28.adoc[]

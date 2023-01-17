@@ -10,9 +10,12 @@ Refer to link:other_references.html[References] to link to _High Availability ma
 
 .. Make sure that the diagnostic user account is unlocked.
 +
-*Important*: The diagnostic user account is intended only for low-level diagnostic purposes and should be used only with guidance from technical support.
-+
-*Important*: For information about unlocking the user accounts, refer to link:other_references.html[References] to link to the _System Administration Reference_.
+[IMPORTANT]
+====
+The diagnostic user account is intended only for low-level diagnostic purposes and should be used only with guidance from technical support.
+
+For information about unlocking the user accounts, refer to link:other_references.html[References] to link to the _System Administration Reference_.
+====
 
 .. Refer to link:other_references.html[References] to link to the _NetApp Support Site_ and download the Performance and Statistics Collector (Perfstat Converged).
 +

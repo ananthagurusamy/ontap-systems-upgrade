@@ -115,7 +115,7 @@ WARNING: Repairing port "node_name:port" might cause it to move into a different
 
 .. List all broadcast domains on the cluster:
 +
-`broadcast-domain show`
+`network port broadcast-domain show`
 
 .. As the reachability repair is performed, ONTAP attempts to place the ports in the correct broadcast domains. However, if a port’s reachability cannot be determined and does not correspond to any of the existing broadcast domains, ONTAP will create new broadcast domains for these ports. As required, you can delete the newly created broadcast domains if all their member ports will become member ports of the interface groups. Delete broadcast domains:
 +

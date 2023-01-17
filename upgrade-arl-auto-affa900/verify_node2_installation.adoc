@@ -80,7 +80,7 @@ For more information on creating and re-creating VLANs, interface groups, and br
 All physical network ports, VLAN ports, and interface group ports on the node are displayed. From this output, you can see any physical ports that have been moved into the `Cluster` broadcast domain by ONTAP. You can use this output to aid in deciding which ports should be used as interface group member ports, VLAN base ports, or standalone physical ports for hosting LIFs.
 .	List the broadcast domains on the cluster:
 +
-`broadcast-domain show`
+`network port broadcast-domain show`
 .	List network port reachability of all ports on node2:
 +
 `network port reachability show -node node2`

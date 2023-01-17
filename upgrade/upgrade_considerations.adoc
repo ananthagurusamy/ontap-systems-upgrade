@@ -20,7 +20,7 @@ link:https://docs.netapp.com/us-en/ontap/upgrade/index.html[Upgrade ONTAP^]
 
 * You must observe the maximum cluster size.
 +
-When you upgrade by moving volumes, new nodes are joined to the cluster before the original nodes are removed. Ensure the number of controllers in the cluster does not exceed the supported maximum cluster size during the procedure.
+When you upgrade by moving volumes, new nodes are joined to the cluster before the original nodes are removed. Confirm that the number of controllers in the cluster does not exceed the supported maximum cluster size during the procedure.
 +
 https://hwu.netapp.com[NetApp Hardware Universe^]
 

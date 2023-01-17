@@ -24,11 +24,11 @@ However, you do not need to netboot the controllers if the same version of ONTAP
 |For... |Then...
 
 |FAS/AFF8000 series systems
-|Extract the contents of the `<ontap_version>_image.tgz` file to the target directory:
+a|Extract the contents of the `<ontap_version>_image.tgz` file to the target directory:
 
 `tar -zxvf <ontap_version>_image.tgz`
 
-*Note*: If you are extracting the contents on Windows, use 7-Zip or WinRAR to extract the netboot image.
+NOTE: If you are extracting the contents on Windows, use 7-Zip or WinRAR to extract the netboot image.
 
 Your directory listing should contain a netboot folder with a kernel file:
 
@@ -38,7 +38,7 @@ Your directory listing should contain a netboot folder with a kernel file:
 
 `<ontap_version>_image.tgz`
 
-*Note*: You do not need to extract the contents of the `<ontap_version>_image.tgz` file.
+NOTE: You do not need to extract the contents of the `<ontap_version>_image.tgz` file.
 |===
 +
 You will use information in the directories in link:stage_3_install_boot_node3.html[Stage 3].

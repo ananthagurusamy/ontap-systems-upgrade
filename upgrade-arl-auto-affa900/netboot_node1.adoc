@@ -46,11 +46,12 @@ NOTE:	You must use the management port and IP as the netboot connection. Do not 
 |Not running
 a|Manually configure the connection by using the following command at the boot environment prompt:
 `ifconfig e0M -addr=_filer_addr_ -mask=_netmask_ -gw=_gateway_ -dns=_dns_addr_ -domain=_dns_domain_`
-`_filer_addr_` is the IP address of the storage system.
-`_netmask_` is the network mask of the storage system.
-`_gateway_` is the gateway for the storage system.
-`_dns_addr_` is the IP address of a name server on your network. This parameter is optional.
-`_dns_domain_` is the Domain Name Service (DNS) domain name. This parameter is optional.
+
+`_filer_addr_` is the IP address of the storage system (mandatory).
+`_netmask_` is the network mask of the storage system (mandatory).
+`_gateway_` is the gateway for the storage system (mandatory).
+`_dns_addr_` is the IP address of a name server on your network (optional).
+`_dns_domain_` is the Domain Name Service (DNS) domain name (optional).
 
 NOTE:	Other parameters might be necessary for your interface. Enter `help ifconfig` at the firmware prompt for details.
 |===
@@ -84,12 +85,13 @@ Selection (1-11)?
 +
 This menu option downloads and installs the new ONTAP image to the boot device.
 +
-[NOTE]
-====
-Disregard the following message: `This procedure is not supported for Non-Disruptive Upgrade on an HA pair`. This note applies to nondisruptive ONTAP software upgrades, and not controller upgrades.
-
-Always use netboot to update the new node to the desired image. If you use another method to install the image on the new controller, the wrong image might install. This issue applies to all ONTAP releases.
-====
+Disregard the following message: 
++
+`This procedure is not supported for Non-Disruptive Upgrade on an HA pair`
++
+This note applies to nondisruptive ONTAP software upgrades, and not controller upgrades.
++
+NOTE: Always use netboot to update the new node to the desired image. If you use another method to install the image on the new controller, the incorrect image might install. This issue applies to all ONTAP releases. The netboot procedure combined with option `(7) Install new software` wipes the boot media and places the same ONTAP version on both image partitions.
 
 .	If you are prompted to continue the procedure, enter `y`, and when prompted for the package, enter the URL:
 `\http://<web_server_ip/path_to_web-accessible_directory>/<ontap_version>_image.tgz`
@@ -173,7 +175,7 @@ NOTE: Set the corresponding UTC time on node1.
 +
 `setenv partner-sysid _node2_sysid_`
 +
-You can obtain the node2 system ID from the `node show -node _node2_` command output on node2.
+For node1, the `partner-sysid` must be that of node2. You can obtain the node2 system ID from the `node show -node _node2_` command output on node2.
 +
 ..	Save the settings:
 +
@@ -181,8 +183,8 @@ You can obtain the node2 system ID from the `node show -node _node2_` command ou
 .	On node1, at the LOADER prompt, verify the `partner-sysid` for node1:
 +
 `printenv partner-sysid`
-+
-For node1, the `partner-sysid` must be that of node2.
+
+
 
 //BURT 1452254, 2022-04-27
 // BURT 1476251, 2022-05-16

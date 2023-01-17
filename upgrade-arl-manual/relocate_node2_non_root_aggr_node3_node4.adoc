@@ -5,7 +5,7 @@ keywords: relocate, non-root, aggregates, node3, node4
 summary: "Relocate node2's non-root aggregates from node3 to node4 during a manual ARL upgrade on controllers running ONTAP 9.7 or earlier."
 ---
 
-= Relocate node2's non-root aggregates from node3 to node4
+= Relocate node2 non-root aggregates from node3 to node4
 :hardbreaks:
 :nofooter:
 :icons: font
