@@ -70,7 +70,7 @@ NOTE: You must have obtained the passphrase and backup data in the link:prepare_
 +
 .. After the system boots to the special boot menu again, run option *(1) Normal Boot*
 + 
-NOTE: You might encounter an error at this stage. If an error occurs, repeat the substeps in <<auto_check_3_step22,Step 22>> until the system boots normally. 
+NOTE: You might encounter an error at this stage. If an error occurs, repeat the substeps in <<auto_check3_step22,Step 22>> until the system boots normally. 
 
 . [[auto_check3_step23]]If you are upgrading from a system with external disks to a system that supports internal and external disks (AFF A800 systems, for example), set the node1 aggregate as the root aggregate to confirm that node3 boots from the root aggregate of node1. To set the root aggregate, go to the boot menu and select option `5` to enter maintenance mode.
 +
