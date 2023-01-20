@@ -29,9 +29,48 @@ If you are upgrading from a system that supports external disks to a system that
 // GitHub issue #32
 . [[auto_check3_step22]]At the loader prompt, boot up:
 +
-`boot_ontap`
+`boot_ontap menu`
 +
 Now, on booting, the node can detect all the disks that were previously assigned to it and can boot up as expected.
++
+When the cluster nodes you are replacing use root volume encryption, ONTAP software is unable to read the volume information from the disks. Restore the keys for the root volume:
++
+.. Return to the special boot menu:
+`LOADER> boot_ontap menu`
++
+----
+Please choose one of the following:
+(1) Normal Boot.
+(2) Boot without /etc/rc.
+(3) Change password.
+(4) Clean configuration and initialize all disks.
+(5) Maintenance mode boot.
+(6) Update flash from backup config.
+(7) Install new software first.
+(8) Reboot node.
+(9) Configure Advanced Drive Partitioning.
+(10) Set Onboard Key Manager recovery secrets.
+(11) Configure node for external key management.
+
+Selection (1-11)? 10
+----
++
+.. Select *(10) Set Onboard Key Manager recovery secrets*
++
+.. Enter `y` at the following prompt:
++
+`This option must be used only in disaster recovery procedures. Are you sure? (y or n): y`
+
++
+.. At the prompt, enter the key-manager passphrase.
++
+.. Enter the backup data when prompted.
++
+NOTE: You must have obtained the passphrase and backup data in the link:prepare_nodes_for_upgrade.html[Prepare the nodes for upgrade] section of this procedure.
++
+.. After the system boots to the special boot menu again, run option *(1) Normal Boot*
++ 
+NOTE: You might encounter an error at this stage. If an error occurs, repeat the substeps in <<auto_check3_step22,Step 22>> until the system boots normally. 
 
 . [[auto_check3_step23]]If you are upgrading from a system with external disks to a system that supports internal and external disks (AFF A800 systems, for example), set the node1 aggregate as the root aggregate to confirm that node3 boots from the root aggregate of node1. To set the root aggregate, go to the boot menu and select option `5` to enter maintenance mode.
 +
@@ -85,3 +124,5 @@ The following shows an example of the command output:
                                64-bit
  -----------------------------------------------------------------
 ----
+
+// 12 Jan 2023, ontap-systems-upgrade-issues 13, 35 and 36
