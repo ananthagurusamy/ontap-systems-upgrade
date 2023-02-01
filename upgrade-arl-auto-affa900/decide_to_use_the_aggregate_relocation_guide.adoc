@@ -35,4 +35,5 @@ If you prefer a different method of upgrading the controller hardware and are wi
 
 Refer to link:other_references.html[References] to link to the _ONTAP 9 Documentation Center_ where you can access ONTAP 9 product documentation.
 
-//BURT 1452254, 2022-04-26
+// 2022 Jan 30, BURT 1523106
+// 2022 APR 26, BURT 1452254 

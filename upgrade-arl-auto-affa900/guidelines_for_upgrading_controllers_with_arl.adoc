@@ -36,4 +36,5 @@ If any problems occur while upgrading the controllers, see the link:troubleshoot
 
 If you do not find a solution to the problem you encountered, contact technical support.
 
-//BURT 1452254, 2022-04-26
+// 2022 Jan 30, BURT 1523106
+// 2022 APR 26, BURT 1452254

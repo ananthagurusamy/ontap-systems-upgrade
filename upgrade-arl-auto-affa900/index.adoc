@@ -52,4 +52,5 @@ NOTE: The terms *node1* and *node2*, are used only as a reference to node names 
 * The AFF A900 and FAS9500 systems only support high-line power (200V to 240V). If your AFF A700 or FAS9000 system is running on low-line power (100V to 120V), you must convert the AFF A700 or FAS9000 input power before using this procedure.
 * If you are upgrading from an AFF A700 or FAS9000 system with downtime, you can upgrade controller hardware by moving storage or contact technical support. Refer to link:other_references.html[References] to link to _Upgrade by moving volumes or storage_.
 
-//BURT 1452254, 2022-04-26
+// 2022 Jan 30, BURT 1523106
+// 2022 APR 26, BURT 1452254
