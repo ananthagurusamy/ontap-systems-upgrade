@@ -87,5 +87,8 @@ xref:upgrade-by-moving-storage-parent.adoc[Upgrade controller hardware by moving
 
 xref:upgrade-by-moving-volumes-parent.adoc[Upgrade controller hardware by moving volumes]
 
-// Clean-up, 2022-03-09
-// BURT 1493415- 2022-09-02
+xref:upgrade_ndu_upgrade_to_entry_level_systems.adoc[Nondisruptive upgrade to entry level systems]
+
+// 2023 Feb 1, BURT 1351102
+// 2022-03-09, Clean-up 
+// 2022-09-02, BURT 1493415

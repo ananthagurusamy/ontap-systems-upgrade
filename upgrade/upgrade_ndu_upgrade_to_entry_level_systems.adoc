@@ -1,5 +1,5 @@
 ---
-permalink: upgrade/upgrade_ndu_upgrade_to_entry_level_systems,html
+permalink: upgrade/upgrade_ndu_upgrade_to_entry_level_systems.html
 sidebar: sidebar
 keywords: ndu, nondisruptive, upgrade, AFF, FAS, systems, entry, level
 summary: You must reassign the disks that belonged to node1 and node2 to node3 and node4 respectively.
@@ -371,3 +371,4 @@ NOTE: You might see a Node owns aggregates belonging to another node in the clus
 +
 `storage aggregate show`
 
+// 2023 Feb 1, BURT 1351102

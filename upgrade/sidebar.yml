@@ -81,3 +81,5 @@ entries:
       url: /upgrade/upgrade-unjoin-original-nodes-move-volumes.html
     - title: Complete upgrade
       url: /upgrade/upgrade-complete-move-volumes.html
+  - title: Nondisruptive upgrade to entry level systems
+    url: /upgrade/upgrade_ndu_upgrade_to_entry_level_systems.html
