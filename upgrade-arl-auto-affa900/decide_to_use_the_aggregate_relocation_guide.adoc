@@ -18,7 +18,7 @@ This content describes how to upgrade storage controllers in an AFF A700 HA pair
 Use this procedure under the following circumstances:
 
 * You have verified with your NetApp sales representative that you have received the AFF A900 or FAS9500 controller and NVRAM modules and the parts required for the upgrade.
-* You are running ONTAP 9.11.1P6 or 9.10.1P10 (targeted to February 2023).
+* You are running ONTAP 9.10.1P10, 9.11.1P6, or a later release.
 * You do not want to add the new controllers as a new HA pair to the cluster and migrate the data by using volume moves.
 * You are experienced in administering ONTAP and are comfortable with the risks of working in diagnostic privilege mode.
 
@@ -35,4 +35,5 @@ If you prefer a different method of upgrading the controller hardware and are wi
 
 Refer to link:other_references.html[References] to link to the _ONTAP 9 Documentation Center_ where you can access ONTAP 9 product documentation.
 
-//BURT 1452254, 2022-04-26
+// 2022 Jan 30, BURT 1523106
+// 2022 APR 26, BURT 1452254 
