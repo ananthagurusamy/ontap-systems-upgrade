@@ -161,7 +161,7 @@ NOTE: If drives are not viewable, *STOP* and contact technical support for assis
 You prepare node4 for data migration before migrating the data aggregates, epsilon, and LIFs on node1 to node4.
 
 .Steps
-. At the LOADER prompt for the node, boot the node into boot menu:
+. At the LOADER prompt for the node, boot the node into the boot menu:
 +
 `boot_ontap menu`
 . Select option `6 Update flash from backup config` to restore the /var file system to node4.
@@ -277,7 +277,7 @@ NOTE: If drives are not viewable, *STOP* and contact technical support for assis
 Prepare node3 for data migration and physically connect node3 to node4.
 
 .Steps
-. At the LOADER prompt of the node, boot the node into boot menu:
+. At the LOADER prompt of the node, boot the node into the boot menu:
 +
 `boot_ontap menu`
 . Select option `6 Update flash from backup config` to restore the /var file system to node3.
