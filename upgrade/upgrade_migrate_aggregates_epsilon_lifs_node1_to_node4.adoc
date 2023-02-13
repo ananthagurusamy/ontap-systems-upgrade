@@ -66,7 +66,7 @@ If the system cluster ports are not similar, for example, when upgrading an AFF 
 `network interface migrate -vserver _vserver_name_ -lif _lif_name_ -destination-node _node_name]_` 
 . Display the status of all data LIFs in the cluster:
 +
-`network interface show -role data `
+`network interface show -role data`
 . If any LIFs are down, set the administrative status of the LIFs to `up` by entering the following command, once for each LIF:
 +
 `network interface modify -vserver _vserver_name_ -lif _lif_name_ -home-node _node_name_ -status-admin up`

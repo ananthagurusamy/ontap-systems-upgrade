@@ -47,7 +47,7 @@ Reassign drives from node1 to node3 by performing the following steps on node3.
 `disk reassign -s _node1_ -d _node3_ -p _node2_`
 . Verify that all reassigned drives are viewable to the new System ID:
 +
-disk show -s _node3 System ID_
+`disk show -s _node3 System ID_`
 +
 NOTE: If drives are not viewable, *STOP* and contact technical support for assistance.
 . Exit Maintenance Mode: 

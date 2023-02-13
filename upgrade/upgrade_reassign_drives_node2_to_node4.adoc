@@ -74,7 +74,7 @@ e0d  ENET storage 100 Gb/s    enabled  online  30
 
 . Display all attached drives: 
 +
-`disk show -v `
+`disk show -v`
 . Record the local System ID.
 . Reassign all drives from node2 to node4:
 +

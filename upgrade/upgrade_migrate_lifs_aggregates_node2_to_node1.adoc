@@ -19,7 +19,7 @@ Verify that you meet the following requirements:
 * You have performed a `wipeconfig` on the new controllers and they are currently waiting at the `Maintenance Mode` prompt.
 * You have all the appropriate cabling on-hand.
 * NVMe shelf module firmware 0121 or later is already installed.
-* Node2 is in advanced privilege mode
+* Node2 is in advanced privilege mode.
 
 .Steps
 . Disable the cluster failover automatic giveback:
@@ -30,7 +30,7 @@ Verify that you meet the following requirements:
 `network interface modify -lif * -auto-revert false`  
 . Display the status of all data network LIFs:
 +
-`network interface show -role data `
+`network interface show -role data`
 . Display the status of the cluster management LIFs:
 +
 `network interface show cluster_mgmt`
