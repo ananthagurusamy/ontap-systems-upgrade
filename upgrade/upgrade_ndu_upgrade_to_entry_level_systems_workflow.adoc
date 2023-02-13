@@ -13,8 +13,13 @@ You can perform a nondisruptive upgrade (NDU) to entry level NetApp AFF and FAS 
 
 In this procedure, the entry high-availability (HA) pair controllers are called node1 and node2 and the new midrange or high range HA pair controllers are called node3 and node4.
 
-image::../upgrade/media/ndu_upgrade_entry_level_systems.PNG[NDU upgrade to entry level systems workflow]
+image::../upgrade/media/ndu_upgrade_entry_level_systems.PNG[Workflow for NDU upgrade to entry level systems]
 
-
+.Steps
+. xref:upgrade_migrate_lifs_aggregates_node2_to_node1.adoc[Migrate LIFs and data aggregates on node2 to node1]
+. xref:upgrade_reassign_drives_node2_to_node4.adoc[Reassign drives from node2 to node4s]
+. xref:upgrade_migrate_aggregates_epsilon_lifs_node1_node4.adoc[Migrate data aggregates, epsilon, and LIFs on node1 to node4]
+. xref:upgrade_reassign_drives_node1_to_node3.adoc[Reassign drives from node1 to node3]
+. xref:upgrade_migrate_lIFs_aggregates_node4_node3.adoc[Migrate LIFs and data aggregates on node4 to node3]
 
 // 2023 Feb 1, BURT 1351102
