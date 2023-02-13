@@ -82,4 +82,16 @@ entries:
     - title: Complete upgrade
       url: /upgrade/upgrade-complete-move-volumes.html
   - title: Nondisruptive upgrade to entry level systems
-    url: /upgrade/upgrade_ndu_upgrade_to_entry_level_systems.html
+    entries:
+    - title: Workflow
+      url: /upgrade/upgrade_ndu_upgrade_to_entry_level_systems_workflow.html
+    - title: Migrate LIFs and data aggregates on node2 to node1
+      url: /upgrade/upgrade_migrate_lifs_aggregates_node1_to_node4.html
+    - title: Reassign drives from node2 to node4
+      url: /upgrade/upgrade_reassign_drives_node2_to_node4.html
+    - title: Migrate data aggregates, epsilon, and LIFs on node1 to node4
+      url: /upgrade/upgrade_migrate_aggregates_epsilon_lifs_node1_node4.html
+    - title: Reassign drives from node1 to node3
+      url: /upgrade/upgrade_reassign_drives_node1_to_node3.html
+    - title: Migrate LIFs and data aggregates on node4 to node3
+      url: /upgrade/upgrade_migrate_lIFs_aggregates_node4_node3.html

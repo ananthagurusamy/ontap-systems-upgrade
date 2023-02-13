@@ -1,0 +1,91 @@
+---
+permalink: upgrade/upgrade_reassign_drives_node2_to_node4.html
+sidebar: sidebar
+keywords: ndu, nondisruptive, upgrade, node2, node4, reassign, drives
+summary: Physically connect node2 to node4 before reassigning drives from node2 to node4.
+---
+= Reassign drives from node2 to node4
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You physically connect node2 to node4 before reassigning drives from node2 to node4.
+
+== Set up node4
+Perform the following steps tp physically connect node2 to node4.
+
+.Before you begin
+Verify that node2 is in advanced privilege mode.
+
+.Steps
+. Disconnect all the network cables from node2.
+. Remove node2 from the enclosure.
+. Insert the NVMe shelf module (NSM) into the bay of node2.
+. Connect the NSM module to node4.
+. Remove node2 and replace it with an NSM.
+. Cable the node4 100GbE port (e0c or e0d) to an available port on the NSM.
+. Connect the 25 GbE cabling from ports e0c & e0d on node1 to the 25 GbE onboard ports on node4.
++
+NOTE: If onboard 25GbE ports are not present on node4, you must have a 25 GbE PCIe adapter to make the connection.
+
+. For NetApp AFF A400 systems only, establish the cable connections between the system nodes:
+.. If 16 Gb Fibre Channel ports are onboard, install a 25 Gb Ethernet adapter into each node for cluster connectivity during migration.
+.. Connect the HA pair cables between the AFF A400 nodes using ports e0a and e0b.
+.. Connect the cluster cables between the AFF A400 nodes using ports e3a and e3b.
+
+== Reassign drives from node2 to node4
+Reassign drives from node2 to node4 by performing the following steps on node4.
+
+.Steps
+. At the LOADER prompt, boot node4 into maintenance mode:
++
+`boot_ontap maint` 
+. Show the state of the 100 GbE interfaces:
++
+`storage port show`
+. Set the 100 GbE interfaces to storage ports:
++
+`storage port modify -p e0c -m storage`
++
+`storage port modify -p e0d -m storage`
+. Verify the mode changes to the 100 GbE interfaces:
++
+`storage port show`
++
+Output like the following should display:
++
+----
+*> storage port modify -p e0c -m storage
+Nov 10 16:27:23 [localhost:nvmeof.port.modify:notice]: Changing NVMe-oF port e0c to storage mode.
+*>
+*> storage port modify -p e0cNov 10 16:27:29 [localhost:nvmeof.subsystem.add:notice]: NVMe-oF subsystem added at address fe80::2a0:98ff:fefa:8885.
+
+*> storage port modify -p e0d Nov 10 16:27:34 [localhost:nvmeof.port.modify:notice]: Changing NVMe-oF port e0d to storage mode.
+-m storage
+*>
+*>
+*> storage port show
+Port Type Mode    Speed(Gb/s) State    Status  VLAN ID
+---- ---- ------- ----------- -------- ------- -------
+e0c  ENET storage 100 Gb/s    enabled  online  30
+e0d  ENET storage 100 Gb/s    enabled  online  30
+*> Nov 10 16:27:38 [localhost:nvmeof.subsystem.add:notice]: NVMe-oF subsystem added at address fe80::2a0:98ff:fefa:8886.
+----
+
+. Display all attached drives: 
++
+`disk show -v `
+. Record the local System ID.
+. Reassign all drives from node2 to node4:
++
+`disk reassign -s _node2_ -d _node4_ -p _node1_`
+. Verify that all reassigned drives are viewable to the new System ID:
++
+disk show -s _node4_System_ID_
++ 
+NOTE: If drives are not viewable, *STOP* and contact technical support for assistance. 
+. Exit maintenance mode: 
++
+`halt`
+
+// 2023 Feb 1, BURT 1351102

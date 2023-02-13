@@ -1,0 +1,57 @@
+---
+permalink: upgrade/upgrade_reassign_drives_node1_to_node3.html
+sidebar: sidebar
+keywords: ndu, nondisruptive, upgrade, node3, node1, reassign, drives
+summary: Physically connect node1 to node3 before reassigning drives from node1 to node3
+---
+= Reassign drives from node1 to node3
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You physically connect node1 to node3 before reassigning drives from node1 to node3.
+
+== Set up node3
+Perform the following steps tp physically connect node1 to node3. 
+
+.Steps
+. Disconnect all network cables from node1.
+. Remove node1 from the enclosure.
+. Insert NVMe module (NSM) into the bay of node1.
+. Connect NSM module to node3.
+
+== Reassign drives from node1 to node3
+Reassign drives from node1 to node3 by performing the following steps on node3.
+
+.Steps
+. At the LOADER prompt boot node3 into Maintenance Mode:
++
+`boot_ontap maint` 
+. Show the state of the 100 GbE interfaces: 
++
+`storage port show`
+. Set 100 GbE interfaces to storage ports:
++
+`storage port modify -p e0c -m storage`
++
+`storage port modify -p e0d -m storage`
+. Verify the mode changes to the 100GbE interfaces:
++ 
+`storage port show` 
+. Display all attached drives:
++
+`disk show -v` 
+. Record the local System ID.
+. Reassign all drives from node1 to node3:
++
+`disk reassign -s _node1_ -d _node3_ -p _node2_`
+. Verify that all reassigned drives are viewable to the new System ID:
++
+disk show -s _node3 System ID_
++
+NOTE: If drives are not viewable, *STOP* and contact technical support for assistance.
+. Exit Maintenance Mode: 
++
+`halt`
+
+// 2023 Feb 1, BURT 1351102

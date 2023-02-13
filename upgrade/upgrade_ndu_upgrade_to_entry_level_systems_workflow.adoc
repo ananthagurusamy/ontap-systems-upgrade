@@ -1,0 +1,27 @@
+---
+permalink: upgrade/upgrade_ndu_upgrade_to_entry_level_systems_workflow.html
+sidebar: sidebar
+keywords: ndu, nondisruptive, upgrade, AFF, FAS, systems, entry, level
+summary: Perform an NDU to entry level NetApp AFF and FAS systems without having to purchase additional storage and cluster switches.
+---
+= Nondisruptive upgrade to entry level NetApp AFF and FAS systems
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can perform a nondisruptive upgrade (NDU) to entry level NetApp AFF and FAS systems without having to purchase additional storage and cluster switches. To perform the upgrade, you first prepare the original nodes and set up the new nodes. You then reassign drives to the new nodes and migrate your data. 
+
+In this procedure, the entry high-availability (HA) pair controllers are called node1 and node2 and the new midrange or high range HA pair controllers are called node3 and node4.
+
+image::../upgrade/media/ndu_upgrade_entry_level_systems.PNG[NDU upgrade to entry level systems workflow]
+
+.Before you begin
+Verify that you meet the following requirements:
+
+* You have purchased a new HA pair of midrange or high-range controllers without storage.
+* The new controllers have the same ONTAP release installed as the current entry system.
+* You have performed a `wipeconfig` on the new controllers and they are currently waiting at the `Maintenance Mode` prompt.
+* You have all the appropriate cabling on-hand.
+* NVMe shelf module firmware 0121 or later is already installed.
+
+// 2023 Feb 1, BURT 1351102

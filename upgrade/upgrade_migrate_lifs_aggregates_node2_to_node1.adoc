@@ -1,0 +1,69 @@
+---
+permalink: upgrade/upgrade_migrate_lifs_aggregates_node2_to_node1.html
+sidebar: sidebar
+keywords: ndu, nondisruptive, upgrade, node1, node2, migrate, aggregates, lifs
+summary: Migrate the logical interfaces (LIFs) and data aggregates on node2 to node1.
+---
+= Migrate LIFs and data aggregates on node2 to node1
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+In preparation for the upgrade, you migrate the logical interfaces (LIFs) and data aggregates on node2 to node1.
+
+.Before you begin
+Verify that node2 is in advanced privilege mode.
+
+.Steps
+. Disable the cluster failover automatic giveback:
++
+`storage failover modify -node _node_name_ -auto-giveback false`
+. Disable auto-revert of the LIFs across both nodes of the HA pair:
++
+`network interface modify -lif * -auto-revert false`  
+. Display the status of all data network LIFs:
++
+`network interface show -role data `
+. Display the status of the cluster management LIFs:
++
+`network interface show cluster_mgmt`
+. Migrate all data LIFs from the storage virtual machines (SVMs) hosted on node2:
++
+`network interface migrate -vserver _vserver_name_ -lif _lif_name_ -destination-node _node_name_ -destination-port _port_name_`
++
+NOTE: The above command only migrates non-SAN LIFs. You cannot use this command to migrate iSCSI and FCP LIFs.
+. Display the status of all data LIFs in the cluster:
++
+`network interface show -role data`
+. If any LIFs are down, set the administrative status of the LIFs to `up` by entering the following command, once for each LIF:
++
+`network interface modify -vserver _vserver_name_ -lif _lif_name_ -home-node _node_name_ -status-admin up`
+. Display the status of all data aggregates in the cluster:
++
+`storage aggregate show` 
+. Display failover eligibility:
++
+`storage failover show`
+. Migrate the data aggregates on node2 to node1:
++
+`storage aggregate relocation start -aggregate _aggregate_name_ -node _node2_ -destination _node1_`   
+. Display the status of all data aggregates in the cluster:
++
+`storage aggregate show`
+. Display the status of all data volumes in the cluster:
++
+`volume show` 
+. Display the ha status and ownership of epsilon:
++
+`cluster show` 
+. Disable cluster `ha`:
++
+`cluster ha modify -configured false` 
+. Display the ha status and ownership of epsilon:
++
+`cluster show` 
+. Halt node2:
++
+`halt -node _node2_ -inhibit-takeover true`   
+
+// 2023 Feb 1, BURT 1351102
