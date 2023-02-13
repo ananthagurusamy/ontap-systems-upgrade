@@ -15,13 +15,6 @@ In this procedure, the entry high-availability (HA) pair controllers are called 
 
 image::../upgrade/media/ndu_upgrade_entry_level_systems.PNG[NDU upgrade to entry level systems workflow]
 
-.Before you begin
-Verify that you meet the following requirements:
 
-* You have purchased a new HA pair of midrange or high-range controllers without storage.
-* The new controllers have the same ONTAP release installed as the current entry system.
-* You have performed a `wipeconfig` on the new controllers and they are currently waiting at the `Maintenance Mode` prompt.
-* You have all the appropriate cabling on-hand.
-* NVMe shelf module firmware 0121 or later is already installed.
 
 // 2023 Feb 1, BURT 1351102

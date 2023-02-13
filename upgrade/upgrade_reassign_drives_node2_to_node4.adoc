@@ -28,7 +28,7 @@ Verify that node2 is in advanced privilege mode.
 +
 NOTE: If onboard 25GbE ports are not present on node4, you must have a 25 GbE PCIe adapter to make the connection.
 
-. For NetApp AFF A400 systems only, establish the cable connections between the system nodes:
+. (NetApp AFF A400 systems only) Establish the cable connections between the system nodes:
 .. If 16 Gb Fibre Channel ports are onboard, install a 25 Gb Ethernet adapter into each node for cluster connectivity during migration.
 .. Connect the HA pair cables between the AFF A400 nodes using ports e0a and e0b.
 .. Connect the cluster cables between the AFF A400 nodes using ports e3a and e3b.

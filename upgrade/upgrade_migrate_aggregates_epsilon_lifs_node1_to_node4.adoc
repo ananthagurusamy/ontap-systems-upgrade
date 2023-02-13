@@ -1,5 +1,5 @@
 ---
-permalink: upgrade/upgrade_migrate_aggregates_epsilon_lifs_node1_node4.html
+permalink: upgrade/upgrade_migrate_aggregates_epsilon_lifs_node1_to_node4.html
 sidebar: sidebar
 keywords: ndu, nondisruptive, upgrade, node1, node4, migrate, aggregates, lifs
 summary:  Migrate the data aggregates, epsilon, and LIFs on node1 to node4.

@@ -12,7 +12,14 @@ summary: Migrate the logical interfaces (LIFs) and data aggregates on node2 to n
 In preparation for the upgrade, you migrate the logical interfaces (LIFs) and data aggregates on node2 to node1.
 
 .Before you begin
-Verify that node2 is in advanced privilege mode.
+Verify that you meet the following requirements:
+
+* You have purchased a new HA pair of midrange or high-range controllers without storage.
+* The new controllers have the same ONTAP release installed as the current entry system.
+* You have performed a `wipeconfig` on the new controllers and they are currently waiting at the `Maintenance Mode` prompt.
+* You have all the appropriate cabling on-hand.
+* NVMe shelf module firmware 0121 or later is already installed.
+* Node2 is in advanced privilege mode
 
 .Steps
 . Disable the cluster failover automatic giveback:
