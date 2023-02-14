@@ -34,11 +34,11 @@ Verify that you meet the following requirements:
 . Display the status of the cluster management LIFs:
 +
 `network interface show cluster_mgmt`
-. Migrate all data LIFs from the storage virtual machines (SVMs) hosted on node2:
+. Migrate all data LIFs from the storage virtual machines hosted on node2:
 +
 `network interface migrate -vserver _vserver_name_ -lif _lif_name_ -destination-node _node_name_ -destination-port _port_name_`
 +
-NOTE: The above command only migrates non-SAN LIFs. You cannot use this command to migrate iSCSI and FCP LIFs.
+NOTE: This command only migrates non-SAN LIFs. You cannot use it to migrate iSCSI and FCP LIFs.
 . Display the status of all data LIFs in the cluster:
 +
 `network interface show -role data`
@@ -60,13 +60,13 @@ NOTE: The above command only migrates non-SAN LIFs. You cannot use this command 
 . Display the status of all data volumes in the cluster:
 +
 `volume show` 
-. Display the ha status and ownership of epsilon:
+. Display the `ha` status and ownership of epsilon:
 +
 `cluster show` 
-. Disable cluster `ha`:
+. Disable `cluster ha`:
 +
 `cluster ha modify -configured false` 
-. Display the ha status and ownership of epsilon:
+. Display the `ha` status and ownership of epsilon:
 +
 `cluster show` 
 . Halt node2:

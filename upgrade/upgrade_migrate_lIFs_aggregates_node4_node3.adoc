@@ -40,7 +40,7 @@ The node reports a warning that there is a System ID mismatch. Enter `y` to over
 Migrate the data LIFs and data aggregates on node4 to node3 by performing the following steps on node4.
 
 .Steps
-. Migrate cluster LIFs:
+. Migrate the cluster LIFs:
 +
 `set -privilege advanced`
 +
@@ -51,7 +51,7 @@ Migrate the data LIFs and data aggregates on node4 to node3 by performing the fo
 +
 `network port broadcast-domain add-ports -broadcast-domain Cluster -ports _port_names_`
 +
-NOTE: This step is required because ONTAP 9.8 might designate new IPspaces and one or more broadcast domains to existing physical ports that are intended for cluster connectivity.
+NOTE: Beginning with ONTAP 9.8, new IPspaces and one or more broadcast domains might be designated to existing physical ports that are intended for cluster connectivity.
 . Modify the cluster IPspace to include the desired cluster ports and set MTU to 9000 if not already set:
 +
 `network port modify -node _node_name_ -port _port_name_ -mtu 9000 -ipspace Cluster`
@@ -96,14 +96,14 @@ Cluster and management LIFs cannot migrate between nodes.
 . Enable auto-revert of the network LIFs across the nodes:
 +
 `network interface modify -lif * -auto-revert true`
-. Display cluster status:
+. Display the cluster status:
 +
 `cluster show`
 . Display failover eligibility: 
 +
 `storage failover show`
 +
-NOTE: You might see a Node owns aggregates belonging to another node in the cluster report in the output. If this occurs, normalize by performing a takeover and giveback from both sides of the cluster.
+NOTE: In the cluster report output, a node might incorrectly own aggregates that belong to another node. If this occurs, normalize by performing a takeover and giveback from both sides of the cluster.
 
 . Display the status of all data aggregates in the cluster:
 +

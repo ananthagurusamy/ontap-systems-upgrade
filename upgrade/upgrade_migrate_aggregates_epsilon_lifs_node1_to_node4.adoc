@@ -50,10 +50,10 @@ If the system cluster ports are not similar, for example, when upgrading an AFF 
 . Migrate epsilon by removing epsilon from node1 and moving to node4.
 .. Remove epsilon from node1: 
 +
-`cluster modify -epsilon false -node _local-node_name_`
+`cluster modify -epsilon false -node _local_node_name_`
 .. Move epsilon to node4: 
 +
-`cluster modify -epsilon true -node _partner-node_name_`
+`cluster modify -epsilon true -node _partner_node_name_`
 
 . Display the cluster status:
 +
@@ -63,7 +63,7 @@ If the system cluster ports are not similar, for example, when upgrading an AFF 
 `network interface show -role data` 
 . Migrate all data LIFs to node4:
 +
-`network interface migrate -vserver _vserver_name_ -lif _lif_name_ -destination-node _node_name]_` 
+`network interface migrate -vserver _vserver_name_ -lif _lif_name_ -destination-node _node_name_` 
 . Display the status of all data LIFs in the cluster:
 +
 `network interface show -role data`

@@ -11,7 +11,7 @@ summary: Perform an NDU to entry level NetApp AFF and FAS systems without having
 [.lead]
 You can perform a nondisruptive upgrade (NDU) to entry level NetApp AFF and FAS systems without having to purchase additional storage and cluster switches. To perform the upgrade, you first prepare the original nodes and set up the new nodes. You then reassign drives to the new nodes and migrate your data. 
 
-In this procedure, the entry high-availability (HA) pair controllers are called node1 and node2 and the new midrange or high range HA pair controllers are called node3 and node4.
+In this procedure, the entry high-availability (HA) pair controllers are called node1 and node2, and the new midrange or high range HA pair controllers are called node3 and node4.
 
 image::../upgrade/media/ndu_upgrade_entry_level_systems.PNG[Workflow for NDU upgrade to entry level systems]
 

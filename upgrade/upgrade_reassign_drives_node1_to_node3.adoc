@@ -12,13 +12,13 @@ summary: Physically connect node1 to node3 before reassigning drives from node1 
 You physically connect node1 to node3 before reassigning drives from node1 to node3.
 
 == Set up node3
-Perform the following steps tp physically connect node1 to node3. 
+Perform the following steps to physically connect node1 to node3. 
 
 .Steps
 . Disconnect all network cables from node1.
 . Remove node1 from the enclosure.
-. Insert NVMe module (NSM) into the bay of node1.
-. Connect NSM module to node3.
+. Insert the NVMe shelf module (NSM) into the bay of node1.
+. Connect the NSM to node3.
 
 == Reassign drives from node1 to node3
 Reassign drives from node1 to node3 by performing the following steps on node3.
@@ -27,10 +27,10 @@ Reassign drives from node1 to node3 by performing the following steps on node3.
 . At the LOADER prompt boot node3 into Maintenance Mode:
 +
 `boot_ontap maint` 
-. Show the state of the 100 GbE interfaces: 
+. Show the state of the 100GbE interfaces: 
 +
 `storage port show`
-. Set 100 GbE interfaces to storage ports:
+. Set the 100GbE interfaces to storage ports:
 +
 `storage port modify -p e0c -m storage`
 +
