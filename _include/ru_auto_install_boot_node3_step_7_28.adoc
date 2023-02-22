@@ -155,13 +155,15 @@ a|* `setenv bootarg.storageencryption.support *false*`
 * `setenv kmip.init.maxwait off`
 |===
 +
+[WARNING]
+====
+*As soon as the controller upgrade completes on the HA pair, you must unset the `kmip.init.maxwait` variable. See link:ensure_new_controllers_are_set_up_correctly.html[Confirm that the new controllers are set up correctly]. Failure to do so might cause data loss if a power outage occurs.*
+====
++
 [NOTE]
 ====
 * You cannot mix FIPS drives with other types of drives on the same node or HA pair.
 * You can mix SEDs with non-encrypting drives on the same node or HA pair.
-* If a power outage occurs after you set the `kmip.init.maxwait` variable to `off`, contact technical support for assistance to avoid potential data loss.
-
-* As soon as the controller upgrade completes on the HA pair, you must unset the `kmip.init.maxwait` variable. See link:ensure_new_controllers_are_set_up_correctly.html[Confirm that the new controllers are set up correctly].
 ====
 
 . [[step28]]Boot node into boot menu:
