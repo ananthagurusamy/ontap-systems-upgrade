@@ -157,7 +157,7 @@ a|* `setenv bootarg.storageencryption.support *false*`
 +
 [WARNING]
 ====
-*As soon as the controller upgrade completes on the HA pair, you must unset the `kmip.init.maxwait` variable. See link:ensure_new_controllers_are_set_up_correctly.html[Confirm that the new controllers are set up correctly]. Failure to do so might cause data loss if a power outage occurs.*
+*As soon as the controller upgrade completes on the HA pair, you must unset the `kmip.init.maxwait` variable. See xref:ensure_new_controllers_are_set_up_correctly.adoc[Confirm that the new controllers are set up correctly]. Failure to do so might cause data loss if a power outage occurs.*
 ====
 +
 [NOTE]
