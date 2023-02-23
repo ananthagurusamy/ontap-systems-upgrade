@@ -97,7 +97,7 @@ Enter `y` to remove all of the packages.
 +
 You can compare the output with the output that you captured in the link:prepare_nodes_for_upgrade.html[Prepare the nodes for upgrade] section.
 
-. If self-encrypting drives are being used in the configuration and you have set the `kmip.init.maxwait` variable to `off` (for example, in _Boot node2 with the AFF A900 or the FAS9500 controller and NVRAM modules_, link:boot_node2_with_a900_controller_and_nvs.html#boot_node2_step1[Step 1]), you must unset the variable:
+. [[unset_maxwait]] If self-encrypting drives are being used in the configuration and you have set the `kmip.init.maxwait` variable to `off` (for example, in _Boot node2 with the AFF A900 or the FAS9500 controller and NVRAM modules_, link:boot_node2_with_a900_controller_and_nvs.html#boot_node2_step1[Step 1]), you must unset the variable:
 +
 `set diag; systemshell -node _node_name_ -command sudo kenv -u -p kmip.init.maxwait`
 .	Configure the SPs by using the following command on both nodes:
