@@ -133,8 +133,9 @@ NOTE: If NetApp Volume Encryption (NVE) or NetApp Aggregate Encryption (NAE) usi
 
 [NOTE]
 ====
-* You cannot mix FIPS drives with other types of drives on the same node or HA pair.
-* You can mix SEDs with non-encrypting drives on the same node or HA pair.
+You cannot mix FIPS drives with other types of drives on the same node or HA pair.
+
+You can mix SEDs with non-encrypting drives on the same node or HA pair.
 ====
 
 https://docs.netapp.com/us-en/ontap/encryption-at-rest/support-storage-encryption-concept.html#supported-self-encrypting-drive-types[Learn more about supported self-encrypting drives^]. 

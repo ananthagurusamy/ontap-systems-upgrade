@@ -156,11 +156,9 @@ WARNING: *As soon as the controller upgrade completes on the HA pair, you must u
 +
 [NOTE]
 ====
-* You cannot mix FIPS drives with other types of drives on the same node or HA pair.
-* You can mix SEDs with non-encrypting drives on the same node or HA pair.
-* If a power outage occurs after you set the `kmip.init.maxwait` variable to `off`, contact technical support for assistance to avoid potential data loss.
+You cannot mix FIPS drives with other types of drives on the same node or HA pair.
 
-* As soon as the controller upgrade completes on the HA pair, you must unset the `kmip.init.maxwait` variable. See link:ensure_controllers_set_up_correctly.html[Confirm that the new controllers are set up correctly].
+You can mix SEDs with non-encrypting drives on the same node or HA pair.
 ====
 
 . [[man_install3_step17]] If the version of ONTAP installed on node3 is the same or later than the version of ONTAP 9 installed on node1, list and reassign disks to the new node3:

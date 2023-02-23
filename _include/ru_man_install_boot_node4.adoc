@@ -143,8 +143,9 @@ WARNING: *As soon as the controller upgrade completes on the HA pair, you must u
 +
 [NOTE]
 ====
-* You cannot mix FIPS drives with other types of drives on the same node or HA pair.
-* You can mix SEDs with non-encrypting drives on the same node or HA pair.
+You cannot mix FIPS drives with other types of drives on the same node or HA pair.
+
+You can mix SEDs with non-encrypting drives on the same node or HA pair.
 ====
 
 . If the version of ONTAP installed on node4 is the same or later than the version of ONTAP 9 installed on node2, enter the following command:

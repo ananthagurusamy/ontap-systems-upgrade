@@ -159,8 +159,9 @@ WARNING: *As soon as the controller upgrade completes on the HA pair, you must u
 +
 [NOTE]
 ====
-* You cannot mix FIPS drives with other types of drives on the same node or HA pair.
-* You can mix SEDs with non-encrypting drives on the same node or HA pair.
+You cannot mix FIPS drives with other types of drives on the same node or HA pair.
+
+You can mix SEDs with non-encrypting drives on the same node or HA pair.
 ====
 
 . [[step28]]Boot node into boot menu:
