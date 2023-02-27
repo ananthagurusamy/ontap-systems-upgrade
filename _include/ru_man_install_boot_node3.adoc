@@ -486,6 +486,7 @@ The node might go through one round of reboot before booting normally.
 . [[man_install3_step48]]Log in to node3.
 
 
+// 2023 Feb 22, BURT 1518041
 // 2022 MAY 13, BURT 1478241
 // 2022 MAR 09, Clean-up
 // 2021 FEB 22, Formatted from CMS
