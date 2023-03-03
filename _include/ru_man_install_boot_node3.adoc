@@ -152,13 +152,13 @@ a|* `setenv bootarg.storageencryption.support *false*`
 * `setenv kmip.init.maxwait off`
 |===
 +
+WARNING: *As soon as the controller upgrade completes on the HA pair, you must unset the `kmip.init.maxwait` variable. See link:ensure_controllers_set_up_correctly.html#unset_maxwait_manual[Confirm that the new controllers are set up correctly, Step 11]. Failure to do so might lead to data loss if a power outage occurs.*
++
 [NOTE]
 ====
-* You cannot mix FIPS drives with other types of drives on the same node or HA pair.
-* You can mix SEDs with non-encrypting drives on the same node or HA pair.
-* If a power outage occurs after you set the `kmip.init.maxwait` variable to `off`, contact technical support for assistance to avoid potential data loss.
+You cannot mix FIPS drives with other types of drives on the same node or HA pair.
 
-* As soon as the controller upgrade completes on the HA pair, you must unset the `kmip.init.maxwait` variable. See link:ensure_controllers_set_up_correctly.html[Confirm that the new controllers are set up correctly].
+You can mix SEDs with non-encrypting drives on the same node or HA pair.
 ====
 
 . [[man_install3_step17]] If the version of ONTAP installed on node3 is the same or later than the version of ONTAP 9 installed on node1, list and reassign disks to the new node3:
@@ -486,6 +486,7 @@ The node might go through one round of reboot before booting normally.
 . [[man_install3_step48]]Log in to node3.
 
 
+// 2023 Feb 22, BURT 1518041
 // 2022 MAY 13, BURT 1478241
 // 2022 MAR 09, Clean-up
 // 2021 FEB 22, Formatted from CMS
