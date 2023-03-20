@@ -87,7 +87,7 @@ xref:upgrade-by-moving-storage-parent.adoc[Upgrade controller hardware by moving
 
 xref:upgrade-by-moving-volumes-parent.adoc[Upgrade controller hardware by moving volumes]
 
-xref:upgrade_ndu_upgrade_to_entry_level_systems_workflow.adoc[Nondisruptive upgrade to entry level systems]
+xref:aff_a250_to_aff_a400_ndu_upgrade_workflow.html.adoc[Perform an AFF A250 to AFF A400 nondisruptive upgrade]
 
 // 2023 Feb 1, BURT 1351102
 // 2022-03-09, Clean-up 

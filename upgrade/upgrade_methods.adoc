@@ -23,7 +23,7 @@ link:upgrade-by-moving-storage-parent.html[Workflow for upgrading by moving stor
 
 link:upgrade-by-moving-volumes-parent.html[Workflow for upgrading by moving volumes]
 
-link:upgrade_ndu_upgrade_to_entry_level_systems.html[Nondisruptive upgrade to entry level systems]
+xref:aff_a250_to_aff_a400_ndu_upgrade_workflow.html.adoc[Workflow for nondisruptively upgrading an AFF A250 to AFF A400]
 
 // 2023 Feb 1, BURT 1351102
 // BURT 1493415, 2022-09-02

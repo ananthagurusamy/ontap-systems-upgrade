@@ -81,7 +81,7 @@ entries:
       url: /upgrade/upgrade-unjoin-original-nodes-move-volumes.html
     - title: Complete upgrade
       url: /upgrade/upgrade-complete-move-volumes.html
-  - title: Nondisruptive upgrade to entry level systems
+  - title: Perform an AFF A250 to AFF A400 nondisruptive upgrade
     entries:
     - title: Workflow
       url: /upgrade/aff_a250_to_aff_a400_ndu_upgrade_workflow.html
