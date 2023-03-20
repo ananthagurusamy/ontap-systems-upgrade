@@ -71,8 +71,7 @@ NOTE: Beginning with ONTAP 9.8, new IPspaces and one or more broadcast domains m
 +
 `network interface show -role data`
 +
-Cluster and management LIFs cannot migrate between nodes.
-.If any LIFs are down, set the administrative status of the LIFs to `up` by entering the following command, once for each LIF:
+Cluster and management LIFs cannot migrate between nodes. If any LIFs are down, set the administrative status of the LIFs to `up` by entering the following command, once for each LIF:
 +
 `network interface modify -vserver _vserver_name_ -lif _lif_name_ -home-node _node_name_ -status-admin up`
 . Migrate the cluster management LIF:
@@ -87,7 +86,7 @@ Cluster and management LIFs cannot migrate between nodes.
 . Enable the HA pair, storage failover, and auto-giveback: 
 +
 `cluster ha modify -configured true`
-. Migrate data aggregates owned by node4 from to node3:
+. Migrate data aggregates owned by node4 to node3:
 + 
 `storage aggregate relocation start -aggregate _aggregate_name_ -node _node4_ -destination _node3_`
 . Display the status of all data aggregates in the cluster:

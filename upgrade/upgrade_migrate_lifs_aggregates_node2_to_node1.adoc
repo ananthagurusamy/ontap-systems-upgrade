@@ -14,8 +14,7 @@ In preparation for the upgrade, you migrate the logical interfaces (LIFs) and da
 .Before you begin
 Verify that you meet the following requirements:
 
-* You have purchased a new HA pair of midrange or high-range controllers without storage.
-* The new controllers have the same ONTAP release installed as the current entry system.
+* The AFF A400 controllers have the same ONTAP release installed as the AFF A250 system.
 * You have performed a `wipeconfig` on the new controllers and they are currently waiting at the `Maintenance Mode` prompt.
 * You have all the appropriate cabling on-hand.
 * NVMe shelf module firmware 0121 or later is already installed.

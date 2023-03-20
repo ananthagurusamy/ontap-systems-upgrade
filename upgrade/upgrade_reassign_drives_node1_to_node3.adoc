@@ -9,7 +9,7 @@ summary: Physically connect node1 to node3 before reassigning drives from node1 
 :imagesdir: ../media/
 
 [.lead]
-You physically connect node1 to node3 before reassigning drives from node1 to node3.
+You physically connect node1 (AFF A250) to node3 (AFF A400) before reassigning drives from node1 to node3.
 
 == Set up node3
 Perform the following steps to physically connect node1 to node3. 
