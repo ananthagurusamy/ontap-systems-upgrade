@@ -24,7 +24,7 @@ Perform the following steps to physically connect node1 to node3.
 Reassign drives from node1 to node3 by performing the following steps on node3.
 
 .Steps
-. At the LOADER prompt boot node3 into Maintenance Mode:
+. At the LOADER prompt, boot node3 into Maintenance Mode:
 +
 `boot_ontap maint` 
 . Show the state of the 100GbE interfaces: 
