@@ -55,19 +55,19 @@ Output like the following should display:
 ----
 *> storage port modify -p e0c -m storage
 Nov 10 16:27:23 [localhost:nvmeof.port.modify:notice]: Changing NVMe-oF port e0c to storage mode.
-*>
-*> storage port modify -p e0cNov 10 16:27:29 [localhost:nvmeof.subsystem.add:notice]: NVMe-oF subsystem added at address fe80::2a0:98ff:fefa:8885.
 
-*> storage port modify -p e0d Nov 10 16:27:34 [localhost:nvmeof.port.modify:notice]: Changing NVMe-oF port e0d to storage mode.
--m storage
-*>
-*>
+Nov 10 16:27:29 [localhost:nvmeof.subsystem.add:notice]: NVMe-oF subsystem added at address fe80::2a0:98ff:fefa:8885.
+
+*> storage port modify -p e0d -m storage
+Nov 10 16:27:34 [localhost:nvmeof.port.modify:notice]: Changing NVMe-oF port e0d to storage mode.
+
+Nov 10 16:27:38 [localhost:nvmeof.subsystem.add:notice]: NVMe-oF subsystem added at address fe80::2a0:98ff:fefa:8886.
+
 *> storage port show
 Port Type Mode    Speed(Gb/s) State    Status  VLAN ID
 ---- ---- ------- ----------- -------- ------- -------
 e0c  ENET storage 100 Gb/s    enabled  online  30
 e0d  ENET storage 100 Gb/s    enabled  online  30
-*> Nov 10 16:27:38 [localhost:nvmeof.subsystem.add:notice]: NVMe-oF subsystem added at address fe80::2a0:98ff:fefa:8886.
 ----
 
 . Display all attached drives: 
