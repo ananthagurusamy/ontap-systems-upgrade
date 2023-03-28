@@ -15,25 +15,32 @@ summary: "You can upgrade controller hardware on an AFF A700 to an AFF A900 by s
 [.lead]
 This procedure describes how to upgrade the controller hardware using aggregate relocation (ARL) for the following system configurations:
 
-[cols=4*,options="header",cols="30,20,20,30"]
+[cols=3*,options="header",cols="20,20,40"]
 |===
-|Method |ONTAP version |Supported systems |Description
-
-|Using `system controller replace` commands
-|9.10.1P10, 9.11.1P6, or a later release
+|Supported upgrades |ONTAP version |Description
+|FAS2620 to FAS2820
+|9.11.1P7 (FAS2620) 
+9.13.1 (FAS2820)
+|Converts a FAS2620 system to a FAS2820 system, keeping the FAS2620 chassis and disks.
+|FAS2720 to FAS2820	
+|9.13.1
+|Converts a FAS2720 system to a FAS2820 system, keeping the FAS2720 chassis and disks.
 
 |AFF A700 to AFF A900
-|Converts an AFF A700 system to an AFF A900 system, keeping the A700 chassis
-|Using `system controller replace` commands
 |9.10.1P10, 9.11.1P6, or a later release
+|Converts an AFF A700 system to an AFF A900 system, keeping the A700 chassis
 |FAS9000 to FAS9500
+|9.10.1P10, 9.11.1P6, or a later release
 |Converts a FAS9000 system to a FAS9500 system, keeping the FAS9000 chassis.
 |===
 
-You can nondisruptively upgrade controller hardware on a high availability (HA) pair by swapping the controller and the NVRAM modules. First, you migrate the non-root aggregates between the old controller nodes. After installation, you then migrate the non-root aggregates from the old controller nodes to the replacement controller nodes. The data hosted on the nodes that you are upgrading is accessible during the upgrade procedure.
+You can nondisruptively upgrade controller hardware on a high availability (HA) pair by swapping the system modules which allows you to keep the same chassis. First, you migrate the non-root aggregates between the old controller nodes. After installation, you then migrate the non-root aggregates from the old controller nodes to the replacement controller nodes. The data hosted on the nodes that you are upgrading is accessible during the upgrade procedure.
 
 .About this task
-During this controller upgrade procedure, you swap only the two field replaceable units (FRUs) on each node on the AFF A700 or FAS9000 system with the new FRUs.
+During this controller upgrade procedure, you perform one of the following procedures:
+
+* Swap the controller module on each node on the FAS2620 or FAS2720 system with the new FAS2820 module.
+* Swap the two controller and NVRAM modules on each node on the AFF A700 or FAS9000 system with the new AFF A900 or FAS9500 modules.
 
 NOTE: You do not need to move, disconnect, or reconnect the I/O cards, data cables, disk shelves, and disks.
 

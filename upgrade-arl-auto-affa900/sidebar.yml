@@ -1,5 +1,5 @@
 section: upgrade-arl-auto-affa900
-title: Use "system controller replace" commands to upgrade AFF A700 to AFF A900 or FAS9000 to FAS9500
+title: Use "system controller replace" commands to upgrade controller models in the same chassis
 entries:
 - title: Overview
   url: /upgrade-arl-auto-affa900/index.html
