@@ -39,7 +39,7 @@ If the system cluster ports are not similar when upgrading an AFF A250 to an AFF
 
 .. `network port modify -node _node4_ -port _port_name_ -mtu 9000 -ipspace Cluster`
 
-.. `net int migrate -vserver Cluster -lif _cluster_LIF_  -destination-node _node4_ -destination-port _port_name_`
+.. `network interface migrate -vserver Cluster -lif _cluster_LIF_  -destination-node _node4_ -destination-port _port_name_`
 ====   
 . Migrate the data aggregates on node1 to node4:
 +

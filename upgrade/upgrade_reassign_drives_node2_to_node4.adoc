@@ -15,7 +15,7 @@ You physically connect node2 (AFF A250) to node4 (AFF A400) before reassigning d
 Perform the following steps to physically connect node2 to node4.
 
 .Before you begin
-Verify that both node2 and node4 are at the LOADER prompt.
+Verify that both node2 and node4 are waiting at the LOADER prompt.
 
 .Steps
 . Disconnect all the network cables from node2.
@@ -35,9 +35,6 @@ NOTE: If 25GbE onboard ports are not present on node4, you can use a 25GbE PCIe 
 Reassign drives from node2 to node4 by performing the following steps on node4.
 
 .Steps
-. At the LOADER prompt, boot node4 into maintenance mode:
-+
-`boot_ontap maint` 
 . Show the state of the 100GbE interfaces:
 +
 `storage port show`
