@@ -17,13 +17,13 @@ NOTE: Models with internal drives are: FAS2520, FAS2552, FAS2554, FAS2620, FAS26
 
 If your system is not listed above, see the https://hwu.netapp.com[NetApp Hardware Universe^] to check if it has internal drives.
 
+If you are upgrading an AFF A250 to an AFF A400, see xref:aff_a250_to_aff_a400_ndu_upgrade_workflow.adoc[Upgrade AFF A250 to AFF A400 by converting to drive shelf].
+
 *Related information*
 
 link:upgrade-by-moving-storage-parent.html[Workflow for upgrading by moving storage]
 
 link:upgrade-by-moving-volumes-parent.html[Workflow for upgrading by moving volumes]
-
-xref:aff_a250_to_aff_a400_ndu_upgrade_workflow.adoc[Workflow for nondisruptively upgrading an AFF A250 to AFF A400]
 
 // 2023 Feb 1, BURT 1351102
 // BURT 1493415, 2022-09-02

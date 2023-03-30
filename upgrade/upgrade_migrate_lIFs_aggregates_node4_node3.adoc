@@ -9,10 +9,7 @@ summary: Prepare node3, connect node node3 to node4, and then migrate the data L
 :imagesdir: ../media/
 
 [.lead]
-You prepare node3 for data migration, physically connect node3 to node4, and then migrate the data logical interfaces (LIFs) and data aggregates on node4 to node3.
-
-== Prepare node3 for data migration 
-Prepare node3 for data migration and physically connect node3 to node4.
+To complete the upgrade, you connect node3 to node4 and then migrate the data logical interfaces (LIFs) and data aggregates on node4 to node3.
 
 .Steps
 . At the LOADER prompt of the node, boot the node into the boot menu:
@@ -36,10 +33,6 @@ The node reports a warning that there is a System ID mismatch. Enter `y` to over
 .. Connect HA pair cables (if separate interfaces) between the nodes.
 .. Connect cluster cables (if separate interfaces) between the nodes.
 
-== Migrate LIFs and data aggregates on node4 to node3
-Migrate the data LIFs and data aggregates on node4 to node3 by performing the following steps on node4.
-
-.Steps
 . Migrate the cluster LIFs:
 +
 `set -privilege advanced`

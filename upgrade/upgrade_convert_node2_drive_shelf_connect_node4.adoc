@@ -1,0 +1,31 @@
+---
+permalink: upgrade/upgrade_convert_node2_drive_shelf_connect_node4.html
+sidebar: sidebar
+keywords: ndu, nondisruptive, upgrade, node2, node4, reassign, drives
+summary: Convert node 2 (AFF A250) to an NS224 drive shelf and then connect to node4 (AFF A400).
+---
+= Convert node2 to a drive shelf and connect to node4
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Convert node 2 (AFF A250) to an NS224 drive shelf and then connect to node4 (AFF A400) before reassigning drives from node2 to node4.
+
+.Before you begin
+Verify that both node2 and node4 are waiting at the LOADER prompt.
+
+.Steps
+. Disconnect all the network cables from node2.
+. Remove node2 from the enclosure.
+. Insert the NVMe shelf module (NSM) into the bay of node2.
+. Connect the NSM to node4. Refer to the NS224 shelf connectivity diagram.
+. Cable a node4 100GbE port (e0c or e0d) to an available port on the NSM.
+. Connect the 25GbE cabling from ports e0c & e0d on node1 to any two 25GbE onboard ports (e0e, e0f, e0g, or e0h) on node4.
++
+NOTE: If 25GbE onboard ports are not present on node4, you can use a 25GbE PCIe adapter to make the connection.
+
+. If the AFF A400 system uses FC ports as onboard ports, install a 25Gb Ethernet adapter into each node for cluster connectivity during migration:
+.. Connect the HA pair cables between the AFF A400 nodes using ports e0a and e0b.
+.. Connect the cluster cables between the AFF A400 nodes using ports e3a and e3b.
+
+// 2023 Feb 1, BURT 1351102

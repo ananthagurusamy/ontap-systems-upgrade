@@ -1,0 +1,24 @@
+---
+permalink: upgrade/upgrade_convert_node1_drive_shelf_connect_node3.html
+sidebar: sidebar
+keywords: ndu, nondisruptive, upgrade, node3, node1, reassign, drives
+summary: Physically connect node1 to node3 before reassigning drives from node1 to node3
+---
+= Convert node1 to a drive shelf and connect to node3
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+Convert node 1 (AFF A250) to an NS224 drive shelf and then connect to node3 (AFF A400) before reassigning drives from node1 to node3.
+
+.Steps
+. Disconnect all network cables from node1.
+. Remove node1 from the enclosure.
+. Insert the NVMe shelf module (NSM) into the bay of node1.
+. Connect the NSM to node3. Refer to the NS224 shelf connectivity diagram.
+. Cable a node3 100GbE port (e0c or e0d) to an available port on the NSM.
+. Connect the 25GbE cabling from ports e0c & e0d on node1 to any two 25GbE onboard ports (e0e, e0f, e0g, or e0h) on node3.
++
+NOTE: If 25GbE onboard ports are not present on node3, you can use a 25GbE PCIe adapter to make the connection.
+
+// 2023 Feb 1, BURT 1351102

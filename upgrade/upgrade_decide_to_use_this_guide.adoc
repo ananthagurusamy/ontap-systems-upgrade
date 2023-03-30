@@ -46,8 +46,6 @@ xref:upgrade-considerations.adoc[Considerations for upgrading controller hardwar
 
 xref:upgrade-methods.adoc[Choose methods for upgrading controller hardware]
 
-xref:aff_a250_to_aff_a400_ndu_upgrade_workflow.adoc[Perform an AFF A250 to AFF A400 nondisruptive upgrade]
-
 https://docs.netapp.com/us-en/ontap-metrocluster/maintain/concept_where_to_find_procedures_for_mcc_maintenance_tasks.html[Where to find procedures for MetroCluster maintenance tasks^]
 
 https://hwu.netapp.com[NetApp Hardware Universe^]
