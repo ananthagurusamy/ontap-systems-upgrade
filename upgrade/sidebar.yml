@@ -88,7 +88,7 @@ entries:
     - title: Migrate LIFs and data aggregates on node2 to node1
       url: /upgrade/upgrade_migrate_lifs_aggregates_node2_to_node1.html
     - title: Convert node2 to a drive shelf and connect to node4
-      url: /upgrade_convert_node2_drive_shelf_connect_node4.html
+      url: /upgrade/upgrade_convert_node2_drive_shelf_connect_node4.html
     - title: Reassign drives from node2 to node4
       url: /upgrade/upgrade_reassign_drives_node2_to_node4.html
     - title: Migrate data aggregates, epsilon, and LIFs on node1 to node4
