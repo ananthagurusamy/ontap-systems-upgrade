@@ -19,7 +19,8 @@ Convert AFF A250 node1 to an NS224 drive shelf and then connect to AFF A400 node
 . Connect the NSM to node3.
 +
 image::../upgrade/media/a400_with_ns224_shelf.PNG[AFF A400 with one NS224 shelf]
-. Cable a node3 100GbE port to an available NSM port by performing one of the following connections:
++
+Cable a node3 100GbE port to an available NSM port by performing one of the following connections:
 +
 * Cable a node3 100GbE port e0c to an NSM port e0c.
 * Cable a node3 100GbE port e0d to an NSM port e0d.
