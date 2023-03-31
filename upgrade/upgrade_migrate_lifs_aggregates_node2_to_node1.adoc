@@ -9,12 +9,12 @@ summary: Migrate the logical interfaces (LIFs) and data aggregates on node2 to n
 :imagesdir: ../media/
 
 [.lead]
-Before converting node2 (AFF A250) to a drive shelf, you migrate the logical interfaces (LIFs) and data aggregates on node2 to node1.
+Before converting AFF A250 node2 to a drive shelf, you migrate the logical interfaces (LIFs) and data aggregates on node2 to node1.
 
 .Before you begin
 Verify that you meet the following requirements:
 
-* The AFF A400 controllers have the same ONTAP release installed as the AFF A250 system.
+* The AFF A250 and AFF A400 controllers have the same ONTAP release installed.
 * Both controllers are waiting at the `Maintenance Mode` prompt.
 * You have all the appropriate cabling on-hand.
 * NVMe shelf module firmware 0121 or later is already installed.

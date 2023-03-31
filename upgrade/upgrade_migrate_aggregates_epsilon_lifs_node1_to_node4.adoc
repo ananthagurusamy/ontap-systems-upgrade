@@ -9,7 +9,7 @@ summary:  Migrate the data aggregates, epsilon, and LIFs on node1 to node4.
 :imagesdir: ../media/
 
 [.lead]
-Before converting node1 (AFF A250) to a drive shelf, you migrate the data aggregates, epsilon, and logical interfaces (LIFs) on node1 to node4 (AFF A400).
+Before converting AFF A250 node1 to a drive shelf, you migrate the data aggregates, epsilon, and logical interfaces (LIFs) on node1 to AFF A400 node4.
 
 .Steps
 . At the LOADER prompt for the node, boot the node into the boot menu:
