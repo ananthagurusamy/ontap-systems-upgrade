@@ -77,7 +77,7 @@ https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Systems/FlexPod_wi
 
 * If your system uses out-of-band ACP, you might need to migrate from out-of-band ACP to in-band ACP.
 +
-https://kb.netapp.com/app/answers/answer_view/a_id/1029778[NetApp KB Article 1029778: In-Band ACP Setup and Support^]
+https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Systems/FAS_Systems/In-Band_ACP_Setup_and_Support[NetApp KB Article: In-Band ACP Setup and Support^]
 
 *Related information*
 
