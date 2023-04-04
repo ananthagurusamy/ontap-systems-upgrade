@@ -120,7 +120,7 @@ Node1
 +
 In the preceding example, node1 booted after the controller replacement. Some ports do not have reachability because there is no physical connectivity. You must repair any ports with a reachability status other than `ok`.
 +
-NOTE:	During an AFF A700 to AFF A900 or a FAS9000 to FAS9500 controller upgrade, the network ports and their connectivity should not change. All ports should reside in the correct broadcast domains and the network port reachability should not change. However, before moving LIFs from node2 back to node1, you must verify the reachability and health status of the network ports.
+NOTE:	During the upgrade, the network ports and their connectivity should not change. All ports should reside in the correct broadcast domains and the network port reachability should not change. However, before moving LIFs from node2 back to node1, you must verify the reachability and health status of the network ports.
 
 .	[[restore_node1_step4]]Repair the reachability for each of the ports on node1 with a reachability status other than `ok` by using the following command, in the following order:
 +

@@ -4,8 +4,7 @@ permalink: upgrade-arl-auto-affa900/boot_node1_with_a900_controller_and_nvs.html
 keywords: boot, NVRAM, controller, module, node1, aff, a700, a900
 summary: Boot node1 with the AFF A900 controller module and NVRAM module.
 ---
-
-= Boot node1 with the AFF A900 or FAS9500 controller and NVRAM modules
+= Boot node1 with the replacement system modules
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,7 +12,16 @@ summary: Boot node1 with the AFF A900 controller module and NVRAM module.
 :imagesdir: ./media/
 
 [.lead]
-Node1 with the AFF A900 or FAS9500 controller and NVRAM modules is now ready for boot up. An AFF A700 to AFF A900 or a FAS9000 to FAS9500 upgrade by swapping the controller and NVRAM modules involves moving only the console and management connections. This section provides the steps required to boot node1 with the AFF A900 or FAS9500 controller and NVRAM modules.
+Node1 with the replacement modules is now ready for boot up. Upgrading by swapping the system modules involves moving only the console and management connections. This section provides the steps required to boot node1 with the replacement modules for the following upgrade configurations:
+
+[cols="35,65"]
+|===
+|Old node1 controller |Replacement node1 system modules
+|FAS2620 |FAS2820 controller module
+|FAS2720 |FAS2820 controller module
+|AFF A700 |AFF A900 controller and NVRAM modules
+|FAS9000 |AS9500 controller and NVRAM modules
+|===
 
 .Steps
 
@@ -48,7 +56,7 @@ You can mix SEDs with non-encrypting drives on the same node or HA pair.
 .	Boot the node into the boot menu:
 +
 `boot_ontap menu`
-.	Reassign the AFF A700 node1 disks to AFF A900 node1 by entering "22/7" and selecting the hidden option `boot_after_controller_replacement` when the node stops at the boot menu.
+.	Reassign the oln node1 disks to the replacement node1 by entering "22/7" and selecting the hidden option `boot_after_controller_replacement` when the node stops at the boot menu.
 +
 After a short delay, you are prompted to enter the name of the node that is being replaced. If there are shared disks (also called Advanced Disk Partitioning (ADP) or partitioned disks), you are prompted to enter the node name of the HA partner.
 +

@@ -34,13 +34,15 @@ entries:
       url: /upgrade-arl-auto-affa900/relocate_failed_or_vetoed_aggr.html
     - title: Retire node1
       url: /upgrade-arl-auto-affa900/retire_node1.html
+    - title: Replace the node1 system modules
+      url: /upgrade-arl-auto-affa900/replace_node1_system_modules.html
     - title: Netboot node1
       url: /upgrade-arl-auto-affa900/netboot_node1.html
-- title: "Stage 3. Boot node1 with the AFF A900 or FAS9500 controller and NVRAM modules"
+- title: "Stage 3. Boot node1 with the replacement system modules"
   entries:
     - title: Overview
       url: /upgrade-arl-auto-affa900/stage_3_index.html
-    - title: Boot node1 with the AFF A900 or FAS9500 controller and NVRAM modules
+    - title: Boot node1 with the replacement system modules
       url: /upgrade-arl-auto-affa900/boot_node1_with_a900_controller_and_nvs.html
     - title: Verify the node1 installation
       url: /upgrade-arl-auto-affa900/verify_node1_installation.html
@@ -60,15 +62,15 @@ entries:
   entries:
    - title: Overview
      url: /upgrade-arl-auto-affa900/stage_5_index.html
-   - title: Install AFF A900 or FAS9500 NVRAM and controller modules on node2
-     url: /upgrade-arl-auto-affa900/install_a900_nvs_and_controller_on_node2.html
+   - title: Install the replacement system modules on node2
+     url: /upgrade-arl-auto-affa900/install_replacement_system_modules_on_node2.html
    - title: Netboot node2
      url: /upgrade-arl-auto-affa900/netboot_node2.html
-- title: "Stage 6. Boot node2 with the AFF A900 or FAS9500 controller and NVRAM modules"
+- title: "Stage 6. Boot node2 with the replacement system modules"
   entries:
    - title: Overview
      url: /upgrade-arl-auto-affa900/stage_6_index.html
-   - title: Boot node2 with the AFF A900 or FAS9500 controller and NVRAM modules
+   - title: Boot node2 with the replacement system modules
      url: /upgrade-arl-auto-affa900/boot_node2_with_a900_controller_and_nvs.html
    - title: Verify the node2 installation
      url: /upgrade-arl-auto-affa900/verify_node2_installation.html

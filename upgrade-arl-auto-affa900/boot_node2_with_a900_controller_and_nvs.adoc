@@ -4,8 +4,7 @@ permalink: upgrade-arl-auto-affa900/boot_node2_with_a900_controller_and_nvs.html
 keywords: boot, NVRAM, controller, module, node2, aff, a700, a900
 summary: Boot node2 with the AFF A900 controller module and NVRAM module.
 ---
-
-= Boot node2 with AFF A900 or FAS9500 controller and NVRAM modules
+= Boot node2 with the replacement system modules
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,11 +12,20 @@ summary: Boot node2 with the AFF A900 controller module and NVRAM module.
 :imagesdir: ./media/
 
 [.lead]
-Node2 with the AFF A900 or FAS9500 controller and NVRAM modules is now ready for upgrade. An AFF A700 to AFF A900 or FAS9000 to FAS9500 upgrade by swapping the controller and NVRAM modules involves moving only the console and management connections. This section provides the steps required to boot node2 with the AFF A900 or FAS9500 controller and NVRAM modules.
+Node2 with the replacement modules is now ready for boot up. Upgrading by swapping the system modules involves moving only the console and management connections. This section provides the steps required to boot node1 with the replacement modules for the following upgrade configurations:
+
+[cols="35,65"]
+|===
+|Old node2 controller |Replacement node2 system modules
+|FAS2620 |FAS2820 controller module
+|FAS2720 |FAS2820 controller module
+|AFF A700 |AFF A900 controller and NVRAM modules
+|FAS9000 |AS9500 controller and NVRAM modules
+|===
 
 .Steps
 
-.	[[boot_node2_step1]]Set the `bootarg.storageencryption.support` and `kmip.init.maxwait` variables to avoid a boot loop after the node2 configuration is loaded.
+. [[boot_node2_step1]]Set the `bootarg.storageencryption.support` and `kmip.init.maxwait` variables to avoid a boot loop after the node2 configuration is loaded.
 +
 If you have not already done so earlier in the procedure, see the Knowledge Base article https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Systems/FAS_Systems/How_to_tell_I_have_FIPS_drives_installed[How to tell I have FIPS drives installed^] to determine the type of self-encrypting drives that are in use.
 +
