@@ -3,8 +3,6 @@ title: Use "system controller replace" commands to upgrade controller models in 
 entries:
 - title: Overview
   url: /upgrade-arl-auto-affa900/index.html
-- title: Automate the controller upgrade process
-  url: /upgrade-arl-auto-affa900/automate_the_controller_upgrade_process.html
 - title: Decide whether to use the aggregate relocation content
   url: /upgrade-arl-auto-affa900/decide_to_use_the_aggregate_relocation_guide.html
 - title: Required tools and documentation
@@ -24,7 +22,7 @@ entries:
       url: /upgrade-arl-auto-affa900/prepare_nodes_for_upgrade.html
     - title: Manage storage encryption using Onboard Key Manager
       url: /upgrade-arl-auto-affa900/manage_storage_encryption_using_okm.html
-- title: "Stage 2. Relocate resources and retire the AFF A700 or FAS9000 node1"
+- title: "Stage 2. Relocate resources and retire node1"
   entries:
     - title: Overview
       url: /upgrade-arl-auto-affa900/stage_2_index.html

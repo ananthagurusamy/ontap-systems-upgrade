@@ -5,7 +5,7 @@ keywords: upgrade, preparing, preparation, prepare, overview, stage 1
 summary: "Stage 2 process sequence for an ARL upgrade using `system controller replace` commands on controllers running ONTAP 9.8 or later."
 ---
 
-= Stage 2. Relocate resources from node1 and retire AFF A700 or FAS9000 node1
+= Stage 2. Relocate resources from node1 and retire node1
 :hardbreaks:
 :nofooter:
 :icons: font
