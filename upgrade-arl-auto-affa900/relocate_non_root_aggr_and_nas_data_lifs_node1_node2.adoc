@@ -21,7 +21,7 @@ The operation should already be paused when you begin the task; you must manuall
 
 .About this task
 
-Remote LIFs handle traffic to SAN LUNs during the upgrade procedure. You are not required to move SAN LIFs for cluster or service health during the upgrade. You must verify that the LIFs are healthy and located on appropriate ports after you bring node1 online as the AFF A900 or FAS9500 system.
+Remote LIFs handle traffic to SAN LUNs during the upgrade procedure. You are not required to move SAN LIFs for cluster or service health during the upgrade. You must verify that the LIFs are healthy and located on appropriate ports after you bring node1 online as the replacement system.
 
 include::../_include/ru_auto_relocate_non_root_aggr_nas_lifs_from_node1_to_node2_steps_1_4.adoc[]
 

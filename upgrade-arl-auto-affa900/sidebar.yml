@@ -56,7 +56,7 @@ entries:
       url: /upgrade-arl-auto-affa900/relocate_non_root_aggr_nas_lifs_from_node2_to_node1.html
     - title: Retire node2
       url: /upgrade-arl-auto-affa900/retire_node2.html
-- title: "Stage 5. Install the AFF A900 or FAS9500 NVRAM and controller modules on node2"
+- title: "Stage 5. Install the replacement system modules on node2"
   entries:
    - title: Overview
      url: /upgrade-arl-auto-affa900/stage_5_index.html

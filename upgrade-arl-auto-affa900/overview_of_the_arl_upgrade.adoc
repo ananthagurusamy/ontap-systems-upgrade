@@ -40,7 +40,7 @@ a| During Stage 3, you boot node1 with upgraded controller and NVRAM modules and
 
 Aggregate ownership at the end of Stage 3:
 
-* Upgraded AFF A900 or FAS9500 node1 is the home owner and current owner of node1 aggregates
+* Upgraded node1 is the home owner and current owner of node1 aggregates
 * Node2 is the home owner and current owner of node2 aggregates
 
 | link:stage_4_index.html[Stage 4: Relocate resources from node2 and retire node2]
@@ -51,7 +51,7 @@ Aggregate ownership at the end of Stage 4:
 *	Upgraded node1 is the home owner and current owner of aggregates that originally belonged to node1
 *	Upgraded node1 is the current owner of node2 aggregates
 
-| link:stage_5_index.html[Stage 5: Install the AFF A900 or FAS9500 NVRAM and controller modules on node2]
+| link:stage_5_index.html[Stage 5: Install the replacement system modules on node2]
 a| During Stage 5, you install the new NVRAM and controller modules that you received for the upgraded node2 and then netboot node2.
 
 Aggregate ownership at the end of Stage 5:

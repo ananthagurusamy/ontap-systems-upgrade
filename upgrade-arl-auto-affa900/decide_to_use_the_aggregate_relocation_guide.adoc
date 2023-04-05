@@ -12,7 +12,7 @@ summary: "Decide whether to use the ARL procedure to upgrade an AFF A700 to an A
 :imagesdir: ./media/
 
 [.lead]
-This content describes how to upgrade storage controllers in an AFF A700 HA pair with new AFF A900 controllers or controllers in a FAS9000 HA pair with new FAS9500 controllers, while keeping all the existing data and disks. This is a complex procedure that should be used only by experienced administrators.
+This content describes how to upgrade storage controllers in a HA pair while keeping all the existing data and disks. This is a complex procedure that should be used only by experienced administrators.
 
 Use this procedure under the following circumstances:
 
