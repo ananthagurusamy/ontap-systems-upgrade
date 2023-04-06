@@ -17,6 +17,7 @@ Node1 with the replacement modules is now ready for boot up. Upgrading by swappi
 [cols="35,65"]
 |===
 |Old node1 controller |Replacement node1 system modules
+
 |FAS2620 |FAS2820 controller module
 |FAS2720 |FAS2820 controller module
 |AFF A700 |AFF A900 controller and NVRAM modules
