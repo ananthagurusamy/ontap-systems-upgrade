@@ -13,5 +13,30 @@ summary: "Install and boot node3 and install ONTAP software during a manual ARL 
 :imagesdir: ./media/
 
 [.lead]
-include::../_include/ru_man_install_boot_node3.adoc[]
+include::../_include/ru_man_install_boot_node3_intro_to_step_15.adoc[]
+. [[man_install3_step16]]If NetApp Storage encryption drives are installed, preform the following steps.
++
+If you have not already done so earlier in the procedure, see the Knowledge Base article https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Systems/FAS_Systems/How_to_tell_I_have_FIPS_drives_installed[How to tell I have FIPS drives installed^] to determine the type of self-encrypting drives that are in use.
++
+[cols="35,65"]
+|===
+|If the following drives are in use…	|Then…
+
+|NetApp Storage Encryption (NSE) drives that conform to FIPS 140-2 Level 2 self-encryption requirements
+a|* `setenv bootarg.storageencryption.support *true*`
+
+|NetApp non-FIPS SEDs
+a|* `setenv bootarg.storageencryption.support *false*`
+
+|===
++
+[NOTE]
+====
+You cannot mix FIPS drives with other types of drives on the same node or HA pair.
+
+You can mix SEDs with non-encrypting drives on the same node or HA pair.
+====
++
+Contact NetApp Support for assistance with restoring the onboard key management information.
+include::../_include/ru_man_install_boot_node3_steps_17_to_48.adoc[]
 // 22 FEB 2021: Formatted from CMS

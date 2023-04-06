@@ -95,11 +95,8 @@ entries:
     entries:
       - title: Overview
         url: /upgrade-arl-manual-app/stage_6_index.html
-      - title: "Get an IP address of an external key management server for Storage Encryption"
-        url: /upgrade-arl-manual-app/get_address_key_management_server_encryption.html
       - title: "Manage authentication using KMIP servers"
         url: /upgrade-arl-manual-app/manage_authentication_kmip.html
-      - title: "Manage authentication using an onboard key manager"
       - title: "Confirm that the new controllers are set up correctly"
         url: /upgrade-arl-manual-app/ensure_controllers_set_up_correctly.html
       - title: "Set up Storage Encryption on the new controller module"
