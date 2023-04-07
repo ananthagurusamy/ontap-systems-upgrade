@@ -37,7 +37,7 @@ You can mix SEDs with non-encrypting drives on the same node or HA pair.
 ====
 .. Go to the special boot menu and select option `(10) Set Onboard Key Manager recovery secrets`. 
 +
-Enter the passphrase and the backup information that you recorded earlier procedure. See link:manage_authentication_okm.html[Manage authentication using an onboard key manager]
+Enter the passphrase and the backup information that you recorded earlier procedure. See link:manage_authentication_okm.html[Manage authentication using the onboard key manager]
 +
 For more information, see the Knowledge Base article https://kb.netapp.com/onprem/ontap/dm/Encryption/How_to_restore_external_key_manager_server_configuration_from_the_ONTAP_boot_menu[How to restore external key manager server configuration from the ONTAP boot menu^] 
 include::../_include/ru_man_install_boot_node3_steps_17_to_48.adoc[]

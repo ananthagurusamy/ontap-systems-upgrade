@@ -46,7 +46,7 @@ entries:
      #  url: /upgrade-arl-manual/get_address_key_management_server_encryption.html
     # - title: "Manage authentication using KMIP servers"
      #  url: /upgrade-arl-manual/manage_authentication_kmip.html
-      - title: "Manage authentication using an onboard key manager"
+      - title: "Manage authentication using the onboard key manager"
         url: /upgrade-arl-manual/manage_authentication_okm.html
       - title: "Quiesce the SnapMirror relationships"
         url: /upgrade-arl-manual/quiesce_snapmirror_relationships.html
