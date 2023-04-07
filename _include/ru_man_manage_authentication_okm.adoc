@@ -1,4 +1,4 @@
-You can use the onboard key manager to manage authentication keys. If you plan to have an onboard key manager (OKM) set up, you must record the passphrase and backup material before the beginning the upgrade.
+You can use the onboard key manager to manage authentication keys. If have an onboard key manager (OKM) set up, you must record the passphrase and backup material before the beginning the upgrade.
 
 .Steps
 
