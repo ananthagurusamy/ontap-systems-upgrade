@@ -42,5 +42,6 @@ You can mix SEDs with non-encrypting drives on the same node or HA pair.
 +
 If you do not have an FC or UTA/UTA2 configuration, execute link:set_fc_or_uta_uta2_config_node4.html#auto_check_node4_step15[Check and configure UTA/UTA2 ports on node4, Step 15] so that node4 can recognize node2’s disks.
 
+// 2023 APR 11, BURT 1519747
 // 2023 Feb 22, BURT 1518041
 // 2022 DEC 1, ontap-systems-upgrade-37

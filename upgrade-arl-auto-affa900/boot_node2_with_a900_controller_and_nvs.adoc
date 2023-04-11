@@ -64,7 +64,7 @@ If `[localhost:disk.encryptNoSupport:ALERT]: Detected FIPS-certified encrypting 
 +
 `boot_ontap`
 ====
-// BURT-1481586 30-May-2022
+
 +
 You can use the following example as a reference:
 +
@@ -202,6 +202,8 @@ The system IDs shown in the preceding example are example IDs. The actual system
 Between entering node names at the prompt and the login prompt, the node reboots a few times to restore the environment variables, update firmware on the cards in the system, and for other ONTAP updates.
 ====
 
+// 2023 APR 11, BURT 1519747
 // 2023 Feb 22, BURT 1518041
 // 2022 DEC 1, ontap-systems-upgrade-37
+// BURT-1481586 30-May-2022
 // 2022 APR 27, BURT 1452254

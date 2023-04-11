@@ -7,4 +7,5 @@ You can use the Onboard Key Manager (OKM) to manage authentication keys. If you 
 The passphrase is entered using the CLI or REST API when you configure the OKM.
 . Back up the key-manager information by running the `security key-manager onboard show-backup` command.
 
+// 2023 APR 11, BURT 1519747
 // 5 MAR 2021:  formatted from CMS

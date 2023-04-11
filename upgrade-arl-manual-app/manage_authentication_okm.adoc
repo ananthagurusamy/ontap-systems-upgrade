@@ -14,4 +14,5 @@ summary:  "Use the Onboard Key Manager to manage authentication keys during a ma
 
 [.lead]
 include::../_include/ru_man_manage_authentication_okm.adoc[]
+// 2023 APR 11, BURT 1519747
 // 5 MAR 2021:  formatted from CMS
