@@ -14,9 +14,9 @@ summary: "Install and boot node3 and install ONTAP software during a manual ARL 
 
 [.lead]
 include::../_include/ru_man_install_boot_node3_intro_to_step_15.adoc[]
-. [[man_install3_step16]]If NetApp Storage encryption drives are installed, preform the following steps.
+. [[man_install3_step16]]If NetApp Storage encryption drives are installed, set `bootarg.storageencryption.support` to `true` or `false`.
 +
-If you have not already done so earlier in the procedure, see the Knowledge Base article https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Systems/FAS_Systems/How_to_tell_I_have_FIPS_drives_installed[How to tell I have FIPS drives installed^] to determine the type of self-encrypting drives that are in use.
+NOTE: If you have not already done so earlier in the procedure, see the Knowledge Base article https://kb.netapp.com/onprem/ontap/Hardware/How_to_tell_if_a_drive_is_FIPS_certified[How to tell if a drive is FIPS certified^] to determine the type of self-encrypting drives that are in use.
 +
 [cols="35,65"]
 |===

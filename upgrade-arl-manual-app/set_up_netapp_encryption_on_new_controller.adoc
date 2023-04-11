@@ -56,11 +56,12 @@ This command needs the OKM passphrase
 |Onboard Key Manager (OKM)
 |`security key-manager onboard sync`
 |===
++
+For more information, see the Knowledge Base article https://kb.netapp.com/onprem/ontap/dm/Encryption/How_to_restore_external_key_manager_server_configuration_from_the_ONTAP_boot_menu[How to restore external key manager server configuration from the ONTAP boot menu^].
 
 .After you finish
 
-Check if any volumes were taken offline because authentication keys were not available or external key management servers could not be reached. Bring those volumes back online by using the following command:
+Check if any volumes were taken offline because authentication keys were not available or external key management servers could not be reached. Bring those volumes back online by using the `volume online` command:
 
-`volume online`
 // 26 FEB 2021:  Formatted from CMS
 // 2022-05-17, BURT 1476241
