@@ -5,6 +5,6 @@ During Stage 1, if required, you confirm that internal disk drives do not contai
 . link:determine_aggregates_on_internal_drives.html[Determine whether the controller has aggregates on internal disk drives]
 . link:prepare_nodes_for_upgrade.html[Prepare the nodes for upgrade]
 
-. link:manage_authentication_okm.html[Manage authentication using the onboard key manager]
+. link:manage_authentication_okm.html[Manage authentication using the Onboard Key Manager]
 . link:quiesce_snapmirror_relationships.html[Quiesce the SnapMirror relationships]
 . link:prepare_for_netboot.html[Prepare for netboot]
