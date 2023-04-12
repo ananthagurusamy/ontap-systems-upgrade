@@ -15,7 +15,7 @@ Convert AFF A250 node2 to an NS224 drive shelf and then connect to AFF A400 node
 . Disconnect all the network cables from node2.
 . Remove node2 from the AFF A250 chassis.
 . Insert the NVMe shelf module (NSM) into the bay of node2.
-. Connect the NSM to node4, by cabling the node4 100GbE port e0c to port e0a on NSM B.
+. Connect the NSM to node4 by cabling the node4 100GbE port e0c to NSM B port e0a.
 +
 image::../upgrade/media/a400_with_ns224_shelf.PNG[AFF A400 with one NS224 shelf]
 
