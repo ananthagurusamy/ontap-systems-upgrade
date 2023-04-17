@@ -22,7 +22,7 @@ entries:
       url: /upgrade-arl-auto-affa900/verify_upgrade_hardware.html
     - title: Prepare the nodes for upgrade
       url: /upgrade-arl-auto-affa900/prepare_nodes_for_upgrade.html
-    - title: Manage storage encryption using Onboard Key Manager
+    - title: Manage storage encryption using the Onboard Key Manager
       url: /upgrade-arl-auto-affa900/manage_storage_encryption_using_okm.html
 - title: "Stage 2. Relocate resources and retire the AFF A700 or FAS9000 node1"
   entries:
@@ -82,7 +82,7 @@ entries:
     url: /upgrade-arl-auto-affa900/stage_7_index.html
   - title: Manage authentication using KMIP servers
     url: /upgrade-arl-auto-affa900/manage-authentication-using-kmip-servers.html
-  # 2023 APR 17, ontap-systems-upgrade-issue-64
+  # 2023 APR 17, ontap-systems-upgrade-issue-64/BURT 1519747
   - title: Confirm that the new controllers are set up correctly
     url: /upgrade-arl-auto-affa900/ensure_new_controllers_are_set_up_correctly.html
   - title: Set up Storage Encryption on the new controller module

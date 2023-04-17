@@ -16,5 +16,5 @@ summary: "Configure and manage Storage Encryption, manage authentication keys, a
 Beginning with ONTAP 9.10.1, you can use Key Management Interoperability Protocol (KMIP) servers to manage authentication keys.
 
 include::../_include/ru_auto_manage_authentication_kmip_servers.adoc[]
-// 2023 APR 17, ontap-systems-upgrade-issue-64
+// 2023 APR 17, ontap-systems-upgrade-issue-64/BURT 1519747
 

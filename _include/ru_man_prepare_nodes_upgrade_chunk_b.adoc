@@ -345,7 +345,7 @@ You can mix SEDs with non-encrypting drives on the same node or HA pair.
 https://docs.netapp.com/us-en/ontap/encryption-at-rest/support-storage-encryption-concept.html#supported-self-encrypting-drive-types[Learn more about supported self-encrypting drives^].
 --
 
-// 2023 APR 11, BURT 1519747
+// 2023 APR 11, ontap-systems-upgrade-issues-64/BURT 1519747
 // 2022 DEC 1, ontap-systems-upgrade-37
 // 2022 MAY 13, 1476241 
 // 2022 MAR 09, Clean-up 

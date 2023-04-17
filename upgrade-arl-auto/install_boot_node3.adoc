@@ -74,6 +74,5 @@ If you do not have an FC or UTA/UTA2 configuration, execute link:set_fc_or_uta_u
 
 . [[auto9597_istall3_step29]]For a MetroCluster configuration, V-Series systems and systems with FlexArray Virtualization software connected to storage arrays,
 go to link:set_fc_or_uta_uta2_config_on_node3.html#auto9597_check_node3_step15[Check and configure UTA/UTA2 ports on node3, Step 15].
-// 2nd half of pg 26 to end of page 30 in PDF
-
+// 2023 APR 17, ontap-systems-upgrade-issues-64/BURT 1519747
 // BURT 1476241 2022-05-13

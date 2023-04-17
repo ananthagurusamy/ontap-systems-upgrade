@@ -22,5 +22,5 @@ During Stage 7, you confirm that the new nodes are set up correctly and, if the 
 . link:set_up_netapp_volume_encryption_new_module.html[Set up NetApp Volume or Aggregate Encryption on the new controller module]
 . link:decommission_old_system.html[Decommission the old system]
 . link:resume_snapmirror_operations.html[Resume SnapMirror operations]
-// 2023 APR 17, ontap-systems-upgrade-issue-64
+// 2023 APR 17, ontap-systems-upgrade-issue-64/BURT 1519747
 //BURT-1476241 13-Sep-2022

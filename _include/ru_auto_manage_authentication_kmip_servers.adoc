@@ -16,6 +16,6 @@
 +
 `security key-manager external restore -node _new_controller_name_`
 
-// 2023 APR 17, ontap-systems-upgrade-issue-64
+// 2023 APR 17, ontap-systems-upgrade-issue-64/BURT 1519747
 // 2022 FEB 11, BURT 1450483 
 

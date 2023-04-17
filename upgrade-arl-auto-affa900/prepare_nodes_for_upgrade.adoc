@@ -148,6 +148,6 @@ Refer to link:other_references.html[References] to link to the _NetApp Support S
 
 For detailed information about licensing, refer to link:other_references.html[References] to link to the _System Administration Reference_.
 
-// 2023 APR 11, BURT 1519747
+// 2023 APR 11, ontap-systems-upgrade-issues-64/BURT 1519747
 // 2022 DEC 1, ontap-systems-upgrade-37
 // 2022 MAY 16, BURT 1476251

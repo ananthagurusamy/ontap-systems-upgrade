@@ -37,4 +37,4 @@ You can mix SEDs with non-encrypting drives on the same node or HA pair.
 Contact NetApp Support for assistance with restoring the onboard key management information.
 
 include::../_include/ru_man_install_boot_node4_steps_17_to_48.adoc[]
-// 2023 APR 11, BURT 1519747
+// 2023 APR 11, ontap-systems-upgrade-issues-64/BURT 1519747

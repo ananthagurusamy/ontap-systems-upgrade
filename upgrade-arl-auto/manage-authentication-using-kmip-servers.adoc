@@ -33,7 +33,7 @@ Steps
 +
 `security key-manager restore -node _new_controller_name_`
 
-// 2023 APR 17, ontap-systems-upgrade-issue-64
+// 2023 APR 17, ontap-systems-upgrade-issue-64/BURT 1519747
 // p. 20 of PDF-- include subheadings
 // BURT 1476241 2022-05-13
 // BURT-1476241 2022-August-12
