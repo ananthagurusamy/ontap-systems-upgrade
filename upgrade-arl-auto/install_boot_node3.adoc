@@ -41,9 +41,37 @@ a|Manually configure the connection by entering the following command at the boo
 NOTE: Other parameters might be necessary for your interface. Enter `help ifconfig` at the firmware prompt for details.
 |===
 
-include::../_include/ru_auto_install_boot_node3_step_7_28.adoc[]
+include::../_include/ru_auto_install_boot_node3_step_7_26.adoc[]
+. [[step27]]If NetApp Storage encryption drives are installed, set `bootarg.storageencryption.support` to `true` or `false`.
++
+NOTE: If you have not already done so earlier in the procedure, see the Knowledge Base article https://kb.netapp.com/onprem/ontap/Hardware/How_to_tell_if_a_drive_is_FIPS_certified[How to tell if a drive is FIPS certified^] to determine the type of self-encrypting drives that are in use.
++
+[cols="35,65"]
+|===
+|If the following drives are in use…	|Then…
 
-[start=29]
+|NetApp Storage Encryption (NSE) drives that conform to FIPS 140-2 Level 2 self-encryption requirements
+a|* `setenv bootarg.storageencryption.support *true*`
+
+|NetApp non-FIPS SEDs
+a|* `setenv bootarg.storageencryption.support *false*`
+
+|===
++
+[NOTE]
+====
+You cannot mix FIPS drives with other types of drives on the same node or HA pair.
+You can mix SEDs with non-encrypting drives on the same node or HA pair.
+====
++
+Contact NetApp Support for assistance with restoring the onboard key management information.
+
+. Boot node into boot menu:
++
+`boot_ontap menu`
++
+If you do not have an FC or UTA/UTA2 configuration, execute link:set_fc_or_uta_uta2_config_node4.html#auto_check_node4_step15[Check and configure UTA/UTA2 ports on node4, Step 15] so that node4 can recognize node2’s disks.
+
 . [[auto9597_istall3_step29]]For a MetroCluster configuration, V-Series systems and systems with FlexArray Virtualization software connected to storage arrays,
 go to link:set_fc_or_uta_uta2_config_on_node3.html#auto9597_check_node3_step15[Check and configure UTA/UTA2 ports on node3, Step 15].
 // 2nd half of pg 26 to end of page 30 in PDF

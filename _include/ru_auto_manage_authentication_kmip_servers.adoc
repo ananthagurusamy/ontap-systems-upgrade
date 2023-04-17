@@ -3,23 +3,19 @@
 . Add a new controller:
 +
 `security key-manager external enable`
-// BURT 1450483 11-Feb-2022
+
 . Add the key manager:
 +
 `security key-manager external add-servers -key-servers _key_management_server_ip_address_`
-// BURT 1450483 11-Feb-2022
+
 . Verify that the key management servers are configured and available to all nodes in the cluster:
 +
 `security key-manager external show-status`
-// BURT 1450483 11-Feb-2022
+
 . Restore the authentication keys from all linked key management servers to the new node:
 +
 `security key-manager external restore -node _new_controller_name_`
-// BURT 1450483 11-Feb-2022
-. Rekey all self-encrypting disks with the new authentication key:
-+
-`storage encryption disk modify -disk * [-data-key-id nonMSID AK]`
 
-. If you use the Federal Information Processing Standard (FIPS), rekey all self-encrypting disks with the new authentication key:
-+
-`storage encryption disk modify -disk * [-fips-key-id nonMSID AK]`
+// 2023 APR 17, ontap-systems-upgrade-issue-64
+// 2022 FEB 11, BURT 1450483 
+

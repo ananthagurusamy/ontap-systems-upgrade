@@ -62,6 +62,8 @@ You must install the same key management servers that are installed on the exist
 +
 This command needs the Onboard Key Manager (OKM) passphrase.
 +
+For more information, see the Knowledge Base article https://kb.netapp.com/onprem/ontap/dm/Encryption/How_to_restore_external_key_manager_server_configuration_from_the_ONTAP_boot_menu[How to restore external key manager server configuration from the ONTAP boot menu^].
++
 * Restore authentication for OKM:
 +
 `security key-manager onboard sync`
@@ -107,6 +109,8 @@ You must install the same key management servers that are installed on the exist
 `security key-manager external restore`
 +
 This command needs the Onboard Key Manager (OKM) passphrase.
++
+For more information, see the Knowledge Base article https://kb.netapp.com/onprem/ontap/dm/Encryption/How_to_restore_external_key_manager_server_configuration_from_the_ONTAP_boot_menu[How to restore external key manager server configuration from the ONTAP boot menu^].
 +
 * Restore authentication for OKM:
 +

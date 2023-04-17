@@ -24,8 +24,9 @@ entries:
         url: /upgrade-arl-manual-app/prepare_nodes_for_upgrade.html
     # - title: "Get an IP address of an external key management server for storage encryption"
     #   url: /upgrade-arl-manual-app/get_address_key_management_server_encryption.html
-    # - title: "Manage authentication using KMIP servers"
-    #   url: /upgrade-arl-manual-app/manage_authentication_kmip.html
+    #   2023 APR 17, ontap-systems-upgrade-issue-64
+      - title: "Manage authentication using KMIP servers"
+        url: /upgrade-arl-manual-app/manage_authentication_kmip.html
       - title: "Manage authentication using the Onboard Key Manager"
         url: /upgrade-arl-manual-app/manage_authentication_okm.html
       - title: "Quiesce the SnapMirror relationships"

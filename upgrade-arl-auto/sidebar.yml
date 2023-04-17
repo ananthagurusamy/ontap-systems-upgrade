@@ -89,8 +89,9 @@ entries:
   entries:
   - title: Overview
     url: /upgrade-arl-auto/stage_6_index.html
-  - title: Get an IP address of an external key management server for Storage Encryption
-    url: /upgrade-arl-auto/get_ip_address_of_external_kms_for_storage_encryption.html
+  - title: Manage authentication using KMIP servers
+    url: /upgrade-arl-auto/manage-authentication-using-kmip-servers.html
+  # 2023 APR 17, ontap-systems-upgrade-issue-64
   # BURT-1476241 2022-August-12
   - title: Confirm that the new controllers are set up correctly
     url: /upgrade-arl-auto/ensure_new_controllers_are_set_up_correctly.html
