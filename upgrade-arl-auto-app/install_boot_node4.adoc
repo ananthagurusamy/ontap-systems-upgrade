@@ -85,7 +85,7 @@ You can mix SEDs with non-encrypting drives on the same node or HA pair.
 ====
 .. Go to the special boot menu and select option `(10) Set Onboard Key Manager recovery secrets`. 
 +
-Enter the passphrase and the backup information that you recorded earlier procedure. See link:manage_authentication_okm.html[Manage authentication using the Onboard Key Manager].
+Enter the passphrase and the backup information that you recorded earlier procedure. See link:manage_authentication_okm.html[Manage authentication keys using the Onboard Key Manager].
 
 . Boot node into boot menu:
 +
