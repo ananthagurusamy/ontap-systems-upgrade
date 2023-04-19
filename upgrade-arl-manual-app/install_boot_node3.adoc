@@ -17,7 +17,7 @@ include::../_include/ru_man_install_boot_node3_intro_to_step_15.adoc[]
 . [[man_install3_step16]]If you have NetApp Storage Encryption (NSE) drives installed, perform the following steps.
 +
 NOTE: If you have not already done so earlier in the procedure, see the Knowledge Base article https://kb.netapp.com/onprem/ontap/Hardware/How_to_tell_if_a_drive_is_FIPS_certified[How to tell if a drive is FIPS certified^] to determine the type of self-encrypting drives that are in use.
-+
+
 .. Set `bootarg.storageencryption.support` to `true` or `false`:
 + 
 [cols="35,65"]
@@ -35,6 +35,7 @@ You cannot mix FIPS drives with other types of drives on the same node or HA pai
 
 You can mix SEDs with non-encrypting drives on the same node or HA pair.
 ====
+
 .. Go to the special boot menu and select option `(10) Set Onboard Key Manager recovery secrets`. 
 +
 Enter the passphrase and the backup information that you recorded earlier procedure. See link:manage_authentication_okm.html[Manage authentication keys using the Onboard Key Manager].

@@ -17,6 +17,7 @@ During Stage 7, you confirm that the new nodes are set up correctly and, if the 
 
 .Steps
 
+. link:manage-authentication-using-kmip-servers.html[Manage authentication using KMIP servers]
 . link:ensure_new_controllers_are_set_up_correctly.html[Confirm that the new controllers are set up correctly]
 . link:set_up_storage_encryption_new_module.html[Set up Storage Encryption on the new controller module]
 . link:set_up_netapp_volume_encryption_new_module.html[Set up NetApp Volume or Aggregate Encryption on the new controller module]

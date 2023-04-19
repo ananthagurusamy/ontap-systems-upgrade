@@ -8,7 +8,6 @@ Installing a new controller module changes the WWPN values associated with each 
 
 . If your configuration uses switch-based zoning, adjust the zoning to reflect the new WWPN values.
 
-// 2022 APR 17, ontap-systems-upgrade-issues-64/BURT 1519747
 // 2023 APR 11, ontap-systems-upgrade-issues-64/BURT 1519747
 // 2023 Feb 22, BURT 1518041
 // 2022 DEC 1, ontap-systems-upgrade-37
