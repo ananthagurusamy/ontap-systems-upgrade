@@ -17,7 +17,7 @@ However, if you are upgrading a system with storage disks, you need to complete 
 
 . [[man_install3_step1]]Make sure that you have rack space for node3.
 +
-If node1 and node2 were in separate chassis, you can put node3 in the same rack location as node1. However, if node1 was in the same chassis with node2, then you need to put node3 into its own rack space, preferably close to the location of node1.
+If node1 and node2 were in separate chassis, you can put node3 in the same rack location as node1. However, if node1 was in the same chassis with node2, then you must put node3 into its own rack space, preferably close to the location of node1.
 
 . [[step2]]Install node3 in the rack, following the _Installation and Setup Instructions_ for your node model.
 +
