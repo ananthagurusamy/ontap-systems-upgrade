@@ -8,16 +8,16 @@ However, you do not need to netboot node3 if it has the same or a later version 
 
 [IMPORTANT]
 ====
-If you are upgrading a V-Series system connected to storage arrays or a system with FlexArray Virtualization software that is connected to storage arrays, you need to complete <<man_install3_step1, Step 1>> through <<man_install3_step5,Step 5>>, leave this section at <<man_install3_step6,Step 6>> and follow instructions in link:set_fc_uta_uta2_config_node3.html#configure-fc-ports-on-node3[Configure FC ports on node3] and link:set_fc_uta_uta2_config_node3.html#check-and-configure-UTAUTA2-ports-on-node3[Check and configure UTA/UTA2 ports on node3] as needed, entering commands in maintenance mode. You must then return to this section and resume with <<man_install3_step7,Step 7>>.
+If you are upgrading a V-Series system connected to storage arrays or a system with FlexArray Virtualization software that is connected to storage arrays, you must complete <<man_install3_step1, Step 1>> through <<man_install3_step5,Step 5>>, leave this section at <<man_install3_step6,Step 6>> and follow instructions in link:set_fc_uta_uta2_config_node3.html#configure-fc-ports-on-node3[Configure FC ports on node3] and link:set_fc_uta_uta2_config_node3.html#check-and-configure-UTAUTA2-ports-on-node3[Check and configure UTA/UTA2 ports on node3] as needed, entering commands in maintenance mode. You must then return to this section and resume with <<man_install3_step7,Step 7>>.
 
-However, if you are upgrading a system with storage disks, you need to complete this entire section and then go to link:set_fc_uta_uta2_config_node3.html#configure-fc-ports-on-node3[Configure FC ports on node3] and link:set_fc_uta_uta2_config_node3.html#check-and-configure-UTAUTA2-ports-on-node3[Check and configure UTA/UTA2 ports on node3], entering commands at the cluster prompt.
+However, if you are upgrading a system with storage disks, you must complete this entire section and then go to link:set_fc_uta_uta2_config_node3.html#configure-fc-ports-on-node3[Configure FC ports on node3] and link:set_fc_uta_uta2_config_node3.html#check-and-configure-UTAUTA2-ports-on-node3[Check and configure UTA/UTA2 ports on node3], entering commands at the cluster prompt.
 ====
 
 .Steps
 
 . [[man_install3_step1]]Make sure that you have rack space for node3.
 +
-If node1 and node2 were in separate chassis, you can put node3 in the same rack location as node1. However, if node1 was in the same chassis with node2, then you need to put node3 into its own rack space, preferably close to the location of node1.
+If node1 and node2 were in separate chassis, you can put node3 in the same rack location as node1. However, if node1 was in the same chassis with node2, then you must put node3 into its own rack space, preferably close to the location of node1.
 
 . [[step2]]Install node3 in the rack, following the _Installation and Setup Instructions_ for your node model.
 +
@@ -41,7 +41,7 @@ Cable the following connections:
 * Storage
 * SAN configurations: iSCSI Ethernet and FC switch ports
 +
-NOTE: You might not need to move the interconnect card or the cluster interconnect cable connection from node1 to node3 because most platform models have a unique interconnect card model. For the MetroCluster configuration, you need to move the FC-VI cable connections from node1 to node3. If the new host does not have an FC-VI card, you might need to move the FC-VI card.
+NOTE: You might not need to move the interconnect card or the cluster interconnect cable connection from node1 to node3 because most platform models have a unique interconnect card model. For the MetroCluster configuration, you must move the FC-VI cable connections from node1 to node3. If the new host does not have an FC-VI card, you might need to move the FC-VI card.
 
 . [[man_install3_step4]]Turn on the power to node3, and then interrupt the boot process by pressing Ctrl-C at the console terminal to access the boot environment prompt.
 +
