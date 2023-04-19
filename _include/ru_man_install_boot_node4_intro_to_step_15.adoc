@@ -92,7 +92,7 @@ a|
 .. Go to the section _Set the FC or UTA/UTA2 configuration on node4_ and complete the sections link:set_fc_uta_uta2_config_node4.html#configure-fc-ports-on-node4[ Configure FC ports on node4] and link:set_fc_uta_uta2_config_node4.html#check-and-configure-utauta2-ports-on-node4[Check and configure UTA/UTA2 ports on node4], as appropriate to your system.
 .. Return to this section and complete the remaining steps, beginning with <<man_install4_Step9,Step 9>>.
 
-IMPORTANT: You must reconfigure FC onboard ports, UTA/UTA2 onboard ports, and UTA/UTA2 cards before you boot Data ONTAP on the V-Series system.
+IMPORTANT: You must reconfigure FC onboard ports, UTA/UTA2 onboard ports, and UTA/UTA2 cards before you boot ONTAP on the V-Series system.
 |===
 
 . [[man_install4_Step9]]Add the FC initiator ports of the new node to the switch zones.
