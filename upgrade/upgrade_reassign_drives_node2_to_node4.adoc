@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ndu, nondisruptive, upgrade, node2, node4, reassign, drives
 summary: Physically connect node2 to node4 before reassigning drives from node2 to node4.
 ---
-= Reassign drives form node2 to node4
+= Reassign drives from node2 to node4
 :icons: font
 :imagesdir: ../media/
 
