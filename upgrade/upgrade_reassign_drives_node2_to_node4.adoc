@@ -18,6 +18,10 @@ Verify that both node2 and node4 are waiting at the LOADER prompt.
 You perform the following steps on node4.
 
 .Steps
+. At the LOADER prompt, boot node4 into Maintenance Mode:
++
+`boot_ontap maint`
+
 . Show the state of the 100GbE interfaces:
 +
 `storage port show`
