@@ -25,7 +25,7 @@ This replaces all flash-based configuration with the last backup to disks.
 ====
 As expected, the node automatically reboots to load the new copy of the /var file system.
 
-The node reports a warning that there is a System ID mismatch. Enter `y` to override the System ID.
+The node reports a warning that there is a system ID mismatch. Enter `y` to override the system ID.
 ====
 
 . Connect node3 to node4:
@@ -45,7 +45,7 @@ The node reports a warning that there is a System ID mismatch. Enter `y` to over
 `network port broadcast-domain add-ports -broadcast-domain Cluster -ports _port_names_`
 +
 NOTE: Beginning with ONTAP 9.8, new IPspaces and one or more broadcast domains might be designated to existing physical ports that are intended for cluster connectivity.
-. Modify the cluster IPspace to include the desired cluster ports and set MTU to 9000 if not already set:
+. Modify the cluster IPspace to include the desired cluster ports and set the maximum transmission unit to 9000 if not already set:
 +
 `network port modify -node _node_name_ -port _port_name_ -mtu 9000 -ipspace Cluster`
 . Display all cluster network LIFs:

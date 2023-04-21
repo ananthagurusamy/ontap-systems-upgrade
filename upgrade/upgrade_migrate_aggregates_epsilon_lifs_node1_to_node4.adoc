@@ -24,7 +24,7 @@ This replaces all flash-based configuration with the last backup to disks.
 ====
 As expected, the node automatically reboots to load the new copy of the /var file system. 
 
-The node reports a System ID mismatch warning. Enter `y` to override the System ID.
+The node reports a system ID mismatch warning. Enter `y` to override the system ID.
 ====
 
 . Migrate the cluster LIFs:
@@ -48,7 +48,7 @@ If the system cluster ports are not similar when upgrading an AFF A250 to an AFF
 . Display the status of all data aggregates in the cluster:
 +
 `storage aggregate show` 
-. Migrate epsilon by removing epsilon from node1 and moving to node4.
+. Migrate the epsilon by removing if from node1 and instead moving it to node4.
 .. Remove epsilon from node1: 
 +
 `cluster modify -epsilon false -node _local_node_name_`
