@@ -2,8 +2,7 @@ During Stage 6, you confirm that the new nodes are set up correctly and, if the 
 
 .Steps
 
-. link:get_ip_address_of_external_kms_for_storage_encryption.html[Get an IP address of an external key management server for storage encryption]
-// BURT-1476241 2022-August-12
+. link:manage-authentication-using-kmip-servers.html[Manage authentication using KMIP servers]
 . link:ensure_new_controllers_are_set_up_correctly.html[Confirm that the new controllers are set up correctly]
 . link:set_up_storage_encryption_new_module.html[Set up Storage Encryption on the new controller module]
 . link:set_up_netapp_volume_encryption_new_module.html[Set up NetApp Volume or Aggregate Encryption on the new controller module]
@@ -13,3 +12,5 @@ During Stage 6, you confirm that the new nodes are set up correctly and, if the 
 .For MetroCluster FC configuration
 
 For MetroCluster FC configuration, you must replace the disaster recovery/failover site nodes as soon as possible. Mismatch in controller models within a MetroCluster is not supported because controller model mismatch can cause disaster recovery mirroring to go offline. Use the command -`skip-metrocluster-check true` option to bypass MetroCluster checks when you are replacing nodes at second site.
+
+// 2023 APR 17, ontap-systems-upgrade-issue-64/BURT 1519747

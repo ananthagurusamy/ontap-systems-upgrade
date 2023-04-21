@@ -5,7 +5,7 @@ keywords: storage, encryption, authentication, key, manager, external
 summary: "Configure and manage Storage Encryption, manage authentication keys, and quiesce the SnapMirror relationships during an AFF A700 to AFF A900 upgrade."
 ---
 
-= Manage storage encryption using Onboard Key Manager
+= Manage storage encryption using the Onboard Key Manager
 :hardbreaks:
 :nofooter:
 :icons: font

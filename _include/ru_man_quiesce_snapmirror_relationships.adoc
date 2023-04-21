@@ -1,4 +1,4 @@
-Before you netboot the system, you must confirm that all the SnapMirror relationship are quiesced. When a SnapMirror relationship is quiesced, it remains quiesced across reboots and failovers.
+Before you netboot the system, you must confirm that all the SnapMirror relationships are quiesced. When a SnapMirror relationship is quiesced, it remains quiesced across reboots and failovers.
 
 .Steps
 

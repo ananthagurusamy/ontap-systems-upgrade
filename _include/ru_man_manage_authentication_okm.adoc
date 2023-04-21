@@ -1,16 +1,11 @@
-You can use an onboard key manager to manage authentication keys. If you plan to use an onboard key manager (OKM), you must record the passphrase and backup material before the beginning the upgrade.
+You can use the Onboard Key Manager (OKM) to manage authentication keys. If you have the OKM set up, you must record the passphrase and backup material before beginning the upgrade.
 
 .Steps
 
-. Verify the key management servers are available to all nodes in the cluster:
+. Record the cluster-wide passphrase.
 +
-`security key-manager key show`
+This is the passphrase that was entered when the OKM was configured or updated using the CLI or REST API.
+. Back up the key-manager information by running the `security key-manager onboard show-backup` command.
 
-. Rekey all self-encrypting disks with the new authentication key:
-+
-`storage encryption disk modify -disk * [-data-key-id nonMSID AK>]`
-
-. If you use the Federal Information Processing Standard (FIPS), rekey all self-encrypting disks with the new authentication key:
-+
-`storage encryption disk* modify -disk * [-fips-key-id nonMSID AK]`
+// 2023 APR 11, ontap-systems-upgrade-issues-64/BURT 1519747
 // 5 MAR 2021:  formatted from CMS
