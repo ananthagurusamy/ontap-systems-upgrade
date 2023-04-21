@@ -1,0 +1,27 @@
+---
+permalink: upgrade/upgrade_aff_a250_to_aff_a400_ndu_upgrade_workflow.html
+sidebar: sidebar
+keywords: ndu, nondisruptive, upgrade, AFF, FAS, systems, entry, level
+summary: Perform an NDU to entry level NetApp AFF and FAS systems without having to purchase additional storage and cluster switches.
+---
+= Workflow
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+You can perform a nondisruptive upgrade from a NetApp AFF A250 system to an AFF A400 system by converting each AFF A250 node to an NS224 drive shelf and then connecting to the AFF A400 replacement nodes.
+
+In this procedure, the AFF A250 high-availability (HA) pair controllers are called node1 and node2, and the replacement AFF A400 HA pair controllers are called node3 and node4.
+
+image::../upgrade/media/ndu_upgrade_entry_level_systems.PNG[Workflow for upgrading AFF A250 to AFF A400 by converting to drive shelf]
+
+.Steps. 
+. xref:upgrade_migrate_lifs_aggregates_node2_to_node1.adoc[Migrate LIFs and data aggregates on node2 to node1]
+. xref:upgrade_convert_node2_drive_shelf_connect_node4.adoc[Convert node2 to a drive shelf and connect to node4]
+. xref:upgrade_reassign_drives_node2_to_node4.adoc[Reassign drives from node2 to node4]
+. xref:upgrade_migrate_aggregates_epsilon_lifs_node1_node4.adoc[Migrate data aggregates, epsilon, and LIFs on node1 to node4]
+. xref:upgrade_convert_node1_drive_shelf_connect_node3.html[Convert node1 to a drive shelf and connect to node3]
+. xref:upgrade_reassign_drives_node1_to_node3.adoc[Reassign drives from node1 to node3]
+. xref:upgrade_migrate_lIFs_aggregates_node4_node3.adoc[Migrate LIFs and data aggregates on node4 to node3]
+
+// 2023 Feb 1, BURT 1351102

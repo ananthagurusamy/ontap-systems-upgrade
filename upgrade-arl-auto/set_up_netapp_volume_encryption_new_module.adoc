@@ -62,6 +62,8 @@ You must install the same key management servers that are installed on the exist
 +
 This command needs the Onboard Key Manager (OKM) passphrase.
 +
+For more information, see the Knowledge Base article https://kb.netapp.com/onprem/ontap/dm/Encryption/How_to_restore_external_key_manager_server_configuration_from_the_ONTAP_boot_menu[How to restore external key manager server configuration from the ONTAP boot menu^].
++
 * Restore authentication for OKM:
 +
 `security key-manager onboard sync`
@@ -108,6 +110,8 @@ You must install the same key management servers that are installed on the exist
 +
 This command needs the Onboard Key Manager (OKM) passphrase.
 +
+For more information, see the Knowledge Base article https://kb.netapp.com/onprem/ontap/dm/Encryption/How_to_restore_external_key_manager_server_configuration_from_the_ONTAP_boot_menu[How to restore external key manager server configuration from the ONTAP boot menu^].
++
 * Restore authentication for OKM:
 +
 `security key-manager setup -node _node_name_`
@@ -119,4 +123,6 @@ This command needs the Onboard Key Manager (OKM) passphrase.
 
 Check if any volumes were taken offline because authentication keys were not available or External Key Management servers could not be reached. Bring those volumes back online using the `volume online` command.
 
+// 2023 APR 11, ontap-systems-upgrade-issues-64/BURT 1519747
+// 2023 APR 17, ontap-systems-upgrade-issues-64/BURT 1519747
 // BURT 1476251, 2022-05-16

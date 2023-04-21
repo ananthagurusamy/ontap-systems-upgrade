@@ -49,7 +49,7 @@ For root aggregate size requirements, see the https://hwu.netapp.com[NetApp Hard
 
 Systems with internal storage
 
-NOTE: The following systems have internal storage: FAS2520, FAS2552, FAS2554, FAS2620, FAS2650, FAS2720, FAS2750, AFF A200, AFF A220, AFF A700s, AFF A800, AFF A250, AFF C250, and AFF C190.
+NOTE: The following systems have internal storage: FAS2520, FAS2552, FAS2554, FAS2620, FAS2650, FAS2720, FAS2750, AFF A150, AFF A200, AFF A220, AFF A250, AFF A700s, AFF A800, AFF C190, AFF C250, and AFF C800.
 
 * If your system is not listed above, see the https://hwu.netapp.com[NetApp Hardware Universe^] to check if it has internal drives.
 * If you have a system with internal storage, the recommended upgrade method is upgrading by moving volumes.
@@ -62,6 +62,8 @@ Converting a FAS255x system to a drive shelf is an optional task in the workflow
 Transferring the internal storage is an optional task in the workflow for upgrading by moving storage.
 
 Situations where additional steps might be needed
+
+* If you are upgrading from an AFF A250 to an AFF A400, see xref:upgrade-aff_a250_to_aff_a400_ndu_upgrade_workflow.adoc[Upgrade AFF A250 to AFF A400 by converting to a drive shelf].
 
 * If the new system has fewer slots than the original system, or if it has fewer or different types of ports, you might need to add an adapter to the new system.
 +
@@ -87,6 +89,9 @@ xref:upgrade-by-moving-storage-parent.adoc[Upgrade controller hardware by moving
 
 xref:upgrade-by-moving-volumes-parent.adoc[Upgrade controller hardware by moving volumes]
 
+// 2023 MAR 23, ontap-systems-upgrade-issue-82
 // 2023 MAR 23, BURT 1541393
+// 2023 Feb 1, BURT 1351102
 // 2022 SEP 3, Clean-up 
 // 2022 FEB 9, BURT 1493415 
+

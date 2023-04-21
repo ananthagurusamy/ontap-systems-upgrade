@@ -1,0 +1,104 @@
+---
+permalink: upgrade/upgrade_migrate_lIFs_aggregates_node4_node3.html
+sidebar: sidebar
+keywords: ndu, nondisruptive, upgrade, node3, node4, migrate, aggregates, lif
+summary: Prepare node3, connect node node3 to node4, and then migrate the data LIFs and data aggregates on node4 to node3.
+---
+= Migrate LIFs and data aggregates on node4 to node3
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+To complete the upgrade, you connect node3 to node4 and then migrate the data logical interfaces (LIFs) and data aggregates on node4 to node3.
+
+.Steps
+. At the LOADER prompt of the node, boot the node into the boot menu:
++
+`boot_ontap menu`
+. Select option `6 Update flash from backup config` to restore the /var file system to node3.
++
+This replaces all flash-based configuration with the last backup to disks. 
+. Enter `y` to continue.
+. Allow the node to boot as normal.
++
+[NOTE]
+====
+As expected, the node automatically reboots to load the new copy of the /var file system.
+
+The node reports a warning that there is a system ID mismatch. Enter `y` to override the system ID.
+====
+
+. Connect node3 to node4:
+.. Attach multipath high availability (MPHA) cables to the NS224 shelf to ensure redundancy.
+.. Connect HA pair cables (if separate interfaces) between the nodes.
+.. Connect cluster cables (if separate interfaces) between the nodes.
+
+. Migrate the cluster LIFs:
++
+`set -privilege advanced`
++
+`network port show`
+. Modify the cluster broadcast domain to include the desired cluster ports:
++
+`network port broadcast-domain remove-ports -broadcast-domain _broadcast_domain_name_ -ports _port_names_`
++
+`network port broadcast-domain add-ports -broadcast-domain Cluster -ports _port_names_`
++
+NOTE: Beginning with ONTAP 9.8, new IPspaces and one or more broadcast domains might be designated to existing physical ports that are intended for cluster connectivity.
+. Modify the cluster IPspace to include the desired cluster ports and set the maximum transmission unit to 9000 if not already set:
++
+`network port modify -node _node_name_ -port _port_name_ -mtu 9000 -ipspace Cluster`
+. Display all cluster network LIFs:
++
+`network interface show -role cluster` 
+. Migrate all cluster network LIFs to home ports:
++
+`network interface show -role cluster`
+. Display all data network LIFs:
++
+`network interface show -role data`
+. Migrate all data LIFs to node3:
++
+`network interface migrate -vserver _vserver_name_ -lif _lif_name_ -destination-node _node_name_`
+. Display all data network LIFs:
++
+`network interface show -role data`
++
+Cluster and management LIFs cannot migrate between nodes. If any LIFs are down, set the administrative status of the LIFs to `up` by entering the following command, once for each LIF:
++
+`network interface modify -vserver _vserver_name_ -lif _lif_name_ -home-node _node_name_ -status-admin up`
+. Migrate the cluster management LIF:
++
+`network interface migrate -vserver _vserver_name_ -lif cluster_mgmt -destination-node _node3_ -destination-port _port_name_`
+. Display the status of the cluster management LIF:
++
+`network interface show cluster_mgmt`
+. Display the status of all data aggregates in the cluster:
++
+`storage aggregate show`
+. Enable the HA pair, storage failover, and auto-giveback: 
++
+`cluster ha modify -configured true`
+. Migrate data aggregates owned by node4 to node3:
++ 
+`storage aggregate relocation start -aggregate _aggregate_name_ -node _node4_ -destination _node3_`
+. Display the status of all data aggregates in the cluster:
++
+`storage aggregate show`
+. Enable auto-revert of the network LIFs across the nodes:
++
+`network interface modify -lif * -auto-revert true`
+. Display the cluster status:
++
+`cluster show`
+. Display failover eligibility: 
++
+`storage failover show`
++
+NOTE: In the cluster report output, a node might incorrectly own aggregates that belong to another node. If this occurs, normalize by performing a takeover and giveback from both sides of the cluster.
+
+. Display the status of all data aggregates in the cluster:
++
+`storage aggregate show`
+
+// 2023 Feb 1, BURT 1351102
