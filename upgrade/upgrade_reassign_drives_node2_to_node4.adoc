@@ -1,0 +1,73 @@
+---
+permalink: upgrade/upgrade_reassign_drives_node2_to_node4.html
+sidebar: sidebar
+keywords: ndu, nondisruptive, upgrade, node2, node4, reassign, drives
+summary: Physically connect node2 to node4 before reassigning drives from node2 to node4.
+---
+= Reassign drives from node2 to node4
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+After converting AFF A250 node2 to an NS224 drive shelf and connecting to AFF A400 node4, you must reassign the drives that previously belonged to node2 to node4. 
+
+.Before you begin
+Verify that both node2 and node4 are on standby at the LOADER prompt.
+
+.About this task
+You perform the following steps on node4.
+
+.Steps
+. At the LOADER prompt, boot node4 into Maintenance Mode:
++
+`boot_ontap maint`
+
+. Show the state of the 100GbE interfaces:
++
+`storage port show`
+. Set the 100GbE interfaces to storage ports:
++
+`storage port modify -p e0c -m storage`
++
+`storage port modify -p e0d -m storage`
+. Verify the mode changes to the 100GbE interfaces:
++
+`storage port show`
++
+Output like the following should display:
++
+----
+*> storage port modify -p e0c -m storage
+Nov 10 16:27:23 [localhost:nvmeof.port.modify:notice]: Changing NVMe-oF port e0c to storage mode.
+
+Nov 10 16:27:29 [localhost:nvmeof.subsystem.add:notice]: NVMe-oF subsystem added at address fe80::2a0:98ff:fefa:8885.
+
+*> storage port modify -p e0d -m storage
+Nov 10 16:27:34 [localhost:nvmeof.port.modify:notice]: Changing NVMe-oF port e0d to storage mode.
+
+Nov 10 16:27:38 [localhost:nvmeof.subsystem.add:notice]: NVMe-oF subsystem added at address fe80::2a0:98ff:fefa:8886.
+
+*> storage port show
+Port Type Mode    Speed(Gb/s) State    Status  VLAN ID
+---- ---- ------- ----------- -------- ------- -------
+e0c  ENET storage 100 Gb/s    enabled  online  30
+e0d  ENET storage 100 Gb/s    enabled  online  30
+----
+
+. Display all attached drives: 
++
+`disk show -v`
+. Record the local system ID.
+. Reassign all drives from node2 to node4:
++
+`disk reassign -s _node2_ -d _node4_ -p _node1_`
+. Verify that all reassigned drives are viewable to the new system ID:
++
+`disk show -s _node4_System_ID_`
++ 
+NOTE: If drives are not viewable, *STOP* and contact technical support for assistance. 
+. Exit maintenance mode: 
++
+`halt`
+
+// 2023 Feb 1, BURT 1351102
