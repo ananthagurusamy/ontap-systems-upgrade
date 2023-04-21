@@ -25,6 +25,7 @@ For detailed information about the `storage aggregate relocation start`, `overri
 At the end of the upgrade procedure, node1 should be the new home node of aggregates that originally had node1 as the home node. You can relocate them after the upgrade.
 
 .About this task
+
 Aggregates might fail to relocate correctly, that is, they have node2 as their home node instead of node1, under the following circumstances:
 
 *	During Stage 3, when aggregates are relocated from node2 to node1.

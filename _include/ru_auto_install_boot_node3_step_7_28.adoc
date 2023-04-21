@@ -155,13 +155,13 @@ a|* `setenv bootarg.storageencryption.support *false*`
 * `setenv kmip.init.maxwait off`
 |===
 +
+WARNING: *As soon as the controller upgrade completes on the HA pair, you must unset the `kmip.init.maxwait` variable. See link:ensure_new_controllers_are_set_up_correctly.html#unset_maxwait_system_commands[Confirm that the new controllers are set up correctly, Step 12]. Failure to do so might lead to data loss if a power outage occurs.*
++
 [NOTE]
 ====
-* You cannot mix FIPS drives with other types of drives on the same node or HA pair.
-* You can mix SEDs with non-encrypting drives on the same node or HA pair.
-* If a power outage occurs after you set the `kmip.init.maxwait` variable to `off`, contact technical support for assistance to avoid potential data loss.
+You cannot mix FIPS drives with other types of drives on the same node or HA pair.
 
-* As soon as the controller upgrade completes on the HA pair, you must unset the `kmip.init.maxwait` variable. See link:ensure_new_controllers_are_set_up_correctly.html[Confirm that the new controllers are set up correctly].
+You can mix SEDs with non-encrypting drives on the same node or HA pair.
 ====
 
 . [[step28]]Boot node into boot menu:
@@ -170,4 +170,5 @@ a|* `setenv bootarg.storageencryption.support *false*`
 +
 If you do not have FC or UTA/UTA2 configuration, execute link:set_fc_or_uta_uta2_config_on_node3.html#auto9597_check_node3_step15[Check and configure UTA/UTA2 ports on node3, Step 15] so that node3 can recognize node1’s disks.
 
+// 2023 Feb 22, BURT 1518041
 // 2022 DEC 1, ontap-systems-upgrade-37
