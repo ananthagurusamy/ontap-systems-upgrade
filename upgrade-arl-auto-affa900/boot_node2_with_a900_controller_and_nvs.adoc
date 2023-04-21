@@ -17,33 +17,30 @@ Node2 with the AFF A900 or FAS9500 controller and NVRAM modules is now ready for
 
 .Steps
 
-.	[[boot_node2_step1]]Set the `bootarg.storageencryption.support` and `kmip.init.maxwait` variables to avoid a boot loop after the node2 configuration is loaded.
+.	[[boot_node2_step1]]If you have NetApp Storage Encryption (NSE) drives installed, perform the following steps.
 +
-If you have not already done so earlier in the procedure, see the Knowledge Base article https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Systems/FAS_Systems/How_to_tell_I_have_FIPS_drives_installed[How to tell I have FIPS drives installed^] to determine the type of self-encrypting drives that are in use.
+NOTE: If you have not already done so earlier in the procedure, see the Knowledge Base article https://kb.netapp.com/onprem/ontap/Hardware/How_to_tell_if_a_drive_is_FIPS_certified[How to tell if a drive is FIPS certified^] to determine the type of self-encrypting drives that are in use.
+
+.. Set `bootarg.storageencryption.support` to `true` or `false`:
 +
 [cols="35,65"]
 |===
 |If the following drives are in use…	|Then…
-
-|NetApp Storage Encryption (NSE) drives that conform to FIPS 140-2 Level 2 self-encryption requirements
-a|* `setenv bootarg.storageencryption.support *true*`
-
-* `setenv kmip.init.maxwait off`
-
+|NSE drives that conform to FIPS 140-2 Level 2 self-encryption requirements
+|`setenv bootarg.storageencryption.support *true*`
 |NetApp non-FIPS SEDs
-a|* `setenv bootarg.storageencryption.support *false*`
-
-* `setenv kmip.init.maxwait off`
+|`setenv bootarg.storageencryption.support *false*`
 |===
-+
-WARNING: *As soon as the controller upgrade completes on the HA pair, you must unset the `kmip.init.maxwait` variable. See link:ensure_new_controllers_are_set_up_correctly.html#unset_maxwait[Confirm that the new controllers are set up correctly, Step 12]. Failure to do so might lead to data loss if a power outage occurs.*
 +
 [NOTE]
 ====
 You cannot mix FIPS drives with other types of drives on the same node or HA pair.
-
 You can mix SEDs with non-encrypting drives on the same node or HA pair.
 ====
+
+.. Go to the special boot menu and select option `(10) Set Onboard Key Manager recovery secrets`. 
++
+Enter the passphrase and the backup information that you recorded earlier procedure. See link:manage_storage_encryption_using_okm.html[Manage storage encryption using the Onboard Key Manager].
 
 .	Boot the node into the boot menu:
 +
@@ -64,7 +61,7 @@ If `[localhost:disk.encryptNoSupport:ALERT]: Detected FIPS-certified encrypting 
 +
 `boot_ontap`
 ====
-// BURT-1481586 30-May-2022
+
 +
 You can use the following example as a reference:
 +
@@ -202,6 +199,8 @@ The system IDs shown in the preceding example are example IDs. The actual system
 Between entering node names at the prompt and the login prompt, the node reboots a few times to restore the environment variables, update firmware on the cards in the system, and for other ONTAP updates.
 ====
 
+// 2023 APR 11, ontap-systems-upgrade-issues-64/BURT 1519747
 // 2023 Feb 22, BURT 1518041
 // 2022 DEC 1, ontap-systems-upgrade-37
+// BURT-1481586 30-May-2022
 // 2022 APR 27, BURT 1452254

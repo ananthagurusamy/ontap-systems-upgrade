@@ -2,10 +2,10 @@
 sidebar: sidebar
 permalink: upgrade-arl-manual-app/manage_authentication_okm.html
 keywords: manage, authentication, onboard key manager, okm, key, passphrase, fips
-summary:  "Use an onboard key manager to manage authentication keys during a manual ARL upgrade on controllers running ONTAP 9.8 or later."
+summary:  "Use the Onboard Key Manager to manage authentication keys during a manual ARL upgrade on controllers running ONTAP 9.8 or later."
 ---
 
-= Manage authentication using an onboard key manager
+= Manage authentication keys using the Onboard Key Manager
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -14,4 +14,5 @@ summary:  "Use an onboard key manager to manage authentication keys during a man
 
 [.lead]
 include::../_include/ru_man_manage_authentication_okm.adoc[]
+// 2023 APR 11, ontap-systems-upgrade-issues-64/BURT 1519747
 // 5 MAR 2021:  formatted from CMS

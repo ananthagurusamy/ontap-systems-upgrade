@@ -303,14 +303,12 @@ node2            enable    Postmaster    -                 mailhost
 |If the original system... |Then...
 
 |Has AutoSupport enabled...
-a|.. Go to <<man_prepare_nodes_step34,Step 34>>.
-.. Go to the section link:get_address_key_management_server_encryption.html[Get an IP address of an external key management server for Storage Encryption].
+a|Go to <<man_prepare_nodes_step34,Step 34>>.
 |Does not have AutoSupport enabled...
-a|.. Enable AutoSupport by following the instructions in the _System Administration Reference_. (Refer to link:other_references.html[References] to link to the _System Administration Reference_.)
+a|Enable AutoSupport by following the instructions in the _System Administration Reference_. (Refer to link:other_references.html[References] to link to the _System Administration Reference_.)
 +
 *Note:*  AutoSupport is enabled by default when you configure your storage system for the first time. Although you can disable AutoSupport at any time, you should leave it enabled. Enabling AutoSupport can significantly help identify problems and solutions should a problem occur on your storage system.
 
-.. Go to the link:get_address_key_management_server_encryption.html[Get an IP address of an external key management server for Storage Encryption] section.
 |===
 
 . [[man_prepare_nodes_step34]]Verify that AutoSupport is configured with the correct mailhost details and recipient e-mail IDs by entering the following command on both of the original nodes and examining the output:
@@ -331,7 +329,7 @@ NOTE: Do not send an AutoSupport message to NetApp for node2 at this point; you 
 +
 The fields `Last Subject Sent:` and `Last Time Sent:` contain the message title of the last message sent and the time the message was sent.
 
-. If your system uses self-encrypting drives, see the Knowledge Base article https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Systems/FAS_Systems/How_to_tell_I_have_FIPS_drives_installed[How to tell I have FIPS drives installed^] to determine the type of self-encrypting drives that are in use on the HA pair that you are upgrading. ONTAP software supports two types of self-encrypting drives:
+. If your system uses self-encrypting drives, see the Knowledge Base article https://kb.netapp.com/onprem/ontap/Hardware/How_to_tell_if_a_drive_is_FIPS_certified[How to tell if a drive is FIPS certified^] to determine the type of self-encrypting drives that are in use on the HA pair that you are upgrading. ONTAP software supports two types of self-encrypting drives:
 +
 --
 * FIPS-certified NetApp Storage Encryption (NSE) SAS or NVMe drives
@@ -347,6 +345,7 @@ You can mix SEDs with non-encrypting drives on the same node or HA pair.
 https://docs.netapp.com/us-en/ontap/encryption-at-rest/support-storage-encryption-concept.html#supported-self-encrypting-drive-types[Learn more about supported self-encrypting drives^].
 --
 
+// 2023 APR 11, ontap-systems-upgrade-issues-64/BURT 1519747
 // 2022 DEC 1, ontap-systems-upgrade-37
 // 2022 MAY 13, 1476241 
 // 2022 MAR 09, Clean-up 

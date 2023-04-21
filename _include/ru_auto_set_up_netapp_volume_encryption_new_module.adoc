@@ -49,10 +49,13 @@ You must install the same key management servers that are installed on the exist
 `security key-manager external restore`
 +
 This command needs the OKM passphrase
++
+For more information, see the Knowledge Base article https://kb.netapp.com/onprem/ontap/dm/Encryption/How_to_restore_external_key_manager_server_configuration_from_the_ONTAP_boot_menu[How to restore external key manager server configuration from the ONTAP boot menu^].
 --
 ====
 
 .After you finish
 Check if any volumes were taken offline because authentication keys were not available or EKM servers could not be reached. Bring those volumes back online by using the `volume online` command.
 
+// 2023 APR 11, ontap-systems-upgrade-issues-64/BURT 1519747
 // 2022-Oct-03, BURT 1476241
