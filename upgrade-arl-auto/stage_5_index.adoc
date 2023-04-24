@@ -5,7 +5,7 @@ keywords: install, boot, node4, node2, node-management,  stage 5
 summary: "Stage 5 process sequence for an ARL upgrade using `system controller replace` commands on controllers running ONTAP 9.5 to 9.7."
 ---
 
-= Stage 5. Install and boot node4
+= Overview
 :hardbreaks:
 :nofooter:
 :icons: font
