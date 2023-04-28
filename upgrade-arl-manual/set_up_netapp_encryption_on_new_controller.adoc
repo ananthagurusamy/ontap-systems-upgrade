@@ -50,7 +50,7 @@ You must install the same key management servers that are installed on the exist
 
 .. Complete the steps in the wizard to configure key management servers.
 . Restore authentication keys from all linked key management servers to the new node.
-* Restore authentication for External Key Manager (EKD):
+* Restore authentication for external key manager:
 +
 `security key-manager external restore`
 +

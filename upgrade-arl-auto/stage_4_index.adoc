@@ -5,7 +5,7 @@ keywords: relocate, retire, node2, LIF, node3, non-root aggregates, stage 4
 summary: "Stage 4 process sequence for an ARL upgrade using `system controller replace` commands on controllers running ONTAP 9.5 to 9.7."
 ---
 
-= Stage 4. Relocate and retire node2
+= Overview
 :hardbreaks:
 :nofooter:
 :icons: font
