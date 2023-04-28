@@ -306,7 +306,7 @@ node2            enable    Postmaster    -                 mailhost
 a|Go to <<man_prepare_nodes_step34,Step 34>>.
 |Does not have AutoSupport enabled...
 a|Enable AutoSupport by following the instructions in the _System Administration Reference_. (Refer to link:other_references.html[References] to link to the _System Administration Reference_.)
-+
+
 *Note:*  AutoSupport is enabled by default when you configure your storage system for the first time. Although you can disable AutoSupport at any time, you should leave it enabled. Enabling AutoSupport can significantly help identify problems and solutions should a problem occur on your storage system.
 
 |===

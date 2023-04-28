@@ -65,13 +65,16 @@ If your system has a tape SAN, then you need zoning for the initiators. If requi
 include::../_include/ru_auto_install_and_boot_node4_step_24_26.adoc[]
 
 [start=27]
-. If you have NetApp Storage Encryption (NSE) drives installed, set `bootarg.storageencryption.support` to `true` or `false`.
+. If you have NetApp Storage Encryption (NSE) drives installed, perform the following steps.
 +
 NOTE: If you have not already done so earlier in the procedure, see the Knowledge Base article https://kb.netapp.com/onprem/ontap/Hardware/How_to_tell_if_a_drive_is_FIPS_certified[How to tell if a drive is FIPS certified^] to determine the type of self-encrypting drives that are in use.
++
+.. Set `bootarg.storageencryption.support` to `true` or `false`.
 +
 [cols="35,65"]
 |===
 |If the following drives are in use…	|Then…
+
 |NSE drives that conform to FIPS 140-2 Level 2 self-encryption requirements
 |`setenv bootarg.storageencryption.support *true*`
 |NetApp non-FIPS SEDs
@@ -84,9 +87,9 @@ You cannot mix FIPS drives with other types of drives on the same node or HA pai
 You can mix SEDs with non-encrypting drives on the same node or HA pair.
 ====
 
-. Go to the special boot menu and select option `(10) Set Onboard Key Manager recovery secrets`. 
+.. Go to the special boot menu and select option `(10) Set Onboard Key Manager recovery secrets`. 
 +
-Enter the passphrase and the backup information that you recorded earlier procedure. See link:manage_storage_encryption_using_okm.html[Manage storage encryption using the Onboard Key Manager]
+Enter the passphrase and the backup information that you recorded earlier procedure. See link:manage_storage_encryption_using_okm.html[Manage storage encryption using the Onboard Key Manager].
 
 . Boot node into boot menu:
 +

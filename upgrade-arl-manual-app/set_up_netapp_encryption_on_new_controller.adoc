@@ -49,7 +49,7 @@ You must install the same key management servers that are installed on the exist
 [cols=2*,options="header",cols="35,65"]
 |===
 |For... |Use this command...
-|External Key Manager (EKM)
+|External key manager
 |`security key-manager external restore`
 
 This command needs the OKM passphrase

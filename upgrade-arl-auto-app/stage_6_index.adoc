@@ -5,7 +5,7 @@ keywords: complete upgrade, node, unified, target, storage, encryption, stage 6
 summary: "Stage 6 process sequence for an ARL upgrade using `system controller replace` commands on controllers running ONTAP 9.8 or later."
 ---
 
-= Stage 6. Complete the upgrade
+= Overview
 :hardbreaks:
 :nofooter:
 :icons: font
