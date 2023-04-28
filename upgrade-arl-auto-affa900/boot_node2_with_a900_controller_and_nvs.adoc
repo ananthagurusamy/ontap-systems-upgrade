@@ -26,6 +26,7 @@ NOTE: If you have not already done so earlier in the procedure, see the Knowledg
 [cols="35,65"]
 |===
 |If the following drives are in use…	|Then…
+
 |NSE drives that conform to FIPS 140-2 Level 2 self-encryption requirements
 |`setenv bootarg.storageencryption.support *true*`
 |NetApp non-FIPS SEDs

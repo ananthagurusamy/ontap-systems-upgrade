@@ -5,7 +5,7 @@ keywords: relocating, retiring, node1, lif, stage 2
 summary: "Stage 2 process sequence for an ARL upgrade using `system controller replace` commands on controllers running ONTAP 9.8 or later."
 ---
 
-= Stage 2. Relocate and retire node1
+= Overview
 :hardbreaks:
 :nofooter:
 :icons: font
