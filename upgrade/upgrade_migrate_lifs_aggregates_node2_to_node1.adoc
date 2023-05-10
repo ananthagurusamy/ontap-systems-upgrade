@@ -22,9 +22,9 @@ Verify that you meet the following requirements:
 The following steps are performed on AFF A250 node1.
 
 .Steps
-. Disable the cluster failover automatic giveback:
+. Disable storage failover automatic giveback:
 +
-`storage failover modify -node _node_name_ -auto-giveback false`
+`storage failover modify -node _node1_ -auto-giveback false`
 . Disable auto-revert of the LIFs across both nodes of the HA pair:
 +
 `network interface modify -lif * -auto-revert false`  
@@ -33,10 +33,10 @@ The following steps are performed on AFF A250 node1.
 `network interface show -role data`
 . Display the status of the cluster management LIFs:
 +
-`network interface show cluster_mgmt`
+`network interface show -role cluster_mgmt`
 . Migrate all data LIFs from the storage virtual machines hosted on node2:
 +
-`network interface migrate -vserver _vserver_name_ -lif _lif_name_ -destination-node _node_name_ -destination-port _port_name_`
+`network interface migrate -vserver _vserver_name_ -lif _lif_name_ -destination-node _node1_ -destination-port _port_name_`
 +
 NOTE: This command only migrates non-SAN LIFs. You cannot use it to migrate iSCSI and FCP LIFs.
 . Display the status of all data LIFs in the cluster:
@@ -73,4 +73,7 @@ NOTE: This command only migrates non-SAN LIFs. You cannot use it to migrate iSCS
 +
 `halt -node _node2_ -inhibit-takeover true -ignore-quorum-warnings true`   
 
+.What's next?
+
+link:upgrade_convert_node2_drive_shelf_connect_node4.html[Convert node2 to a drive shelf and connect to node4]
 // 2023 Feb 1, BURT 1351102
