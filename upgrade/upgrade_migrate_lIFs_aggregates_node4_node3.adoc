@@ -58,9 +58,9 @@ NOTE: Beginning with ONTAP 9.8, new IPspaces and one or more broadcast domains m
 .. Display all cluster network LIFs:
 +
 `network interface show -role cluster`
-.. Configure the home node and home port for all cluster LIFs. If any LIFs are down, set the administrative status of the LIFs to `up` by entering the following command, once for each LIF:
+.. Verify the home ports for the cluster network LIF :
 +
-`network interface modify -vserver _vserver_name_ -lif lif_name -home-node _node_name_ -home-port _port_name_ -status-admin up`
+`network interface modify -vserver _vserver_name_ -lif _lif_name_ -home-port _port_name_`
 
 . Display all data network LIFs:
 +

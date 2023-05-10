@@ -22,6 +22,10 @@ Verify that you meet the following requirements:
 The following steps are performed on AFF A250 node1.
 
 .Steps
+. Access the advanced privilege level:
++
+`set -privilege advanced`
+
 . Disable storage failover automatic giveback:
 +
 `storage failover modify -node _node1_ -auto-giveback false`
@@ -44,7 +48,7 @@ NOTE: This command only migrates non-SAN LIFs. You cannot use it to migrate iSCS
 `network interface show -role data`
 . If any LIFs are down, set the administrative status of the LIFs to `up` by entering the following command, once for each LIF:
 +
-`network interface modify -vserver _vserver_name_ -lif _lif_name_ -home-node _node_name_ -status-admin up`
+`network interface modify -vserver _vserver_name_ -lif _lif_name_ -status-admin up`
 . Display the status of all data aggregates in the cluster:
 +
 `storage aggregate show` 

@@ -29,13 +29,13 @@ After converting AFF A250 node1 to an NS224 drive shelf and connecting to AFF A4
 . Display all attached drives:
 +
 `disk show -v` 
-. Record the local system ID value; this is the system ID of node3. Also record the System IDs of node1 and node2 from the "OWNER" column. 
+. Record the local system ID value; this is the system ID of node3. Also record the system IDs of node1 and node2 from the "OWNER" column. 
 . Reassign all drives from node1 to node3:
 +
-`disk reassign -s _node1_system_ID_ -d _node3_system_ID_ -p _node2_system_ID_`
+`disk reassign -s _node1_system_ID_ -d _node3_system_ID_ -p _node4_system_ID_`
 . Verify that all reassigned drives are viewable to the new system ID:
 +
-`disk show -s _node3_system ID_`
+`disk show -s _node3_system_ID_`
 +
 NOTE: If drives are not viewable, *STOP* and contact technical support for assistance.
 . Exit Maintenance Mode: 
