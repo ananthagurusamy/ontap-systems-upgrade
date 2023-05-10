@@ -19,11 +19,11 @@ Convert AFF A250 node2 to an NS224 drive shelf and then connect to AFF A400 node
 +
 image::../upgrade/media/a400_with_ns224_shelf.PNG[AFF A400 with one NS224 shelf]
 
-. Connect the 25GbE cabling from node2 ports e0c and e0d to any two 25GbE onboard ports (e0e, e0f, e0g, or e0h) on node4.
+. Connect the 25GbE cabling from node2 ports e0c and e0d to any two 25GbE onboard ports (e0e, e0f, e0g, or e0h) on node4 to create temporary cluster connections.
 +
-NOTE: If the AFF A400 system uses FC ports as onboard ports, install a 25Gb Ethernet adapter into each node for cluster connectivity during migration:
+NOTE: If 25GbE onboard ports are not present on node4, you can use a 25GbE PCIe adapter to make the connection.
 . Connect the 25GbE HA interconnect cables between the AFF A400 nodes using ports e0a and e0b. Do not cross-connect the ports.
-.. Connect the 100GbE cluster interconnect cables between the AFF A400 nodes using ports e3a and e3b. Do not cross-connect the ports.
+. Connect the 100GbE cluster interconnect cables between the AFF A400 nodes using ports e3a and e3b. Do not cross-connect the ports.
 
 .What's next?
 
