@@ -25,6 +25,7 @@ You perform the following steps on node4.
 . Show the state of the 100GbE interfaces:
 +
 `storage port show`
+
 . Set the 100GbE interfaces to storage ports:
 +
 `storage port modify -p e0c -m storage`
