@@ -53,12 +53,12 @@ NOTE: Beginning with ONTAP 9.8, new IPspaces and one or more broadcast domains m
 `network interface show -role cluster` 
 . Migrate all cluster network LIFs on both nodes to their home ports:
 +
-`network interface migrate -vserver vserver_name -lif _lif_name_ -destination-node _node_name_ -destination-port _port_name_`
+`network interface migrate -vserver _vserver_name_ -lif _lif_name_ -destination-node _node_name_ -destination-port _port_name_`
 
 .. Display all cluster network LIFs:
 +
 `network interface show -role cluster`
-.. Verify the home ports for the cluster network LIF :
+.. Verify the home ports for the cluster network LIFs:
 +
 `network interface modify -vserver _vserver_name_ -lif _lif_name_ -home-port _port_name_`
 
