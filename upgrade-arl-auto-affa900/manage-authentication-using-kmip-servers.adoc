@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
-permalink: upgrade-arl-auto-affa900/get_ip_address_of_external_kms_for_storage_encryption.html
+permalink: upgrade-arl-auto-affa900/manage-authentication-using-kmip-servers.html
 keywords: storage, encryption, authentication, key, manager, external
 summary: "Configure and manage Storage Encryption, manage authentication keys, and quiesce the SnapMirror relationships during an AFF A700 to AFF A900 upgrade."
 ---
 
-= Get an IP address of an external key management server for Storage Encryption
+= Manage authentication using KMIP servers
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,11 +13,8 @@ summary: "Configure and manage Storage Encryption, manage authentication keys, a
 :imagesdir: ./media/
 
 [.lead]
-include::../_include/ru_auto_get_ip_address_external_key_management_server_encryption.adoc[]
-
-== Manage authentication using KMIP servers
-
 Beginning with ONTAP 9.10.1, you can use Key Management Interoperability Protocol (KMIP) servers to manage authentication keys.
 
 include::../_include/ru_auto_manage_authentication_kmip_servers.adoc[]
+// 2023 APR 17, ontap-systems-upgrade-issue-64/BURT 1519747
 

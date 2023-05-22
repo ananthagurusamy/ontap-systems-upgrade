@@ -13,5 +13,31 @@ summary: "Install and boot node4 and install ONTAP software during a manual ARL 
 :imagesdir: ./media/
 
 [.lead]
-// COPIED FROM 9.8 GUIDE...CHECK FOR REUSE, THEN REMOVE THIS COMMENT
-include::../_include/ru_man_install_boot_node4.adoc[]
+include::../_include/ru_man_install_boot_node4_intro_to_step_15.adoc[]
+. If you have NetApp Storage Encryption (NSE) drives installed, perform the following steps.
++
+NOTE: If you have not already done so earlier in the procedure, see the Knowledge Base article https://kb.netapp.com/onprem/ontap/Hardware/How_to_tell_if_a_drive_is_FIPS_certified[How to tell if a drive is FIPS certified^] to determine the type of self-encrypting drives that are in use.
+
+.. Set `bootarg.storageencryption.support` to `true` or `false`:
++
+[cols="35,65"]
+|===
+|If the following drives are in use…	|Then…
+
+|NSE drives that conform to FIPS 140-2 Level 2 self-encryption requirements
+|`setenv bootarg.storageencryption.support *true*`
+|NetApp non-FIPS SEDs
+|`setenv bootarg.storageencryption.support *false*`
+|===
++
+[NOTE]
+====
+You cannot mix FIPS drives with other types of drives on the same node or HA pair.
+
+You can mix SEDs with non-encrypting drives on the same node or HA pair.
+====
+
+.. Contact NetApp Support for assistance with restoring the onboard key management information.
+
+include::../_include/ru_man_install_boot_node4_steps_17_to_48.adoc[]
+// 2023 APR 11, ontap-systems-upgrade-issues-64/BURT 1519747

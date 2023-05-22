@@ -5,7 +5,7 @@ keywords: installing, booting, node3, install, cluster, stage 3
 summary: "Stage 3 process sequence for an ARL upgrade using `system controller replace` commands on controllers running ONTAP 9.8 or later."
 ---
 
-= Stage 3. Install and boot node3
+= Overview
 :hardbreaks:
 :nofooter:
 :icons: font

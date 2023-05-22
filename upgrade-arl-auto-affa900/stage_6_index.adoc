@@ -5,7 +5,11 @@ keywords: upgrade, preparing, preparation, prepare, overview, stage 1
 summary: "Stage 1 process sequence for an ARL upgrade using `system controller replace` commands on controllers running ONTAP 9.8 or later."
 ---
 
+<<<<<<< HEAD
 = Stage 6. Boot node2 with the replacement system modules
+=======
+= Overview
+>>>>>>> f7ae3eb43e97dae0b9e1499b273325818327585f
 :hardbreaks:
 :nofooter:
 :icons: font
