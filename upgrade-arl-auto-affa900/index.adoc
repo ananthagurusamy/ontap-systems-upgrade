@@ -16,18 +16,18 @@ This procedure describes how to nondisruptively upgrade controller hardware on a
 
 [cols=3*,options="header",cols="20,20,40"]
 |===
-|Old system |Replacement system |Minimum ONTAP version
+|Old system |Replacement system |Supported ONTAP versions
 |FAS2620 
 |FAS2820
-|9.11.1P7 (FAS2620) 
-9.13.1 (FAS2820)
+|9.11.1P7 or earlier (FAS2620) 
+9.13.1 or later (FAS2820)
 |FAS2720 |FAS2820	
-|9.13.1
+|9.13.1 or later
 |AFF A700 
 |AFF A900
-|9.10.1P10, 9.11.1P6, or a later release
+|9.10.1P10, 9.11.1P6 or later
 |FAS9000 |FAS9500
-|9.10.1P10, 9.11.1P6, or a later release
+|9.10.1P10, 9.11.1P6 or later
 |===
 
 NOTE: NetApp recommends, if possible, that you have the same ONTAP version on the old and the replacement system.
@@ -61,6 +61,7 @@ NOTE: The terms *node1* and *node2*, are used only as a reference to node names 
 == Automate the controller upgrade process
 This procedure supports the following controller upgrades and provides the steps for the automated procedure, which uses automatic disk assignment and network port reachability checks to simplify the controller upgrade experience
 
+// 2023 MAY 22, BURT 1542232
 // 2023 MAY 22, BURT 1531220
 // 2022 JAN 30, BURT 1523106
 // 2022 APR 26, BURT 1452254

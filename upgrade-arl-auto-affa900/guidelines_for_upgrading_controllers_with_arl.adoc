@@ -22,18 +22,18 @@ WARNING: This procedure strictly applies to the following upgrade configurations
 
 [cols=3*,options="header",cols="20,20,40"]
 |===
-|Old system |Replacement system |Minimum ONTAP version
+|Old system |Replacement system |Supported ONTAP versions
 |FAS2620 
 |FAS2820
-|9.11.1P7 (FAS2620) 
-9.13.1 (FAS2820)
+|9.11.1P7 or earlier (FAS2620) 
+9.13.1 or later (FAS2820)
 |FAS2720 |FAS2820	
-|9.13.1
+|9.13.1 or later
 |AFF A700 
 |AFF A900
-|9.10.1P10, 9.11.1P6, or a later release
+|9.10.1P10, 9.11.1P6 or later
 |FAS9000 |FAS9500
-|9.10.1P10, 9.11.1P6, or a later release
+|9.10.1P10, 9.11.1P6 or later
 |===
 
 If you have received a new FAS2820, AFF A900, or FAS9500 system as a complete system, including a new chassis, refer to link:other_references.html[References] to link to the _Use "system controller replace" commands to upgrade controller hardware running ONTAP 9.8 or later_ content.
@@ -50,5 +50,7 @@ If any problems occur while upgrading the controllers, see the link:troubleshoot
 
 If you do not find a solution to the problem you encountered, contact technical support.
 
+// 2023 MAY 22, BURT 1542232
+// 2023 MAY 22, BURT 1531220
 // 2022 Jan 30, BURT 1523106
 // 2022 APR 26, BURT 1452254
