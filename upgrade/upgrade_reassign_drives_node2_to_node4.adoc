@@ -35,7 +35,7 @@ You perform the following steps on node4.
 +
 `storage port show`
 +
-Output like the following should display:
+Output like the following example should display:
 +
 ----
 *> storage port modify -p e0c -m storage
@@ -67,6 +67,11 @@ e0d  ENET storage 100 Gb/s    enabled  offline 30
 `disk show -s _node4_System_ID_`
 + 
 NOTE: If drives are not viewable, *STOP* and contact technical support for assistance. 
+
+. Verify that the root aggregate of node2 is reported in the output and the aggregate is online:
++
+`aggr status`
+
 . Exit maintenance mode: 
 +
 `halt`
