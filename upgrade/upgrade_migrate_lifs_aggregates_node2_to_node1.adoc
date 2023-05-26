@@ -14,8 +14,16 @@ Before converting AFF A250 node2 to a drive shelf, you migrate the logical inter
 .Before you begin
 Verify that you meet the following requirements:
 
-* The AFF A250 and AFF A400 controllers have the same ONTAP release and patch version installed.
-* Both AFF A400 controllers are on standby at the `Maintenance Mode` prompt.
+* The AFF A250 and AFF A400 controllers are running the same ONTAP release and patch version.
++
+[NOTE]
+====
+* You must netboot and install the ONTAP version on the AFF A400 that is identical to the version running on the AFF A250.
+* Both the primary and backup boot image of the AFF A400 must have the same ONTAP version.
+* If the AFF A400 cluster was previously configured, you must clear any residual cluster configuration by performing a `wipeconfig` from the boot menu.
+====
+
+* Both AFF A400 controllers are on standby at the LOADER prompt.
 * You have all the appropriate cabling on-hand.
 
 .About this task

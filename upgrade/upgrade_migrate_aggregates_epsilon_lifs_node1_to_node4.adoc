@@ -42,7 +42,22 @@ If the system cluster ports are not similar when upgrading an AFF A250 to an AFF
 +
 `network interface migrate -vserver Cluster -lif _cluster_LIF_  -destination-node _node4_ -destination-port _port_name_`
  
-  
+. Wait for the cluster to come into quorum and then verify that the cluster nodes are healthy:
++
+`– cluster show`
++
+NOTE: The HA pair and storage failover remain disabled in the current state.  
+
+. Move the cluster LIFs to the temporary 25G cluster ports on node4:
++
+`network interface modify`
+
+. If interface groups and data VLANs are in use on the AFF A250 cluster you are upgrading, perform this step. If not, go to <<migrate_node1_nod4,Step 8>>.
++
+The physical network port names on an AFF A400 are different from those on an AFF A250. As a result, interface groups might be incorrectly configured and VLANs displaced. Check, and if required, fix any incorrectly configured interface groups and displaced VLANs on node4.
+
+[[migrate_node1_nod4]]
+[start=8] 
 . Migrate the data aggregates on node1 to node4:
 +
 `storage aggregate relocation start -aggregate-list _aggregate_list_name_ -node _node1_ -destination _node4_ -ndo-controller-upgrade true -override-destination-checks true`   
