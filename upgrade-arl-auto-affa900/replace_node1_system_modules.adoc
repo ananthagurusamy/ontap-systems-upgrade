@@ -14,7 +14,7 @@ summary: "Disable the HA pair with node2 and shut node1 down during an AFF A700 
 [.lead]
 Replace the node1 system modules using the procedure for your upgrade configuration:
 
-* <<Replace the AFF A220, AFF A200, AFF C190, FAS2620, or FAS2720 controller module>>
+
 * <<Replace the AFF A700 or FAS9000 controller and NVRAM modules>>
 
 == Replace the AFF A220, AFF A200, AFF C190, FAS2620, or FAS2720 controller module
