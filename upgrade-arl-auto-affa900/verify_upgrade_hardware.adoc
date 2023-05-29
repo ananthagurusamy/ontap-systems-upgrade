@@ -19,6 +19,10 @@ Before starting the upgrade, you must verify that you have the correct hardware 
 |===
 |If you are upgrading ...
 |You must have ...
+|AFF A220 to AFF A150
+AFF A200 to AFF A150
+AFF C190 to AFF A150
+|Two controller modules
 |FAS2620 or FAS2720 to FAS2820
 |Two controller modules
 |AFF A700 to AFF A900 
@@ -27,4 +31,5 @@ Before starting the upgrade, you must verify that you have the correct hardware 
 |Two controller and two NVRAM modules
 |===
 
+// 2023 MAY 29, AFFFASDOC-39
 //BURT 1452254, 2022-04-27

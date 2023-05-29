@@ -14,10 +14,10 @@ summary: "Installation instructions for an AFF A900 NVRAM module and controller 
 [.lead]
 Install the replacement system modules that you received for the upgrade on node2. Node2 is controller B located on the right side of the chassis when looking at the controllers from the rear of the system.
 
-* <<Install the FAS2820 controller modules on node2>>
+* <<Install the AFF A150 or FAS2820 controller module on node2>>
 * <<Install the AFF A900 or FAS9500 NVRAM and controller modules on node2>>
 
-== Install the FAS2820 controller modules on node2
+== Install the AFF A150 or FAS2820 controller module on node2
 Install the FAS2820 controller module that you received for the upgrade on node2. Node2 is controller B located on the right side of the chassis when looking at the controllers from the rear of the system.
 
 .Before you begin
@@ -94,6 +94,7 @@ WARNING: To avoid damaging the connectors, do not use excessive force when slidi
 +
 `saveenv`
 
+// 2023 MAY 29, AFFFASDOC-39
 // 2023-MAR-3, ontap-systems-upgrade/issues/78
 // 2022-OCT-24, BURT 1506458 
 // 2022-APR-27, BURT 1452254

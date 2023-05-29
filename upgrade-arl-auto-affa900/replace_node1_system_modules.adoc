@@ -14,16 +14,17 @@ summary: "Disable the HA pair with node2 and shut node1 down during an AFF A700 
 [.lead]
 Replace the node1 system modules using the procedure for your upgrade configuration:
 
-* <<Replace the FAS2620 or FAS2720 controller module>>
+* <<Replace the AFF A220, AFF A200, AFF C190, FAS2620, or FAS2720 controller module>>
 * <<Replace the AFF A700 or FAS9000 controller and NVRAM modules>>
 
-== Replace the FAS2620 or FAS2720 controller module
+== Replace the AFF A220, AFF A200, AFF C190, FAS2620, or FAS2720 controller module
+
 At this stage, node1 is down and all data is served by node2. Because node1 and node2 are in the same chassis and powered by the same set of power supplies, do NOT power off the chassis. You must take care to remove only the node1 controller module. Typically, node1 is controller A, located on the left side of the chassis when looking at the controllers from the rear of the system. The controller label is located on the chassis directly above the controller module.
 
 .Before you begin
 If you are not already grounded, correctly ground yourself.
 
-=== Remove the FAS2620 or FAS2720 controller module
+=== Remove the AFF A220, AFF A200, AFF C190, FAS2620, or FAS2720 controller module
 To access components inside the controller, you must first remove the controller module from the system and then remove the cover on the controller module.
 
 .Steps
@@ -39,12 +40,8 @@ image::../media/drw_25xx_cable_management_arm.png[]
 +
 image::../media/drw_2240_x_opening_cam_latch.png[]
 
-. Turn the controller module over and place it on a flat, stable surface.
-. Open the cover by sliding in the blue tabs to release the cover, and then swing the cover up and open.
-+
-image::../media/drw_2600_opening_pcm_cover.png[]
 
-=== Install the FAS2820 controller module
+=== Install the AFF A150 or FAS2820 controller module
 Use the following procedure to install the FAS2820 controller module in node1.
 
 .Steps
@@ -204,5 +201,6 @@ image::../media/black_circle_two.png[Number two]
 +
 `saveenv`
 
+// 2023 MAY 29, AFFFASDOC-39
 // 2022-OCT-24, BURT 1506458
 // 2022-APR-27, BURT 1452254

@@ -17,26 +17,42 @@ This procedure describes how to nondisruptively upgrade controller hardware on a
 [cols=3*,options="header",cols="20,20,40"]
 |===
 |Old system |Replacement system |Supported ONTAP versions
+|AFF A220
+|AFF A150
+|9.10.1P13, 9.11.1P10, 9.12.1P3 and later
+|AFF A200
+|AFF A150
+a|9.10.1P13, 9.11.1P10 and later (AFF A200 and AFF A150) 
+
+NOTE: AFF A200 does not support ONTAP versions later than 9.11.1.
+|AFF C190
+|AFF A150
+|9.10.1P13, 9.11.1P10, 9.12.1P3 and later 
+
 |FAS2620 
 |FAS2820
-|9.11.1P7 or earlier (FAS2620) 
+a|9.11.1P7 or later (FAS2620)
+
+NOTE: FAS2620 does not support ONTAP versions later than 9.11.1.
+
 9.13.1 or later (FAS2820)
 |FAS2720 |FAS2820	
-|9.13.1 or later
+|9.13.1 and later
 |AFF A700 
 |AFF A900
-|9.10.1P10, 9.11.1P6 or later
+|9.10.1P10, 9.11.1P6 and later
 |FAS9000 |FAS9500
-|9.10.1P10, 9.11.1P6 or later
+|9.10.1P10, 9.11.1P6 and later
 |===
 
-NOTE: NetApp recommends, if possible, that you have the same ONTAP version on the old and the replacement system.
+NOTE: NetApp recommends, when possible, that you have the same ONTAP version on the old and the replacement system.
 
 During the procedure, you migrate the non-root aggregates between the old controller nodes. After installation, you then migrate the non-root aggregates from the old controller nodes to the replacement controller nodes. The data hosted on the nodes that you are upgrading is accessible during the upgrade procedure.
 
 .About this task
 During this controller upgrade procedure, you perform one of the following procedures:
 
+* Swap the controller module on each node on the AFF A220, AFF A200, or AFF C190 system with the new AFF A150 module.
 * Swap the controller module on each node on the FAS2620 or FAS2720 system with the new FAS2820 module.
 * Swap the two controller and NVRAM modules on each node on the AFF A700 or FAS9000 system with the new AFF A900 or FAS9500 modules.
 
@@ -54,13 +70,14 @@ NOTE: The terms *node1* and *node2*, are used only as a reference to node names 
 * This procedure assumes that the replacement controller hardware is new and has not been used in another system. The steps required to prepare used controllers with the `wipeconfig` command are not included in this procedure. You must contact technical support if the replacement controller hardware was previously used as part of another ONTAP cluster or as a standalone single node system.
 * You can use this procedure to upgrade the controller hardware in clusters with more than two nodes; however, you need to perform the procedure separately for each HA pair in the cluster.
 * If you have a switch that is not supported by the ONTAP version and the replacement system that you are upgrading to, refer to link:other_references.html[References] to link to the _Hardware Universe_.
-* This procedure only applies FAS2620, FAS2720, AFF A700, and FAS9000 systems. For all other controller models that need upgrading to a FAS2820, AFF A900, or FAS9500 system, refer to link:other_references.html[References] to link to the _Use "system controller replace" commands to upgrade controller hardware running ONTAP 9.8 or later_ and the _Using Aggregate Relocation to Manually Upgrade Controller Hardware Running ONTAP 9.8 or Later_ content.
+* This procedure only applies to AFF A200, AFF A220, AFF C190, FAS2620, FAS2720, AFF A700, and FAS9000 systems. For all other controller models that need upgrading to an AFF A150, FAS2820, AFF A900, or FAS9500 system, refer to link:other_references.html[References] to link to the _Use "system controller replace" commands to upgrade controller hardware running ONTAP 9.8 or later_ and the _Using Aggregate Relocation to Manually Upgrade Controller Hardware Running ONTAP 9.8 or Later_ content.
 * The AFF A900 and FAS9500 systems only support high-line power (200V to 240V). If your AFF A700 or FAS9000 system is running on low-line power (100V to 120V), you must convert the AFF A700 or FAS9000 input power before using this procedure.
-* If you are upgrading from a FAS2620, FAS2720, AFF A700, or FAS9000  ystem with downtime, you can upgrade controller hardware by moving storage or contact technical support. Refer to link:other_references.html[References] to link to _Upgrade by moving volumes or storage_.
+* If you are upgrading from an AFF A200, AFF A220, AFF C190, FAS2620, FAS2720, AFF A700, or FAS9000  system with downtime, you can upgrade controller hardware by moving storage or contact technical support. Refer to link:other_references.html[References] to link to _Upgrade by moving volumes or storage_.
 
 == Automate the controller upgrade process
 This procedure supports the following controller upgrades and provides the steps for the automated procedure, which uses automatic disk assignment and network port reachability checks to simplify the controller upgrade experience
 
+// 2023 MAY 29, AFFFASDOC-39
 // 2023 MAY 22, BURT 1542232
 // 2023 MAY 22, BURT 1531220
 // 2022 JAN 30, BURT 1523106

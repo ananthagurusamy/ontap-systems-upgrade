@@ -17,6 +17,31 @@ During Stage 1, you must prepare the nodes for the upgrade and run a series of p
 
 .Steps
 
+. Verify that you have a supported service processor or baseboard management controller (BMC) firmware version for your upgrade by running the `service-processor show` command.
++
+[cols=3*,options="header",cols="30,35,35"]
+|===
+|Old controller
+|Service processor or BMC
+|Minimum firmware version
+
+|AFF A220
+|BMC	
+|
+|AFF A200		
+|
+|
+|AFF C190		
+|
+|
+|FAS2620
+|Service processor
+|5.11P1
+|FAS2720
+|BMC
+|11.9P1
+|===
+
 . Begin the controller replacement process by entering the following command in the advanced privilege mode of the ONTAP command line:
 +
 `set -privilege advanced`
@@ -140,14 +165,15 @@ include::../_include/ru_auto_correct_aggregate_ownership.adoc[]
 
 == License
 
-When you set up a cluster, the setup wizard prompts you to enter the cluster-base license key. However, some features require additional licenses, which are issued as _packages_ that include one or more features. Each node in the cluster must have its own key for each feature to be used in the cluster.
+When you set up a cluster, the setup wizard prompts you to enter the cluster-base license key. However, some features require additional licenses, which are issued as _packages_ that include one or more features. Each node in the cluster must have its own license for each feature to be used in the cluster.
 
-If you do not have new license keys, currently licensed features in the cluster are available to the new controller. However, using unlicensed features on the controller might put you out of compliance with your license agreement, so you should install the new license key or keys for the new controller after the upgrade is complete.
+If you do not have new license keys or NetApp License File (NLF), currently licensed features in the cluster are available to the new controller. However, using unlicensed features on the controller might put you out of compliance with your license agreement, so you should install the new license key or NLF for the new controller after the upgrade is complete.
 
 Refer to link:other_references.html[References] to link to the _NetApp Support Site_ where you can obtain new 2-character license keys for 9.10.1 or later. The keys are available in the _My Support_ section under _Software licenses_. If the site does not have the license keys you need, contact your NetApp sales representative.
 
 For detailed information about licensing, refer to link:other_references.html[References] to link to the _System Administration Reference_.
 
+// 2023 MAY 29, AFFFASDOC-39
 // 2023 APR 11, ontap-systems-upgrade-issues-64/BURT 1519747
 // 2022 DEC 1, ontap-systems-upgrade-37
 // 2022 MAY 16, BURT 1476251
