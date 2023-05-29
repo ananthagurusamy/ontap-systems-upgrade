@@ -37,7 +37,7 @@ Use this procedure under the following circumstances:
 ** FAS2820 controller
 ** AFF A900 or FAS9500 controller and NVRAM modules and the parts required for the upgrade.
 
-* You are running the minimum ONTAP version for your upgrade. For more information, see link:guidelines_for_upgrading_controllers_with_arl.html[Supported upgrades for ARL].
+* You are running the minimum ONTAP version for your upgrade. For more information, see link:index.html[Overview].
 * You do not want to add the new controllers as a new HA pair to the cluster and migrate the data by using volume moves.
 * You are experienced in administering ONTAP and are comfortable with the risks of working in diagnostic privilege mode.
 

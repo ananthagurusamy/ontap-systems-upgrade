@@ -48,7 +48,7 @@ entries:
       url: /upgrade-arl-auto-affa900/restore_key_manager_config_upgraded_node1.html
     - title: Move non-root aggregates and NAS data LIFs owned by node1 from node2 to the upgraded node1
       url: /upgrade-arl-auto-affa900/move_non_root_aggr_nas_lifs_node1_from_node2_to_upgraded_node1.html
-- title: "Stage 4. Relocate resources from node2 and retire node2"
+- title: "Stage 4. Relocate resources and retire node2"
   entries:
     - title: Overview
       url: /upgrade-arl-auto-affa900/stage_4_index.html

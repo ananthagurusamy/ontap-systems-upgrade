@@ -20,7 +20,7 @@ include::../_include/ru_auto_overview_arl_workflow_top.adoc[]
 | Stage | Steps
 
 | link:stage_1_index.html[Stage 1. Prepare for the upgrade]
-a| During Stage 1, you run prechecks and, if required, correct aggregate ownership. You must record certain information if you’re managing storage encryption by using OKM and you can choose to quiesce the SnapMirror relationships.
+a| During Stage 1, you run prechecks and, if required, correct aggregate ownership. You must record certain information if you are managing storage encryption by using the Onboard Key Manager and you can choose to quiesce the SnapMirror relationships.
 
 Aggregate ownership at the end of Stage 1:
 

@@ -17,6 +17,7 @@ Node2 with the replacement modules is now ready for boot up. Upgrading by swappi
 [cols="35,65"]
 |===
 |Old node2 controller |Replacement node2 system modules
+
 |AFF A220
 AFF A200
 AFF C190

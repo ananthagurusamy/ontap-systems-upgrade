@@ -17,6 +17,7 @@ Node1 with the replacement modules is now ready for boot up. This section provid
 [cols="35,65"]
 |===
 |Old node1 controller |Replacement node1 system modules
+
 |AFF A220	
 AFF A200	
 AFF C190
@@ -30,8 +31,8 @@ FAS2720
 |FAS9500 controller and NVRAM modules ^2^
 |===
 
-^1^ Upgrading by the swapping the controller in the chassis involves moving all connections from the old to the replacement controller module.
-^2^ Upgrading by swapping the system modules involves moving only the console and management connections.
+^1^ Upgrading by the swapping the controller module involves moving all connections from the old to the replacement controller module.
+^2^ Upgrading by swapping the controller and NVRAM modules involves moving only the console and management connections.
 
 .Steps
 
