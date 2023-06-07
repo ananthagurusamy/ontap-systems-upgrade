@@ -66,4 +66,6 @@ NOTE: If drives are not viewable, *STOP* and contact technical support for assis
 .What's next?
 
 link:upgrade_migrate_lIFs_aggregates_node4_node3.html[Migrate LIFs and data aggregates on node4 to node3]
+
+// 2023 JUN 7, AFFFASDOC-46
 // 2023 Feb 1, BURT 1351102

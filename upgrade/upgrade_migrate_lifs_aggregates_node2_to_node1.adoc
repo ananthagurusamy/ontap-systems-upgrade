@@ -88,4 +88,6 @@ NOTE: This command only migrates non-SAN LIFs. You cannot use it to migrate iSCS
 .What's next?
 
 link:upgrade_convert_node2_drive_shelf_connect_node4.html[Convert node2 to a drive shelf and connect to node4]
+
+// 2023 JUN 7, AFFFASDOC-46
 // 2023 Feb 1, BURT 1351102
