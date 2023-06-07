@@ -55,23 +55,22 @@ NOTE: Beginning with ONTAP 9.8, new IPspaces and one or more broadcast domains m
 +
 `network interface migrate -vserver _vserver_name_ -lif _lif_name_ -destination-node _node_name_ -destination-port _port_name_`
 
-.. Display all cluster network LIFs:
+. Display all cluster network LIFs:
 +
 `network interface show -role cluster`
-.. Verify the home ports for the cluster network LIFs:
+. Verify the home ports for the cluster network LIFs:
 +
 `network interface modify -vserver _vserver_name_ -lif _lif_name_ -home-port _port_name_`
+
+
+. Migrate all data LIFs to node3:
++
+`network interface migrate -vserver _vserver_name_ -lif _lif_name_ -destination-node _node_name_ -destination-port _port_name_`
 
 . Display all data network LIFs:
 +
 `network interface show -role data`
-. Migrate all data LIFs to node3:
-+
-`network interface migrate -vserver _vserver_name_ -lif _lif_name_ -destination-node _node_name_ -destination-port _port_name_`
-.. Display all data network LIFs:
-+
-`network interface show -role data`
-.. Configure the home node and home port for all data LIFs. If any LIFs are down, set the administrative status of the LIFs to `up` by entering the following command, once for each LIF:
+. Configure the home node and home port for all data LIFs. If any LIFs are down, set the administrative status of the LIFs to `up` by entering the following command, once for each LIF:
 +
 `network interface modify -vserver _vserver_name_ -lif lif_name -home-node _node_name_ -home-port _port_name_ -status-admin up`
 . Migrate the cluster management LIF:
