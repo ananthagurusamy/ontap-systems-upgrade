@@ -54,7 +54,7 @@ NOTE: The HA pair and storage failover remain disabled in the current state.
 
 . If interface groups and data VLANs are in use on the AFF A250 cluster you are upgrading, perform this step. If not, go to <<migrate_node1_nod4,Step 8>>.
 +
-The physical network port names on an AFF A400 are different from those on an AFF A250. As a result, interface groups might be incorrectly configured and VLANs displaced. Check, and if required, fix any incorrectly configured interface groups and displaced VLANs on node4.
+The physical network port names differ between AFF A250 and AFF A400 systems. As a result, there might be incorrectly configured interface groups and displaced VLANs on node4. Check, and if required, fix any incorrectly configured interface groups and displaced VLANs.
 
 [[migrate_node1_nod4]]
 [start=8] 
@@ -101,4 +101,6 @@ The physical network port names on an AFF A400 are different from those on an AF
 .What's next?
 
 link:upgrade_convert_node1_drive_shelf_connect_node3.html[Convert node1 to a drive shelf and connect to node3]
+
+// 2023 JUN 7, AFFFASDOC-46
 // 2023 Feb 1, BURT 1351102

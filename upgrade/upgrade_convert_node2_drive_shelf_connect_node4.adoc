@@ -30,4 +30,5 @@ NOTE: If the AFF A400 system uses FC ports as onboard ports, install a 25Gb Ethe
 
 link:upgrade_reassign_drives_node2_to_node4.html[Reassign drives from node2 to node4]
 
+// 2023 JUN 7, AFFFASDOC-46
 // 2023 Feb 1, BURT 1351102

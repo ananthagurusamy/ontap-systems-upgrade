@@ -89,6 +89,7 @@ xref:upgrade-by-moving-storage-parent.adoc[Upgrade controller hardware by moving
 
 xref:upgrade-by-moving-volumes-parent.adoc[Upgrade controller hardware by moving volumes]
 
+// 2023 JUN 7, AFFFASDOC-46
 // 2023 MAR 23, ontap-systems-upgrade-issue-82
 // 2023 MAR 23, BURT 1541393
 // 2023 Feb 1, BURT 1351102
