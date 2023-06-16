@@ -27,7 +27,7 @@ You cannot migrate a LIF that is used for copy-offload operations with VMware vS
 a|
 A specific LIF
 a|
-`network interface migrate -vserver _vserver_name_ -lif _lif_name_ -source-node _source_node_name_ -destination-node _dest_node_name_ -destination-port _dest_port_name_`
+`network interface migrate -vserver _vserver_name_ -lif _lif_name_ -destination-node _dest_node_name_ -destination-port _dest_port_name_`
 a|
 All the non-SAN data LIFs and cluster-management LIFs
 a|
@@ -54,5 +54,6 @@ cluster::> network interface migrate-all -node local
 +
 `network interface migrate -vserver _vserver_name_ -lif cluster-mgmt -destination-node _new_node_name_ -destination-port {<netport|ifgrp>}`
 
-// Clean-up, 2022-03-09
-// BURT 1476241 2022-05-13
+// 2023 JUN 15, BURT 1552668
+// 2022 MAY13, BURT 1476241
+// 2022 MAR 9, Clean-up
