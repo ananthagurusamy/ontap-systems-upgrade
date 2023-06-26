@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: upgrade-arl-auto-affa900/install_replacement_system_modules_on_node2.html
-keywords: install, NVRAM, aff, a900, node2, controller, module
-summary: "Installation instructions for an AFF A900 NVRAM module and controller module during the ARL controller upgrade procedure."
+keywords: install, NVRAM, node2, controller, module, modules, replacement
+summary: "Install the replacement system modules on node2 during an ARL upgrade of controller models in the same chassis."
 ---
 = Install the replacement system modules on node2
 :hardbreaks:

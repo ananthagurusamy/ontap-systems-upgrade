@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: upgrade-arl-auto-affa900/decide_to_use_the_aggregate_relocation_guide.html
-keywords: deciding, aggregate, relocation, content, storage, controllers, administrators, ontap, ha, high, availability, aff, a700, a900
-summary: "Decide whether to use the ARL procedure to upgrade an AFF A700 to an AFF A900."
+keywords: deciding, aggregate, relocation, content, storage, controllers, administrators, ontap, ha, high, availability
+summary: "Decide whether to use the ARL procedure that upgrades controller models in the same chassis."
 ---
 = Decide whether to use the aggregate relocation procedure
 :hardbreaks:

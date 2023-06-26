@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: upgrade-arl-auto-affa900/overview_of_the_arl_upgrade.html
-keywords: overview, arl, upgrade, owner, controller, hardware
-summary: "Understand how the AFF A700 to AFF A900 ARL controller upgrade procedure works."
+keywords: overview, arl, upgrade, owner, controller, hardware, old, system, chassis, disk, disks
+summary: "Understand how the ARL procedure to upgrade controller models in the same chassis works."
 ---
 
 = Overview of the ARL upgrade

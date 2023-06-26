@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: upgrade-arl-auto-affa900/replace_node1_system_modules.html
-keywords: retiring, node, retire
-summary: "Disable the HA pair with node2 and shut node1 down during an AFF A700 to AFF A900 upgrade."
+keywords: replace, node1, system, modules
+summary: "Replace the node1 system modules when using ARL to upgrade controller models in the same chassis."
 ---
 = Replace the node1 system modules
 :hardbreaks:

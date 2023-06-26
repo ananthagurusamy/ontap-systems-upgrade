@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: upgrade-arl-auto-affa900/netboot_node2.html
-keywords: preparing, netboot, ontap, aff, a900, node2
-summary: After swapping the corresponding AFF A900 node2 controller module and NVRAM module, you might need to netboot them.
+keywords: preparing, prepare, netboot, ontap, node2
+summary: After swapping the corresponding replacement node2 system modules when using ARL to upgrade controller models in the same chassis, you might need to netboot them.
 ---
 
 = Netboot node2
@@ -142,7 +142,7 @@ Controller HA configuration: ha
 `halt`
 +
 Node2 should stop at the LOADER> prompt.
-.	On node2, check the system date, time, and time zone:
+.	On node1, check the system date, time, and time zone:
 +
 `date`
 .	On node2, check the date by using the following command at the boot environment prompt:

@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: upgrade-arl-auto-affa900/guidelines_for_upgrading_controllers_with_arl.html
-keywords: guidelines, upgrade, aff, a900, a700, ontap, controllers
-summary: "Understand if you can use ARL to upgrade an AFF A700 to an AFF A900."
+keywords: guidelines, upgrade, ontap, controllers, old, system, chassis, disk, disks
+summary: "Understand if you can use ARL, keeping the old system chassis and disks, for your upgrade configuration."
 ---
 = Guidelines for upgrading controllers
 :hardbreaks:

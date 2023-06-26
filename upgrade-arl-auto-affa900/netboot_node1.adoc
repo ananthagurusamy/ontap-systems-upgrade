@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: upgrade-arl-auto-affa900/netboot_node1.html
-keywords: preparing, netboot, ontap, node1, aff, a900
-summary: After swapping the corresponding AFF A900 node1 controller module and NVRAM module, you must netboot node1.
+keywords: preparing, prepare, netboot, ontap, node1 
+summary:  When using ARL to upgrade controller models in the same chassis, you must netboot node1 after swapping the corresponding replacement system module.
 ---
 
 = Netboot node1

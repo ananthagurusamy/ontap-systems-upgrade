@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: upgrade-arl-auto-affa900/relocate_non_root_aggr_and_nas_data_lifs_node1_node2.html
-keywords: relocating, non-root, aggregates, nas, data, lif, node1, node2, aff, a900, NVRAM, controller
-summary: "Move the non-root aggregates and NAS data LIFs from node1 to node2 and restore node1's resources during an AFF A700 to AFF A900 upgrade."
+keywords: relocating, non-root, aggregates, nas, data, lif, node1, node2, NVRAM, controller, module, modules
+summary: "Move the non-root aggregates and NAS data LIFs from node1 to node2 and restore node1's resources when using ARL to upgrade controller models in the same chassis."
 ---
 
 = Relocate non-root aggregates and NAS data LIFs owned by node1 to node2

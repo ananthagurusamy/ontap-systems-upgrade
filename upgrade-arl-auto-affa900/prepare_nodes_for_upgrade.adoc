@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: upgrade-arl-auto-affa900/prepare_nodes_for_upgrade.html
-keywords: preparing, nodes, upgrade, stage 1, prechecks
-summary: "Prepare the nodes and run a series of prechecks during an AFF A700 to AFF A900 upgrade."
+keywords: preparing, prepare, nodes, upgrade, stage 1, prechecks, old, system, chassis, disk, disks
+summary: "Prepare the nodes and run a series of prechecks when using ARL to upgrade controller models in the same chassis."
 ---
 
 = Prepare the nodes for upgrade

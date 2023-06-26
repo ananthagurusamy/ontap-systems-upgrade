@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: upgrade-arl-auto-affa900/index.html
-keywords: aggregate, relocation, controller, hardware, aggregates, flexarray, metrocluster, terminology, aff, a700, a900
-summary: "You can upgrade controller hardware on an AFF A700 to an AFF A900 by swapping the controller module and NVS."
+keywords: aggregate, relocation, controller, hardware, aggregates, flexarray, metrocluster, terminology, old, system, chassis, disk, disks
+summary: "You can upgrade controller hardware by converting an old system to a replacement system, keeping the old system chassis and disks."
 ---
 = Overview
 :hardbreaks:
@@ -12,24 +12,24 @@ summary: "You can upgrade controller hardware on an AFF A700 to an AFF A900 by s
 :imagesdir: ./media/
 
 [.lead]
-This procedure describes how to nondisruptively upgrade controller hardware on a HA pair using aggregate relocation (ARL) for the following system configurations. The procedure converts the old system to the replacement system keeping the old system chassis and disks. 
+This procedure describes how to nondisruptively upgrade controller hardware on a HA pair using aggregate relocation (ARL) for the following system configurations. The procedure converts the old system to the replacement system, keeping the old system chassis and disks. 
 
-WARNING: This procedure strictly applies to the following upgrade configurations. Do NOT use this procedure to perform an upgrade between any other system combinations.
+WARNING: This procedure strictly applies to the following upgrade configurations. Do *NOT* use this procedure to perform an upgrade between any other system combinations.
 
 [cols=3*,options="header",cols="20,20,40"]
 |===
 |Old system |Replacement system |Supported ONTAP versions
 |AFF A220
 |AFF A150
-|9.10.1P13, 9.11.1P10, 9.12.1P3 and later
+|9.10.1P15, 9.11.1P11, 9.12.1P5 and later
 |AFF A200
 |AFF A150
-a|9.10.1P13, 9.11.1P10 and later (AFF A200 and AFF A150) 
+a|9.10.1P15, 9.11.1P11 and later (AFF A200 and AFF A150) 
 
 NOTE: AFF A200 does not support ONTAP versions later than 9.11.1.
 |AFF C190
 |AFF A150
-|9.10.1P13, 9.11.1P10, 9.12.1P3 and later 
+|9.10.1P15, 9.11.1P11, 9.12.1P5 and later 
 
 |FAS2620 
 |FAS2820
@@ -47,7 +47,12 @@ NOTE: FAS2620 does not support ONTAP versions later than 9.11.1.
 |9.10.1P10, 9.11.1P6 and later
 |===
 
-NOTE: NetApp recommends, when possible, that you have the same ONTAP version on the old and the replacement system.
+[NOTE]
+====
+NetApp recommends, when possible, that you have the same ONTAP version on the old and the replacement system.
+
+The minimum ONTAP versions in the preceding table are mandatory. These ONTAP versions have the service process or baseboard management controller (BMC) firmware version that is required to support mixing controller types within a chassis during an upgrade. 
+====
 
 During the procedure, you migrate the non-root aggregates between the old controller nodes. After installation, you then migrate the non-root aggregates from the old controller nodes to the replacement controller nodes. The data hosted on the nodes that you are upgrading is accessible during the upgrade procedure.
 

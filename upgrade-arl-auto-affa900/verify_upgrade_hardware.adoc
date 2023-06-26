@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: upgrade-arl-auto-affa900/verify_upgrade_hardware.html
-keywords: preparing, nodes, upgrade
-summary: Before starting the upgrade, verify that you have the correct hardware for an AFF A700 to AFF A900 upgrade.
+keywords: nodes, upgrade, verify, hardware
+summary: Before starting the upgrade, verify that you have the correct hardware to upgrade controller models in the same chassis.
 ---
 
 = Verify the upgrade hardware

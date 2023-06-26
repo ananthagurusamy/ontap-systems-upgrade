@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: upgrade-arl-auto-affa900/boot_node2_with_a900_controller_and_nvs.html
-keywords: boot, NVRAM, controller, module, node2, aff, a700, a900
-summary: Boot node2 with the AFF A900 controller module and NVRAM module.
+keywords: boot, NVRAM, controller, module, node2, replacement
+summary: Boot node2 with the replacement controller modules when using ARL to upgrade controller models in the same chassis.
 ---
 = Boot node2 with the replacement system modules
 :hardbreaks:
