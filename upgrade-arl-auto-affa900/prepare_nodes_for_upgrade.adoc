@@ -31,13 +31,13 @@ Verify that you have a supported service processor or BMC firmware version:
 
 |AFF A220
 |BMC	
-|
+|11.9P1 
 |AFF A200		
-|
-|
+|Service processor
+|5.11P1 
 |AFF C190		
-|
-|
+|BMC	
+|11.9P1 
 |FAS2620
 |Service processor
 |5.11P1
