@@ -19,7 +19,7 @@ summary: "Prepare the nodes and run a series of prechecks when upgrading control
 //
 
 [.lead]
-The controller replacement process begins with a series of prechecks. You also gather information about the original nodes for use later in the procedure, prepare to netboot the new controllers and, if required, determine the type of self-encrypting drives that are in use.
+The controller replacement process begins with a series of prechecks. You also gather information about the original nodes for use later in the procedure and, if required, determine the type of self-encrypting drives that are in use.
 
 .Steps
 
