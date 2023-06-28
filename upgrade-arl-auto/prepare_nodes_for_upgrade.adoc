@@ -110,9 +110,9 @@ From the serial port connected to each node, run and save the output of the foll
 * `vserver services name-service dns show`
 * `network interface show -curr-node _local_ -role cluster,intercluster,node-mgmt,clustermgmt, data`
 * `network port show -node _local_ -type physical`
-* `service-processor show -node local -instance`
+* `service-processor show -local -instance`
 * `network fcp adapter show -node _local_`
-* `network port ifgrp show -node local`
+* `network port ifgrp show`
 * `network port vlan show`
 * `system node show -instance -node _local_`
 * `run -node _local_ sysconfig`
@@ -146,7 +146,6 @@ include::../_include/ru_auto_correct_aggregate_ownership.adoc[]
 
 include::../_include/ru_auto_license.adoc[]
 
-// 2023 JUN 28, ontap-systems-upgrade-issues-87
 // 2023 APR 11, ontap-systems-upgrade-issues-64/BURT 1519747
 // 2022 DEC 1, ontap-systems-upgrade-37
 // 2022 MAY 16, BURT 1476241
