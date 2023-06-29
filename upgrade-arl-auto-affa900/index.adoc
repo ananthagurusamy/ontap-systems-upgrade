@@ -82,7 +82,7 @@ NOTE: The terms *node1* and *node2*, are used only as a reference to node names 
 * If you are upgrading from an AFF A200, AFF A220, AFF C190, FAS2620, FAS2720, AFF A700, or FAS9000 system with downtime, you can upgrade controller hardware by moving storage or contact technical support. Refer to link:other_references.html[References] to link to _Upgrade by moving volumes or storage_.
 
 == Automate the controller upgrade process
-This procedure supports the following controller upgrades and provides the steps for the automated procedure, which uses automatic disk assignment and network port reachability checks to simplify the controller upgrade experience
+This procedure supports the following controller upgrades and provides the steps for the automated procedure, which uses automatic disk assignment and network port reachability checks to simplify the controller upgrade experience.
 
 // 2023 MAY 29, AFFFASDOC-39
 // 2023 MAY 22, BURT 1542232
