@@ -21,7 +21,7 @@ The controller replacement process begins with a series of prechecks. You also g
 +
 `service-processor show` command:
 +
-Verify that you have a supported service processor or BMC firmware version:
+Verify that you have a supported SP or BMC firmware version:
 +
 [cols=3*,options="header",cols="30,35,35"]
 |===
