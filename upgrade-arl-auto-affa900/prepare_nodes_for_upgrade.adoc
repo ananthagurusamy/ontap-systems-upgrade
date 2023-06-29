@@ -33,7 +33,7 @@ Verify that you have a supported SP or BMC firmware version:
 |BMC	
 |11.9P1 
 |AFF A200		
-|Service processor
+|SP
 |5.11P1 
 |AFF C190		
 |BMC	
