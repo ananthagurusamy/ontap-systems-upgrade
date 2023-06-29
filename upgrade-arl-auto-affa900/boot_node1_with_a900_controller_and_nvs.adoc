@@ -65,7 +65,7 @@ Enter the passphrase and the backup information that you recorded earlier proced
 .	Boot the node into the boot menu:
 +
 `boot_ontap menu`
-.	Reassign the oln node1 disks to the replacement node1 by entering "22/7" and selecting the hidden option `boot_after_controller_replacement` when the node stops at the boot menu.
+.	Reassign the old node1 disks to the replacement node1 by entering "22/7" and selecting the hidden option `boot_after_controller_replacement` when the node stops at the boot menu.
 +
 After a short delay, you are prompted to enter the name of the node that is being replaced. If there are shared disks (also called Advanced Disk Partitioning (ADP) or partitioned disks), you are prompted to enter the node name of the HA partner.
 +
