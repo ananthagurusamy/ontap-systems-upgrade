@@ -110,7 +110,7 @@ NOTE: The AFF A700 or FAS9000 NVRAM module is in slot 6 and is double the height
 
 .Steps
 . Unlock and remove the NVRAM module from slot 6 of node1.
-..	Depress the lettered and numbered cam button.
+.. Depress the lettered and numbered cam button.
 +
 The cam button moves away from the chassis.
 ..	Rotate the cam latch down until it is in a horizontal position.
