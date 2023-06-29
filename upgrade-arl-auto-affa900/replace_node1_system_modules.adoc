@@ -98,7 +98,7 @@ image::../media/black_circle_two.png[Number two]
 |Cam handle
 |===
 
-..	Rotate the cam handle so that it completely disengages the controller module from the chassis, and then slide the controller module out of the chassis.
+.. Rotate the cam handle so that it completely disengages the controller module from the chassis, and then slide the controller module out of the chassis.
 +
 Make sure that you support the bottom of the controller module as you slide it out of the chassis.
 
