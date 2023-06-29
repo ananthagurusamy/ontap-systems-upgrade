@@ -34,7 +34,7 @@ WARNING: Do not completely insert the controller module in the chassis until you
 
 . Cable the management and console ports to the node2 controller module.
 +
-NOTE: Because the chassis is already powered ON, node2 starts booting as soon as it is fully seated. To avoid node2 booting, it is recommended that you connect the console and management cables to the node2 controller module before completely inserting the controller module into the slot.
+NOTE: Because the chassis is already powered ON, node2 starts booting as soon as it is fully seated. To avoid node2 booting, NetApp recommends that you connect the console and management cables to the node2 controller module before completely inserting the controller module into the slot.
 
 . Firmly push the controller module into the chassis until it meets the midplane and is fully seated.
 +
