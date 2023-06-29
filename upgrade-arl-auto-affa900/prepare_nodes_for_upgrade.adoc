@@ -39,7 +39,7 @@ Verify that you have a supported SP or BMC firmware version:
 |BMC	
 |11.9P1 
 |FAS2620
-|Service processor
+|SP
 |5.11P1
 |FAS2720
 |BMC
