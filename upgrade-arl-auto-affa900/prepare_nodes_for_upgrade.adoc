@@ -17,7 +17,7 @@ The controller replacement process begins with a series of prechecks. You also g
 
 .Steps
 
-. List the service processor or baseboard management controller (BMC) firmware version running on the old controller: 
+. List the Service Processor (SP) or baseboard management controller (BMC) firmware version running on the old controller: 
 +
 `service-processor show` command:
 +
