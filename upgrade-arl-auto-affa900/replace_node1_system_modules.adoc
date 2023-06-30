@@ -147,7 +147,7 @@ If you are not already grounded, correctly ground yourself.
 Use the following procedure to install the AFF A900 or FAS9500 NVRAM module in slot 6 of node1.
 
 .Steps
-.	Align the NVRAM module with the edges of the chassis opening in slot 6.
+. Align the NVRAM module with the edges of the chassis opening in slot 6.
 . Gently slide the NVRAM module into the slot until the lettered and numbered I/O cam latch begins to engage with the I/O cam pin, and then push the I/O cam latch all the way up to lock the NVRAM module in place.
 +
 image::../media/drw_a900_move-remove_NVRAM_module.png[Install the NVRAM module]
