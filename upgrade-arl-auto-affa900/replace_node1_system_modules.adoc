@@ -116,7 +116,7 @@ The cam button moves away from the chassis.
 .. Rotate the cam latch down until it is in a horizontal position.
 +
 The NVRAM module disengages from the chassis and moves a few inches.
-..	Remove the NVRAM module from the chassis by pulling on the pull tabs on the sides of the module face.
+.. Remove the NVRAM module from the chassis by pulling on the pull tabs on the sides of the module face.
 +
 image::../media/drw_a900_move-remove_NVRAM_module.png[Remove the NVRAM module]
 +
