@@ -27,8 +27,8 @@ The following example shows the output of the command when storage failover is e
 +
 ----
 cluster::> storage failover show
-                         Takeover
-Node	    Partner	      Possible	    State Description
+                          Takeover
+Node	    Partner       Possible      State Description
 ----------  -----------   ------------  ------------------
 node1	    node2         true	        Connected to node2
 node2	    node1         true	        Connected to node1

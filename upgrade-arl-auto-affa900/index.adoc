@@ -51,7 +51,7 @@ NOTE: FAS2620 does not support ONTAP versions later than 9.11.1.
 ====
 NetApp recommends, when possible, that you have the same ONTAP version on the old and the replacement system.
 
-The minimum ONTAP versions in the preceding table are mandatory. These ONTAP versions have the service process or baseboard management controller (BMC) firmware version that is required to support mixing controller types within a chassis during an upgrade. 
+The minimum ONTAP versions in the preceding table are mandatory. These ONTAP versions have the Service Processor or baseboard management controller (BMC) firmware version that is required to support mixing controller types within a chassis during an upgrade. 
 ====
 
 During the procedure, you migrate the non-root aggregates between the old controller nodes. After installation, you then migrate the non-root aggregates from the old controller nodes to the replacement controller nodes. The data hosted on the nodes that you are upgrading is accessible during the upgrade procedure.

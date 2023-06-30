@@ -177,5 +177,6 @@ For node2, the `partner-sysid` must be that of the node1 that you are upgrading.
 +
 `printenv partner-sysid`
 
+// 2023 MAY 29, AFFFASDOC-39
 // BURT 1476251, 2022-05-16
 //BURT 1452254, 2022-04-27
