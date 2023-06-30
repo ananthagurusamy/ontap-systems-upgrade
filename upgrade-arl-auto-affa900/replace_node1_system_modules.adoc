@@ -113,10 +113,10 @@ NOTE: The AFF A700 or FAS9000 NVRAM module is in slot 6 and is double the height
 .. Depress the lettered and numbered cam button.
 +
 The cam button moves away from the chassis.
-..	Rotate the cam latch down until it is in a horizontal position.
+.. Rotate the cam latch down until it is in a horizontal position.
 +
 The NVRAM module disengages from the chassis and moves a few inches.
-..	Remove the NVRAM module from the chassis by pulling on the pull tabs on the sides of the module face.
+.. Remove the NVRAM module from the chassis by pulling on the pull tabs on the sides of the module face.
 +
 image::../media/drw_a900_move-remove_NVRAM_module.png[Remove the NVRAM module]
 +
@@ -147,7 +147,7 @@ If you are not already grounded, correctly ground yourself.
 Use the following procedure to install the AFF A900 or FAS9500 NVRAM module in slot 6 of node1.
 
 .Steps
-.	Align the NVRAM module with the edges of the chassis opening in slot 6.
+. Align the NVRAM module with the edges of the chassis opening in slot 6.
 . Gently slide the NVRAM module into the slot until the lettered and numbered I/O cam latch begins to engage with the I/O cam pin, and then push the I/O cam latch all the way up to lock the NVRAM module in place.
 +
 image::../media/drw_a900_move-remove_NVRAM_module.png[Install the NVRAM module]
