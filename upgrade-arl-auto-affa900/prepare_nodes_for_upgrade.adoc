@@ -17,29 +17,29 @@ The controller replacement process begins with a series of prechecks. You also g
 
 .Steps
 
-. List the service processor or baseboard management controller (BMC) firmware version running on the old controller: 
+. List the Service Processor (SP) or baseboard management controller (BMC) firmware version running on the old controller: 
 +
 `service-processor show` command:
 +
-Verify that you have a supported service processor or BMC firmware version:
+Verify that you have a supported SP or BMC firmware version:
 +
 [cols=3*,options="header",cols="30,35,35"]
 |===
 |Old controller
-|Service processor or BMC
+|SP or BMC
 |Minimum firmware version
 
 |AFF A220
 |BMC	
 |11.9P1 
 |AFF A200		
-|Service processor
+|SP
 |5.11P1 
 |AFF C190		
 |BMC	
 |11.9P1 
 |FAS2620
-|Service processor
+|SP
 |5.11P1
 |FAS2720
 |BMC

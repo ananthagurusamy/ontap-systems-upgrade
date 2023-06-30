@@ -60,7 +60,7 @@ NOTE: Because the chassis is already powered ON, node1 starts BIOS initializatio
 NOTE: To avoid damaging the connectors, do not use excessive force when sliding the controller module into the chassis.
 
 . Connect the serial console as soon as the module is seated and be ready to interrupt AUTOBOOT of node1.
-. After you interrupt AUTOBOOT, node1 stops at the LOADER prompt. If you do not interrupt AUTOBOOT on time and node1 starts booting, wait for the prompt and press Ctrl-C to go into the boot menu. After the node stops at the boot menu, use option 8 to reboot the node and interrupt the AUTOBOOT during reboot.
+. After you interrupt AUTOBOOT, node1 stops at the LOADER prompt. If you do not interrupt AUTOBOOT on time and node1 starts booting, wait for the prompt and press *Ctrl-C* to go into the boot menu. After the node stops at the boot menu, use option 8 to reboot the node and interrupt the AUTOBOOT during reboot.
 . At the LOADER> prompt of node1, set the default environment variables:
 +
 `set-defaults`
@@ -98,7 +98,7 @@ image::../media/black_circle_two.png[Number two]
 |Cam handle
 |===
 
-..	Rotate the cam handle so that it completely disengages the controller module from the chassis, and then slide the controller module out of the chassis.
+.. Rotate the cam handle so that it completely disengages the controller module from the chassis, and then slide the controller module out of the chassis.
 +
 Make sure that you support the bottom of the controller module as you slide it out of the chassis.
 
@@ -109,8 +109,8 @@ Use the following procedure to remove the AFF A700 or FAS9000 NVRAM module.
 NOTE: The AFF A700 or FAS9000 NVRAM module is in slot 6 and is double the height of the other modules in the system.
 
 .Steps
-.	Unlock and remove the NVRAM module from slot 6 of node1.
-..	Depress the lettered and numbered cam button.
+. Unlock and remove the NVRAM module from slot 6 of node1.
+.. Depress the lettered and numbered cam button.
 +
 The cam button moves away from the chassis.
 ..	Rotate the cam latch down until it is in a horizontal position.
@@ -148,7 +148,7 @@ Use the following procedure to install the AFF A900 or FAS9500 NVRAM module in s
 
 .Steps
 .	Align the NVRAM module with the edges of the chassis opening in slot 6.
-.	Gently slide the NVRAM module into the slot until the lettered and numbered I/O cam latch begins to engage with the I/O cam pin, and then push the I/O cam latch all the way up to lock the NVRAM module in place.
+. Gently slide the NVRAM module into the slot until the lettered and numbered I/O cam latch begins to engage with the I/O cam pin, and then push the I/O cam latch all the way up to lock the NVRAM module in place.
 +
 image::../media/drw_a900_move-remove_NVRAM_module.png[Install the NVRAM module]
 +
@@ -169,7 +169,7 @@ Use the following procedure to install the AFF A900 or FAS9500 controller module
 .Steps
 . Align the end of the controller module with opening A in the chassis, and then gently push the controller module halfway into the system.
 +
-NOTE:	Do not completely insert the controller module in the chassis until instructed to do so later in the procedure.
+NOTE: Do not completely insert the controller module in the chassis until instructed to do so later in the procedure.
 
 . Cable the management and console ports to the node1 controller module.
 +
