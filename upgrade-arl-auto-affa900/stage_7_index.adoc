@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: upgrade-arl-auto-affa900/stage_7_index.html
-keywords: upgrade, preparing, preparation, prepare, overview, stage 1
-summary: "Stage 1 process sequence for an ARL upgrade using `system controller replace` commands on controllers running ONTAP 9.8 or later."
+keywords: upgrade, authentication, storage, volume, aggregate, encryption, overview, stage 7
+summary: "Stage 1 process sequence for an ARL upgrade using `system controller replace` commands to upgrade controller models in the same chassis."
 ---
 
 = Overview
