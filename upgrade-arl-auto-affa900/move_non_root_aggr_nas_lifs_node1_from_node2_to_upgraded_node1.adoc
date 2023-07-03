@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: /upgrade-arl-auto-affa900/move_non_root_aggr_nas_lifs_node1_from_node2_to_upgraded_node1.html
 keywords: moving, non-root, aggregates, nas, lif, node1, node2
-summary: "Verify that the node1 NAS data LIFs on node2 are relocated from node2 to node1 during an AFF A700 to AFF A900 upgrade."
+summary: "Verify that the node1 NAS data LIFs on node2 are relocated from node2 to node1 when using ARL to upgrade controller models in the same chassis."
 ---
 
 = Move non-root aggregates and NAS data LIFs owned by node1 from node2 to the upgraded node1
@@ -39,7 +39,7 @@ The operation pauses at this stage in the network reachability check.
 
 . Perform a network reachability check:
 +
-`network port reachability -show-detail -node node1`
+`network port reachability show -node node1`
 +
 Confirm that all connected ports, including the interface group and VLAN ports, show their status as `OK`.
 . Resume the relocation operation:
