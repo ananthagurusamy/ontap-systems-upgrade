@@ -27,7 +27,7 @@ homepage:
           url: /upgrade/upgrade_aff_a250_to_aff_a400_ndu_upgrade_workflow.html
     - title: Upgrade by moving aggregates on systems running ONTAP 9.8 and later
       links:
-        - title: Use "system controller replace" commands (AFF A700 to AFF A900)
+        - title: Use "system controller replace" commands to upgrade controller models in the same chassis
           url: https://docs.netapp.com/us-en/ontap-systems-upgrade/upgrade-arl-auto-affa900/
         - title: Use "system controller replace" commands (most systems)
           url: https://docs.netapp.com/us-en/ontap-systems-upgrade/upgrade-arl-auto-app/

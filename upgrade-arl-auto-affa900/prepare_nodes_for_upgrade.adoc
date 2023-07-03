@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: upgrade-arl-auto-affa900/prepare_nodes_for_upgrade.html
-keywords: preparing, nodes, upgrade, stage 1, prechecks
-summary: "Prepare the nodes and run a series of prechecks during an AFF A700 to AFF A900 upgrade."
+keywords: preparing, prepare, nodes, upgrade, stage 1, prechecks, old, system, chassis, disk, disks
+summary: "Prepare the nodes and run a series of prechecks when using ARL to upgrade controller models in the same chassis."
 ---
 
 = Prepare the nodes for upgrade
@@ -13,9 +13,38 @@ summary: "Prepare the nodes and run a series of prechecks during an AFF A700 to 
 :imagesdir: ./media/
 
 [.lead]
-During Stage 1, you must prepare the nodes for the upgrade and run a series of prechecks. You must also prepare to netboot the new controllers.
+The controller replacement process begins with a series of prechecks. You also gather information about the original nodes for use later in the procedure and, if required, determine the type of self-encrypting drives that are in use.
 
 .Steps
+
+. List the Service Processor (SP) or baseboard management controller (BMC) firmware version running on the old controller: 
++
+`service-processor show` command:
++
+Verify that you have a supported SP or BMC firmware version:
++
+[cols=3*,options="header",cols="30,35,35"]
+|===
+|Old controller
+|SP or BMC
+|Minimum firmware version
+
+|AFF A220
+|BMC	
+|11.9P1 
+|AFF A200		
+|SP
+|5.11P1 
+|AFF C190		
+|BMC	
+|11.9P1 
+|FAS2620
+|SP
+|5.11P1
+|FAS2720
+|BMC
+|11.9P1
+|===
 
 . Begin the controller replacement process by entering the following command in the advanced privilege mode of the ONTAP command line:
 +
@@ -139,16 +168,15 @@ https://docs.netapp.com/us-en/ontap/encryption-at-rest/support-storage-encryptio
 include::../_include/ru_auto_correct_aggregate_ownership.adoc[]
 
 == License
+Each node in the cluster must have its own NetApp License File (NLF). 
 
-When you set up a cluster, the setup wizard prompts you to enter the cluster-base license key. However, some features require additional licenses, which are issued as _packages_ that include one or more features. Each node in the cluster must have its own key for each feature to be used in the cluster.
+If you do not have an NLF, currently licensed features in the cluster are available to the new controller. However, using unlicensed features on the controller might put you out of compliance with your license agreement, so you should install the NLF for the new controller after the upgrade is complete.
 
-If you do not have new license keys, currently licensed features in the cluster are available to the new controller. However, using unlicensed features on the controller might put you out of compliance with your license agreement, so you should install the new license key or keys for the new controller after the upgrade is complete.
-
-Refer to link:other_references.html[References] to link to the _NetApp Support Site_ where you can obtain new 2-character license keys for 9.10.1 or later. The keys are available in the _My Support_ section under _Software licenses_. If the site does not have the license keys you need, contact your NetApp sales representative.
+Refer to link:other_references.html[References] to link to the _NetApp Support Site_ where you can obtain your NLF. The NLFs are available in the _My Support_ section under _Software licenses_. If the site does not have the NLFs that you need, contact your NetApp sales representative.
 
 For detailed information about licensing, refer to link:other_references.html[References] to link to the _System Administration Reference_.
 
-// 2023 JUN 28, ontap-systems-upgrade-issues-87
+// 2023 MAY 29, AFFFASDOC-39
 // 2023 APR 11, ontap-systems-upgrade-issues-64/BURT 1519747
 // 2022 DEC 1, ontap-systems-upgrade-37
 // 2022 MAY 16, BURT 1476251
