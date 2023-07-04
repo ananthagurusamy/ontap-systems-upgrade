@@ -11,7 +11,7 @@ summary: You create at least an aggregate on each of the new nodes to store the 
 [.lead]
 During an ONTAP software upgrade, you migrate your data by creating an aggregate on the new nodes and then moving the volumes.
 
-If your storage configuration includes SAN volumes or encrypted volumes, for example, during a mixed version cluster upgrade, you must also move these volumes:
+If your storage configuration includes SAN volumes or encrypted volumes, for example, when performing a mixed version cluster upgrade, you must also move these volumes:
 
 * <<Move SAN volumes>>
 * <<Move volumes with encryption enabled>>
