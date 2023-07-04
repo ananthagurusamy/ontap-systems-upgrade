@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto-affa900/stage_5_index.html
 keywords: upgrade, install, netboot, node2, overview, stage 1
-summary: "Stage 1 process sequence for an ARL upgrade using `system controller replace` commands to upgrade controller models in the same chassis."
+summary: "Stage 5 process sequence for an ARL upgrade using `system controller replace` commands to upgrade controller models in the same chassis."
 ---
 
 = Overview

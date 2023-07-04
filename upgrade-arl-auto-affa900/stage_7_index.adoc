@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto-affa900/stage_7_index.html
 keywords: upgrade, authentication, storage, volume, aggregate, encryption, overview, stage 7
-summary: "Stage 1 process sequence for an ARL upgrade using `system controller replace` commands to upgrade controller models in the same chassis."
+summary: "Stage 7 process sequence for an ARL upgrade using `system controller replace` commands to upgrade controller models in the same chassis."
 ---
 
 = Overview

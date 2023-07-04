@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: upgrade-arl-auto-affa900/stage_4_index.html
 keywords: upgrade, relocate, retire, overview, stage 4
-summary: "Stage 1 process sequence for an ARL upgrade using `system controller replace` commands to upgrade controller models in the same chassis."
+summary: "Stage 4 process sequence for an ARL upgrade using `system controller replace` commands to upgrade controller models in the same chassis."
 ---
 
 = Overview

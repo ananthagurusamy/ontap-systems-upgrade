@@ -57,7 +57,7 @@ The minimum ONTAP versions in the preceding table are mandatory. These ONTAP ver
 During the procedure, you migrate the non-root aggregates between the old controller nodes. After installation, you then migrate the non-root aggregates from the old controller nodes to the replacement controller nodes. The data hosted on the nodes that you are upgrading is accessible during the upgrade procedure.
 
 .About this task
-During this controller upgrade procedure, you perform one of the following procedures:
+During this controller upgrade procedure, you perform one of the following upgrades:
 
 * Swap the controller module on each node on the AFF A220, AFF A200, or AFF C190 system with the new AFF A150 module.
 * Swap the controller module on each node on the FAS2620 or FAS2720 system with the new FAS2820 module.
@@ -82,7 +82,7 @@ NOTE: The terms *node1* and *node2*, are used only as a reference to node names 
 * If you are upgrading from an AFF A200, AFF A220, AFF C190, FAS2620, FAS2720, AFF A700, or FAS9000 system with downtime, you can upgrade controller hardware by moving storage or contact technical support. Refer to link:other_references.html[References] to link to _Upgrade by moving volumes or storage_.
 
 == Automate the controller upgrade process
-This procedure supports the following controller upgrades and provides the steps for the automated procedure, which uses automatic disk assignment and network port reachability checks to simplify the controller upgrade experience.
+This procedure provides the steps for the automated procedure, which uses automatic disk assignment and network port reachability checks to simplify the controller upgrade experience.
 
 // 2023 MAY 29, AFFFASDOC-39
 // 2023 MAY 22, BURT 1542232
