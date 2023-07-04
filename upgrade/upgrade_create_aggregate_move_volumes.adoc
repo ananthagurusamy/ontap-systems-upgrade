@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, aggregate, node, store, volume, original, node, identify, aggregate, individually, create an aggregate and moving volumes to the new nodes
 summary: You create at least an aggregate on each of the new nodes to store the volumes you want to move from the original nodes. You must identify an aggregate for each volume and move each volume individually.
 ---
-= Create an aggregate and move volumes to the new nodes
+= Create an aggregate and move volumes
 :icons: font
 :imagesdir: ../media/
 
