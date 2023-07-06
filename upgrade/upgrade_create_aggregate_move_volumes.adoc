@@ -13,7 +13,7 @@ During an ONTAP software upgrade, you migrate your data by creating an aggregate
 
 If your storage configuration includes SAN volumes or encrypted volumes, you must also move these volumes:
 
-* <<Move SAN volumes>>
+* <<move_san_vols,Move SAN volumes>>
 * <<Move volumes with encryption enabled>>
 
 == Create an aggregate and move volumes to the new nodes
@@ -97,12 +97,13 @@ Forcing the volume move operation to finish can disrupt client access to the vol
 +
 `volume show -vserver _svm_name_`
 
+[[move_san_vols]]
 == Move SAN volumes
 
-Move the SAN volumes by following the steps in all sections in https://docs.netapp.com/us-en/ontap-metrocluster/transition/task_move_linux_iscsi_hosts_from_mcc_fc_to_mcc_ip_nodes.html[Moving Linux iSCSI hosts from MetroCluster FC to MetroCluster IP nodes^]. This applies to moving SAN volumes in both MetroCluster and non-MetroCluster configurations. 
+To move SAN volumes, follow the steps in https://docs.netapp.com/us-en/ontap-metrocluster/transition/task_move_linux_iscsi_hosts_from_mcc_fc_to_mcc_ip_nodes.html[Moving Linux iSCSI hosts from MetroCluster FC to MetroCluster IP nodes^]. This applies to moving SAN volumes in both MetroCluster and non-MetroCluster configurations. 
 
 == Move volumes with encryption enabled
 
-Move volumes with aggregate encryption enabled by following the steps in https://docs.netapp.com/us-en/ontap/encryption-at-rest/encrypt-existing-volume-task.html[Enable encryption on an existing volume with the volume move start command^].
+To move volumes with aggregate encryption enabled, follow the steps in https://docs.netapp.com/us-en/ontap/encryption-at-rest/encrypt-existing-volume-task.html[Enable encryption on an existing volume with the volume move start command^].
 
 // 2023 JULY 3, BURTs 1552420, 1552651, and 1552660
