@@ -11,12 +11,14 @@ summary: To plan for the upgrade, you should familiarize yourself with the gener
 [.lead]
 To plan for the upgrade, you must familiarize yourself with the general upgrade considerations. If necessary, contact technical support for recommendations and guidance specific to the configuration of your cluster.
 
-Requirements and limitations
+.Requirements and limitations
 
 * The procedure for upgrading by moving storage is disruptive. The procedure for upgrading by moving volumes is nondisruptive.
 * The new nodes must support the same software version as the original nodes.
 +
 link:https://docs.netapp.com/us-en/ontap/upgrade/index.html[Upgrade ONTAP^]
++
+NOTE: For details on mixed software version cluster upgrades, see https://docs.netapp.com/us-en/ontap/upgrade/concept_mixed_version_requirements.html[Mixed version ONTAP clusters^].
 
 * You must observe the maximum cluster size.
 +
@@ -89,6 +91,7 @@ xref:upgrade-by-moving-storage-parent.adoc[Upgrade controller hardware by moving
 
 xref:upgrade-by-moving-volumes-parent.adoc[Upgrade controller hardware by moving volumes]
 
+// 2023 JULY 3, BURTs 1552420, 1552651, and 1552660
 // 2023 JUN 7, AFFFASDOC-46
 // 2023 MAR 23, ontap-systems-upgrade-issue-82
 // 2023 MAR 23, BURT 1541393

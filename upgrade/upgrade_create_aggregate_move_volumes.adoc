@@ -11,12 +11,10 @@ summary: You create at least an aggregate on each of the new nodes to store the 
 [.lead]
 During an ONTAP software upgrade, you migrate your data by creating an aggregate on the new nodes and then moving the volumes.
 
-If your storage configuration includes SAN volumes or encrypted volumes, for example, when performing a mixed version cluster upgrade, you must also move these volumes:
+If your storage configuration includes SAN volumes or encrypted volumes, you must also move these volumes:
 
 * <<Move SAN volumes>>
 * <<Move volumes with encryption enabled>>
-
-For information on performing upgrades in a mixed version cluster, see https://docs.netapp.com/us-en/ontap/upgrade/concept_mixed_version_requirements.html[Mixed version ONTAP clusters^].
 
 == Create an aggregate and move volumes to the new nodes
 You create at least an aggregate on each of the new nodes to store the volumes you want to move from the original nodes. You must identify an aggregate for each volume and move each volume individually.
@@ -101,7 +99,7 @@ Forcing the volume move operation to finish can disrupt client access to the vol
 
 == Move SAN volumes
 
-Move all SAN volumes during the upgrade by following the steps in https://docs.netapp.com/us-en/ontap-metrocluster/transition/task_move_linux_iscsi_hosts_from_mcc_fc_to_mcc_ip_nodes.html#setting-up-new-iscsi-connections[Setting up new iSCSI connections^].
+Move the SAN volumes by following the steps in all sections in https://docs.netapp.com/us-en/ontap-metrocluster/transition/task_move_linux_iscsi_hosts_from_mcc_fc_to_mcc_ip_nodes.html[Moving Linux iSCSI hosts from MetroCluster FC to MetroCluster IP nodes^]. This applies to moving SAN volumes in both MetroCluster and non-MetroCluster configurations. 
 
 == Move volumes with encryption enabled
 
