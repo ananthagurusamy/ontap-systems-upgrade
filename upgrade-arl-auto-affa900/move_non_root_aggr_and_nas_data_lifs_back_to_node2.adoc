@@ -13,7 +13,7 @@ summary: "Verify that node2's NAS data LIFs on node1 are relocated from node1 to
 :imagesdir: ./media/
 
 [.lead]
-After you verify network configuration on node2 and before you relocate aggregates from node1 to node2, you must verify that the NAS data LIFs belonging to node2 that are currently on node1 are relocated from node1 to node2. You must also verify that the SAN LIFs exist on node2.
+After you verify network configuration on node2 and before you relocate aggregates from node1 to node2, you verify that the NAS data LIFs belonging to node2 that are currently on node1 are relocated from node1 to node2. You must also verify that the SAN LIFs exist on node2.
 
 .About this task
 Remote LIFs handle traffic to SAN LUNs during the upgrade procedure. Moving SAN LIFs is not necessary for cluster or service health during the upgrade. SAN LIFs are not moved unless they need to be mapped to new ports. After you bring node2 online, you must verify that the LIFs are healthy and located on the appropriate ports.
