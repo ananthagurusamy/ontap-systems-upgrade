@@ -13,7 +13,7 @@ summary: Before starting the upgrade, verify that you have the correct hardware 
 :imagesdir: ./media/
 
 [.lead]
-Before starting the upgrade, you must verify that you have the correct hardware for your upgrade. Depending on your upgrade, for each HA pair that you are upgrading, you must have two controller modules or two controller modules and two NVRAM modules. If there are parts missing, contact technical support or your NetApp sales contact for assistance.
+Before starting the upgrade, verify that you have the correct hardware for your upgrade. Depending on your upgrade, for each HA pair that you are upgrading, you must have two controller modules or two controller modules and two NVRAM modules. If there are parts missing, contact technical support or your NetApp sales representative for assistance.
 
 [cols=2*,options="header",cols="50,50"]
 |===

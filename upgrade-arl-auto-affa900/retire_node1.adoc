@@ -13,7 +13,7 @@ summary: "Disable the HA pair with node2 and shut node1 down when using ARL to u
 
 
 [.lead]
-To retire node1, resume the automated operation to disable the HA pair with node2 and shut down node1 correctly. You must later remove the old system modules from the node1 chassis and then install the replacement modules on node1.
+To retire node1, you resume the automated operation to disable the HA pair with node2 and shut down node1 correctly.
 
 .Steps
 .	Resume the operation:
