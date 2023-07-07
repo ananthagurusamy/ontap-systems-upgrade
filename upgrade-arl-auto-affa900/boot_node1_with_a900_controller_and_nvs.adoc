@@ -12,7 +12,7 @@ summary: Boot node1 with the replacement controller modules when using ARL to up
 :imagesdir: ./media/
 
 [.lead]
-Node1 with the replacement modules is now ready for boot up. This section provides the steps required to boot node1 with the replacement modules for the following upgrade configurations:
+Node1 with the replacement modules is now ready to boot. This section provides the steps required to boot node1 with the replacement modules for the following upgrade configurations:
 
 [cols="35,65"]
 |===
@@ -31,8 +31,8 @@ FAS2720
 |FAS9500 controller and NVRAM modules ^2^
 |===
 
-^1^ Upgrading by swapping the controller module involves moving all connections from the old to the replacement controller module.
-^2^ Upgrading by swapping the controller and NVRAM modules involves moving only the console and management connections.
+^1^ When replacing controller modules, you move all connections from the old to the replacement controller module.
+^2^ When replacing the controller and NVRAM modules, you move only the console and management connections.
 
 .Steps
 
