@@ -14,7 +14,7 @@ To plan for the upgrade, you must familiarize yourself with the general upgrade 
 .Requirements and limitations
 
 * The procedure for upgrading by moving storage is disruptive. The procedure for upgrading by moving volumes is nondisruptive.
-* The new nodes must support the same software version as the original nodes.
+* The original nodes must support the same software version as the new nodes.
 +
 link:https://docs.netapp.com/us-en/ontap/upgrade/index.html[Upgrade ONTAP^]
 +
