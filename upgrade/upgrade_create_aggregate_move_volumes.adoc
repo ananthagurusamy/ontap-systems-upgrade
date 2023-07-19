@@ -11,7 +11,7 @@ summary: You create at least an aggregate on each of the new nodes to store the 
 [.lead]
 You create at least an aggregate on each of the new nodes to store the volumes you want to move from the original nodes. You must identify an aggregate for each volume and move each volume individually.
 
-NOTE: If your storage configuration includes SAN volumes or encrypted volumes, you must perform additional steps to move these volumes to the node nodes.
+NOTE: If your storage configuration includes SAN volumes or encrypted volumes, you must perform additional steps to move these volumes to the new nodes.
 
 .Before you begin
 Data protection mirror relationships must have been initialized before you can move a volume.
@@ -91,7 +91,7 @@ Forcing the volume move operation to finish can disrupt client access to the vol
 +
 `volume show -vserver _svm_name_`
 
-. If required, perform one or both of the following procedures.
+. If required, perform one or both of the following procedures:
 +
 [options="header" cols="1,2"]
 |===
