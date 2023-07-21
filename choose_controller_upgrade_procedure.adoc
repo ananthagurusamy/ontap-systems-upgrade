@@ -1,0 +1,33 @@
+---
+permalink: choose_controller_upgrade_procedure.html
+sidebar: sidebar
+keywords: 
+summary: 
+---
+= Choose your controller upgrade procedure
+:icons: font
+:imagesdir: ../media/
+
+[.lead]
+The controller upgrade procedure you use depends on the controller model and if you want to upgrade by moving volumes or storage, or by using aggregate relocation. 
+
+_Incude info about preferred method_
+
+[cols=3*,options="header",cols="20,65,15"]
+|===
+|Upgrade by... |Description |Nondisruptive
+|link:../upgrade/upgrade-decide-to-use-this-guide.html[Moving storage]
+|Prepare the old nodes and set up the new nodes. Reassign disks and restore root volume configuration to the new nodes and configure network ports.
+|No
+|link:../upgrade/upgrade-decide-to-use-this-guide.html[Moving volumes]
+|Add new nodes to the cluster as a HA pair, move volumes from the old to the new nodes, and then retire the old nodes.
+|Yes
+|link:../upgrade-arl/index.html[Relocating aggregates] (most systems)
+|Use ARL operations to move data from the old nodes to the new nodes. You first relocate the data before retiring the old node and adding the new node.
+|Yes
+|===
+
+If you are upgrading a MetroCluster configuration, see https://docs.netapp.com/us-en/ontap-metrocluster/upgrade/concept_choosing_an_upgrade_method_mcc.html[Upgrade, refresh, or expand the MetroCluster configuration^].
+
+If you are replacing an individual component, see https://docs.netapp.com/us-en/ontap-systems/index.html[AFF and FAS System Documentation^] and locate the field-replaceable unit (FRU) flyer for that component.
+

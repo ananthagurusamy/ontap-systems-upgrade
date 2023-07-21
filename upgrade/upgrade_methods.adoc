@@ -21,9 +21,8 @@ If you are upgrading from an AFF A250 to an AFF A400, see xref:upgrade_aff_a250_
 
 *Related information*
 
-link:upgrade-by-moving-storage-parent.html[Workflow for upgrading by moving storage]
-
-link:upgrade-by-moving-volumes-parent.html[Workflow for upgrading by moving volumes]
+*  link:upgrade-by-moving-storage-parent.html[Workflow for upgrading by moving storage]
+* link:upgrade-by-moving-volumes-parent.html[Workflow for upgrading by moving volumes]
 
 // 2023 MAR 23, ontap-systems-upgrade-issue-82
 // 2023 MAR 23, BURT 1541393

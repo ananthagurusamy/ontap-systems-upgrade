@@ -9,6 +9,8 @@ sidebar:
   entries:
     - title: AFF and FAS System Upgrade Documentation
       url: /index.html
+    - title: Choose your controller upgrade procedure
+      url: /choose_controller_upgrade_procedure.html
     - section: upgrade
     - section: upgrade-arl
 
@@ -18,7 +20,9 @@ homepage:
       links:
         - title: ONTAP Release notes
           url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508
-    - title: Upgrade by moving storage or volumes (most systems)
+        - title: Choose your controller upgrade procedure
+          url: /choose_controller_upgrade_procedure.html  
+    - title: Upgrade by moving storage or volumes
       links:
         - title: Upgrade controller hardware
           url: /upgrade/upgrade-decide-to-use-this-guide.html

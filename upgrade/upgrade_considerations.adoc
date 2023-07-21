@@ -11,50 +11,72 @@ summary: To plan for the upgrade, you should familiarize yourself with the gener
 [.lead]
 To plan for the upgrade, you must familiarize yourself with the general upgrade considerations. If necessary, contact technical support for recommendations and guidance specific to the configuration of your cluster.
 
-.Requirements and limitations
+== Requirements and limitations
 
-* The procedure for upgrading by moving storage is disruptive. The procedure for upgrading by moving volumes is nondisruptive.
-* The original nodes must support the same software version as the new nodes.
-+
-link:https://docs.netapp.com/us-en/ontap/upgrade/index.html[Upgrade ONTAP^]
-+
-NOTE: For details on mixed software version cluster upgrades, see https://docs.netapp.com/us-en/ontap/upgrade/concept_mixed_version_requirements.html[Mixed version ONTAP clusters^].
+Depending on your environment, you need to consider certain factors before you start your upgrade. Get started by reviewing the tables below to see what special considerations you need to consider.
 
-* You must observe the maximum cluster size.
-+
-When you upgrade by moving volumes, new nodes are joined to the cluster before the original nodes are removed. Confirm that the number of controllers in the cluster does not exceed the supported maximum cluster size during the procedure.
-+
-https://hwu.netapp.com[NetApp Hardware Universe^]
+[cols=2*,options="header",cols="50,50"]
+|===
+|Ask yourself... |If your answer is yes, then do this..
+|Do I want to run a nondisruptive upgrade?
+a|* link:upgrade-by-moving-volumes-parent.html[Upgrade by moving volumes]
 
-* When combining different controller platform model in a cluster, you must follow storage platform mixing rules.
+* When you upgrade by moving volumes, new nodes are joined to the cluster before the original nodes are removed
 +
-https://hwu.netapp.com[NetApp Hardware Universe^]
+https://hwu.netapp.com[Verify that the number of controllers in the cluster does not exceed the supported maximum cluster size during the procedure.^]
 
-* The new nodes must have enough storage to accommodate storage associated with the original nodes.
+
+|Do I want to run a disruptive procedure?
+|link:upgrade-by-moving-storage-parent.html[Upgrade by moving storage]
+|Do my systems contain internal drives?
+|link:upgrade-by-moving-volumes-parent.html[NetApp recommends upgrading by moving volumes]
+|Are there different software versions running on original and new nodes?
+a|Verify that the original nodes support the same software version as the new nodes. 
+
+If required, link:https://docs.netapp.com/us-en/ontap/upgrade/index.html[perform an ONTAP software upgrade on the original nodes to at least the minimum supported version on the new nodes.^]
+
+For details on mixed software version cluster upgrades, see https://docs.netapp.com/us-en/ontap/upgrade/concept_mixed_version_requirements.html[Mixed version ONTAP clusters^].
+ 
+|Are you upgrading a HA pair in a cluster with multiple HA pairs? 
+|Move epsilon to the node of a HA pair not undergoing a controller upgrade. For example, if you are upgrading nodeA/nodeB in a cluster with the HA pair configuration nodeA/nodeB and nodeC/nodeD, you must move epsilon to nodeC or nodeD.
+|Are you running ONTAP 9.6P11, 9.7P8, or later releases? 
+|NetApp recommends that you enable Connectivity, Liveliness, and Availability Monitor (CLAM) takeover to return the cluster into quorum when certain node failures occur. The `kernel-service` command requires advanced privilege level access. For more information, see the NetApp Knowledge Base article https://kb.netapp.com/Support_Bulletins/Customer_Bulletins/SU436[CLAM takeover default configuration changed^]. 
+
+Beginning with ONTAP 9.8, the `kcs-enable-takeover` parameter is enabled by default.
+|===
+
+[cols=2*,options="header",cols="50,50"]
+|===
+|Ask yourself... |If your answer is no, then do this..
+
+|Have I verified that I'm following the platform mixing rules?
+|https://hwu.netapp.com[Confirm the storage platform mixing rules^]
+
+The controllers in a HA pair must be two AFF, FAS, or ASA models.
+
+|Have I verified that the nodes have enough storage to accommodate storage associated with the original nodes?
+
+|https://docs.netapp.com/us-en/ontap/disks-aggregates/index.html[Verify the node storage capacity^]
+
+|Have I checked the root aggregate size requirements?
+|https://hwu.netapp.com[Verify the root aggregate size requirements^]
+
+The root aggregate size and the number of disks supported by the new system must be equal to or greater than those supported by the original system.
+|===
+
+* You must observe the maximum cluster size. 
 +
-https://docs.netapp.com/us-en/ontap/disks-aggregates/index.html[Disk and aggregate management with the CLI^]
+NOTE: SAN 8-node clusters going to an ONTAP version that supports 12-nodes (SLM reporting nodes must be reestablished).
 
-* The root aggregate size and the number of disks supported by the new system must be equal to or greater than those supported by the original system.
-+
-For root aggregate size requirements, see the https://hwu.netapp.com[NetApp Hardware Universe^]
-
-* The controllers in a HA pair must be two AFF models or two FAS models.
 * You can upgrade by moving volumes or physical storage from one FAS2xxx to a later FAS2xxx if the nodes are in the same cluster. For example, you can move volumes or physical storage from a FAS2552 to a FAS2750.
 
-* If you are upgrading a HA pair in a cluster with multiple HA pairs, you must move epsilon to the node of a HA pair not undergoing a controller upgrade. For example, if you are upgrading nodeA/nodeB in a cluster with the HA pair configuration nodeA/nodeB and nodeC/nodeD, you must move epsilon to nodeC or nodeD.
-// BURT 1400769 31-Jan-2022
 
-* If you are using ONTAP 9.6P11, 9.7P8, or later releases, it is recommended to enable Connectivity, Liveliness, and Availability Monitor (CLAM) takeover to return the cluster into quorum when certain node failures occur. The `kernel-service` command requires advanced privilege level access. For more information, see: https://kb.netapp.com/Support_Bulletins/Customer_Bulletins/SU436[NetApp KB Article SU436: CLAM takeover default configuration changed^]. Beginning with ONTAP 9.8, the `kcs-enable-takeover` parameter is enabled by default.
-// BURT 1400769 31-Jan-2022
 
-* If you are upgrading a two-node MetroCluster configuration, see: https://docs.netapp.com/us-en/ontap-metrocluster/upgrade/concept_choosing_an_upgrade_method_mcc.html[Choosing an upgrade or refresh method^]
-
-Systems with internal storage
+== Systems with internal storage
 
 NOTE: The following systems have internal storage: FAS2520, FAS2552, FAS2554, FAS2620, FAS2650, FAS2720, FAS2750, AFF A150, AFF A200, AFF A220, AFF A250, AFF A700s, AFF A800, AFF C190, AFF C250, and AFF C800.
 
 * If your system is not listed above, see the https://hwu.netapp.com[NetApp Hardware Universe^] to check if it has internal drives.
-* If you have a system with internal storage, the recommended upgrade method is upgrading by moving volumes.
 * If you have a system with internal storage, you can convert the system to a drive shelf and attach it to a new node in the same cluster. FAS2520 controllers cannot be converted to a drive shelf.
 +
 Converting a FAS255x system to a drive shelf is an optional task in the workflow for upgrading by moving storage.
@@ -63,7 +85,7 @@ Converting a FAS255x system to a drive shelf is an optional task in the workflow
 +
 Transferring the internal storage is an optional task in the workflow for upgrading by moving storage.
 
-Situations where additional steps might be needed
+== Situations where you might need additional steps
 
 * If you are upgrading from an AFF A250 to an AFF A400, see xref:upgrade_aff_a250_to_aff_a400_ndu_upgrade_workflow.adoc[Upgrade AFF A250 to AFF A400 by converting to a drive shelf].
 
@@ -85,11 +107,9 @@ https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Systems/FAS_System
 
 *Related information*
 
-xref:upgrade-methods.adoc[Choose methods for upgrading controller hardware]
-
-xref:upgrade-by-moving-storage-parent.adoc[Upgrade controller hardware by moving storage]
-
-xref:upgrade-by-moving-volumes-parent.adoc[Upgrade controller hardware by moving volumes]
+* xref:upgrade-methods.adoc[Choose methods for upgrading controller hardware]
+* xref:upgrade-by-moving-storage-parent.adoc[Upgrade controller hardware by moving storage]
+* xref:upgrade-by-moving-volumes-parent.adoc[Upgrade controller hardware by moving volumes]
 
 // 2023 JULY 3, BURTs 1552420, 1552651, and 1552660
 // 2023 JUN 7, AFFFASDOC-46
@@ -98,4 +118,5 @@ xref:upgrade-by-moving-volumes-parent.adoc[Upgrade controller hardware by moving
 // 2023 Feb 1, BURT 1351102
 // 2022 SEP 3, Clean-up 
 // 2022 FEB 9, BURT 1493415 
+// 2022 JAN 31, BURT 1400769
 
