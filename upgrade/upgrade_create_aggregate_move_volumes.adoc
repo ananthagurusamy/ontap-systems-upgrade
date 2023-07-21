@@ -95,7 +95,7 @@ Forcing the volume move operation to finish can disrupt client access to the vol
 +
 [options="header" cols="1,2"]
 |===
-| If your storage configuration includes…....| Follow the steps in...
+| If your storage configuration includes...| Follow the steps in...
 
 |SAN volumes
 a|
