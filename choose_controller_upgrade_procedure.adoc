@@ -9,23 +9,19 @@ summary:
 :imagesdir: ../media/
 
 [.lead]
-The controller upgrade procedure you use depends on the controller model and if you want to upgrade by moving volumes or storage, or by using aggregate relocation. 
+In general, how you upgrade the controller hardware depends on the platform models of the original nodes. You upgrade either by relocating aggregate or moving volumes (both disruptive procedures), or by moving the storage (a disruptive procedure).
 
-_Incude info about preferred method_
+NetApp recommends upgrading by relocating aggregates over moving volumes for the following reasons:
 
-[cols=3*,options="header",cols="20,65,15"]
-|===
-|Upgrade by... |Description |Nondisruptive
-|link:../upgrade/upgrade-decide-to-use-this-guide.html[Moving storage]
-|Prepare the old nodes and set up the new nodes. Reassign disks and restore root volume configuration to the new nodes and configure network ports.
-|No
-|link:../upgrade/upgrade-decide-to-use-this-guide.html[Moving volumes]
-|Add new nodes to the cluster as a HA pair, move volumes from the old to the new nodes, and then retire the old nodes.
-|Yes
-|link:../upgrade-arl/index.html[Relocating aggregates] (most systems)
-|Use ARL operations to move data from the old nodes to the new nodes. You first relocate the data before retiring the old node and adding the new node.
-|Yes
-|===
+* You don't need to expand and shrink your cluster with the new nodes (it's purely replace) which is very useful for two-node switchless clusters. 
+* Aggregate relocation is much faster than copying data across aggregates when moving volumes.
+
+[NOTE]
+====
+Models with internal drives are: FAS2520, FAS2552, FAS2554, FAS2620, FAS2650, FAS2720, FAS2750, AFF A150, AFF A200, AFF A220, AFF A250, AFF A700s, AFF A800, AFF C190, AFF C250, and AFF C800.
+
+If your system is not listed above, see the https://hwu.netapp.com[NetApp Hardware Universe^] to check if it has internal drives.
+====
 
 If you are upgrading a MetroCluster configuration, see https://docs.netapp.com/us-en/ontap-metrocluster/upgrade/concept_choosing_an_upgrade_method_mcc.html[Upgrade, refresh, or expand the MetroCluster configuration^].
 

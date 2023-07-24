@@ -13,7 +13,7 @@ To plan for the upgrade, you must familiarize yourself with the general upgrade 
 
 == Requirements and limitations
 
-Depending on your environment, you need to consider certain factors before you start your upgrade. Get started by reviewing the tables below to see what special considerations you need to consider.
+Depending on your environment, you need to consider certain factors before you start your upgrade. Get started by reviewing the table below to see what special considerations you need to consider.
 
 [cols=2*,options="header",cols="50,50"]
 |===
@@ -21,22 +21,32 @@ Depending on your environment, you need to consider certain factors before you s
 |Do I want to run a nondisruptive upgrade?
 a|* link:upgrade-by-moving-volumes-parent.html[Upgrade by moving volumes]
 
-* When you upgrade by moving volumes, new nodes are joined to the cluster before the original nodes are removed
+* When you upgrade by moving volumes, new nodes are joined to the cluster before the original nodes are removed.
 +
 https://hwu.netapp.com[Verify that the number of controllers in the cluster does not exceed the supported maximum cluster size during the procedure.^]
-
++
+You must observe the maximum cluster size. 
++
+NOTE: You must reestablish the Service Level Manager reporting nodes for SAN 8-node clusters going to an ONTAP version that supports 12-nodes.
 
 |Do I want to run a disruptive procedure?
 |link:upgrade-by-moving-storage-parent.html[Upgrade by moving storage]
-|Do my systems contain internal drives?
-|link:upgrade-by-moving-volumes-parent.html[NetApp recommends upgrading by moving volumes]
 |Are there different software versions running on original and new nodes?
-a|Verify that the original nodes support the same software version as the new nodes. 
+a|* Verify that the original nodes support the same software version as the new nodes. 
 
-If required, link:https://docs.netapp.com/us-en/ontap/upgrade/index.html[perform an ONTAP software upgrade on the original nodes to at least the minimum supported version on the new nodes.^]
-
+* If required, link:https://docs.netapp.com/us-en/ontap/upgrade/index.html[perform an ONTAP software upgrade on the original nodes to at least the minimum supported version on the new nodes.^]
++
 For details on mixed software version cluster upgrades, see https://docs.netapp.com/us-en/ontap/upgrade/concept_mixed_version_requirements.html[Mixed version ONTAP clusters^].
+|Do my systems contain internal drives?
+|link:upgrade-by-moving-volumes-parent.html[Upgrade by moving volumes]
+
  
+|Are you combining different controller platform models in a cluster?
+
+a|https://hwu.netapp.com[Verify that you are following storage platform mixing rules^]
+
+The controllers in a HA pair must be two AFF, FAS, or ASA models.
+
 |Are you upgrading a HA pair in a cluster with multiple HA pairs? 
 |Move epsilon to the node of a HA pair not undergoing a controller upgrade. For example, if you are upgrading nodeA/nodeB in a cluster with the HA pair configuration nodeA/nodeB and nodeC/nodeD, you must move epsilon to nodeC or nodeD.
 |Are you running ONTAP 9.6P11, 9.7P8, or later releases? 
@@ -45,28 +55,11 @@ For details on mixed software version cluster upgrades, see https://docs.netapp.
 Beginning with ONTAP 9.8, the `kcs-enable-takeover` parameter is enabled by default.
 |===
 
-[cols=2*,options="header",cols="50,50"]
-|===
-|Ask yourself... |If your answer is no, then do this..
+You also need to consider the the node storage capacity and the root size requirements:
 
-|Have I verified that I'm following the platform mixing rules?
-|https://hwu.netapp.com[Confirm the storage platform mixing rules^]
+* https://docs.netapp.com/us-en/ontap/disks-aggregates/index.html[Verify that the new nodes have enough storage to accommodate storage associated with the original nodes^].
 
-The controllers in a HA pair must be two AFF, FAS, or ASA models.
-
-|Have I verified that the nodes have enough storage to accommodate storage associated with the original nodes?
-
-|https://docs.netapp.com/us-en/ontap/disks-aggregates/index.html[Verify the node storage capacity^]
-
-|Have I checked the root aggregate size requirements?
-|https://hwu.netapp.com[Verify the root aggregate size requirements^]
-
-The root aggregate size and the number of disks supported by the new system must be equal to or greater than those supported by the original system.
-|===
-
-* You must observe the maximum cluster size. 
-+
-NOTE: SAN 8-node clusters going to an ONTAP version that supports 12-nodes (SLM reporting nodes must be reestablished).
+* https://hwu.netapp.com[Verify that the root aggregate size and the number of disks supported by the new system are equal to or greater than those supported by the original system^].
 
 * You can upgrade by moving volumes or physical storage from one FAS2xxx to a later FAS2xxx if the nodes are in the same cluster. For example, you can move volumes or physical storage from a FAS2552 to a FAS2750.
 
