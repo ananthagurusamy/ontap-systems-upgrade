@@ -9,12 +9,8 @@ summary:
 :imagesdir: ../media/
 
 [.lead]
-In general, how you upgrade the controller hardware depends on the platform models of the original nodes. You upgrade either by relocating aggregate or moving volumes (both disruptive procedures), or by moving the storage (a disruptive procedure).
+In general, how you upgrade the controller hardware depends on the platform models of the original nodes. You upgrade either by relocating aggregates or moving volumes (both nondisruptive procedures), or by moving the storage (a disruptive procedure).
 
-NetApp recommends upgrading by relocating aggregates over moving volumes for the following reasons:
-
-* You don't need to expand and shrink your cluster with the new nodes (it's purely replace) which is very useful for two-node switchless clusters. 
-* Aggregate relocation is much faster than copying data across aggregates when moving volumes.
 
 [NOTE]
 ====
@@ -23,7 +19,12 @@ Models with internal drives are: FAS2520, FAS2552, FAS2554, FAS2620, FAS2650, FA
 If your system is not listed above, see the https://hwu.netapp.com[NetApp Hardware Universe^] to check if it has internal drives.
 ====
 
+NetApp recommends upgrading by relocating aggregates over moving volumes for the following reasons:
+
+* With aggregate relocation, you don't need to expand and then shrink your cluster with the new nodes which is beneficial for two-node switchless clusters. 
+* Aggregate relocation is much faster than copying data across aggregates when moving volumes.
+
 If you are upgrading a MetroCluster configuration, see https://docs.netapp.com/us-en/ontap-metrocluster/upgrade/concept_choosing_an_upgrade_method_mcc.html[Upgrade, refresh, or expand the MetroCluster configuration^].
 
-If you are replacing an individual component, see https://docs.netapp.com/us-en/ontap-systems/index.html[AFF and FAS System Documentation^] and locate the field-replaceable unit (FRU) flyer for that component.
+If you are replacing an individual component, se the https://docs.netapp.com/us-en/ontap-systems/index.html[AFF and FAS System Documentation^] and locate the field-replaceable unit (FRU) flyer for that component.
 
