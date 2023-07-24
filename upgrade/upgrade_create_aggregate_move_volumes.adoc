@@ -11,7 +11,10 @@ summary: You create at least an aggregate on each of the new nodes to store the 
 [.lead]
 You create at least an aggregate on each of the new nodes to store the volumes you want to move from the original nodes. You must identify an aggregate for each volume and move each volume individually.
 
-NOTE: If your storage configuration includes SAN volumes or encrypted volumes, you must perform additional steps to move these volumes to the new nodes.
+[NOTE]
+====
+If your storage configuration includes SAN volumes, follow the steps in https://docs.netapp.com/us-en/ontap-metrocluster/transition/task_move_linux_iscsi_hosts_from_mcc_fc_to_mcc_ip_nodes.html[Move Linux iSCSI hosts from MetroCluster FC to MetroCluster IP nodes^] to move these volumes to the new nodes.
+====
 
 .Before you begin
 Data protection mirror relationships must have been initialized before you can move a volume.
@@ -91,20 +94,6 @@ Forcing the volume move operation to finish can disrupt client access to the vol
 +
 `volume show -vserver _svm_name_`
 
-. If required, perform one or both of the following procedures:
-+
-[options="header" cols="1,2"]
-|===
-| If your storage configuration includes...| Follow the steps in...
-
-|SAN volumes
-a|
-https://docs.netapp.com/us-en/ontap-metrocluster/transition/task_move_linux_iscsi_hosts_from_mcc_fc_to_mcc_ip_nodes.html[Move Linux iSCSI hosts from MetroCluster FC to MetroCluster IP nodes^]
-
-NOTE: This applies to moving SAN volumes in both MetroCluster and non-MetroCluster configurations. 
-
-|Volumes with encryption enabled
-|https://docs.netapp.com/us-en/ontap/encryption-at-rest/encrypt-existing-volume-task.html[Enable encryption on an existing volume with the volume move start command^]
-|===
+. If your storage configuration includes volumes with encryption enabled, follow the steps in https://docs.netapp.com/us-en/ontap/encryption-at-rest/encrypt-existing-volume-task.html[Enable encryption on an existing volume with the volume move start command^].
 
 // 2023 JULY 3, BURTs 1552420, 1552651, and 1552660
