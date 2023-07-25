@@ -21,8 +21,8 @@ If your system is not listed above, see the https://hwu.netapp.com[NetApp Hardwa
 
 NetApp recommends upgrading by relocating aggregates over moving volumes for the following reasons:
 
-* With aggregate relocation, you don't need to expand and then shrink your cluster with the new nodes which is beneficial for two-node switchless clusters. 
-* Aggregate relocation is much faster than copying data across aggregates when moving volumes.
+* Aggregate relocation is a replacement procedure. You do not need to expand and shrink your cluster with the new nodes which is beneficial for two-node switchless clusters. 
+* Moving data by relocating aggregates is much faster than copying data across aggregates when moving volumes.
 
 If you are upgrading a MetroCluster configuration, see https://docs.netapp.com/us-en/ontap-metrocluster/upgrade/concept_choosing_an_upgrade_method_mcc.html[Upgrade, refresh, or expand the MetroCluster configuration^].
 

@@ -15,11 +15,14 @@ To plan for the upgrade, you must familiarize yourself with the general upgrade 
 
 Depending on your environment, you need to consider certain factors before you start your upgrade. Get started by reviewing the table below to see what special considerations you need to consider.
 
-[cols=2*,options="header",cols="50,50"]
+[cols=2*,options="header",cols="30,70"]
 |===
 |Ask yourself... |If your answer is yes, then do this..
-|Do I want to run a nondisruptive upgrade?
-a|* link:upgrade-by-moving-volumes-parent.html[Upgrade by moving volumes]
+|Do my systems contain internal drives?
+|link:upgrade-by-moving-volumes-parent.html[Upgrade by moving volumes]
+
+|Do I want to perform a nondisruptive upgrade?
+a|* link:upgrade-by-moving-volumes-parent.html[Upgrade by moving volumes] (Moving storage is a disruptive procedure)
 
 * When you upgrade by moving volumes, new nodes are joined to the cluster before the original nodes are removed.
 +
@@ -29,18 +32,13 @@ You must observe the maximum cluster size.
 +
 NOTE: You must reestablish the Service Level Manager reporting nodes for SAN 8-node clusters going to an ONTAP version that supports 12-nodes.
 
-|Do I want to run a disruptive procedure?
-|link:upgrade-by-moving-storage-parent.html[Upgrade by moving storage]
-|Are there different software versions running on original and new nodes?
+|Are there different software versions running on the original and new nodes?
 a|* Verify that the original nodes support the same software version as the new nodes. 
 
 * If required, link:https://docs.netapp.com/us-en/ontap/upgrade/index.html[perform an ONTAP software upgrade on the original nodes to at least the minimum supported version on the new nodes.^]
 +
 For details on mixed software version cluster upgrades, see https://docs.netapp.com/us-en/ontap/upgrade/concept_mixed_version_requirements.html[Mixed version ONTAP clusters^].
-|Do my systems contain internal drives?
-|link:upgrade-by-moving-volumes-parent.html[Upgrade by moving volumes]
 
- 
 |Are you combining different controller platform models in a cluster?
 
 a|https://hwu.netapp.com[Verify that you are following storage platform mixing rules^]
