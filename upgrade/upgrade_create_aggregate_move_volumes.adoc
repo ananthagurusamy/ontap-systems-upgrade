@@ -80,6 +80,8 @@ node12a_aggr4    10.36GB         FCAL
 `volume move start -vserver _svm_name_ -volume _vol_name_ -destination-aggregate _destination_aggr_name_ -cutover-window integer`
 +
 You cannot move the node root volume (vol0). Other volumes, including SVM root volumes, can be moved.
++
+NOTE: If your storage configuration includes volumes with encryption enabled, follow the steps in https://docs.netapp.com/us-en/ontap/encryption-at-rest/encrypt-existing-volume-task.html[Enable encryption on an existing volume with the volume move start command^] to move these volumes.
 
 . Display the outcome of the `volume move` operation to verify that the volumes were moved successfully:
 +
@@ -93,7 +95,5 @@ Forcing the volume move operation to finish can disrupt client access to the vol
 . Verify that the volumes were moved successfully to the specified SVM and are in the correct aggregate:
 +
 `volume show -vserver _svm_name_`
-
-. If your storage configuration includes volumes with encryption enabled, follow the steps in https://docs.netapp.com/us-en/ontap/encryption-at-rest/encrypt-existing-volume-task.html[Enable encryption on an existing volume with the volume move start command^].
 
 // 2023 JULY 3, BURTs 1552420, 1552651, and 1552660
