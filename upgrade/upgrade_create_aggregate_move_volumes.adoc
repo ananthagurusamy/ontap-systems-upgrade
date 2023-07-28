@@ -4,20 +4,17 @@ sidebar: sidebar
 keywords: create, aggregate, node, store, volume, original, node, identify, aggregate, individually, create an aggregate and moving volumes to the new nodes
 summary: You create at least an aggregate on each of the new nodes to store the volumes you want to move from the original nodes. You must identify an aggregate for each volume and move each volume individually.
 ---
-= Create an aggregate and move volumes
+= Create an aggregate and move volumes to the new nodes
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-During an ONTAP software upgrade, you migrate your data by creating an aggregate on the new nodes and then moving the volumes.
-
-If your storage configuration includes SAN volumes or encrypted volumes, you must also move these volumes:
-
-* <<move_san_vols,Move SAN volumes>>
-* <<Move volumes with encryption enabled>>
-
-== Create an aggregate and move volumes to the new nodes
 You create at least an aggregate on each of the new nodes to store the volumes you want to move from the original nodes. You must identify an aggregate for each volume and move each volume individually.
+
+[NOTE]
+====
+If your storage configuration includes SAN volumes, follow the steps in https://docs.netapp.com/us-en/ontap-metrocluster/transition/task_move_linux_iscsi_hosts_from_mcc_fc_to_mcc_ip_nodes.html[Move Linux iSCSI hosts from MetroCluster FC to MetroCluster IP nodes^] to move these volumes to the new nodes.
+====
 
 .Before you begin
 Data protection mirror relationships must have been initialized before you can move a volume.
@@ -38,7 +35,7 @@ Both the new aggregate and the old aggregate from which the volume will be moved
 
 . Verify that the new aggregate is now assigned to the same SVM as the aggregate on the original node:
 +
-`vserver show -vserversvm_name`
+`vserver show -vserver _svm_name_`
 . Display information for the volumes that you want to move from the original nodes to the new nodes:
 +
 `volume show -vserver _svm_name_ -node _original_node_name_`
@@ -83,6 +80,8 @@ node12a_aggr4    10.36GB         FCAL
 `volume move start -vserver _svm_name_ -volume _vol_name_ -destination-aggregate _destination_aggr_name_ -cutover-window integer`
 +
 You cannot move the node root volume (vol0). Other volumes, including SVM root volumes, can be moved.
++
+NOTE: If your storage configuration includes volumes with encryption enabled, follow the steps in https://docs.netapp.com/us-en/ontap/encryption-at-rest/encrypt-existing-volume-task.html[Enable encryption on an existing volume with the volume move start command^] to move these volumes.
 
 . Display the outcome of the `volume move` operation to verify that the volumes were moved successfully:
 +
@@ -96,14 +95,5 @@ Forcing the volume move operation to finish can disrupt client access to the vol
 . Verify that the volumes were moved successfully to the specified SVM and are in the correct aggregate:
 +
 `volume show -vserver _svm_name_`
-
-[[move_san_vols]]
-== Move SAN volumes
-
-To move SAN volumes, follow the steps in https://docs.netapp.com/us-en/ontap-metrocluster/transition/task_move_linux_iscsi_hosts_from_mcc_fc_to_mcc_ip_nodes.html[Moving Linux iSCSI hosts from MetroCluster FC to MetroCluster IP nodes^]. This applies to moving SAN volumes in both MetroCluster and non-MetroCluster configurations. 
-
-== Move volumes with encryption enabled
-
-To move volumes with aggregate encryption enabled, follow the steps in https://docs.netapp.com/us-en/ontap/encryption-at-rest/encrypt-existing-volume-task.html[Enable encryption on an existing volume with the volume move start command^].
 
 // 2023 JULY 3, BURTs 1552420, 1552651, and 1552660
