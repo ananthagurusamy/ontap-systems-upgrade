@@ -5,8 +5,8 @@ entries:
     url: /upgrade/upgrade-decide-to-use-this-guide.html
   - title: Considerations
     url: /upgrade/upgrade-considerations.html
-  - title: Choose method
-    url: /upgrade/upgrade-methods.html
+# - title: Choose method
+#   url: /upgrade/upgrade-methods.html
   - title: Upgrade by moving storage
     entries:
     - title: Workflow

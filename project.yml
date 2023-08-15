@@ -9,10 +9,10 @@ sidebar:
   entries:
     - title: AFF and FAS System Upgrade Documentation
       url: /index.html
-    - title: Choose your controller upgrade procedure
+    - title: Choose your controller hardware upgrade procedure
       url: /choose_controller_upgrade_procedure.html
-    - section: upgrade
     - section: upgrade-arl
+    - section: upgrade
 
 homepage:
   tiles:
@@ -20,15 +20,9 @@ homepage:
       links:
         - title: ONTAP Release notes
           url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508
-        - title: Choose your controller upgrade procedure
-          url: /choose_controller_upgrade_procedure.html  
-    - title: Upgrade by moving storage or volumes
-      links:
-        - title: Upgrade controller hardware
-          url: /upgrade/upgrade-decide-to-use-this-guide.html
-        - title: Upgrade AFF A250 to AFF A400 by converting to a drive shelf
-          url: /upgrade/upgrade_aff_a250_to_aff_a400_ndu_upgrade_workflow.html
-    - title: Upgrade by moving aggregates on systems running ONTAP 9.8 and later
+        - title: Choose your controller hardware upgrade procedure
+          url: /choose_controller_upgrade_procedure.html 
+    - title: Upgrade by relocating aggregates on systems running ONTAP 9.8 and later
       links:
         - title: Use "system controller replace" commands to upgrade controller models in the same chassis
           url: https://docs.netapp.com/us-en/ontap-systems-upgrade/upgrade-arl-auto-affa900/
@@ -36,12 +30,18 @@ homepage:
           url: https://docs.netapp.com/us-en/ontap-systems-upgrade/upgrade-arl-auto-app/
         - title: Use manual commands
           url: https://docs.netapp.com/us-en/ontap-systems-upgrade/upgrade-arl-manual-app/
-    - title: Upgrade by moving aggregates on systems running ONTAP 9.7 and earlier
+    - title: Upgrade by relocating aggregates on systems running ONTAP 9.7 and earlier
       links:
         - title: Use “system controller replace” commands (most systems)
           url: https://docs.netapp.com/us-en/ontap-systems-upgrade/upgrade-arl-auto/
         - title: Use manual commands
           url: https://docs.netapp.com/us-en/ontap-systems-upgrade/upgrade-arl-manual/
+    - title: Upgrade by moving storage or volumes
+      links:
+        - title: Upgrade controller hardware
+          url: /upgrade/upgrade-decide-to-use-this-guide.html
+        - title: Upgrade AFF A250 to AFF A400 by converting to a drive shelf
+          url: /upgrade/upgrade_aff_a250_to_aff_a400_ndu_upgrade_workflow.html
     - title: Upgrade systems in a MetroCluster configuration
       links:
         - title: Select the upgrade procedure for your MetroCluster configuration

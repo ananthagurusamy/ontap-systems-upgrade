@@ -2,14 +2,14 @@
 permalink: choose_controller_upgrade_procedure.html
 sidebar: sidebar
 keywords: 
-summary: 
+summary: In general, how you upgrade the controller hardware depends on the platform models of the original nodes. You upgrade either by moving aggregates or volumes storage (nondisruptive procedures) or by moving storage (a disruptive procedure).
 ---
-= Choose your controller upgrade procedure
+= Choose your controller hardware upgrade procedure
 :icons: font
 :imagesdir: ../media/
 
 [.lead]
-In general, how you upgrade the controller hardware depends on the platform models of the original nodes. You upgrade either by relocating aggregates or moving volumes (both nondisruptive procedures), or by moving the storage (a disruptive procedure).
+In general, how you upgrade the controller hardware depends on the platform models of the original nodes. You upgrade either by relocating aggregates or moving volumes (both nondisruptive procedures), or by moving the storage (a disruptive procedure). If you have different ONTAP versions running on the original and new nodes, you might need to perform a software upgrade before starting the hardware upgrade. 
 
 
 [NOTE]
@@ -19,12 +19,17 @@ Models with internal drives are: FAS2520, FAS2552, FAS2554, FAS2620, FAS2650, FA
 If your system is not listed above, see the https://hwu.netapp.com[NetApp Hardware Universe^] to check if it has internal drives.
 ====
 
-NetApp recommends upgrading by relocating aggregates over moving volumes for the following reasons:
+Learn about the controller hardware upgrade procedures:
+
+* link:upgrade-arl/index.html[Upgrade by relocating aggregates]
+* link:upgrade/upgrade-decide-to-use-this-guide.html[Upgrade by moving volumes or storage]
+
+When possible, NetApp recommends upgrading by relocating aggregates over moving volumes for the following reasons:
 
 * Aggregate relocation is a replacement procedure. You do not need to expand and shrink your cluster with the new nodes which is beneficial for two-node switchless clusters. 
-* Moving data by relocating aggregates is much faster than copying data across aggregates when moving volumes.
+* Moving data by relocating aggregates is faster than copying data across aggregates when moving volumes.
 
 If you are upgrading a MetroCluster configuration, see https://docs.netapp.com/us-en/ontap-metrocluster/upgrade/concept_choosing_an_upgrade_method_mcc.html[Upgrade, refresh, or expand the MetroCluster configuration^].
 
-If you are replacing an individual component, se the https://docs.netapp.com/us-en/ontap-systems/index.html[AFF and FAS System Documentation^] and locate the field-replaceable unit (FRU) flyer for that component.
+If you are replacing an individual component, see the https://docs.netapp.com/us-en/ontap-systems/index.html[AFF and FAS System Documentation^] and locate the field-replaceable unit (FRU) flyer for that component.
 
