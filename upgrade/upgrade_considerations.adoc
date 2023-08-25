@@ -23,7 +23,7 @@ a|*  https://hwu.netapp.com[Verify that the original nodes support the same soft
 
 * If required, link:https://docs.netapp.com/us-en/ontap/upgrade/index.html[Upgrade the ONTAP version on the original nodes to the maximum supported version^].
 +
-NOTE: The version difference between the original and new nodes cannot be greater than four. For example, ONTAP 9.8 and 9.12.1 is supported, however, ONTAP 9.8 and 9.13.1 and is NOT supported. 
+NOTE: The version difference between the original and new nodes cannot be greater than four. For example, ONTAP 9.8 and 9.12.1 is supported; however, ONTAP 9.8 and 9.13.1 is NOT supported. 
 +
 For details on mixed software version cluster upgrades, see https://docs.netapp.com/us-en/ontap/upgrade/concept_mixed_version_requirements.html[Mixed version ONTAP clusters^].
 |Do my systems contain internal drives?
