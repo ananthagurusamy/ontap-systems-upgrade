@@ -21,7 +21,7 @@ If your system is not listed above, see the https://hwu.netapp.com[NetApp Hardwa
 
 Learn about the controller hardware upgrade procedures:
 
-* link:upgrade-arl/index.html[Upgrade by relocating aggregates]
+* link:upgrade-arl/index.html[Upgrade by using aggregate relocation]
 * link:upgrade/upgrade-decide-to-use-this-guide.html[Upgrade by moving volumes or storage]
 
 When possible, NetApp recommends upgrading by relocating aggregates over moving volumes for the following reasons:
