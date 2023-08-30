@@ -51,7 +51,7 @@ Install the ASA A900, AFF A900, or FAS9500 NVRAM and controller modules that you
 You must note the following when performing the installation:
 
 * Move all blank filler modules in slots 6-1 and 6-2 from the old NVRAM module to the new NVRAM module.
-* Do NOT move the coredump device from the AFF A700 NVRAM module to the AFF A900 or ASA 900 NVRAM module.
+* Do NOT move the coredump device from the AFF A700 NVRAM module to the AFF A900 or ASA A900 NVRAM module.
 * Move all flash cache modules installed in the FAS9000 NVRAM module to the FAS9500 NVRAM module.
 
 .Before you begin

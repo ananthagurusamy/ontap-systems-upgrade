@@ -27,7 +27,7 @@ Use this procedure under the following circumstances:
 |FAS2620 or FAS2720
 |FAS2820
 |AFF A700
-|AFF A900 or ASA-A900
+|AFF A900 or ASA A900
 |FAS9000
 |FAS9500
 |===
