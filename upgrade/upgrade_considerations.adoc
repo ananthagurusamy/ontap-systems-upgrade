@@ -18,7 +18,7 @@ Depending on your environment, you need to consider certain factors before you s
 [cols=2*,options="header",cols="30,70"]
 |===
 |Ask yourself... |If your answer is yes, then do this..
-|Are there different software versions running on the original and new nodes?
+|Do I have different software versions running on the original and new nodes?
 a|*  https://hwu.netapp.com[Verify that the original nodes support the same software version and patch level as the new nodes^]. 
 
 * If required, link:https://docs.netapp.com/us-en/ontap/upgrade/index.html[Upgrade the ONTAP version on the original nodes to the maximum supported version^].
