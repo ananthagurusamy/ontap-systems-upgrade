@@ -30,7 +30,7 @@ For details on mixed software version cluster upgrades, see https://docs.netapp.
 
 Am I moving volumes?
 
-|* link:upgrade-by-moving-volumes-parent.html[Upgrade by moving volumes] (a nondisruptive procedure)
+a|* link:upgrade-by-moving-volumes-parent.html[Upgrade by moving volumes] (a nondisruptive procedure)
 
 * link:https://docs.netapp.com/us-en/ontap/disks-aggregates/index.html[Verify that the new nodes have enough storage to accommodate storage associated with the original nodes^].
 * When you upgrade by moving volumes, new nodes are joined to the cluster before the original nodes are removed.
@@ -55,7 +55,7 @@ a|link:https://hwu.netapp.com[Verify that you are following storage platform mix
 
 The controllers in a HA pair must be two AFF, FAS, or ASA models.
 
-|Am I you upgrading a HA pair in a cluster with multiple HA pairs? 
+|Am I upgrading a HA pair in a cluster with multiple HA pairs? 
 |Move epsilon to the node of a HA pair not undergoing a controller upgrade. For example, if you are upgrading nodeA/nodeB in a cluster with the HA pair configuration nodeA/nodeB and nodeC/nodeD, you must move epsilon to nodeC or nodeD.
 |Am I running ONTAP 9.6P11, 9.7P8, or later releases? 
 |NetApp recommends that you enable Connectivity, Liveliness, and Availability Monitor (CLAM) takeover to return the cluster into quorum when certain node failures occur. The `kernel-service` command requires advanced privilege level access. For more information, see the NetApp Knowledge Base article https://kb.netapp.com/Support_Bulletins/Customer_Bulletins/SU436[CLAM takeover default configuration changed^]. 
