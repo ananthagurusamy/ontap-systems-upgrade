@@ -41,12 +41,12 @@ https://hwu.netapp.com[Verify that the number of controllers in the cluster does
 You must observe the maximum cluster size. 
 +
 NOTE: You must reestablish the Service Level Manager reporting nodes for SAN 8-node clusters going to an ONTAP version that supports 12-nodes.
-. link:upgrade-by-moving-volumes-parent.html[Upgrade by moving volumes] (a nondisruptive procedure)
+. link:upgrade-by-moving-volumes-parent.html[Upgrade by moving volumes] (a nondisruptive procedure).
 
 |Am I moving internal storage or converting the system to a drive shelf?
 a|. https://hwu.netapp.com/[Verify that the root aggregate size and the number of disks supported by the new system are equal to or greater than those supported by the original system^].
 
-. link:upgrade-by-moving-storage-parent.html[Upgrade by moving storage] (a disruptive procedure)
+. link:upgrade-by-moving-storage-parent.html[Upgrade by moving storage] (a disruptive procedure).
 
 NOTE: You can upgrade by moving storage from one FAS2xxx to a later FAS2xxx if the nodes are in the same cluster. For example, you can move volumes or physical storage from a FAS2620 to a FAS2820.
 
@@ -68,17 +68,15 @@ Beginning with ONTAP 9.8, the `kcs-enable-takeover` parameter is enabled by defa
 
 == Systems with internal storage
 
-Models with internal drives are listed in the table below. 
+Models with internal drives are listed in the table below. If your system is not listed, see the https://hwu.netapp.com[NetApp Hardware Universe^] to check if it has internal drives.
 
 [cols=3*,options="header"]
 |===
-3+h|Models with internal drives
+3+^|Models with internal drives
 a|FAS2520, FAS2552, FAS2554, FAS2620, FAS2650, FAS2720, and FAS2750 
 a|AFF A150, AFF A200, AFF A220, AFF A250, AFF A700s, and AFF A800
 |AFF C190, AFF C250, and AFF C800 
 |===
-
-* If your system is not listed in the table above, see the https://hwu.netapp.com[NetApp Hardware Universe^] to check if it has internal drives. 
 
 * If you have a system with internal storage, you can convert the system to a drive shelf and attach it to a new node in the same cluster. FAS2520 controllers cannot be converted to a drive shelf.
 +
