@@ -28,7 +28,9 @@ NOTE: The version difference between the original and new nodes cannot be greate
 For details on mixed software version cluster upgrades, see https://docs.netapp.com/us-en/ontap/upgrade/concept_mixed_version_requirements.html[Mixed version ONTAP clusters^].
 |Do my systems contain internal drives?
 
-.2+a|* link:upgrade-by-moving-volumes-parent.html[Upgrade by moving volumes] (a nondisruptive procedure)
+Am I moving volumes?
+
+|* link:upgrade-by-moving-volumes-parent.html[Upgrade by moving volumes] (a nondisruptive procedure)
 
 * link:https://docs.netapp.com/us-en/ontap/disks-aggregates/index.html[Verify that the new nodes have enough storage to accommodate storage associated with the original nodes^].
 * When you upgrade by moving volumes, new nodes are joined to the cluster before the original nodes are removed.
@@ -38,7 +40,7 @@ https://hwu.netapp.com[Verify that the number of controllers in the cluster does
 You must observe the maximum cluster size. 
 +
 NOTE: You must reestablish the Service Level Manager reporting nodes for SAN 8-node clusters going to an ONTAP version that supports 12-nodes.
-|Am I moving volumes?
+
 |Am I moving internal storage or converting the system to a drive shelf?
 a|* link:upgrade-by-moving-storage-parent.html[Upgrade by moving storage] (a disruptive procedure)
 * https://hwu.netapp.com/[Verify that the root aggregate size and the number of disks supported by the new system are equal to or greater than those supported by the original system^].
