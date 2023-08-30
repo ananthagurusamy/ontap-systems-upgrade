@@ -21,7 +21,7 @@ WARNING: This procedure strictly applies to the following upgrade configurations
 |Old system |Replacement system |Supported ONTAP versions
 |AFF A700
 |ASA A900
-|9.13.1 and later
+|9.13.1P1 and later
 |AFF A220
 |AFF A150
 |9.10.1P15, 9.11.1P11, 9.12.1P5 and later
