@@ -131,7 +131,7 @@ image::../media/black_circle_two.png[Number two]
 |I/O latch completely unlocked
 |===
 
-=== Install the ASA A900, AFF A900 or FAS9500 NVRAM and controller modules
+=== Install the ASA A900, AFF A900, or FAS9500 NVRAM and controller modules
 Install the ASA A900, AFF A900, or FAS9500 NVRAM and controller modules that you received for the upgrade on node1.
 
 You must note the following when performing the installation:
@@ -164,7 +164,7 @@ image::../media/black_circle_two.png[Number two]
 |===
 
 ==== Install the ASA A900, AFF A900, or FAS9500 controller module on node1.
-Use the following procedure to install the ASA A900, AFF A900, or FAS9500 controller module in node1.
+Use the following procedure to install the ASA A900, AFA A900, or FAS9500 controller module in node1.
 
 .Steps
 . Align the end of the controller module with opening A in the chassis, and then gently push the controller module halfway into the system.

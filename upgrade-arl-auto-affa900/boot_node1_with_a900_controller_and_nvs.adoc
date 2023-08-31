@@ -26,7 +26,7 @@ AFF C190
 FAS2720 
 |FAS2820 controller module ^1^
 |AFF A700 
-|AFF A900 or ASA A900 controller and NVRAM modules ^2^ 
+|ASA A900 or AFF A900 controller and NVRAM modules ^2^ 
 |FAS9000 
 |FAS9500 controller and NVRAM modules ^2^
 |===
