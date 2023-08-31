@@ -25,7 +25,9 @@ Aggregate relocation is a replacement procedure. You do not need to expand and s
 
 [NOTE]
 ====
-*Note1*: The version difference between the original and new nodes cannot be greater than four. For example, ONTAP 9.8 and 9.12.1 is supported; however, ONTAP 9.8 and 9.13.1 is NOT supported. If required, https://docs.netapp.com/us-en/ontap/upgrade/index.html[upgrade the ONTAP version on the original nodes^].
+*Note1*: The ONTAP version running on the original nodes must be supported by the new nodes. If required, link:https://docs.netapp.com/us-en/ontap/upgrade/index.html[upgrade the ONTAP version^] on the original nodes to the maximum supported version. 
+
+The version difference between the original and new nodes cannot be greater than four. For example, ONTAP 9.8 and 9.12.1 is supported; however, ONTAP 9.8 and 9.13.1 is NOT supported. 
 
 *Note2*: Models with internal drives are listed below. If your system is not listed, see the https://hwu.netapp.com[NetApp Hardware Universe^] to check if it has internal drives. 
 

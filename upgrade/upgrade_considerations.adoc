@@ -15,30 +15,35 @@ To plan for the upgrade, you must familiarize yourself with the general upgrade 
 
 Depending on your environment, you need to consider certain factors before you start your upgrade. Get started by reviewing the table below to see the requirements and limitations you need to consider.
 
-NOTE: Before starting your controller upgrade procedure, you must review all the questions listed in the table below.
+NOTE: Before starting your controller upgrade procedure, you must review ALL the questions listed in the table below.
 
 [cols=2*,options="header",cols="30,70"]
 |===
 |Ask yourself... |If your answer is yes, then do this..
-|Do I have different software versions running on the original and new nodes?
-a|.  https://hwu.netapp.com[Verify that the original nodes support the same software version and patch level as the new nodes^]. 
+|Am I combining different controller platform models in a cluster?
 
-. If required, link:https://docs.netapp.com/us-en/ontap/upgrade/index.html[Upgrade the ONTAP version on the original nodes to the maximum supported version^].
+a|link:https://hwu.netapp.com[Verify that you are following storage platform mixing rules^].
+
+The controllers in a HA pair must be two AFF, FAS, or ASA models.
+
+|Do I have different ONTAP versions running on the original and new nodes?
+a|.  https://hwu.netapp.com[Check the ONTAP versions and patch levels supported by the original and the new nodes^]. 
+
+. The ONTAP version running on the original nodes must be supported by the new nodes. If required, link:https://docs.netapp.com/us-en/ontap/upgrade/index.html[upgrade the ONTAP version^] on the original nodes to the maximum supported version.
 +
 NOTE: The version difference between the original and new nodes cannot be greater than four. For example, ONTAP 9.8 and 9.12.1 is supported; however, ONTAP 9.8 and 9.13.1 is NOT supported. 
 +
-For details on mixed software version cluster upgrades, see https://docs.netapp.com/us-en/ontap/upgrade/concept_mixed_version_requirements.html[Mixed version ONTAP clusters^].
+For more information on mixed software version cluster upgrades, see https://docs.netapp.com/us-en/ontap/upgrade/concept_mixed_version_requirements.html[Mixed version ONTAP clusters^].
+
 |Do my systems contain internal drives?
 
 Am I moving volumes?
 
 a|
 . link:https://docs.netapp.com/us-en/ontap/disks-aggregates/index.html[Verify that the new nodes have enough storage to accommodate storage associated with the original nodes^].
-. When you upgrade by moving volumes, new nodes are joined to the cluster before the original nodes are removed.
+. When you upgrade by moving volumes, new nodes are joined to the cluster before the original nodes are removed. You must observe the maximum cluster size. 
 +
-https://hwu.netapp.com[Verify that the number of controllers in the cluster does not exceed the supported maximum cluster size during the procedure^].
-+
-You must observe the maximum cluster size. 
+https://hwu.netapp.com[Verify that the total number of controllers in the cluster during the procedure does not exceed the supported maximum cluster size^].
 +
 NOTE: You must reestablish the Service Level Manager reporting nodes for SAN 8-node clusters going to an ONTAP version that supports 12-nodes.
 . link:upgrade-by-moving-volumes-parent.html[Upgrade by moving volumes] (a nondisruptive procedure).
@@ -49,14 +54,6 @@ a|. https://hwu.netapp.com/[Verify that the root aggregate size and the number o
 . link:upgrade-by-moving-storage-parent.html[Upgrade by moving storage] (a disruptive procedure).
 
 NOTE: You can upgrade by moving storage from one FAS2xxx to a later FAS2xxx if the nodes are in the same cluster. For example, you can move volumes or physical storage from a FAS2620 to a FAS2820.
-
-
-
-|Am I combining different controller platform models in a cluster?
-
-a|link:https://hwu.netapp.com[Verify that you are following storage platform mixing rules^].
-
-The controllers in a HA pair must be two AFF, FAS, or ASA models.
 
 |Am I upgrading a HA pair in a cluster with multiple HA pairs? 
 |Move epsilon to the node of a HA pair not undergoing a controller upgrade. For example, if you are upgrading nodeA/nodeB in a cluster with the HA pair configuration nodeA/nodeB and nodeC/nodeD, you must move epsilon to nodeC or nodeD.
