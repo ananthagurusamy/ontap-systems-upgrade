@@ -17,7 +17,8 @@ Node1 with the replacement modules is now ready to boot. This section provides t
 [cols="35,65"]
 |===
 |Old node1 controller |Replacement node1 system modules
-
+|AFF A220 configured as an ASA
+|AFF A150 controller module ^1^
 |AFF A220	
 AFF A200	
 AFF C190
@@ -25,8 +26,10 @@ AFF C190
 |FAS2620 
 FAS2720 
 |FAS2820 controller module ^1^
+|AFF A700 configured as an ASA 
+|ASA A900 controller and NVRAM modules ^2^ 
 |AFF A700 
-|ASA A900 or AFF A900 controller and NVRAM modules ^2^ 
+|AFF A900 controller and NVRAM modules ^2^ 
 |FAS9000 
 |FAS9500 controller and NVRAM modules ^2^
 |===

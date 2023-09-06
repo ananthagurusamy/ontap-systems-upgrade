@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: upgrade-arl-auto-affa900/install_replacement_system_modules_on_node2.html
-keywords: install, NVRAM, node2, controller, module, modules, replacement
+keywords: aff, fas, asa, install, NVRAM, node2, controller, module, modules, replacement
 summary: "Install the replacement system modules on node2 during an ARL upgrade of controller models in the same chassis."
 ---
 = Install the replacement system modules on node2
@@ -14,11 +14,11 @@ summary: "Install the replacement system modules on node2 during an ARL upgrade 
 [.lead]
 Install the replacement system modules that you received for the upgrade on node2. Node2 is controller B located on the right side of the chassis when looking at the controllers from the rear of the system.
 
-* <<Install the AFF A150 or FAS2820 controller module on node2>>
+* <<Install the ASA A150, AFF A150 or FAS2820 controller module on node2>>
 * <<Install the ASA A900, AFF A900, or FAS9500 NVRAM and controller modules on node2>>
 
-== Install the AFF A150 or FAS2820 controller module on node2
-Install the AFF A150 or FAS2820 controller module that you received for the upgrade on node2. Node2 is controller B located on the right side of the chassis when looking at the controllers from the rear of the system.
+== Install the ASA A150, AFF A150 or FAS2820 controller module on node2
+Install the ASA A150, AFF A150 or FAS2820 controller module that you received for the upgrade on node2. Node2 is controller B located on the right side of the chassis when looking at the controllers from the rear of the system.
 
 .Before you begin
 

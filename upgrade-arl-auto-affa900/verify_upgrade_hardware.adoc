@@ -19,11 +19,15 @@ Before starting the upgrade, verify that you have the correct hardware for your 
 |===
 |If you are upgrading ...
 |You must have ...
+|AFF A220 configured as an ASA to ASA A150
+|Two controller modules
 |AFF A220, AFF A200, or AFF C190 to AFF A150
 |Two controller modules
 |FAS2620 or FAS2720 to FAS2820
 |Two controller modules
-|AFF A700 to ASA A900 or AFF A900 
+|AFF A700 configured as an ASA to ASA A900
+|Two controller and two NVRAM modules
+|AFF A700 to AFF A900 
 |Two controller and two NVRAM modules
 |FAS9000 to FAS9500
 |Two controller and two NVRAM modules

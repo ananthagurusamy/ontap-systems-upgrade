@@ -22,18 +22,23 @@ Use this procedure under the following circumstances:
 |===
 |Old controller
 |Replacement controller
+
+|AFF A220 configured as an ASA
+|ASA A150
 |AFF A220, AFF A200, or AFF C190
 |AFF A150
 |FAS2620 or FAS2720
 |FAS2820
+|AFF A700 configured as an ASA
+|ASA A900
 |AFF A700
-|ASA A900 or AFF A900 
+|AFF A900 
 |FAS9000
 |FAS9500
 |===
 
 * You have verified with your NetApp sales representative that you have received the hardware for your controller upgrade:
-** AFF A150 or FAS2820 controller
+** ASA A150, AFF A150, or FAS2820 controller
 ** ASA A900, AFF A900, or FAS9500 controller and NVRAM modules and the parts required for the upgrade
 
 * You are running the minimum ONTAP version for your upgrade. For more information, see link:index.html[Overview].

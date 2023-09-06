@@ -17,7 +17,8 @@ Node2 with the replacement modules is now ready to boot. Upgrading by swapping t
 [cols="35,65"]
 |===
 |Old node2 controller |Replacement node2 system modules
-
+|AFF A220 configured as an ASA
+|ASA A150 controller module
 |AFF A220
 AFF A200
 AFF C190
@@ -26,7 +27,9 @@ AFF C190
 |FAS2620 
 FAS2720
 |FAS2820 controller module
-|AFF A700 |ASA A900 or AFF A900 controller and NVRAM modules
+|AFF A700 configured as an ASA
+|ASA A900 controller and NVRAM modules
+|AFF A700 |AFF A900 controller and NVRAM modules
 |FAS9000 |FAS9500 controller and NVRAM modules
 |===
 
