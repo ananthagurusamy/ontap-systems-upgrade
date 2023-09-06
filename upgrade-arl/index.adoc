@@ -31,7 +31,7 @@ If you are performing an upgrade by using system commands refer to the following
 |9.10.1 or later
 |link:https://docs.netapp.com/us-en/ontap-systems-upgrade/upgrade-arl-auto-affa900/index.html[Use "system controller replace" commands to upgrade controller models in the same chassis^]
 
-You can use this procedure to upgrade an AFF controller or an AFF All SAN Array (ASA) configuration to an ASA controller for certain models and ONTAP software versions. link:https://docs.netapp.com/us-en/ontap-systems-upgrade/upgrade-arl-auto-affa900/index.html[Learn more].
+You can use this procedure to upgrade an AFF controller configured as an All SAN Array (ASA) to an ASA controller for certain models and ONTAP software versions. link:https://docs.netapp.com/us-en/ontap-systems-upgrade/upgrade-arl-auto-affa900/index.html[Learn more].
 |9.8 or later
 |link:https://docs.netapp.com/us-en/ontap-systems-upgrade/upgrade-arl-auto-app/index.html[Use "system controller replace" commands to upgrade controller hardware running ONTAP 9.8 or later]
 |9.5 to 9.7
@@ -48,4 +48,5 @@ If you are performing a manual upgrade refer to the following table:
 |link:https://docs.netapp.com/us-en/ontap-systems-upgrade/upgrade-arl-manual/index.html[Manually upgrade controller hardware running ONTAP 9.7 or earlier]
 |===
 
+// 2023 SEP 6, AFFFASDOC-78
 // 24 FEB 2021:  formatted from CMS
