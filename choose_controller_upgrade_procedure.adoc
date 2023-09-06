@@ -11,28 +11,11 @@ summary: In general, how you upgrade the controller hardware depends on the plat
 [.lead]
 In general, how you upgrade the controller hardware depends on the platform models of the original nodes. You upgrade either by relocating aggregates or moving volumes (both nondisruptive procedures), or by moving the storage (a disruptive procedure). If you have different ONTAP versions running on the original and new nodes, you might need to perform a software upgrade before starting the hardware upgrade.
 
-image:workflow_for_choosing_upgrade_procedure.png[Decision workflow for choosing an upgrade procedure]
-
-Learn about the controller hardware upgrade procedures:
-
-* link:upgrade-arl/index.html[Nondisruptive procedure: Upgrade by using aggregate relocation]
-+
-Aggregate relocation is a replacement procedure. You do not need to expand and shrink your cluster with the new nodes which is beneficial for two-node switchless clusters. Moving data by relocating aggregates is faster than copying data across aggregates when moving volumes.
-
-* link:upgrade/upgrade-decide-to-use-this-guide.html[Nondisruptive procedure: Upgrade by moving volumes]
-* link:upgrade/upgrade-decide-to-use-this-guide.html[Disruptive procedure: Upgrade by moving storage]
-
-
-[NOTE]
+[role="tabbed-block"]
 ====
-*Note1*: The ONTAP version running on the original nodes must be supported by the new nodes. If required, link:https://docs.netapp.com/us-en/ontap/upgrade/index.html[upgrade the ONTAP version^] on the original nodes to the maximum supported version. 
-
-The version difference between the original and new nodes cannot be greater than four. For example, ONTAP 9.8 and 9.12.1 is supported; however, ONTAP 9.8 and 9.13.1 is NOT supported. https://docs.netapp.com/us-en/ontap/upgrade/concept_mixed_version_requirements.html[Learn more about mixed version ONTAP clusters^].
-====
-
-[NOTE]
-====
-*Note2*: Models with internal drives are listed below. If your system is not listed, see the https://hwu.netapp.com[NetApp Hardware Universe^] to check if it has internal drives. 
+.Systems with internal drives
+--
+Models with internal drives are listed below. If your system is not listed, see the https://hwu.netapp.com[NetApp Hardware Universe^] to check if it has internal drives. 
 
 [cols=3*,options="header"]
 |===
@@ -42,7 +25,37 @@ a|AFF A150, AFF A200, AFF A220, AFF A250, AFF A700s, and AFF A800
 |AFF C190, AFF C250, and AFF C800 
 |===
 
+image:workflow_internal_drives.png[Decision workflow for choosing an upgrade procedure]
+
+--
+
+.Systems with external drives
+--
+image:workflow_external_drives.png[Decision workflow for choosing an upgrade procedure]
+--
 ====
+
+Learn about the controller hardware upgrade procedures:
+
+* link:upgrade-arl/index.html[Upgrade by using aggregate relocation]
++
+Aggregate relocation is a replacement procedure. You do not need to expand and shrink your cluster with the new nodes which is beneficial for two-node switchless clusters. Moving data by relocating aggregates is faster than copying data across aggregates when moving volumes.
+
+* link:upgrade/upgrade-decide-to-use-this-guide.html[Upgrade by moving volumes]
+* link:upgrade/upgrade-decide-to-use-this-guide.html[Upgrade by moving storage]
+
+
+[NOTE]
+====
+*Note1*: The ONTAP version running on the original nodes must be supported by the new nodes. If required, link:https://docs.netapp.com/us-en/ontap/upgrade/index.html[upgrade the ONTAP version^] on the original nodes to the maximum supported version. 
+
+The version difference between the original and new nodes cannot be greater than four. For example, ONTAP 9.8 and 9.12.1 is supported; however, ONTAP 9.8 and 9.13.1 is NOT supported. https://docs.netapp.com/us-en/ontap/upgrade/concept_mixed_version_requirements.html[Learn more about mixed version ONTAP clusters^].
+====
+
+NOTE: *Note2*: A nondisruptive upgrade requires a new system with its own storage and shelves to store the data from the original system. 
+
+NOTE: *Note3*: When upgrading by moving volumes, you join and then unjoin the cluster. A switch is required for a two-node switchless cluster upgrade.
+
 
 If you are upgrading a MetroCluster configuration, see https://docs.netapp.com/us-en/ontap-metrocluster/upgrade/concept_choosing_an_upgrade_method_mcc.html[Upgrade, refresh, or expand the MetroCluster configuration^].
 
