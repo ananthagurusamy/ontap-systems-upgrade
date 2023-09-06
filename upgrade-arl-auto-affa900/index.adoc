@@ -44,7 +44,7 @@ NOTE: FAS2620 does not support ONTAP versions later than 9.11.1.
 9.13.1 and later (FAS2820)
 |FAS2720 |FAS2820	
 |9.13.1 and later
-|AFF A700 or AFF A700 configured as an ASA 
+|AFF A700 configured as an ASA 
 |ASA A900
 |9.13.1P1 and later
 |AFF A700 
