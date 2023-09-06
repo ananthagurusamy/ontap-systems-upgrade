@@ -31,7 +31,9 @@ image:workflow_internal_drives.png[Decision workflow for choosing an upgrade pro
 
 .Systems with external drives
 --
-Choose an upgrade procedure for a system with external drives.
+Choose an upgrade procedure for a system with only external drives.
+
+<Include a list of these systems>
 
 image:workflow_external_drives.png[Decision workflow for choosing an upgrade procedure]
 --
