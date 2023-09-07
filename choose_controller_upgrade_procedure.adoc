@@ -29,7 +29,7 @@ image:workflow_internal_drives.png[Decision workflow for choosing an upgrade pro
 
 .Systems with external drives
 --
-Choose an upgrade procedure for a system with only external drives, which are listed below:
+Choose an upgrade procedure for a system with external drives, which are listed below:
 
 * FAS8200, FAS8300, FAS8700, FAS9000, and FAS9500
 * AFF A300, AFF A400, AFF A900, and AFF A700 
