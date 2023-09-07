@@ -15,15 +15,13 @@ In general, how you upgrade the controller hardware depends on the platform mode
 ====
 .Systems with internal drives
 --
-Choose an upgrade procedure for a system with internal drives, which are listed below. If your system is not listed, see the https://hwu.netapp.com[NetApp Hardware Universe^] to check if it has internal drives. 
+Choose an upgrade procedure for a system with internal drives, which are listed below:
 
-[cols=3*,options="header",20,20,20]
-|===
-3+^|Models with internal drives
-a|FAS2520, FAS2552, FAS2554, FAS2620, FAS2650, FAS2720, and FAS2750 
-a|AFF A150, AFF A200, AFF A220, AFF A250, AFF A700s, and AFF A800
-|AFF C190, AFF C250, and AFF C800 
-|===
+* FAS2520, FAS2552, FAS2554, FAS2620, FAS2650, FAS2720, and FAS2750 
+* AFF A150, AFF A200, AFF A220, AFF A250, AFF A700s, and AFF A800
+* AFF C190, AFF C250, and AFF C800 
+
+If your system is not listed, see the https://hwu.netapp.com[NetApp Hardware Universe^] to check if it has internal drives. 
 
 image:workflow_internal_drives.png[Decision workflow for choosing an upgrade procedure]
 
@@ -31,9 +29,13 @@ image:workflow_internal_drives.png[Decision workflow for choosing an upgrade pro
 
 .Systems with external drives
 --
-Choose an upgrade procedure for a system with only external drives.
+Choose an upgrade procedure for a system with only external drives, which are listed below:
 
-<Include a list of these systems>
+* FAS8200, FAS8300, FAS8700, FAS9000, and FAS9500
+* AFF A300, AFF A400, AFF A900, and AFF A700 
+* AFF C400 
+
+If your system is not listed, see the https://hwu.netapp.com[NetApp Hardware Universe^] to check if it only has external drives.
 
 image:workflow_external_drives.png[Decision workflow for choosing an upgrade procedure]
 --
@@ -55,7 +57,7 @@ Aggregate relocation is a replacement procedure. You do not need to expand and s
 
 *Note2*: A nondisruptive upgrade requires a new system with its own storage and shelves to store the data from the original system. 
 
-*Note3*: When upgrading by moving volumes, you join and then unjoin the cluster. A switch is required for a two-node switchless cluster upgrade.
+*Note3*: When upgrading by moving volumes, you add the new nodes and then uninstall the nodes you want to remove from the cluster. If the system you are upgrading is a two-node switchless cluster, you will need a pair of cluster switches.
 ====
 
 If you are upgrading a MetroCluster configuration, see https://docs.netapp.com/us-en/ontap-metrocluster/upgrade/concept_choosing_an_upgrade_method_mcc.html[Upgrade, refresh, or expand the MetroCluster configuration^].
