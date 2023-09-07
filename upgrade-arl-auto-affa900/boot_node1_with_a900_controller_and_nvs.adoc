@@ -17,6 +17,7 @@ Node1 with the replacement modules is now ready to boot. This section provides t
 [cols="35,65"]
 |===
 |Old node1 controller |Replacement node1 system modules
+
 |AFF A220 configured as an ASA
 |AFF A150 controller module ^1^
 |AFF A220	

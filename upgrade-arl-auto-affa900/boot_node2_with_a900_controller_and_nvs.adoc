@@ -17,6 +17,7 @@ Node2 with the replacement modules is now ready to boot. Upgrading by swapping t
 [cols="35,65"]
 |===
 |Old node2 controller |Replacement node2 system modules
+
 |AFF A220 configured as an ASA
 |ASA A150 controller module
 |AFF A220
