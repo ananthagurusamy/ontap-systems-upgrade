@@ -36,7 +36,6 @@ If any problems occur while upgrading the controllers, see the link:troubleshoot
 
 If you do not find a solution to the problem you encountered, contact technical support.
 
-// 2023 SEP 5, AFFFASDOC-78
 // 2023 MAY 29, AFFFASDOC-39
 // 2023 MAY 22, BURT 1542232
 // 2023 MAY 22, BURT 1531220
