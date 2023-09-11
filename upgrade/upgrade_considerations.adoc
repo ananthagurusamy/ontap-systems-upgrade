@@ -59,7 +59,7 @@ a|. https://hwu.netapp.com/[Verify that the root aggregate size and the number o
 Beginning with ONTAP 9.8, the `kcs-enable-takeover` parameter is enabled by default.
 |===
 
-NOTE: You can upgrade integrated systems by moving data to new storage (moving volumes) or converting the existing integrated system into a shelf then migrating it to a new system (moving storage). For example, you can upgrade a FAS26xx to a FAS8300. In either case, the data migration or converted shelf must remain in the same switched cluster.
+NOTE: You can upgrade an integrated system by moving data to new storage (moving volumes) or converting the existing integrated system into a shelf and then migrating it to a new system (moving storage). For example, upgrading a FAS26xx to a FAS8300. In either case, the data migration or converted shelf remains in the same switched cluster.
 
 == Systems with internal storage
 
