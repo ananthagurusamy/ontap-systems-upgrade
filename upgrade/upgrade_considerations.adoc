@@ -51,8 +51,6 @@ a|. https://hwu.netapp.com/[Verify that the root aggregate size and the number o
 
 . link:upgrade-by-moving-storage-parent.html[Upgrade by moving storage] (a disruptive procedure).
 
-NOTE: You can upgrade by moving storage from one FAS2xxx to a later FAS2xxx if the nodes are in the same cluster. For example, you can move volumes or physical storage from a FAS2620 to a FAS2820.
-
 |Am I upgrading a HA pair in a cluster with multiple HA pairs? 
 |Move epsilon to the node of a HA pair not undergoing a controller upgrade. For example, if you are upgrading nodeA/nodeB in a cluster with the HA pair configuration nodeA/nodeB and nodeC/nodeD, you must move epsilon to nodeC or nodeD.
 |Am I running ONTAP 9.6P11, 9.7P8, or later releases? 
@@ -60,6 +58,8 @@ NOTE: You can upgrade by moving storage from one FAS2xxx to a later FAS2xxx if t
 
 Beginning with ONTAP 9.8, the `kcs-enable-takeover` parameter is enabled by default.
 |===
+
+NOTE: You can upgrade integrated systems by moving data to new storage (moving volumes) or converting the existing integrated system into a shelf then migrating it to a new system (moving storage). For example, you can upgrade a FAS26xx to a FAS8300. In either case, the data migration or converted shelf must remain in the same switched cluster.
 
 == Systems with internal storage
 
