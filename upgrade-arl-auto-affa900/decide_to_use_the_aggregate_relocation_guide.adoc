@@ -22,20 +22,24 @@ Use this procedure under the following circumstances:
 |===
 |Old controller
 |Replacement controller
+
+|AFF A220 configured as an ASA
+|ASA A150
 |AFF A220, AFF A200, or AFF C190
 |AFF A150
 |FAS2620 or FAS2720
 |FAS2820
+|AFF A700 configured as an ASA
+|ASA A900
 |AFF A700
-|AFF A900
+|AFF A900 
 |FAS9000
 |FAS9500
 |===
 
 * You have verified with your NetApp sales representative that you have received the hardware for your controller upgrade:
-** AFF A150 controller
-** FAS2820 controller
-** AFF A900 or FAS9500 controller and NVRAM modules and the parts required for the upgrade.
+** ASA A150, AFF A150, or FAS2820 controller
+** ASA A900, AFF A900, or FAS9500 controller and NVRAM modules and the parts required for the upgrade
 
 * You are running the minimum ONTAP version for your upgrade. For more information, see link:index.html[Overview].
 * You do not want to add the new controllers as a new HA pair to the cluster and migrate the data by using volume moves.
@@ -55,6 +59,7 @@ If you prefer a different method of upgrading the controller hardware and are wi
 Refer to link:other_references.html[References] to link to the _ONTAP 9 Documentation Center_ where you can access ONTAP 9 product documentation.
 
 
+// 2023 AUG 29, AFFFASDOC-78
 // 2023 MAY 29, AFFFASDOC-39
 // 2022 Jan 30, BURT 1523106
 // 2022 APR 26, BURT 1452254 

@@ -64,7 +64,7 @@ NOTE:	Other parameters might be necessary for your interface. Enter `help ifconf
 +
 NOTE:	Do not interrupt the boot.
 
-.	Wait for the node1 now running on the AFF A900 or FAS9500 controller module to boot and display the boot menu options as shown below:
+.	Wait for the node1 now running on the ASA A900, AFF A900, or FAS9500 controller module to boot and display the boot menu options as shown below:
 +
 ----
 Please choose one of the following:
@@ -187,6 +187,6 @@ For node1, the `partner-sysid` must be that of node2. You can obtain the node2 s
 `printenv partner-sysid`
 
 
-
+// 2023 AUG 29, AFFFASDOC-78
 //BURT 1452254, 2022-04-27
 // BURT 1476251, 2022-05-16
