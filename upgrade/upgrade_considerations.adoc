@@ -72,8 +72,6 @@ a|AFF A150, AFF A200, AFF A220, AFF A250, AFF A700s, and AFF A800
 |===
 
 * If you have a system with internal storage, you can convert the system to a drive shelf and attach it to a new node in the same cluster.
-+
-Converting a FAS255x system to a drive shelf is an optional task in the workflow for upgrading by moving storage.
 
 * If you have a system with internal storage or a system with volumes or aggregates on internal SATA drives or SSDs, you can upgrade by transferring the internal storage to a drive shelf that is attached to the new node in the same cluster.
 +
