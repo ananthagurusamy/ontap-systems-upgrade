@@ -66,12 +66,12 @@ Models with internal drives are listed in the table below. If your system is not
 [cols=3*,options="header"]
 |===
 3+^|Models with internal drives
-a|FAS2520, FAS2552, FAS2554, FAS2620, FAS2650, FAS2720, and FAS2750 
+a|FAS2620, FAS2650, FAS2720, and FAS2750 
 a|AFF A150, AFF A200, AFF A220, AFF A250, AFF A700s, and AFF A800
 |AFF C190, AFF C250, and AFF C800 
 |===
 
-* If you have a system with internal storage, you can convert the system to a drive shelf and attach it to a new node in the same cluster. FAS2520 controllers cannot be converted to a drive shelf.
+* If you have a system with internal storage, you can convert the system to a drive shelf and attach it to a new node in the same cluster.
 +
 Converting a FAS255x system to a drive shelf is an optional task in the workflow for upgrading by moving storage.
 

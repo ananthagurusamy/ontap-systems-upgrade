@@ -17,7 +17,7 @@ In general, how you upgrade the controller hardware depends on the platform mode
 --
 Choose an upgrade procedure for a system with internal drives, which are listed below:
 
-* FAS2520, FAS2552, FAS2554, FAS2620, FAS2650, FAS2720, and FAS2750 
+* FAS2620, FAS2650, FAS2720, and FAS2750 
 * AFF A150, AFF A200, AFF A220, AFF A250, AFF A700s, and AFF A800
 * AFF C190, AFF C250, and AFF C800 
 
