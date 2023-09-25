@@ -65,7 +65,7 @@ The following systems have internal storage:
 
 [cols=4*,options="header"]
 |===
-4+^|Models with internal drives
+4+^|Systems with internal drives
 a|FAS2620, FAS2650, FAS2720, and FAS2750 
 a|AFF A150, AFF A200, AFF A220, AFF A250, AFF A700s, and AFF A800
 |AFF C190, AFF C250, and AFF C800
