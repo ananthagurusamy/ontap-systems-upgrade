@@ -30,10 +30,10 @@ Upgrading by moving volumes is nondisruptive.
 
 If you are upgrading a MetroCluster configuration, see https://docs.netapp.com/us-en/ontap-metrocluster/upgrade/concept_choosing_an_upgrade_method_mcc.html[Upgrade, refresh, or expand the MetroCluster configuration^].
 
-*Related information*
+.Related information
 
 * xref:upgrade-considerations.adoc[Considerations for upgrading controller hardware]
-* xref:upgrade-methods.adoc[Choose methods for upgrading controller hardware]
+* xref:choose_controller_upgrade_procedure.adoc[Choose methods for upgrading controller hardware]
 * https://docs.netapp.com/us-en/ontap-metrocluster/maintain/concept_where_to_find_procedures_for_mcc_maintenance_tasks.html[Where to find procedures for MetroCluster maintenance tasks^]
 * https://hwu.netapp.com[NetApp Hardware Universe^]
 

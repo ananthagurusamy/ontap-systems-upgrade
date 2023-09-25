@@ -61,17 +61,22 @@ NOTE: You can upgrade an integrated system by moving data to new storage (moving
 
 == Systems with internal storage
 
-Models with internal drives are listed in the table below. If your system is not listed, see the https://hwu.netapp.com[NetApp Hardware Universe^] to check if it has internal drives.
+The following systems have internal storage: 
 
-[cols=3*,options="header"]
+[cols=4*,options="header"]
 |===
-3+^|Models with internal drives
+4+^|Models with internal drives
 a|FAS2620, FAS2650, FAS2720, and FAS2750 
 a|AFF A150, AFF A200, AFF A220, AFF A250, AFF A700s, and AFF A800
-|AFF C190, AFF C250, and AFF C800 
+|AFF C190, AFF C250, and AFF C800
+|ASA A150
 |===
 
+* If your system is not listed above, see the https://hwu.netapp.com[NetApp Hardware Universe^] to check if it has internal drives.
+
 * If you have a system with internal storage, you can convert the system to a drive shelf and attach it to a new node in the same cluster.
++
+You cannot convert AFF A700s, AFF A800, and AFF C800 systems to a drive shelf.
 
 * If you have a system with internal storage or a system with volumes or aggregates on internal SATA drives or SSDs, you can upgrade by transferring the internal storage to a drive shelf that is attached to the new node in the same cluster.
 +
@@ -79,25 +84,17 @@ Transferring the internal storage is an optional task in the workflow for upgrad
 
 == Situations where you might need additional steps
 
-* If you are upgrading from an AFF A250 to an AFF A400, see xref:upgrade_aff_a250_to_aff_a400_ndu_upgrade_workflow.adoc[Upgrade AFF A250 to AFF A400 by converting to a drive shelf].
+* xref:upgrade_aff_a250_to_aff_a400_ndu_upgrade_workflow.adoc[You are upgrading from an AFF A250 to an AFF A400] (nondisruptive). 
 
-* If the new system has fewer slots than the original system, or if it has fewer or different types of ports, you might need to add an adapter to the new system.
-+
-https://hwu.netapp.com[NetApp Hardware Universe^]
+* If the new system has fewer slots than the original system, or if it has fewer or different types of ports, you might need to add an adapter to the new system, see the https://hwu.netapp.com[NetApp Hardware Universe^].
 
-* If the original nodes or new nodes use FlexArray Virtualization software.
-+
-https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Systems/V_Series/What_are_the_specific_steps_involved_in_FlexArray_for_NetApp_controller_upgrades%2F%2Freplacements%3F[NetApp KB Article: What are the specific steps involved in FlexArray for NetApp controller upgrades and replacements^]
+* If the original nodes or new nodes use FlexArray Virtualization software, see the Knowledge Base article https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Systems/V_Series/What_are_the_specific_steps_involved_in_FlexArray_for_NetApp_controller_upgrades%2F%2Freplacements%3F[What are the specific steps involved in FlexArray for NetApp controller upgrades and replacements^].
 
-* If your cluster has SAN hosts you might need to take steps to resolve issues with LUN serial number changes.
-+
-https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Systems/FlexPod_with_Infrastructure_Automation/resolve_issues_during_storage_controller_motherboard_replacement_and_head_upgrades_with_iSCSI_and_FCP[How to resolve issues during storage controller motherboard replacement and head upgrades with iSCSI and FCP^]
+* If your cluster has SAN hosts you might need to take steps to resolve issues with LUN serial number changes. See the Knowledge Base article https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Systems/FlexPod_with_Infrastructure_Automation/resolve_issues_during_storage_controller_motherboard_replacement_and_head_upgrades_with_iSCSI_and_FCP[How to resolve issues during storage controller motherboard replacement and head upgrades with iSCSI and FCP^].
 
-* If your system uses out-of-band ACP, you might need to migrate from out-of-band ACP to in-band ACP.
-+
-https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Systems/FAS_Systems/In-Band_ACP_Setup_and_Support[NetApp KB Article: In-Band ACP Setup and Support^]
+* If your system uses out-of-band ACP, you might need to migrate from out-of-band ACP to in-band ACP. See the Knowledge Base article https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Systems/FAS_Systems/In-Band_ACP_Setup_and_Support[In-Band ACP Setup and Support^]
 
-*Related information*
+.Related information
 
 * link:choose_controller_upgrade_procedure.html[Choose methods for upgrading controller hardware]
 * xref:upgrade-by-moving-storage-parent.adoc[Upgrade controller hardware by moving storage]
