@@ -69,7 +69,7 @@ The following systems have internal storage:
 a|FAS2620, FAS2650, FAS2720, and FAS2750 
 a|AFF A150, AFF A200, AFF A220, AFF A250, AFF A700s, and AFF A800
 |AFF C190, AFF C250, and AFF C800
-|ASA A150, ASA A250, ASA A800, ASA AFF A220
+|ASA A150, ASA A250, ASA A800, and ASA AFF A220
 |===
 
 * If your system is not listed above, see the https://hwu.netapp.com[NetApp Hardware Universe^] to check if it has internal drives.
@@ -84,7 +84,7 @@ Transferring the internal storage is an optional task in the workflow for upgrad
 
 == Situations where you might need additional steps
 
-* xref:upgrade_aff_a250_to_aff_a400_ndu_upgrade_workflow.adoc[You are upgrading from an AFF A250 to an AFF A400] (nondisruptive). 
+* xref:upgrade_aff_a250_to_aff_a400_ndu_upgrade_workflow.adoc[You are upgrading from an AFF A250 to an AFF A400] (a nondisruptive procedure). 
 
 * If the new system has fewer slots than the original system, or if it has fewer or different types of ports, you might need to add an adapter to the new system. See the https://hwu.netapp.com[NetApp Hardware Universe^].
 
@@ -96,7 +96,7 @@ Transferring the internal storage is an optional task in the workflow for upgrad
 
 .Related information
 
-* link:choose_controller_upgrade_procedure.html[Choose methods for upgrading controller hardware]
+* link:../choose_controller_upgrade_procedure.html[Choose methods for upgrading controller hardware]
 * xref:upgrade-by-moving-storage-parent.adoc[Upgrade controller hardware by moving storage]
 * xref:upgrade-by-moving-volumes-parent.adoc[Upgrade controller hardware by moving volumes]
 
