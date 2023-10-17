@@ -230,17 +230,19 @@ vsa_1 /vol/vsa_1_vol1/lun_linux_3 igroup_linux node_A_1-old,node_A_2-old,node_A_
 .
 12 entries were displayed.
 ----
-.  The `sg3-utils` package must be installed on the Linux host. This prevents a `rescan-scsi-bus.sh utility not found` error when you rescan the Linux host for the newly mapped LUNs using the `rescan-scsi-bus` command.
+.  The `sg3-utils` package must be installed on the Linux host. This prevents a `rescan-scsi-bus.sh utility not found` error when you rescan the Linux host for the newly mapped LUNs using the `rescan-scsi-bus` command. 
++
+On the host, verify the `sg3-utils` installation:
 +
 --
-** Verify the `sg3-utils` installation for a Debian based distribution:
+** For a Debian based distribution:
 +
 [source,cli]
 ----
 dpkg -l | grep sg3-utils 
 ----
 +
-** Verify the `sg3-utils` installation for a Red Hat based distribution:
+** For a Red Hat based distribution:
 +
 [source,cli]
 ----
@@ -321,7 +323,7 @@ Vserver  Volume      State       Move       Phase            Percent-Complete  T
 vsa_1    vsa_1_vol1  healthy                initializing     -                 -
 ----
 
-. When the volume move is complete, verify that the volume in online:
+. When the volume move is complete, verify that the volume is online:
 +
 [source,cli]
 ----
@@ -392,15 +394,17 @@ vsa_1    /vol/vsa_1_vol2/lun_linux_4  group_linux   node_A_1-new,node_A_2-new
 
 . The `sg3-utils` package must be installed on the Linux host. This prevents a `rescan-scsi-bus.sh utility not found` error when you rescan the Linux host for the newly mapped LUNs using the `rescan-scsi-bus` command.
 +
+On the host, verify the `sg3-utils` installation:
++
 --
-** Verify the `sg3-utils` installation for a Debian based distribution:
+** For a Debian based distribution:
 +
 [source,cli]
 ----
 dpkg -l | grep sg3-utils 
 ----
 +
-** Verify the `sg3-utils` installation for a Red Hat based distribution:
+** For a Red Hat based distribution:
 +
 [source,cli]
 ----
