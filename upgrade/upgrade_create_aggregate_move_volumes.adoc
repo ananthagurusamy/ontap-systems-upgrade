@@ -11,11 +11,6 @@ summary: You create at least an aggregate on each of the new nodes to store the 
 [.lead]
 You create at least an aggregate on each of the new nodes to store the volumes you want to move from the original nodes. You must identify an aggregate for each volume and move each volume individually.
 
-[NOTE]
-====
-If your storage configuration includes SAN volumes, follow all the steps in https://docs.netapp.com/us-en/ontap-metrocluster/transition/task_move_linux_iscsi_hosts_from_mcc_fc_to_mcc_ip_nodes.html[Move Linux iSCSI hosts from MetroCluster FC to MetroCluster IP nodes^] to move these volumes to the new nodes.
-====
-
 .Before you begin
 Data protection mirror relationships must have been initialized before you can move a volume.
 
