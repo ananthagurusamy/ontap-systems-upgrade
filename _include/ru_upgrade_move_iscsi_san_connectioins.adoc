@@ -304,7 +304,7 @@ Vserver  Volume      State       Move       Phase            Percent-Complete  T
 vsa_1    vsa_1_vol1  healthy                initializing     -                 -
 ----
 
-. When the volume move to the new node is complete, verify that the volume is online:
+. When the volume move to the new nodes is complete, verify that the volume is online:
 +
 [source,cli]
 ----
