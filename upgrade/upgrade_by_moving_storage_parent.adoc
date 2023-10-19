@@ -19,7 +19,7 @@ In the steps for upgrading controller hardware by moving storage, the original n
 
 image::../upgrade/media/original_to_new_nodes.png[]
 
-The terms node1, node2, node3, and node4 are used only to distinguish between the original and new nodes. When following the procedure, you must substitute the real names of your original and new nodes. However, in reality, the names of the nodes do not change: node3 has the name node1, and node4 has the name node2 after the controller hardware is upgraded.
+The terms node1, node2, node3, and node4 are used only to distinguish between the original and new nodes. When following the procedure, you must substitute these with the real names of your original and new nodes. However, in reality, the names of the nodes do not change: node3 has the name node1, and node4 has the name node2 after the controller hardware is upgraded.
 ====
 
 .Steps
