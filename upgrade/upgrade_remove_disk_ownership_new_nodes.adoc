@@ -20,11 +20,11 @@ These steps are performed on node3 and node4 one after the other. The node seque
 * You are only required to remove disk ownership for disks and shelves that have come with new controllers.
 * You are not required to remove ownership of disks if you are upgrading the hardware by swapping an old controller with a new controller on an internal drive platform while retaining the chassis and disks of the old controller.
 +
-For example, if you are upgrading your system from A200 to A220 by only swapping the old A200 controller module with the new A220 controller module while keeping the chassis and disks of the old A200 in place, you would not remove ownership of disks for the new A220 controller module as outlined in this section _Removing ownership of disks attached to the new nodes_.
+For example, if you are upgrading your system from an AFF A200 to an AFF A220 by only swapping the old AFF A200 controller module with the new AFF A220 controller module while keeping the chassis and disks of the old AFF A200 in place, you would not remove ownership of disks for the new AFF A220 controller module as outlined in this section _Removing ownership of disks attached to the new nodes_.
 +
 Contact NetApp technical support if you have questions on removing disk ownership during a controller upgrade.
 +
-The following is a list of systems that have internal storage: FAS2520, FAS2552, FAS2554, FAS2620, FAS2650, FAS2720, FAS2750, AFF A200, AFF A220, AFF A700s, AFF A800, AFF A250.
+The following is a list of systems that have internal storage: FAS2620, FAS2650, FAS2720, FAS2750, AFF A200, AFF A220, AFF A700s, AFF A800, AFF A250.
 +
 If your system is not listed above, see the https://hwu.netapp.com[NetApp Hardware Universe^] to check if it has internal drives.
 ====
