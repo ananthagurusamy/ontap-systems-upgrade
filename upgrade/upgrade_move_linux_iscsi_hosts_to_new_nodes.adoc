@@ -15,6 +15,6 @@ If you do not need to move iSCSI SAN volumes when upgrading by moving volumes, y
 
 .About this task
 * IPv4 interfaces are created when you set up the new iSCSI connections.
-* The host commands and examples are specific to LINUX operating systems.
+* The host commands and examples are specific to Linux operating systems.
 
 include::../_include/ru_upgrade_move_iscsi_san_connectioins.adoc[]
