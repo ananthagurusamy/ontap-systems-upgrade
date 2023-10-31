@@ -19,7 +19,7 @@ homepage:
   tiles:
     - title: Get started
       links:
-        - title: ONTAP Release notes
+        - title: ONTAP Release Notes
           url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508
         - title: Choose your controller hardware upgrade procedure
           url: /choose_controller_upgrade_procedure.html 
