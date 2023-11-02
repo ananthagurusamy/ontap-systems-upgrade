@@ -1,3 +1,4 @@
+// This include file is referenced in the ontap-systems-upgrade and ontap-metrocluster repos.
 == Step 1: Set up new iSCSI connections
 To move the iSCSI connections, you set up new iSCSI connections to the new nodes.
 
