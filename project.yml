@@ -20,7 +20,7 @@ homepage:
   tiles:
     - title: Get started
       links:
-        - title: ONTAP Release notes
+        - title: ONTAP Release Notes
           url: https://library.netapp.com/ecm/ecm_download_file/ECMLP2492508
         - title: Choose your controller hardware upgrade procedure
           url: /choose_controller_upgrade_procedure.html 
@@ -34,7 +34,7 @@ homepage:
           url: https://docs.netapp.com/us-en/ontap-systems-upgrade/upgrade-arl-manual-app/
     - title: Upgrade by relocating aggregates on systems running ONTAP 9.7 and earlier
       links:
-        - title: Use “system controller replace” commands (most systems)
+        - title: Use "system controller replace" commands
           url: https://docs.netapp.com/us-en/ontap-systems-upgrade/upgrade-arl-auto/
         - title: Use manual commands
           url: https://docs.netapp.com/us-en/ontap-systems-upgrade/upgrade-arl-manual/
