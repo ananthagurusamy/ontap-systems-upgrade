@@ -64,7 +64,7 @@ When all cluster LIFs are migrated and cluster communication is established, the
 
 `::> network connections listening show -vserver Cluster`
 |9.12.1 or later
-|Skip this step and got to <<map_9.8_5,Step 5>>.
+|Skip this step and go to <<map_9.8_5,Step 5>>.
 |===
 +
 Port 7700 listening on cluster ports is the expected outcome as shown in the following example for a two-node cluster:
