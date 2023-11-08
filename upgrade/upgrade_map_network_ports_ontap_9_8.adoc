@@ -53,7 +53,7 @@ When all cluster LIFs are migrated and cluster communication is established, the
 +
 `cluster show -node _node1_ -fields health`
 
-.. Each cluster LIF must be listening on port 7700. Verify that the cluster LIFs are listening on port 7700:
+.. For ONTAP 9.8 to 9.11.1, verify that the cluster LIFs are listening on port 7700:
 +
 `::> network connections listening show -vserver Cluster`
 +
@@ -72,7 +72,7 @@ Cluster          NodeB_clus2:7700               TCP/ctlopcp
 4 entries were displayed.
 ----
 
-.. If necessary, for each cluster LIF that is not listening on port 7700, set the administrative status of the LIF to `down` and then `up`:
+.. For each cluster LIF that is not listening on port 7700, set the administrative status of the LIF to `down` and then `up`:
 +
 `::> net int modify -vserver Cluster -lif _cluster-lif_ -status-admin down; net int modify -vserver Cluster -lif _cluster-lif_ -status-admin up`
 +
@@ -160,5 +160,6 @@ NOTE: For iSCSI LIFs, modification of the home port requires the LIF to be admin
 
 You have completed mapping the physical ports. To complete the upgrade, go to xref:upgrade-final-upgrade-steps-in-ontap-9-8.adoc[Perform final upgrade steps in ONTAP 9.8 or later].
 
-// Clean-up, 2022-03-09
+// 2023 NOV 8, AFFFASDOC-133
 // BURT 1476241 2022-05-13
+// Clean-up, 2022-03-09
