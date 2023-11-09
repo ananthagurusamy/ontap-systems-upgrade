@@ -75,7 +75,7 @@ When all cluster LIFs are migrated and cluster communication is established, the
 +
 [cols="30,70"]
 |===
-|ONTAP version... |Then...
+|If your ONTAP version is... |Then...
 
 |9.8 to 9.11.1 
 |Verify that the cluster LIFs are listening on port 7700:

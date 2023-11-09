@@ -49,7 +49,7 @@ The output of the `health` field should be `true`.
 +
 [cols="30,70"]
 |===
-|ONTAP version... |Then...
+|If your ONTAP version is... |Then...
 
 |9.8 to 9.11.1 
 |Verify that the cluster LIFs are listening on port 7700:
