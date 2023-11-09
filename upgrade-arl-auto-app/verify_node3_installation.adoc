@@ -135,6 +135,8 @@ After you confirm that node3 is in quorum and can communicate with node2, verify
 
 For more information on creating and re-creating VLANs, interface groups, and broadcast domains, refer to link:other_references.html[References] to link to _Network Management_.
 
+NOTE: If you are changing the port speed of the e0a and e1a cluster ports on AFF A800 or AFF C800 systems, you might observe malformed packets being received after the speed conversion. See https://mysupport.netapp.com/site/bugs-online/product/ONTAP/BURT/1570339[NetApp Bugs Online Bug ID 1570339^] and the knowledge base article https://kb.netapp.com/onprem/ontap/hardware/CRC_errors_on_T6_ports_after_converting_from_40GbE_to_100GbE[CRC errors on T6 ports after converting from 40GbE to 100GbE^] for guidance.
+
 .Steps
 
 . [[step1]]List all the physical ports that are on upgraded node1 (referred to as node3):
@@ -314,6 +316,6 @@ When all ports are correctly configured and added to the correct broadcast domai
 `network interface show -fields home-port, status-admin`
 
 // 2023 NOV 8, AFFFASDOC-133
-// 2022-05-12 , 1476241
-// BURT 1476241,2022-05-12
+// 2023 OCT 31, AFFFASDOC-144
+// 2022-05-12, BURT 1476241
 // Clean-up, 2022-03-09
