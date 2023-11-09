@@ -45,9 +45,19 @@ The output of the `health` field should be `true`.
 +
 `cluster show`
 
-. For ONTAP 9.8 to 9.11.1, verify that the cluster LIFs are listening on port 7700:
+. Depending on the ONTAP version running on the HA pair being upgraded, take one of the following actions:
 +
+[cols="30,70"]
+|===
+|ONTAP version... |Then...
+
+|9.8 to 9.11.1 
+|Verify that the cluster LIFs are listening on port 7700:
+
 `::> network connections listening show -vserver Cluster`
+|9.12.1 or later
+|Skip this step and go to <<verify_node3_step_5,Step 5>>.
+|===
 +
 Port 7700 listening on cluster ports is the expected outcome as shown in the following example for a two-node cluster:
 +
@@ -70,7 +80,7 @@ Cluster          NodeB_clus2:7700               TCP/ctlopcp
 +
 Repeat Step 3 to verify that the cluster LIF is now listening on port 7700.
 // 2021-11-03, BURT 1429264
-. Switch to advanced privilege mode:
+. [[verify_node3_step_5]]Switch to advanced privilege mode:
 +
 `set advanced`
 
