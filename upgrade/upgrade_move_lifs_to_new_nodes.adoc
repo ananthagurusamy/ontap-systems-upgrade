@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: move, volume, original, node, migrate, non-san, lif, cluster-management, move non-san data lifs and cluster management lifs to the new nodeas
 summary: After you have moved the volumes from the original nodes, you need to migrate the non-SAN data LIFs and cluster-management LIFs from the original nodes to the new nodes.
 ---
-= Move non-SAN data LIFs and cluster management LIFs to the new nodes
+= Move non-SAN data LIFs and cluster-management LIFs to the new nodes
 :icons: font
 :imagesdir: ../media/
 
