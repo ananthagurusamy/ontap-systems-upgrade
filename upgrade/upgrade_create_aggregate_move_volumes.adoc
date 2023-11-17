@@ -16,7 +16,7 @@ You create at least an aggregate on each of the new nodes to store the volumes y
 +
 https://docs.netapp.com/us-en/ontap/data-protection-disaster-recovery/index.html[Find the required data protection procedure^]. 
 
-* If you are moving iSCSI SAN volumes, you have link:upgrade_move_linux_iscsi_hosts_to_new_nodes.html[created new iSCSI connections].
+* If you are moving iSCSI SAN volumes, verify that you have link:upgrade_move_linux_iscsi_hosts_to_new_nodes.html[created new iSCSI connections].
 
 NOTE: For each storage virtual machine (SVM), NetApp recommends moving all the non-root volumes in the cluster before moving the root volume, and performing this procedure on one SVM at a time. 
 
